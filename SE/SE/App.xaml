@@ -1,7 +1,7 @@
-﻿<Application x:Class="SistemaEgresados.App"
+﻿<Application x:Class="SE.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:SistemaEgresados"
+             xmlns:local="clr-namespace:SE"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6720CC8A-480F-401E-A1E9-680AC97FCB74}</ProjectGuid>
+    <ProjectGuid>{1E948F6D-8FB9-4175-87B4-16D530BA2A7C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>SistemaEgresados</RootNamespace>
-    <AssemblyName>SistemaEgresados</AssemblyName>
+    <RootNamespace>SE</RootNamespace>
+    <AssemblyName>SE</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="VentanasEgresado\MenuEgresado.xaml.cs">
+      <DependentUpon>MenuEgresado.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,6 +70,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="VentanasEgresado\MenuEgresado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -93,6 +100,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\uv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\uv2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="VentanasAdministrativo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\usuario.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SistemaEgresados.Properties
+namespace SE.Properties
 {
 
 
