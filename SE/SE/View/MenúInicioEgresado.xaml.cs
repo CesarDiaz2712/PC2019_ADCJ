@@ -12,16 +12,23 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace SE.VentanasEgresado
+namespace SE.View
 {
     /// <summary>
-    /// Lógica de interacción para MenuEgresado.xaml
+    /// Lógica de interacción para MenúInicioEgresado.xaml
     /// </summary>
-    public partial class MenuEgresado : Window
+    public partial class MenúInicioEgresado : Window
     {
-        public MenuEgresado()
+        public MenúInicioEgresado()
         {
             InitializeComponent();
+        }
+
+        private void btn_cuestionario_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+            FichaPreEgreso ficha = new FichaPreEgreso();
+            ficha.Show();
         }
     }
 }

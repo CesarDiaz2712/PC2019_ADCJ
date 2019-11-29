@@ -6,18 +6,23 @@
         xmlns:local="clr-namespace:SE"
         mc:Ignorable="d"
         Title="MainWindow" Height="357" Width="768.5">
-    <Grid Background="#FF171717">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="260*"/>
-            <ColumnDefinition Width="500*"/>
-        </Grid.ColumnDefinitions>
-        <StackPanel HorizontalAlignment="Left" Width="260" Background="#FF3B85E2" Grid.ColumnSpan="2">
-            <Image Source="Resource/uv.png" Height="150px" />
-            <Label Content="Facultad de Estadistica E Informatica" Margin="100,100,-100,0" FontSize="14" FontFamily="Microsoft JhengHei" Width="260"/>
-        </StackPanel>
-        <TextBox x:Name="txt_usuario" HorizontalAlignment="Left" Height="22" Margin="154,98,0,0" TextWrapping="Wrap" Text="USUARIO" VerticalAlignment="Top" Width="273" FontSize="16" FontFamily="Microsoft JhengHei" FontWeight="Bold" Foreground="#FFA4A4A4" Background="{x:Null}" TextChanged="txt_usuario_TextChanged" Grid.Column="1" GotFocus="txt_usuario_GotFocus" />
-        <TextBox x:Name="txt_contrasena" HorizontalAlignment="Left" Height="22" Margin="154,183,0,0" TextWrapping="Wrap" Text="CONTRASEÑA" VerticalAlignment="Top" Width="273" FontSize="16" FontFamily="Microsoft JhengHei" FontWeight="Bold" Foreground="#FFA4A4A4" Background="{x:Null}" TextChanged="txt_contrasena_TextChanged" Grid.Column="1" GotFocus="txt_contrasena_GotFocus"/>
-        <Button x:Name="btn_ingresar"  Content="INGRESAR" HorizontalAlignment="Left" Margin="222,262,0,0" VerticalAlignment="Top" Width="131" FontFamily="Microsoft JhengHei" FontSize="16" FontWeight="Bold" Foreground="Black" Grid.Column="1" Click="btn_ingresar_Click">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="#FF446DD3" Offset="1"/>
+                <GradientStop Color="Black" Offset="0.219"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+
+        <Image Source="/Resource/uv.png" Height="150px" Margin="76,50,512,126" />
+        <Label Content="Facultad de Estadistica E Informatica" FontSize="18" FontFamily="Microsoft JhengHei" Margin="10,205,416,83" FontWeight="Bold" Background="{x:Null}" Foreground="#FFB6B6B6"/>
+
+        <Label x:Name="lb_usuario" Content="USUARIO:" HorizontalAlignment="Left" Margin="311,79,0,0" VerticalAlignment="Top" Width="126" FontSize="16" FontFamily="Microsoft JhengHei" Foreground="#FFA4A4A4"/>
+        <TextBox x:Name="txt_usuario" HorizontalAlignment="Left" Height="22" Margin="409,110,0,0" TextWrapping="Wrap" Text="USUARIO" VerticalAlignment="Top" Width="273" FontSize="16" FontFamily="Microsoft JhengHei" FontWeight="Bold" Foreground="#FFA4A4A4" Background="{x:Null}" TextChanged="txt_usuario_TextChanged" GotFocus="txt_usuario_GotFocus" />
+        <Label x:Name="lb_contrasena" Content="CONTRASEÑA:" HorizontalAlignment="Left" Margin="311,146,0,0" VerticalAlignment="Top" Width="126" FontSize="16" FontFamily="Microsoft JhengHei" Foreground="#FFA4A4A4"/>
+        <PasswordBox x:Name="txt_contrasena" HorizontalAlignment="Left" Margin="409,177,0,0" VerticalAlignment="Top" Width="273" FontSize="16" FontWeight="Bold" Foreground="#FFA4A4A4" Background="{x:Null}" />
+        <Button x:Name="btn_ingresar"  Content="INGRESAR" HorizontalAlignment="Left" Margin="462,250,0,0" VerticalAlignment="Top" Width="131" FontFamily="Microsoft JhengHei" FontSize="16" FontWeight="Bold" Foreground="Black" Click="btn_ingresar_Click">
             <Button.OpacityMask>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.8">
                     <GradientStop Color="Black" Offset="0"/>
@@ -31,7 +36,8 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Label Content="INICIAR SESION" HorizontalAlignment="Left" Margin="222,19,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Microsoft JhengHei" FontWeight="Bold" Background="{x:Null}" Foreground="#FFA4A4A4" Grid.Column="1"/>
+        <Label Content="INICIAR SESION" HorizontalAlignment="Left" Margin="444,15,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Microsoft JhengHei" FontWeight="Bold" Background="{x:Null}" Foreground="#FFA4A4A4"/>
+
 
     </Grid>
 </Window>

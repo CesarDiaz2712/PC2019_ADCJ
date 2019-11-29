@@ -55,8 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="VentanasEgresado\MenuEgresado.xaml.cs">
-      <DependentUpon>MenuEgresado.xaml</DependentUpon>
+    <Compile Include="model\dao\UsuarioDAO.cs" />
+    <Compile Include="View\FichaPreEgreso.xaml.cs">
+      <DependentUpon>FichaPreEgreso.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MenúInicioEgresado.xaml.cs">
+      <DependentUpon>MenúInicioEgresado.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -70,7 +74,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="VentanasEgresado\MenuEgresado.xaml">
+    <Page Include="View\FichaPreEgreso.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MenúInicioEgresado.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -105,13 +113,24 @@
     <Resource Include="Resource\uv.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resource\uv2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="VentanasAdministrativo\" />
+    <Folder Include="model\clases\" />
+    <Folder Include="model\db\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resource\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\consultar.png" />
+    <Resource Include="Resource\cuestionario.png" />
+    <Resource Include="Resource\satisfaccion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\slider\imagen1.jpg" />
+    <Resource Include="Resource\slider\imagen2.jpg" />
+    <Resource Include="Resource\slider\imagen3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\ficha.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
