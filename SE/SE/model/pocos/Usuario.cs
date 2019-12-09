@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SE.model.pocos
 {
-    class Usuario
+    public class Usuario
     {
         private Int32 idUsuario;
         private String nombreUsuario;

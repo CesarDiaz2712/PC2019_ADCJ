@@ -55,29 +55,30 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="model\dao\FichaPreEgresoDAO.cs" />
     <Compile Include="model\dao\UsuarioDAO.cs" />
     <Compile Include="model\db\ConnectionUtils.cs" />
     <Compile Include="model\pocos\Egresado.cs" />
+    <Compile Include="model\pocos\FichaPreEgreso.cs" />
     <Compile Include="model\pocos\Usuario.cs" />
     <Compile Include="View\FichaPreEgreso.xaml.cs">
       <DependentUpon>FichaPreEgreso.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\IniciarSesion.xaml.cs">
+      <DependentUpon>IniciarSesion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MenúInicioEgresado.xaml.cs">
       <DependentUpon>MenúInicioEgresado.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
     <Page Include="View\FichaPreEgreso.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\IniciarSesion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

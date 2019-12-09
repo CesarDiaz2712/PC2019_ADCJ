@@ -9,7 +9,7 @@ using SE.model.pocos;
 
 namespace SE.model.dao
 {
-    class UsuarioDAO
+    public class UsuarioDAO
     {
         public static Usuario getLogin(String usuario, String contrasena)
         {
@@ -26,8 +26,8 @@ namespace SE.model.dao
                         "x.idUsuario," +
                         "x.nombreUsuario," +
                         "x.contraseña" + 
-                        "FROM dbo.seguimientoegresados x" +
-                        "WHERE x.nombreUsuario = '{1}' AND x.contraseña = '{2}';", usuario, contrasena);
+                        "FROM dbo.usuario x" +
+                        "WHERE x.nombreUsuario = '{0}' AND x.contraseña = '{1}';", usuario, contrasena);
                     Console.WriteLine(query);
                     command = new SqlCommand(query, conn);
                     rd = command.ExecuteReader();
