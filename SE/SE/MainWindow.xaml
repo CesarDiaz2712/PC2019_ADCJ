@@ -19,7 +19,7 @@
         <Label Content="Facultad de Estadistica E Informatica" FontSize="18" FontFamily="Microsoft JhengHei" Margin="10,205,416,83" FontWeight="Bold" Background="{x:Null}" Foreground="#FFB6B6B6"/>
 
         <Label x:Name="lb_usuario" Content="USUARIO:" HorizontalAlignment="Left" Margin="311,79,0,0" VerticalAlignment="Top" Width="126" FontSize="16" FontFamily="Microsoft JhengHei" Foreground="#FFA4A4A4"/>
-        <TextBox x:Name="txt_usuario" HorizontalAlignment="Left" Height="22" Margin="409,110,0,0" TextWrapping="Wrap" Text="USUARIO" VerticalAlignment="Top" Width="273" FontSize="16" FontFamily="Microsoft JhengHei" FontWeight="Bold" Foreground="#FFA4A4A4" Background="{x:Null}" TextChanged="txt_usuario_TextChanged" GotFocus="txt_usuario_GotFocus" />
+        <TextBox x:Name="txt_usuario" HorizontalAlignment="Left" Height="22" Margin="409,110,0,0" TextWrapping="Wrap" Text="USUARIO" VerticalAlignment="Top" Width="273" FontSize="16" FontFamily="Microsoft JhengHei" FontWeight="Bold" Foreground="#FFA4A4A4" Background="{x:Null}" GotFocus="txt_usuario_GotFocus" />
         <Label x:Name="lb_contrasena" Content="CONTRASEÑA:" HorizontalAlignment="Left" Margin="311,146,0,0" VerticalAlignment="Top" Width="126" FontSize="16" FontFamily="Microsoft JhengHei" Foreground="#FFA4A4A4"/>
         <PasswordBox x:Name="txt_contrasena" HorizontalAlignment="Left" Margin="409,177,0,0" VerticalAlignment="Top" Width="273" FontSize="16" FontWeight="Bold" Foreground="#FFA4A4A4" Background="{x:Null}" />
         <Button x:Name="btn_ingresar"  Content="INGRESAR" HorizontalAlignment="Left" Margin="462,250,0,0" VerticalAlignment="Top" Width="131" FontFamily="Microsoft JhengHei" FontSize="16" FontWeight="Bold" Foreground="Black" Click="btn_ingresar_Click">

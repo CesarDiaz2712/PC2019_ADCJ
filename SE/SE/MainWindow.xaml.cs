@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using SE.model.dao;
+using SE.model.pocos;
 using SE.View;
 
 namespace SE
@@ -21,19 +23,11 @@ namespace SE
     /// </summary>
     public partial class MainWindow : Window
     {
+        String usuario;
+        String contrasena;
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void txt_contrasena_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void txt_usuario_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
 
         private void txt_usuario_GotFocus(object sender, RoutedEventArgs e)
@@ -56,8 +50,46 @@ namespace SE
 
         private void btn_ingresar_Click(object sender, RoutedEventArgs e)
         {
-            MenúInicioEgresado menu = new MenúInicioEgresado();
-            menu.Show();
+            if (validarCampos())
+            {
+                usuario = txt_usuario.Text;
+                contrasena = txt_contrasena.Password;
+                Usuario u = UsuarioDAO.getLogin(usuario, contrasena);
+                if (u != null || u.IdUsuario > 0)
+                {
+                    MessageBox.Show(this, "Bienvenido" + u.NombreUsuario);
+                    MenúInicioEgresado menu = new MenúInicioEgresado();
+                    menu.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(this, "Sin acceso", "Error");
+                    txt_usuario.Text = "";
+                    txt_contrasena.Password = "";
+                    txt_usuario.Focus();
+                    Console.WriteLine("this is a test");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Usuario y/o Contraseña vacios");
+            }
         }
+
+        public bool validarCampos()
+        {
+            if (txt_usuario.Text == null || txt_usuario.Text.Length == 0)
+            {
+                return false;
+            }
+            if (txt_contrasena.Password == null || txt_contrasena.Password.Length == 0)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
     }
 }
