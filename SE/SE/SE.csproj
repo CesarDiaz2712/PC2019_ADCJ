@@ -79,6 +79,9 @@
     <Compile Include="model\pocos\Egresado.cs" />
     <Compile Include="model\pocos\FichaPreEgreso.cs" />
     <Compile Include="model\pocos\Usuario.cs" />
+    <Compile Include="View\CuestionarioSatisfaccion.xaml.cs">
+      <DependentUpon>CuestionarioSatisfaccion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\FichaPreEgreso.xaml.cs">
       <DependentUpon>FichaPreEgreso.xaml</DependentUpon>
     </Compile>
@@ -92,6 +95,10 @@
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\CuestionarioSatisfaccion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\FichaPreEgreso.xaml">
       <SubType>Designer</SubType>
