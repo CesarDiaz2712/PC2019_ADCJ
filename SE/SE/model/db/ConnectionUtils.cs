@@ -30,9 +30,9 @@ namespace SE.model.db
                 conn.Open();
                 return conn;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("ERROR BASE DE DATOS");
             }
             return conn;
         }
