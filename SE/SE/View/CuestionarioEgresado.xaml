@@ -162,58 +162,50 @@
                     <CheckBox Content="Aceptable" HorizontalAlignment="Left" Margin="367,277,0,0" VerticalAlignment="Top"/>
                     <CheckBox Content="Regular" HorizontalAlignment="Left" Margin="488,277,0,0" VerticalAlignment="Top"/>
                     <CheckBox Content="Deficiente" HorizontalAlignment="Left" Margin="621,277,0,0" VerticalAlignment="Top"/>
-                    <Label Content="En relación con las experiencias educativas del Área de formación básica general, señale en qué medida facilitaron el aprendizaje&#xD;&#xA;de las demás experiencias educativas:" HorizontalAlignment="Left" Margin="25,329,0,0" VerticalAlignment="Top" Width="693"/>
-                    <Label Content="Inglés I:" HorizontalAlignment="Left" Margin="25,376,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Computación básica:" HorizontalAlignment="Left" Margin="25,438,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Habilidades de pensamiento&#xD;&#xA;crítico y creativo:" HorizontalAlignment="Left" Margin="25,516,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Lectura y redacción a través del &#xD;&#xA;análisis del mundo contemporáneo:" HorizontalAlignment="Left" Margin="25,469,0,0" VerticalAlignment="Top" Width="210"/>
-                    <Label Content="Inglés II:" HorizontalAlignment="Left" Margin="25,407,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Mucho" HorizontalAlignment="Left" Margin="240,382,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_6"/>
-                    <CheckBox Content="Mucho" HorizontalAlignment="Left" Margin="240,413,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Mucho" HorizontalAlignment="Left" Margin="240,444,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Mucho" HorizontalAlignment="Left" Margin="240,475,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Mucho" HorizontalAlignment="Left" Margin="240,522,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Regular" HorizontalAlignment="Left" Margin="369,382,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Regular" HorizontalAlignment="Left" Margin="369,413,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Regular" HorizontalAlignment="Left" Margin="369,444,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Regular" HorizontalAlignment="Left" Margin="369,475,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Regular" HorizontalAlignment="Left" Margin="369,522,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Poco" HorizontalAlignment="Left" Margin="488,382,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Poco" HorizontalAlignment="Left" Margin="488,413,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Poco" HorizontalAlignment="Left" Margin="488,444,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Poco" HorizontalAlignment="Left" Margin="488,475,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Poco" HorizontalAlignment="Left" Margin="488,522,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Nada" HorizontalAlignment="Left" Margin="623,382,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Nada" HorizontalAlignment="Left" Margin="623,413,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Nada" HorizontalAlignment="Left" Margin="623,444,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Nada" HorizontalAlignment="Left" Margin="623,475,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Nada" HorizontalAlignment="Left" Margin="623,522,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Mucho" HorizontalAlignment="Left" Margin="238,605,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_6"/>
-                    <CheckBox Content="Mucho" HorizontalAlignment="Left" Margin="238,636,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Mucho" HorizontalAlignment="Left" Margin="238,667,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Mucho" HorizontalAlignment="Left" Margin="238,698,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Mucho" HorizontalAlignment="Left" Margin="238,745,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Regular" HorizontalAlignment="Left" Margin="367,605,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Regular" HorizontalAlignment="Left" Margin="367,636,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Regular" HorizontalAlignment="Left" Margin="367,667,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Regular" HorizontalAlignment="Left" Margin="367,698,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Regular" HorizontalAlignment="Left" Margin="367,745,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Poco" HorizontalAlignment="Left" Margin="486,605,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Poco" HorizontalAlignment="Left" Margin="486,636,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Poco" HorizontalAlignment="Left" Margin="486,667,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Poco" HorizontalAlignment="Left" Margin="486,698,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Poco" HorizontalAlignment="Left" Margin="486,745,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Nada" HorizontalAlignment="Left" Margin="621,605,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Nada" HorizontalAlignment="Left" Margin="621,636,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Nada" HorizontalAlignment="Left" Margin="621,667,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Nada" HorizontalAlignment="Left" Margin="621,698,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Nada" HorizontalAlignment="Left" Margin="621,745,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Iniciación a la Disciplina" HorizontalAlignment="Left" Margin="25,574,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Algebra Lineal:" HorizontalAlignment="Left" Margin="25,599,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Probabilidad y Estadística:" HorizontalAlignment="Left" Margin="25,630,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Matemáticas Discretas:" HorizontalAlignment="Left" Margin="25,661,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Programación:" HorizontalAlignment="Left" Margin="25,692,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Introducción a la Programación:" HorizontalAlignment="Left" Margin="25,739,0,0" VerticalAlignment="Top"/>
+                    <Label Content="En relación con las experiencias educativas del Área de formación básica general, señale qué Experiencias Educativas &#xD;&#xA;han tenido utilidad para su desempeño como profesionista: " HorizontalAlignment="Left" Margin="25,329,0,0" VerticalAlignment="Top" Width="693"/>
+                    <CheckBox Content="Inglés I" HorizontalAlignment="Left" Margin="36,382,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_6"/>
+                    <CheckBox Content="Inglés II" HorizontalAlignment="Left" Margin="111,382,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Habilidades de pensamiento&#xD;&#xA;crítico y creativo&#xD;&#xA;" HorizontalAlignment="Left" Margin="534,381,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_7"/>
+                    <CheckBox Content="Computación Básica" HorizontalAlignment="Left" Margin="178,382,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Lectura y redacción a través del &#xD;&#xA;análisis del mundo contemporáneo&#xD;&#xA;" HorizontalAlignment="Left" Margin="325,382,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Algebra Lineal&#xD;&#xA;" HorizontalAlignment="Left" Margin="36,442,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_6"/>
+                    <CheckBox Content="Introducción a la Programación &#xD;&#xA;" HorizontalAlignment="Left" Margin="155,442,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Probabilidad y Estadística" HorizontalAlignment="Left" Margin="367,442,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_8"/>
+                    <CheckBox Content="Matemáticas Discretas" HorizontalAlignment="Left" Margin="534,445,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Programación" HorizontalAlignment="Left" Margin="36,473,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Iniciación a la Disciplina:" HorizontalAlignment="Left" Margin="25,411,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Formación Disciplinar:" HorizontalAlignment="Left" Margin="25,493,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Metodología de la Investigación&#xD;" HorizontalAlignment="Left" Margin="153,522,0,0" VerticalAlignment="Top" Height="19"/>
+                    <CheckBox Content="Lógica" HorizontalAlignment="Left" Margin="40,522,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Calculo" HorizontalAlignment="Left" Margin="40,542,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_9"/>
+                    <CheckBox Content="Ingeniería de Software I" HorizontalAlignment="Left" Margin="153,541,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Redes I" HorizontalAlignment="Left" Margin="40,562,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Redes II" HorizontalAlignment="Left" Margin="40,583,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Ingeniería de Software II&#xD;" HorizontalAlignment="Left" Margin="153,562,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_10"/>
+                    <CheckBox Content="Sistemas Operativos" HorizontalAlignment="Left" Margin="153,583,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Base de Datos &#xD;" HorizontalAlignment="Left" Margin="39,603,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Taller de Integración I" HorizontalAlignment="Left" Margin="153,603,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Arquitectura de Computadoras" HorizontalAlignment="Left" Margin="369,522,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Algoritmos y Estructuras de Datos" HorizontalAlignment="Left" Margin="369,541,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Organización de Archivos" HorizontalAlignment="Left" Margin="369,562,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Inteligencia Artificial" HorizontalAlignment="Left" Margin="369,583,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Programación Avanzada" HorizontalAlignment="Left" Margin="592,603,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Programación de Sistemas" HorizontalAlignment="Left" Margin="592,522,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Ética y Legislación Informática" HorizontalAlignment="Left" Margin="592,542,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_11"/>
+                    <CheckBox Content="Compiladores" HorizontalAlignment="Left" Margin="592,562,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Administración de Proyectos" HorizontalAlignment="Left" Margin="592,581,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Admon. de Recursos Informáticos&#xD;" HorizontalAlignment="Left" Margin="369,606,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Área Terminal:" HorizontalAlignment="Left" Margin="25,634,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Servicio Social" HorizontalAlignment="Left" Margin="40,665,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Experiencia &#xD;&#xA;Recepcional" HorizontalAlignment="Left" Margin="40,685,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Desarrollo de Aplicaciones en Red" HorizontalAlignment="Left" Margin="369,685,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Graficación" HorizontalAlignment="Left" Margin="39,721,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Sistemas de Información&#xD;&#xA;Empresarial" HorizontalAlignment="Left" Margin="367,709,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Administración y Seguridad de&#xD;&#xA;Servicios de Red" HorizontalAlignment="Left" Margin="153,665,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Tópicos Selectos de Computación" HorizontalAlignment="Left" Margin="153,696,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Auditoria Informática" HorizontalAlignment="Left" Margin="153,721,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Sistemas de Información Geográfica" HorizontalAlignment="Left" Margin="369,665,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Multimedia" HorizontalAlignment="Left" Margin="592,665,0,0" VerticalAlignment="Top"/>
 
                 </Grid>
             </TabItem>
