@@ -5,121 +5,132 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SE.View"
         mc:Ignorable="d"
-        Title="CuestionarioSatisfaccion" Height="1074" Width="800">
+        Title="CuestionarioSatisfaccion" Height="1345.5" Width="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="538*"/>
-            <ColumnDefinition Width="156*"/>
-            <ColumnDefinition Width="99*"/>
-        </Grid.ColumnDefinitions>
-
-
         <Label Content="SISTEMAS DE EGRESADOS" HorizontalAlignment="Left" Margin="32,20,0,0" VerticalAlignment="Top" Width="328" FontSize="24" FontWeight="Bold" Height="40" FontFamily="Microsoft JhengHei"/>
-        <TabControl HorizontalAlignment="Left" Height="978" Margin="0,65,0,0" VerticalAlignment="Top" Width="792" SelectionChanged="TabControl_SelectionChanged" Background="{x:Null}" Grid.ColumnSpan="3">
+        <TabControl HorizontalAlignment="Left" Height="1250" Margin="0,65,0,0" VerticalAlignment="Top" Width="792" SelectionChanged="TabControl_SelectionChanged" Background="{x:Null}">
             <TabItem Header="Información Personal" Background="{x:Null}" Margin="-2,-3,-137,1">
                 <Grid >
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="94*"/>
-                        <ColumnDefinition Width="299*"/>
-                    </Grid.ColumnDefinitions>
                     <Label Content="Matricula:" HorizontalAlignment="Left" Margin="10,32,0,0" VerticalAlignment="Top" Width="100" FontFamily="Microsoft YaHei"/>
-                    <TextBox HorizontalAlignment="Left" Height="22" Margin="72,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" Grid.ColumnSpan="2"/>
-                    <Label Content="Nombre(s):" HorizontalAlignment="Left" Margin="236,32,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei" Grid.Column="1"/>
-                    <Label Content="Apellidos:" HorizontalAlignment="Left" Margin="18,32,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei" Grid.Column="1"/>
-                    <TextBox HorizontalAlignment="Left" Height="22" Margin="310,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Grid.Column="1"/>
-                    <TextBox HorizontalAlignment="Left" Height="22" Margin="84,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Grid.Column="1"/>
+                    <TextBox HorizontalAlignment="Left" Height="22" Margin="91,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
+                    <Label Content="Nombre(s):" HorizontalAlignment="Left" Margin="476,32,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
+                    <Label Content="Apellidos:" HorizontalAlignment="Left" Margin="240,32,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
+                    <TextBox HorizontalAlignment="Left" Height="22" Margin="555,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152"/>
+                    <TextBox HorizontalAlignment="Left" Height="22" Margin="306,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152"/>
                     <Label Content="Domicilio Actual:" HorizontalAlignment="Left" Margin="10,91,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei" FontSize="14"/>
-                    <Label Content="Calle:" HorizontalAlignment="Left" Margin="10,128,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
-                    <TextBox HorizontalAlignment="Left" Height="22" Margin="51,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Grid.ColumnSpan="2"/>
-                    <Label Content="Estado:" HorizontalAlignment="Left" Margin="10,160,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
-                    <TextBox HorizontalAlignment="Left" Height="22" Margin="60,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Grid.ColumnSpan="2"/>
-                    <Label Content="No.:" HorizontalAlignment="Left" Margin="53,132,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei" Grid.Column="1"/>
-                    <TextBox HorizontalAlignment="Left" Height="22" Margin="84,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" Grid.Column="1"/>
-                    <Label Content="Colonia:" HorizontalAlignment="Left" Margin="158,133,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei" Grid.Column="1"/>
-                    <TextBox HorizontalAlignment="Left" Height="22" Margin="216,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" Grid.Column="1"/>
-                    <Label Content="Ciudad:" HorizontalAlignment="Left" Margin="380,132,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei" Grid.Column="1"/>
-                    <TextBox HorizontalAlignment="Left" Height="22" Margin="438,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Grid.Column="1"/>
-                    <Label Content="C.P." HorizontalAlignment="Left" Margin="62,159,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei" Grid.Column="1"/>
-                    <TextBox HorizontalAlignment="Left" Height="22" Margin="91,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" Grid.Column="1"/>
-                    <Label Content="Teléfono:" HorizontalAlignment="Left" Margin="169,155,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei" Grid.Column="1"/>
-                    <TextBox HorizontalAlignment="Left" Height="22" Margin="232,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" Grid.Column="1"/>
-                    <Label Content="Email:" HorizontalAlignment="Left" Margin="306,159,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei" Grid.Column="1"/>
-                    <TextBox HorizontalAlignment="Left" Height="22" Margin="350,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" Grid.Column="1"/>
-                    <Button Content="Finalizar" HorizontalAlignment="Left" Margin="476,252,0,0" VerticalAlignment="Top" Width="74" Grid.Column="1"/>
+                    <Label Content="Calle:" HorizontalAlignment="Left" Margin="5,124,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
+                    <TextBox HorizontalAlignment="Left" Height="22" Margin="51,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190"/>
+                    <Label Content="Estado:" HorizontalAlignment="Left" Margin="5,152,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei" RenderTransformOrigin="0.431,0.615"/>
+                    <TextBox HorizontalAlignment="Left" Height="22" Margin="51,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190"/>
+                    <Label Content="No.:" HorizontalAlignment="Left" Margin="246,120,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
+                    <TextBox HorizontalAlignment="Left" Height="22" Margin="279,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74"/>
+                    <Label Content="Colonia:" HorizontalAlignment="Left" Margin="353,120,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
+                    <TextBox HorizontalAlignment="Left" Height="22" Margin="410,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164"/>
+                    <Label Content="Ciudad:" HorizontalAlignment="Left" Margin="579,120,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei" RenderTransformOrigin="0.906,0.5"/>
+                    <TextBox HorizontalAlignment="Left" Height="22" Margin="632,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
+                    <Label Content="C.P." HorizontalAlignment="Left" Margin="246,152,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
+                    <TextBox HorizontalAlignment="Left" Height="22" Margin="284,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74"/>
+                    <Label Content="Teléfono:" HorizontalAlignment="Left" Margin="358,152,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
+                    <TextBox HorizontalAlignment="Left" Height="22" Margin="421,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74"/>
+                    <Label Content="Email:" HorizontalAlignment="Left" Margin="495,152,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei" RenderTransformOrigin="3.295,0.462"/>
+                    <TextBox HorizontalAlignment="Left" Height="22" Margin="544,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232"/>
+                    <Button Content="Finalizar" HorizontalAlignment="Left" Margin="690,207,0,0" VerticalAlignment="Top" Width="74"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Información Laboral" Background="{x:Null}" Margin="136,-3,-270,1">
 
                 <Grid>
-                    <Label Content="¿Qué conocimientos (saberes teóricos) no incluidos en el programa de estudios ha considerado o considera necesarios para &#xD;&#xA;su desempeño laboral actual?" HorizontalAlignment="Left" Margin="32,10,0,0" VerticalAlignment="Top" Width="689"/>
-                    <TextBox HorizontalAlignment="Left" Height="27" Margin="32,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689"/>
-                    <Label Content="¿Qué habilidades (saberes heurísticos) no contemplados en el programa de estudios ha considerado o considera necesarios &#xD;&#xA;para su desempeño laboral actual?" HorizontalAlignment="Left" Margin="32,98,0,0" VerticalAlignment="Top" Width="689"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="32,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689" TextChanged="TextBox_TextChanged"/>
-                    <Label Content="¿Cuáles experiencias educativas cursadas son aplicadas en su desempeño laboral actual? " HorizontalAlignment="Left" Margin="32,179,0,0" VerticalAlignment="Top" Width="689"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="32,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689"/>
-                    <Label Content="Indique los conocimientos (saberes teóricos) que considere haber adquirido o desarrollado durante su formación profesional:" HorizontalAlignment="Left" Margin="32,250,0,0" VerticalAlignment="Top" Width="689"/>
-                    <CheckBox Content=" Programación estructurada" HorizontalAlignment="Left" Margin="47,304,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Algorítmia" HorizontalAlignment="Left" Margin="47,284,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content=" Ingeniería de Software " HorizontalAlignment="Left" Margin="230,324,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Programación Concurrente" HorizontalAlignment="Left" Margin="47,324,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Redes " HorizontalAlignment="Left" Margin="230,284,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked" RenderTransformOrigin="0.218,0.467"/>
-                    <CheckBox Content="Estructuras de datos " HorizontalAlignment="Left" Margin="230,304,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Procesos de desarrollo de software" HorizontalAlignment="Left" Margin="395,284,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Programación Orientada a Objetos" HorizontalAlignment="Left" Margin="396,304,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Bases de Datos" HorizontalAlignment="Left" Margin="230,344,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_1"/>
-                    <CheckBox Content="Sistemas inteligentes" HorizontalAlignment="Left" Margin="47,344,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Indique las habilidades/destrezas (saberes heurísticos) que considere haber adquirido o desarrollado durante su formación &#xD;&#xA;profesional:" HorizontalAlignment="Left" Margin="32,373,0,0" VerticalAlignment="Top" Width="689"/>
-                    <CheckBox Content="Planteamiento y solución a&#xD;&#xA;problemas algorítmicos" HorizontalAlignment="Left" Margin="47,420,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Diseño e implantación de&#xD;&#xA;programas" HorizontalAlignment="Left" Margin="47,457,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Aplicación de una metodología para la obtención de&#xD;&#xA;modelos de análisis y diseño de un sistema de software" HorizontalAlignment="Left" Margin="417,457,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_2"/>
-                    <CheckBox Content="Diseño e implantación de rede" HorizontalAlignment="Left" Margin="230,420,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Diseño e implantación de&#xD;&#xA;sistemas inteligentes" HorizontalAlignment="Left" Margin="230,445,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Diseño e implantación de bases de datos &#xD;" HorizontalAlignment="Left" Margin="45,493,0,0" VerticalAlignment="Top" Height="19"/>
-                    <CheckBox Content="Uso de un lenguaje de programación y su entorno de&#xD;&#xA;desarrollo para codificar y probar algoritmos" HorizontalAlignment="Left" Margin="417,420,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Indique las actitudes/valores (saberes axiológicos) que considere haber adquirido, desarrollado o fortalecido durante su &#xD;&#xA;formación profesional:" HorizontalAlignment="Left" Margin="32,512,0,0" VerticalAlignment="Top" Width="688"/>
-                    <CheckBox Content="Creatividad" HorizontalAlignment="Left" Margin="45,559,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Responsabilidad" HorizontalAlignment="Left" Margin="45,579,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_3"/>
-                    <CheckBox Content="Paciencia" HorizontalAlignment="Left" Margin="45,599,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Trabajo en equipo" HorizontalAlignment="Left" Margin="45,619,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Imaginación" HorizontalAlignment="Left" Margin="580,559,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content=" Colaboración" HorizontalAlignment="Left" Margin="180,559,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content=" Originalidad" HorizontalAlignment="Left" Margin="180,579,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Honestidad" HorizontalAlignment="Left" Margin="180,599,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content=" Respeto" HorizontalAlignment="Left" Margin="180,619,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Tolerancia" HorizontalAlignment="Left" Margin="580,579,0,0" VerticalAlignment="Top"/>
-                    <Grid>
-                        <TextBox HorizontalAlignment="Left" Height="27" Margin="32,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689"/>
-                        <TextBox HorizontalAlignment="Left" Height="23" Margin="32,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689" TextChanged="TextBox_TextChanged"/>
-                        <TextBox HorizontalAlignment="Left" Height="23" Margin="32,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689"/>
-                        <CheckBox Content="Auto aprendizaje" HorizontalAlignment="Left" Margin="444,579,0,0" VerticalAlignment="Top"/>
-                        <CheckBox Content="Discreción" HorizontalAlignment="Left" Margin="314,559,0,0" VerticalAlignment="Top"/>
-                        <CheckBox Content="Coherencia" HorizontalAlignment="Left" Margin="444,599,0,0" VerticalAlignment="Top"/>
-                        <CheckBox Content="Curiosidad" HorizontalAlignment="Left" Margin="444,619,0,0" VerticalAlignment="Top"/>
-                        <CheckBox Content="Cooperación" HorizontalAlignment="Left" Margin="314,599,0,0" VerticalAlignment="Top"/>
-                        <CheckBox Content="Interés" HorizontalAlignment="Left" Margin="444,559,0,0" VerticalAlignment="Top"/>
-                        <CheckBox Content="Meticulosidad " HorizontalAlignment="Left" Margin="314,579,0,0" VerticalAlignment="Top"/>
-                        <CheckBox Content="Iniciativa" HorizontalAlignment="Left" Margin="314,619,0,0" VerticalAlignment="Top"/>
-                        <CheckBox Content="Constancia" HorizontalAlignment="Left" Margin="580,599,0,0" VerticalAlignment="Top"/>
-                        <Label Content="De las opciones que se le ofrece a continuación señale cuál es el tipo de funciones y/o actividades que realiza en su trabajo: " HorizontalAlignment="Left" Margin="32,649,0,0" VerticalAlignment="Top" Width="689"/>
-                        <CheckBox Content="Organización" HorizontalAlignment="Left" Margin="45,677,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_4"/>
-                        <CheckBox Content="Operación" HorizontalAlignment="Left" Margin="181,697,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.141,2.2"/>
-                        <CheckBox Content=" Control" HorizontalAlignment="Left" Margin="314,697,0,0" VerticalAlignment="Top"/>
-                        <CheckBox Content="Dirección" HorizontalAlignment="Left" Margin="314,677,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.423,0.6"/>
-                        <CheckBox Content="Planeación" HorizontalAlignment="Left" Margin="45,697,0,0" VerticalAlignment="Top"/>
-                        <CheckBox Content="Diagnóstico" HorizontalAlignment="Left" Margin="181,677,0,0" VerticalAlignment="Top"/>
-                        <Label Content="Describa en forma breve las funciones que desempeña con mayor frecuencia: " HorizontalAlignment="Left" Margin="32,726,0,0" VerticalAlignment="Top" Width="689"/>
-                        <TextBox HorizontalAlignment="Left" Height="21" Margin="32,757,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689"/>
-                        <Label Content="¿Qué problemática(s) social(es) ha contribuido a solucionar con su desempeño profesional?" HorizontalAlignment="Left" Margin="32,783,0,0" VerticalAlignment="Top" Width="689"/>
-                    </Grid>
+                    <Label Content="¿Qué conocimientos (saberes teóricos) no incluidos en el programa de estudios ha considerado o considera necesarios para &#xD;&#xA;su desempeño laboral actual?" HorizontalAlignment="Left" Margin="33,257,0,0" VerticalAlignment="Top" Width="689"/>
+                    <TextBox HorizontalAlignment="Left" Height="27" Margin="33,299,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689"/>
+                    <Label Content="¿Qué habilidades (saberes heurísticos) no contemplados en el programa de estudios ha considerado o considera necesarios &#xD;&#xA;para su desempeño laboral actual?" HorizontalAlignment="Left" Margin="34,340,0,0" VerticalAlignment="Top" Width="689"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="34,382,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689" TextChanged="TextBox_TextChanged"/>
+                    <Label Content="¿Cuáles experiencias educativas cursadas son aplicadas en su desempeño laboral actual? " HorizontalAlignment="Left" Margin="34,425,0,0" VerticalAlignment="Top" Width="689"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="34,456,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689"/>
+                    <Label Content="Indique los conocimientos (saberes teóricos) que considere haber adquirido o desarrollado durante su formación profesional:" HorizontalAlignment="Left" Margin="33,498,0,0" VerticalAlignment="Top" Width="689"/>
+                    <CheckBox Content=" Programación estructurada" HorizontalAlignment="Left" Margin="48,552,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Algorítmia" HorizontalAlignment="Left" Margin="48,532,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content=" Ingeniería de Software " HorizontalAlignment="Left" Margin="231,572,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Programación Concurrente" HorizontalAlignment="Left" Margin="48,572,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Redes " HorizontalAlignment="Left" Margin="231,532,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked" RenderTransformOrigin="0.218,0.467"/>
+                    <CheckBox Content="Estructuras de datos " HorizontalAlignment="Left" Margin="231,552,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Procesos de desarrollo de software" HorizontalAlignment="Left" Margin="396,532,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Programación Orientada a Objetos" HorizontalAlignment="Left" Margin="397,552,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Bases de Datos" HorizontalAlignment="Left" Margin="231,592,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_1"/>
+                    <CheckBox Content="Sistemas inteligentes" HorizontalAlignment="Left" Margin="48,592,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Indique las habilidades/destrezas (saberes heurísticos) que considere haber adquirido o desarrollado durante su formación &#xD;&#xA;profesional:" HorizontalAlignment="Left" Margin="32,625,0,0" VerticalAlignment="Top" Width="689"/>
+                    <CheckBox Content="Planteamiento y solución a&#xD;&#xA;problemas algorítmicos" HorizontalAlignment="Left" Margin="50,672,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Diseño e implantación de&#xD;&#xA;programas" HorizontalAlignment="Left" Margin="50,709,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Aplicación de una metodología para la obtención de&#xD;&#xA;modelos de análisis y diseño de un sistema de software" HorizontalAlignment="Left" Margin="420,709,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_2"/>
+                    <CheckBox Content="Diseño e implantación de rede" HorizontalAlignment="Left" Margin="233,672,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Diseño e implantación de&#xD;&#xA;sistemas inteligentes" HorizontalAlignment="Left" Margin="233,697,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Diseño e implantación de bases de datos &#xD;" HorizontalAlignment="Left" Margin="48,745,0,0" VerticalAlignment="Top" Height="19"/>
+                    <CheckBox Content="Uso de un lenguaje de programación y su entorno de&#xD;&#xA;desarrollo para codificar y probar algoritmos" HorizontalAlignment="Left" Margin="420,672,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Indique las actitudes/valores (saberes axiológicos) que considere haber adquirido, desarrollado o fortalecido durante su &#xD;&#xA;formación profesional:" HorizontalAlignment="Left" Margin="30,789,0,0" VerticalAlignment="Top" Width="688"/>
+                    <CheckBox Content="Creatividad" HorizontalAlignment="Left" Margin="43,836,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Responsabilidad" HorizontalAlignment="Left" Margin="43,856,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_3"/>
+                    <CheckBox Content="Paciencia" HorizontalAlignment="Left" Margin="43,876,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Trabajo en equipo" HorizontalAlignment="Left" Margin="43,896,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Imaginación" HorizontalAlignment="Left" Margin="578,836,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content=" Colaboración" HorizontalAlignment="Left" Margin="178,836,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content=" Originalidad" HorizontalAlignment="Left" Margin="178,856,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Honestidad" HorizontalAlignment="Left" Margin="178,876,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content=" Respeto" HorizontalAlignment="Left" Margin="178,896,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Tolerancia" HorizontalAlignment="Left" Margin="578,856,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Auto aprendizaje" HorizontalAlignment="Left" Margin="442,856,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Discreción" HorizontalAlignment="Left" Margin="312,836,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Coherencia" HorizontalAlignment="Left" Margin="442,876,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Curiosidad" HorizontalAlignment="Left" Margin="442,896,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Cooperación" HorizontalAlignment="Left" Margin="312,876,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Interés" HorizontalAlignment="Left" Margin="442,836,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Meticulosidad " HorizontalAlignment="Left" Margin="312,856,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Iniciativa" HorizontalAlignment="Left" Margin="312,896,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Constancia" HorizontalAlignment="Left" Margin="578,876,0,0" VerticalAlignment="Top"/>
+                    <Label Content="De las opciones que se le ofrece a continuación señale cuál es el tipo de funciones y/o actividades que realiza en su trabajo: " HorizontalAlignment="Left" Margin="30,926,0,0" VerticalAlignment="Top" Width="689"/>
+                    <CheckBox Content="Organización" HorizontalAlignment="Left" Margin="43,954,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_4"/>
+                    <CheckBox Content="Operación" HorizontalAlignment="Left" Margin="179,974,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.141,2.2"/>
+                    <CheckBox Content=" Control" HorizontalAlignment="Left" Margin="312,974,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Dirección" HorizontalAlignment="Left" Margin="312,954,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.423,0.6"/>
+                    <CheckBox Content="Planeación" HorizontalAlignment="Left" Margin="43,974,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Diagnóstico" HorizontalAlignment="Left" Margin="179,954,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Describa en forma breve las funciones que desempeña con mayor frecuencia: " HorizontalAlignment="Left" Margin="32,994,0,0" VerticalAlignment="Top" Width="689"/>
+                    <TextBox HorizontalAlignment="Left" Height="21" Margin="32,1025,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689"/>
+                    <Label Content="¿Qué problemática(s) social(es) ha contribuido a solucionar con su desempeño profesional?" HorizontalAlignment="Left" Margin="32,1051,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="32,1077,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689"/>
+                    <Label Content="Indique el promedio de ingreso mensual que percibe como producto de su práctica profesional" HorizontalAlignment="Left" Margin="32,1105,0,0" VerticalAlignment="Top" Width="689"/>
+                    <CheckBox Content="Menos de $5000.00" HorizontalAlignment="Left" Margin="45,1131,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="De $5001.00 a $10,000.00&#xD;&#xA;" HorizontalAlignment="Left" Margin="45,1151,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="De $10,001.00 a $15,000.00" HorizontalAlignment="Left" Margin="247,1131,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="De $15,001.00 a $20,000.00" HorizontalAlignment="Left" Margin="247,1151,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="De $20,001.00 o más" HorizontalAlignment="Left" Margin="444,1131,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Cargo que desempeña: " HorizontalAlignment="Left" Margin="34,33,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Tipo de contratación:" HorizontalAlignment="Left" Margin="34,64,0,0" VerticalAlignment="Top"/>
+                    <Label Content="El trabajo que realiza actualmente está relacionado con su formación:" HorizontalAlignment="Left" Margin="34,95,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="175,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="367"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="175,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="367"/>
+                    <CheckBox Content="Sí" HorizontalAlignment="Left" Margin="427,101,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="No" HorizontalAlignment="Left" Margin="483,101,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Seleccione el tiempo transcurrido desde su egreso hasta encontrar un empleo relacionado con su formación académica" HorizontalAlignment="Left" Margin="32,138,0,0" VerticalAlignment="Top" Width="689"/>
+                    <CheckBox Content="De 12 a 18 meses" HorizontalAlignment="Left" Margin="247,169,0,0" VerticalAlignment="Top" Width="131"/>
+                    <CheckBox Content="Menos de 6 meses" HorizontalAlignment="Left" Margin="40,169,0,0" VerticalAlignment="Top" Width="130"/>
+                    <CheckBox Content=" 6 a 12 meses" HorizontalAlignment="Left" Margin="40,205,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="De 18 a 24 meses" HorizontalAlignment="Left" Margin="247,202,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Más de 24 meses" HorizontalAlignment="Left" Margin="471,169,0,0" VerticalAlignment="Top" Width="103"/>
+                    <CheckBox Content="No he trabajado " HorizontalAlignment="Left" Margin="471,202,0,0" VerticalAlignment="Top"/>
                 </Grid>
 
             </TabItem>
             <TabItem Header="Información Académica" Margin="270,-3,-382,0" Background="{x:Null}">
                 <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="67*"/>
-                        <ColumnDefinition Width="326*"/>
-                    </Grid.ColumnDefinitions>
+                    <Label Content="Año de ingreso a la licenciatura:" HorizontalAlignment="Left" Margin="25,23,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Año de egreso: " HorizontalAlignment="Left" Margin="417,23,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="209,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="515,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged_1"/>
+                    <Label Content="Formación académica actual:" HorizontalAlignment="Left" Margin="25,63,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content=" Licenciatura " HorizontalAlignment="Left" Margin="209,69,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_5"/>
+                    <CheckBox Content="Maestría " HorizontalAlignment="Left" Margin="417,69,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Especialidad" HorizontalAlignment="Left" Margin="309,69,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Doctorado " HorizontalAlignment="Left" Margin="512,69,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Posdoctorado" HorizontalAlignment="Left" Margin="607,69,0,0" VerticalAlignment="Top"/>
 
                 </Grid>
             </TabItem>
