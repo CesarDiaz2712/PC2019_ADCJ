@@ -10,10 +10,10 @@ namespace SE.model.db
     class ConnectionUtils
     {
         private static String SERVER = "localhost";
-        private static String PORT = "3306";
-        private static String DATABASE = "seguimientoegresados";
-        private static String USER = "root";
-        private static String PASSWORD = "Maroonv271297";
+        private static String PORT = "1433";
+        private static String DATABASE = "sistemaegresados";
+        private static String USER = "sa";
+        private static String PASSWORD = "cesardiaz";
 
         public static SqlConnection getConnection()
         {
@@ -30,9 +30,9 @@ namespace SE.model.db
                 conn.Open();
                 return conn;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine(ex.Message);
             }
             return conn;
         }

@@ -14,7 +14,7 @@ namespace SE.model.pocos
 
         public override string ToString()
         {
-            return String.Format("idUsuario: {0}, nombreUsuario: {1}, contrasena: {2}", idUsuario,nombreUsuario,contrasena);
+            return String.Format("idUsuario: {0}, nombreUsuario: {1}, contraseña: {2}", idUsuario,nombreUsuario,contrasena);
         }
 
         public int IdUsuario { get => idUsuario; set => idUsuario = value; }

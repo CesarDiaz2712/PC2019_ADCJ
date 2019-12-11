@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using SE.model.pocos;
 
 namespace SE.View
 {
@@ -19,7 +20,7 @@ namespace SE.View
     /// </summary>
     public partial class MenúInicioEgresado : Window
     {
-        public MenúInicioEgresado()
+        public MenúInicioEgresado(Usuario u)
         {
             InitializeComponent();
         }

@@ -23,8 +23,8 @@ namespace SE
     /// </summary>
     public partial class MainWindow : Window
     {
-        String usuario;
-        String contrasena;
+        private string usuario;
+        private string contrasena;
         public MainWindow()
         {
             InitializeComponent();
@@ -55,10 +55,10 @@ namespace SE
                 usuario = txt_usuario.Text;
                 contrasena = txt_contrasena.Password;
                 Usuario u = UsuarioDAO.getLogin(usuario, contrasena);
-                if (u != null || u.IdUsuario > 0)
+                if (u != null && u.IdUsuario > 0)
                 {
                     MessageBox.Show(this, "Bienvenido" + u.NombreUsuario);
-                    MenúInicioEgresado menu = new MenúInicioEgresado();
+                    MenúInicioEgresado menu = new MenúInicioEgresado(u);
                     menu.Show();
                     this.Close();
                 }
