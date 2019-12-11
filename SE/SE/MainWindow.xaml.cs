@@ -32,28 +32,28 @@ namespace SE
 
         private void txt_usuario_GotFocus(object sender, RoutedEventArgs e)
         {
-            if (txt_usuario.Text == "USUARIO")
+            if (txtUsuario.Text == "USUARIO")
             {
-                txt_usuario.Text = "";
+                txtUsuario.Text = "";
             }
-            txt_contrasena.Password = "";
+            txtContrasena.Password = "";
         }
 
         private void txt_contrasena_GotFocus(object sender, RoutedEventArgs e)
         {
-            if (txt_contrasena.Password == "")
+            if (txtContrasena.Password == "")
             {
-                txt_contrasena.Password = "";
+                txtContrasena.Password = "";
             }
-            txt_usuario.Text = "USUARIO";
+            txtUsuario.Text = "USUARIO";
         }
 
         private void btn_ingresar_Click(object sender, RoutedEventArgs e)
         {
             if (validarCampos())
             {
-                usuario = txt_usuario.Text;
-                contrasena = txt_contrasena.Password;
+                usuario = txtUsuario.Text;
+                contrasena = txtContrasena.Password;
                 Usuario u = UsuarioDAO.getLogin(usuario, contrasena);
                 if (u != null && u.IdUsuario > 0)
                 {
@@ -65,9 +65,9 @@ namespace SE
                 else
                 {
                     MessageBox.Show(this, "Sin acceso", "Error");
-                    txt_usuario.Text = "";
-                    txt_contrasena.Password = "";
-                    txt_usuario.Focus();
+                    txtUsuario.Text = "";
+                    txtContrasena.Password = "";
+                    txtUsuario.Focus();
                     Console.WriteLine("this is a test");
                 }
             }
@@ -79,11 +79,11 @@ namespace SE
 
         public bool validarCampos()
         {
-            if (txt_usuario.Text == null || txt_usuario.Text.Length == 0)
+            if (txtUsuario.Text == null || txtUsuario.Text.Length == 0)
             {
                 return false;
             }
-            if (txt_contrasena.Password == null || txt_contrasena.Password.Length == 0)
+            if (txtContrasena.Password == null || txtContrasena.Password.Length == 0)
             {
                 return false;
             }
