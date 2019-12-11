@@ -78,5 +78,30 @@ namespace SE.View
         {
 
         }
+
+        private void CheckBox_Checked_7(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CheckBox_Checked_8(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CheckBox_Checked_9(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CheckBox_Checked_10(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CheckBox_Checked_11(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
