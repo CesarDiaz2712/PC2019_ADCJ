@@ -11,41 +11,41 @@
             <ColumnDefinition Width="661*"/>
             <ColumnDefinition Width="201*"/>
         </Grid.ColumnDefinitions>
-        <Label Content="SISTEMAS DE EGRESADOS" HorizontalAlignment="Left" Margin="32,20,0,0" VerticalAlignment="Top" Width="328" FontSize="24" FontWeight="Bold" Height="40" FontFamily="Microsoft JhengHei"/>
-        <Label Content="Matricula:" HorizontalAlignment="Left" Margin="55,119,0,0" VerticalAlignment="Top" Width="100" FontFamily="Microsoft YaHei"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="118,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
-        <Label Content="Contesta el formulario de la Ficha Pre-Egreso:" HorizontalAlignment="Left" Margin="55,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.169,0.423" Width="559" FontSize="14" FontFamily="Microsoft YaHei"/>
-        <Label Content="Nombre(s):" HorizontalAlignment="Left" Margin="470,119,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
-        <Label Content="Apellidos:" HorizontalAlignment="Left" Margin="252,119,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="544,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Grid.ColumnSpan="2"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="318,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152"/>
-        <Label Content="Fecha Nacimiento:" HorizontalAlignment="Left" Margin="55,165,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
-        <DatePicker HorizontalAlignment="Left" Margin="176,167,0,0" VerticalAlignment="Top"/>
-        <Label Content="Sexo:" HorizontalAlignment="Left" Margin="326,165,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
-        <RadioButton x:Name="rb_hombre" Content="Hombre" HorizontalAlignment="Left" Margin="366,171,0,0" VerticalAlignment="Top" GroupName="rb_sexo" />
-        <RadioButton x:Name="rb_mujer" Content="Mujer" HorizontalAlignment="Left" Margin="433,171,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.22,0.733" GroupName="rb_sexo"/>
-        <Label Content="Nacionalidad:" HorizontalAlignment="Left" Margin="488,165,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
-        <RadioButton x:Name="rb_mexicana" Content="Mexicana" HorizontalAlignment="Left" Margin="582,171,0,0" VerticalAlignment="Top" GroupName="rb_nacionalidad"/>
-        <Label Content="Otra:" HorizontalAlignment="Left" Margin="660,165,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="34.953,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <Label Content="Domicilio Actual:" HorizontalAlignment="Left" Margin="55,205,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei" FontSize="14"/>
-        <Label Content="Calle:" HorizontalAlignment="Left" Margin="55,233,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="96,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189"/>
-        <Label Content="Estado:" HorizontalAlignment="Left" Margin="55,261,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="106,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189"/>
-        <Label Content="No.:" HorizontalAlignment="Left" Margin="285,233,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="318,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74"/>
-        <Label Content="Colonia:" HorizontalAlignment="Left" Margin="392,233,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="449,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
-        <Label Content="Ciudad:" HorizontalAlignment="Left" Margin="614,233,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei" Grid.ColumnSpan="2"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="10.953,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Grid.Column="1"/>
-        <Label Content="C.P." HorizontalAlignment="Left" Margin="295,261,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="326,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74"/>
-        <Label Content="Teléfono:" HorizontalAlignment="Left" Margin="402,261,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="465,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74"/>
-        <Label Content="Email:" HorizontalAlignment="Left" Margin="539,261,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="583,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233" Grid.ColumnSpan="2"/>
-        <Button Content="Finalizar" HorizontalAlignment="Left" Margin="47.953,339,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1"/>
+        <Label x:Name="lblSistemaEgresados" Content="SISTEMAS DE EGRESADOS" HorizontalAlignment="Left" Margin="32,20,0,0" VerticalAlignment="Top" Width="328" FontSize="24" FontWeight="Bold" Height="40" FontFamily="Microsoft JhengHei"/>
+        <Label x:Name="lblMatricula" Content="Matricula:" HorizontalAlignment="Left" Margin="55,119,0,0" VerticalAlignment="Top" Width="100" FontFamily="Microsoft YaHei"/>
+        <TextBox x:Name="txtMatricula" HorizontalAlignment="Left" Height="23" Margin="118,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
+        <Label x:Name="lblContestarFormulario" Content="Contesta el formulario de la Ficha Pre-Egreso:" HorizontalAlignment="Left" Margin="55,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.169,0.423" Width="559" FontSize="14" FontFamily="Microsoft YaHei"/>
+        <Label x:Name="lblNombres" Content="Nombre(s):" HorizontalAlignment="Left" Margin="470,119,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
+        <Label x:Name="lblApellidos" Content="Apellidos:" HorizontalAlignment="Left" Margin="252,119,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
+        <TextBox x:Name="txtNombres" HorizontalAlignment="Left" Height="23" Margin="544,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtApellidos" HorizontalAlignment="Left" Height="23" Margin="318,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152"/>
+        <Label x:Name="lblFechaNacimiento" Content="Fecha Nacimiento:" HorizontalAlignment="Left" Margin="55,165,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
+        <DatePicker x:Name="dtpFechaNacimiento" HorizontalAlignment="Left" Margin="176,167,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblSexo" Content="Sexo:" HorizontalAlignment="Left" Margin="326,165,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
+        <RadioButton x:Name="rbHombre" Content="Hombre" HorizontalAlignment="Left" Margin="366,171,0,0" VerticalAlignment="Top" GroupName="rb_sexo" />
+        <RadioButton x:Name="rbMujer" Content="Mujer" HorizontalAlignment="Left" Margin="433,171,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.22,0.733" GroupName="rb_sexo"/>
+        <Label x:Name="lblNacionalidad" Content="Nacionalidad:" HorizontalAlignment="Left" Margin="488,165,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
+        <RadioButton x:Name="rbMexicana" Content="Mexicana" HorizontalAlignment="Left" Margin="582,171,0,0" VerticalAlignment="Top" GroupName="rb_nacionalidad"/>
+        <Label x:Name="lblOtra" Content="Otra:" HorizontalAlignment="Left" Margin="660,165,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtNacionalidad" HorizontalAlignment="Left" Height="23" Margin="34.953,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <Label x:Name="lblDomicilio" Content="Domicilio Actual:" HorizontalAlignment="Left" Margin="55,205,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei" FontSize="14"/>
+        <Label x:Name="lblCalle" Content="Calle:" HorizontalAlignment="Left" Margin="55,233,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
+        <TextBox x:Name="txtCalle" HorizontalAlignment="Left" Height="23" Margin="96,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189"/>
+        <Label x:Name="lblEstado" Content="Estado:" HorizontalAlignment="Left" Margin="55,261,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
+        <TextBox x:Name="txtEstado" HorizontalAlignment="Left" Height="23" Margin="106,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189"/>
+        <Label x:Name="lblNumeroCasa" Content="No.:" HorizontalAlignment="Left" Margin="285,233,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
+        <TextBox x:Name="txtNumeroCasa" HorizontalAlignment="Left" Height="23" Margin="318,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74"/>
+        <Label x:Name="lblColonia" Content="Colonia:" HorizontalAlignment="Left" Margin="392,233,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
+        <TextBox x:Name="txtColonia" HorizontalAlignment="Left" Height="23" Margin="449,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+        <Label x:Name="lblCiudad" Content="Ciudad:" HorizontalAlignment="Left" Margin="614,233,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtCiudad" HorizontalAlignment="Left" Height="23" Margin="10.953,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Grid.Column="1"/>
+        <Label x:Name="lblCP" Content="C.P." HorizontalAlignment="Left" Margin="295,261,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
+        <TextBox x:Name="txtCP" HorizontalAlignment="Left" Height="23" Margin="326,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74"/>
+        <Label x:Name="lblTelefono" Content="Teléfono:" HorizontalAlignment="Left" Margin="402,261,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
+        <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Height="23" Margin="465,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74"/>
+        <Label x:Name="lblEmail" Content="Email:" HorizontalAlignment="Left" Margin="539,261,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="583,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnFinalizar" Content="Finalizar" HorizontalAlignment="Left" Margin="47.953,339,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1"/>
 
     </Grid>
 </Window>
