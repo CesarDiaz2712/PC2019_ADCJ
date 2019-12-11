@@ -87,11 +87,14 @@
     <Compile Include="model\pocos\Egresado.cs" />
     <Compile Include="model\pocos\FichaPreEgreso.cs" />
     <Compile Include="model\pocos\Usuario.cs" />
-    <Compile Include="View\CuestionarioEstudiante.xaml.cs">
-      <DependentUpon>CuestionarioEstudiante.xaml</DependentUpon>
+    <Compile Include="View\CuestionarioEgresado.xaml.cs">
+      <DependentUpon>CuestionarioEgresado.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\FichaPreEgreso.xaml.cs">
       <DependentUpon>FichaPreEgreso.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\IniciarSesion.xaml.cs">
+      <DependentUpon>IniciarSesion.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MenúInicioEgresado.xaml.cs">
       <DependentUpon>MenúInicioEgresado.xaml</DependentUpon>
@@ -104,11 +107,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\CuestionarioEstudiante.xaml">
+    <Page Include="View\CuestionarioEgresado.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\FichaPreEgreso.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\IniciarSesion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

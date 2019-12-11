@@ -22,12 +22,7 @@ namespace SE.model.dao
                 SqlDataReader rd;
                 if (conn != null)
                 {
-                    String query = String.Format("SELECT "+
-                        "x.idUsuario," +
-                        "x.nombreUsuario," +
-                        "x.contraseña" + 
-                        "FROM dbo.Usuario x " +
-                        "WHERE x.idUsuario = '{0}';", usuario, contrasena);
+                    String query = String.Format("SELECT * FROM dbo.Usuario;", usuario, contrasena);
                     Console.WriteLine(query);
                     command = new SqlCommand(query, conn);
                     rd = command.ExecuteReader();
