@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace SE.View
 {
     /// <summary>
@@ -19,9 +20,19 @@ namespace SE.View
     /// </summary>
     public partial class FichaPreEgreso : Window
     {
-        public FichaPreEgreso()
+        private bool nuevo;
+        private bool resultado;
+        private FichaPreEgreso ficha;
+        public FichaPreEgreso(bool nuevo, FichaPreEgreso ficha)
         {
+            this.ficha = ficha;
+            this.nuevo = nuevo;
+
             InitializeComponent();
+            if (!nuevo)
+            {
+            }
+
         }
     }
 }
