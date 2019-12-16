@@ -6,12 +6,12 @@
         xmlns:local="clr-namespace:SE.View"
         mc:Ignorable="d"
         Title="FichaPreEgreso" Height="508" Width="870">
-    <Grid>
+    <Grid Background="#FFC7C7C7">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="661*"/>
             <ColumnDefinition Width="201*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="lblSistemaEgresados" Content="SISTEMAS DE EGRESADOS" HorizontalAlignment="Left" Margin="32,20,0,0" VerticalAlignment="Top" Width="328" FontSize="24" FontWeight="Bold" Height="40" FontFamily="Microsoft JhengHei"/>
+        <Label x:Name="lblSistemaEgresados" Content="SISTEMAS DE EGRESADOS" Background="#FF345781" HorizontalAlignment="Left" VerticalAlignment="Top" Width="862" FontSize="24" FontWeight="Bold" Height="65" FontFamily="Microsoft JhengHei" Grid.ColumnSpan="2"/>
         <Label x:Name="lblMatricula" Content="Matricula:" HorizontalAlignment="Left" Margin="55,119,0,0" VerticalAlignment="Top" Width="100" FontFamily="Microsoft YaHei"/>
         <TextBox x:Name="txtMatricula" HorizontalAlignment="Left" Height="23" Margin="118,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
         <Label x:Name="lblContestarFormulario" Content="Contesta el formulario de la Ficha Pre-Egreso:" HorizontalAlignment="Left" Margin="55,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.169,0.423" Width="559" FontSize="14" FontFamily="Microsoft YaHei"/>

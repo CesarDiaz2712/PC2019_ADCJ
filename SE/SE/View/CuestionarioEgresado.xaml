@@ -6,11 +6,11 @@
         xmlns:local="clr-namespace:SE.View"
         mc:Ignorable="d"
         Title="Cuestionario de Egresados" Height="498.25" Width="800">
-    <Grid>
-        <Label x:Name="lblSistemaEgresados" Content="SISTEMAS DE EGRESADOS" HorizontalAlignment="Left" Margin="32,20,0,0" VerticalAlignment="Top" Width="328" FontSize="24" FontWeight="Bold" Height="40" FontFamily="Microsoft JhengHei"/>
+    <Grid Background="#FF345781">
+        <Label x:Name="lblSistemaEgresados" Content="SISTEMAS DE EGRESADOS"  HorizontalAlignment="Left" Margin="32,20,0,0" VerticalAlignment="Top" Width="328" FontSize="24" FontWeight="Bold" Height="40" FontFamily="Microsoft JhengHei"/>
         <TabControl x:Name="tabCuestionarioEgresados" HorizontalAlignment="Left" Height="402" Margin="0,65,0,0" VerticalAlignment="Top" Width="792" SelectionChanged="TabControl_SelectionChanged" Background="{x:Null}">
-            <TabItem x:Name="tabInformacionPersonal" Header="Información Personal" Background="{x:Null}" Margin="-2,-3,-137,1">
-                <Grid >
+            <TabItem x:Name="tabInformacionPersonal" Header="Información Personal" Margin="-2,-3,-137,1" Background="#FF345781">
+                <Grid Background="#FFC7C7C7" >
                     <Label x:Name="lblMatricula" Content="Matricula:" HorizontalAlignment="Left" Margin="10,32,0,0" VerticalAlignment="Top" Width="100" FontFamily="Microsoft YaHei"/>
                     <TextBox x:Name="txtMatricula" HorizontalAlignment="Left" Height="22" Margin="91,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
                     <Label x:Name="lblNombres" Content="Nombre(s):" HorizontalAlignment="Left" Margin="476,32,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
@@ -37,9 +37,9 @@
                     <Button x:Name="btnFinalizar" Content="Finalizar" HorizontalAlignment="Left" Margin="690,207,0,0" VerticalAlignment="Top" Width="74"/>
                 </Grid>
             </TabItem>
-            <TabItem x:Name="tabInformacionLaboral" Header="Información Laboral" Background="{x:Null}" Margin="136,-3,-270,1">
-                <ScrollViewer Height="350">
-                    <Grid>
+            <TabItem x:Name="tabInformacionLaboral" Header="Información Laboral" Background="#FF345781" Margin="136,-3,-270,1">
+                <ScrollViewer>
+                    <Grid Background=" #FFC7C7C7">
 
                         <Label x:Name="lblConocimientosTeoricos" Content="¿Qué conocimientos (saberes teóricos) no incluidos en el programa de estudios ha considerado o considera necesarios para &#xD;&#xA;su desempeño laboral actual?" HorizontalAlignment="Left" Margin="33,257,0,0" VerticalAlignment="Top" Width="689"/>
                         <TextBox x:Name="txtConocimientosTeoricos" HorizontalAlignment="Left" Height="27" Margin="33,299,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689"/>
@@ -123,97 +123,97 @@
                     </Grid>
                 </ScrollViewer>
             </TabItem>
-            <TabItem x:Name="tabInformacionAcademica" Header="Información Académica" Margin="270,-3,-382,0" Background="{x:Null}">
-                <ScrollViewer Height="350">
-                  <Grid>
-                    <Label x:Name="lblIngreso" Content="Año de ingreso a la licenciatura:" HorizontalAlignment="Left" Margin="25,23,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="lblEgreso" Content="Año de egreso: " HorizontalAlignment="Left" Margin="417,23,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="txtIngreso" HorizontalAlignment="Left" Height="23" Margin="209,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185"/>
-                    <TextBox x:Name="txtEgreso" HorizontalAlignment="Left" Height="23" Margin="515,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged_1"/>
-                    <Label x:Name="lblFormacionActual" Content="Formación académica actual:" HorizontalAlignment="Left" Margin="25,63,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbLicenciatura" Content=" Licenciatura " HorizontalAlignment="Left" Margin="209,69,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_5"/>
-                    <RadioButton x:Name="rbMaestria" Content="Maestría " HorizontalAlignment="Left" Margin="417,69,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbEscpecialidad" Content="Especialidad" HorizontalAlignment="Left" Margin="309,69,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbDoctorado" Content="Doctorado " HorizontalAlignment="Left" Margin="512,69,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPostDoctorado" Content="Posdoctorado" HorizontalAlignment="Left" Margin="607,69,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="lblAspectosInstitucion" Content="A continuación se mencionan aspectos propios de la institución donde realizó sus estudios de licenciatura, indique su opinión &#xD;&#xA;acerca de ellos:" HorizontalAlignment="Left" Margin="25,94,0,0" VerticalAlignment="Top" Width="693"/>
-                    <Label x:Name="lblPlanEstudios" Content="Plan de estudios: " HorizontalAlignment="Left" Margin="25,141,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="lblDesempeñoDocentes" Content="Desempeño de los docentes:&#xD;&#xA;" HorizontalAlignment="Left" Margin="25,167,0,0" VerticalAlignment="Top" Width="179" Height="26"/>
-                    <Label x:Name="lblOrganizacionAdmin" Content="Organización administrativa:" HorizontalAlignment="Left" Margin="25,193,0,0" VerticalAlignment="Top" Width="162"/>
-                    <Label x:Name="lblInstalaciones" Content="Instalaciones: " HorizontalAlignment="Left" Margin="25,219,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="lblServicios" Content="Servicios de apoyo:" HorizontalAlignment="Left" Margin="25,245,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="lblActCulturalesDeportivas" Content="Actividades culturales y /o&#xD;&#xA;deportivas:" HorizontalAlignment="Left" Margin="25,271,0,0" VerticalAlignment="Top" Width="162"/>
-                    <RadioButton x:Name="rbEficientePlanEstudiantil" Content="Eficiente" HorizontalAlignment="Left" Margin="240,147,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbAceptablePlanEstudiantil" Content="Aceptable" HorizontalAlignment="Left" Margin="367,147,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularPlanEstudiantil" Content="Regular" HorizontalAlignment="Left" Margin="488,147,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbDeficientePlanEstudiantil" Content="Deficiente" HorizontalAlignment="Left" Margin="621,147,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbEficienteDocentes" Content="Eficiente" HorizontalAlignment="Left" Margin="240,173,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbAceptableDocentes" Content="Aceptable" HorizontalAlignment="Left" Margin="367,173,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularDocentes" Content="Regular" HorizontalAlignment="Left" Margin="488,173,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbDeficienteDocentes" Content="Deficiente" HorizontalAlignment="Left" Margin="621,173,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbEficienteOrganizacion" Content="Eficiente" HorizontalAlignment="Left" Margin="240,199,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbAceptableOrganizacion" Content="Aceptable" HorizontalAlignment="Left" Margin="367,199,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularOrganizacion" Content="Regular" HorizontalAlignment="Left" Margin="488,199,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbDeficienteOrganizacion" Content="Deficiente" HorizontalAlignment="Left" Margin="621,199,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbEficienteInstalacion" Content="Eficiente" HorizontalAlignment="Left" Margin="240,225,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbAceptableInstalacion" Content="Aceptable" HorizontalAlignment="Left" Margin="367,225,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularInstalacion" Content="Regular" HorizontalAlignment="Left" Margin="488,225,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbDeficienteInstalacion" Content="Deficiente" HorizontalAlignment="Left" Margin="621,225,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbEficienteServicio" Content="Eficiente" HorizontalAlignment="Left" Margin="240,251,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbAceptableServicio" Content="Aceptable" HorizontalAlignment="Left" Margin="367,251,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularServicio" Content="Regular" HorizontalAlignment="Left" Margin="488,251,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbDeficienteServicio" Content="Deficiente" HorizontalAlignment="Left" Margin="621,251,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbEficienteActDeportivas" Content="Eficiente" HorizontalAlignment="Left" Margin="240,277,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbAceptableActDeportivas" Content="Aceptable" HorizontalAlignment="Left" Margin="367,277,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularActDeportivas" Content="Regular" HorizontalAlignment="Left" Margin="488,277,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbDeficienteActDeportivas" Content="Deficiente" HorizontalAlignment="Left" Margin="621,277,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="lblEEUtiles" Content="En relación con las experiencias educativas del Área de formación básica general, señale qué Experiencias Educativas &#xD;&#xA;han tenido utilidad para su desempeño como profesionista: " HorizontalAlignment="Left" Margin="25,329,0,0" VerticalAlignment="Top" Width="693"/>
-                    <CheckBox x:Name="chkIngles1" Content="Inglés I" HorizontalAlignment="Left" Margin="36,382,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_6"/>
-                    <CheckBox x:Name="chkIngles2" Content="Inglés II" HorizontalAlignment="Left" Margin="111,382,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkHP" Content="Habilidades de pensamiento&#xD;&#xA;crítico y creativo&#xD;&#xA;" HorizontalAlignment="Left" Margin="534,381,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_7"/>
-                    <CheckBox x:Name="chkComputacion" Content="Computación Básica" HorizontalAlignment="Left" Margin="178,382,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkLectura" Content="Lectura y redacción a través del &#xD;&#xA;análisis del mundo contemporáneo&#xD;&#xA;" HorizontalAlignment="Left" Margin="325,382,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkAlgebra" Content="Algebra Lineal&#xD;&#xA;" HorizontalAlignment="Left" Margin="36,442,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_6"/>
-                    <CheckBox x:Name="chkIntroduccionProgramacion" Content="Introducción a la Programación &#xD;&#xA;" HorizontalAlignment="Left" Margin="155,442,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkProbabilidad" Content="Probabilidad y Estadística" HorizontalAlignment="Left" Margin="367,442,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_8"/>
-                    <CheckBox x:Name="chkMatematicas" Content="Matemáticas Discretas" HorizontalAlignment="Left" Margin="534,445,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkProgramación" Content="Programación" HorizontalAlignment="Left" Margin="36,473,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="lblIniciacionDisciplina" Content="Iniciación a la Disciplina:" HorizontalAlignment="Left" Margin="25,411,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="lblFormacionDisciplinar" Content="Formación Disciplinar:" HorizontalAlignment="Left" Margin="25,493,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkMetodologiaInv" Content="Metodología de la Investigación&#xD;" HorizontalAlignment="Left" Margin="153,522,0,0" VerticalAlignment="Top" Height="19"/>
-                    <CheckBox x:Name="chkLogica" Content="Lógica" HorizontalAlignment="Left" Margin="40,522,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkCalculo" Content="Calculo" HorizontalAlignment="Left" Margin="40,542,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_9"/>
-                    <CheckBox x:Name="chkIngSoftware" Content="Ingeniería de Software I" HorizontalAlignment="Left" Margin="153,541,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkRedes" Content="Redes I" HorizontalAlignment="Left" Margin="40,562,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkRedes2" Content="Redes II" HorizontalAlignment="Left" Margin="40,583,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkIngSoftware2" Content="Ingeniería de Software II&#xD;" HorizontalAlignment="Left" Margin="153,562,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_10"/>
-                    <CheckBox x:Name="chkSistemasOperativos" Content="Sistemas Operativos" HorizontalAlignment="Left" Margin="153,583,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkBaseDatos" Content="Base de Datos &#xD;" HorizontalAlignment="Left" Margin="39,603,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkTallerIntegracion" Content="Taller de Integración I" HorizontalAlignment="Left" Margin="153,603,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkArquitecturaComputadoras" Content="Arquitectura de Computadoras" HorizontalAlignment="Left" Margin="369,522,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkAlgotimosEstructuraDatos" Content="Algoritmos y Estructuras de Datos" HorizontalAlignment="Left" Margin="369,541,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkOrganizacionArchivos" Content="Organización de Archivos" HorizontalAlignment="Left" Margin="369,562,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkInteligenciaArtificial" Content="Inteligencia Artificial" HorizontalAlignment="Left" Margin="369,583,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkProgramacionAvanzada" Content="Programación Avanzada" HorizontalAlignment="Left" Margin="592,603,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkProgramacionSistemas" Content="Programación de Sistemas" HorizontalAlignment="Left" Margin="592,522,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkEticaLegislacion" Content="Ética y Legislación Informática" HorizontalAlignment="Left" Margin="592,542,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_11"/>
-                    <CheckBox x:Name="chkCompiladores" Content="Compiladores" HorizontalAlignment="Left" Margin="592,562,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkAdmonProyectos" Content="Administración de Proyectos" HorizontalAlignment="Left" Margin="592,581,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkAdmonRecursosInformaticos" Content="Admon. de Recursos Informáticos&#xD;" HorizontalAlignment="Left" Margin="369,606,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="lblAreaTerminal" Content="Área Terminal:" HorizontalAlignment="Left" Margin="25,634,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkServicioSocial" Content="Servicio Social" HorizontalAlignment="Left" Margin="40,665,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkExperienciaRecepcional" Content="Experiencia &#xD;&#xA;Recepcional" HorizontalAlignment="Left" Margin="40,685,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkDesarrolloAplicaciones" Content="Desarrollo de Aplicaciones en Red" HorizontalAlignment="Left" Margin="369,685,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkGraficacion" Content="Graficación" HorizontalAlignment="Left" Margin="39,721,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkSistemasInformacion" Content="Sistemas de Información&#xD;&#xA;Empresarial" HorizontalAlignment="Left" Margin="367,709,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkAdmonSeguraridadServiciosRed" Content="Administración y Seguridad de&#xD;&#xA;Servicios de Red" HorizontalAlignment="Left" Margin="153,665,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkTopicosComputacion" Content="Tópicos Selectos de Computación" HorizontalAlignment="Left" Margin="153,696,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkAuditorioInformatica" Content="Auditoria Informática" HorizontalAlignment="Left" Margin="153,721,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkSistemasInfGeografica" Content="Sistemas de Información Geográfica" HorizontalAlignment="Left" Margin="369,665,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="chkMultimedia" Content="Multimedia" HorizontalAlignment="Left" Margin="592,665,0,0" VerticalAlignment="Top"/>
-                    <Button x:Name="btnCancelarInfLaboral" Content="Cancelar" HorizontalAlignment="Left" Margin="488,785,0,0" VerticalAlignment="Top" Width="75"/>
-                    <Button x:Name="btnFinalizarInfLaboral" Content="Finalizar" HorizontalAlignment="Left" Margin="607,785,0,0" VerticalAlignment="Top" Width="75"/>
-                   </Grid>
+            <TabItem x:Name="tabInformacionAcademica" Header="Información Académica" Margin="270,-3,-382,0" Background="#FF345781">
+                <ScrollViewer Margin="-11,0,2,0">
+                    <Grid Background="#FFC7C7C7" Height="724" Width="775" >
+                        <Label x:Name="lblIngreso" Content="Año de ingreso a la licenciatura:" HorizontalAlignment="Left" Margin="25,23,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="lblEgreso" Content="Año de egreso: " HorizontalAlignment="Left" Margin="417,23,0,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="txtIngreso" HorizontalAlignment="Left" Height="23" Margin="209,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185"/>
+                        <TextBox x:Name="txtEgreso" HorizontalAlignment="Left" Height="23" Margin="515,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged_1"/>
+                        <Label x:Name="lblFormacionActual" Content="Formación académica actual:" HorizontalAlignment="Left" Margin="25,63,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbLicenciatura" Content=" Licenciatura " HorizontalAlignment="Left" Margin="209,69,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_5"/>
+                        <RadioButton x:Name="rbMaestria" Content="Maestría " HorizontalAlignment="Left" Margin="417,69,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbEscpecialidad" Content="Especialidad" HorizontalAlignment="Left" Margin="309,69,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbDoctorado" Content="Doctorado " HorizontalAlignment="Left" Margin="512,69,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbPostDoctorado" Content="Posdoctorado" HorizontalAlignment="Left" Margin="607,69,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="lblAspectosInstitucion" Content="A continuación se mencionan aspectos propios de la institución donde realizó sus estudios de licenciatura, indique su opinión &#xD;&#xA;acerca de ellos:" HorizontalAlignment="Left" Margin="25,94,0,0" VerticalAlignment="Top" Width="693"/>
+                        <Label x:Name="lblPlanEstudios" Content="Plan de estudios: " HorizontalAlignment="Left" Margin="25,141,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="lblDesempeñoDocentes" Content="Desempeño de los docentes:&#xD;&#xA;" HorizontalAlignment="Left" Margin="25,167,0,0" VerticalAlignment="Top" Width="179" Height="26"/>
+                        <Label x:Name="lblOrganizacionAdmin" Content="Organización administrativa:" HorizontalAlignment="Left" Margin="25,193,0,0" VerticalAlignment="Top" Width="162"/>
+                        <Label x:Name="lblInstalaciones" Content="Instalaciones: " HorizontalAlignment="Left" Margin="25,219,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="lblServicios" Content="Servicios de apoyo:" HorizontalAlignment="Left" Margin="25,245,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="lblActCulturalesDeportivas" Content="Actividades culturales y /o&#xD;&#xA;deportivas:" HorizontalAlignment="Left" Margin="25,271,0,0" VerticalAlignment="Top" Width="162"/>
+                        <RadioButton x:Name="rbEficientePlanEstudiantil" Content="Eficiente" HorizontalAlignment="Left" Margin="240,147,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbAceptablePlanEstudiantil" Content="Aceptable" HorizontalAlignment="Left" Margin="367,147,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbRegularPlanEstudiantil" Content="Regular" HorizontalAlignment="Left" Margin="488,147,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbDeficientePlanEstudiantil" Content="Deficiente" HorizontalAlignment="Left" Margin="621,147,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbEficienteDocentes" Content="Eficiente" HorizontalAlignment="Left" Margin="240,173,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbAceptableDocentes" Content="Aceptable" HorizontalAlignment="Left" Margin="367,173,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbRegularDocentes" Content="Regular" HorizontalAlignment="Left" Margin="488,173,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbDeficienteDocentes" Content="Deficiente" HorizontalAlignment="Left" Margin="621,173,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbEficienteOrganizacion" Content="Eficiente" HorizontalAlignment="Left" Margin="240,199,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbAceptableOrganizacion" Content="Aceptable" HorizontalAlignment="Left" Margin="367,199,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbRegularOrganizacion" Content="Regular" HorizontalAlignment="Left" Margin="488,199,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbDeficienteOrganizacion" Content="Deficiente" HorizontalAlignment="Left" Margin="621,199,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbEficienteInstalacion" Content="Eficiente" HorizontalAlignment="Left" Margin="240,225,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbAceptableInstalacion" Content="Aceptable" HorizontalAlignment="Left" Margin="367,225,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbRegularInstalacion" Content="Regular" HorizontalAlignment="Left" Margin="488,225,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbDeficienteInstalacion" Content="Deficiente" HorizontalAlignment="Left" Margin="621,225,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbEficienteServicio" Content="Eficiente" HorizontalAlignment="Left" Margin="240,251,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbAceptableServicio" Content="Aceptable" HorizontalAlignment="Left" Margin="367,251,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbRegularServicio" Content="Regular" HorizontalAlignment="Left" Margin="488,251,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbDeficienteServicio" Content="Deficiente" HorizontalAlignment="Left" Margin="621,251,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbEficienteActDeportivas" Content="Eficiente" HorizontalAlignment="Left" Margin="240,277,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbAceptableActDeportivas" Content="Aceptable" HorizontalAlignment="Left" Margin="367,277,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbRegularActDeportivas" Content="Regular" HorizontalAlignment="Left" Margin="488,277,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbDeficienteActDeportivas" Content="Deficiente" HorizontalAlignment="Left" Margin="621,277,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="lblEEUtiles" Content="En relación con las experiencias educativas del Área de formación básica general, señale qué Experiencias Educativas &#xD;&#xA;han tenido utilidad para su desempeño como profesionista: " HorizontalAlignment="Left" Margin="25,329,0,0" VerticalAlignment="Top" Width="693"/>
+                        <CheckBox x:Name="chkIngles1" Content="Inglés I" HorizontalAlignment="Left" Margin="36,382,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_6"/>
+                        <CheckBox x:Name="chkIngles2" Content="Inglés II" HorizontalAlignment="Left" Margin="111,382,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkHP" Content="Habilidades de pensamiento&#xD;&#xA;crítico y creativo&#xD;&#xA;" HorizontalAlignment="Left" Margin="534,381,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_7"/>
+                        <CheckBox x:Name="chkComputacion" Content="Computación Básica" HorizontalAlignment="Left" Margin="178,382,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkLectura" Content="Lectura y redacción a través del &#xD;&#xA;análisis del mundo contemporáneo&#xD;&#xA;" HorizontalAlignment="Left" Margin="325,382,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkAlgebra" Content="Algebra Lineal&#xD;&#xA;" HorizontalAlignment="Left" Margin="36,442,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_6"/>
+                        <CheckBox x:Name="chkIntroduccionProgramacion" Content="Introducción a la Programación &#xD;&#xA;" HorizontalAlignment="Left" Margin="155,442,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkProbabilidad" Content="Probabilidad y Estadística" HorizontalAlignment="Left" Margin="367,442,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_8"/>
+                        <CheckBox x:Name="chkMatematicas" Content="Matemáticas Discretas" HorizontalAlignment="Left" Margin="534,445,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkProgramación" Content="Programación" HorizontalAlignment="Left" Margin="36,473,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="lblIniciacionDisciplina" Content="Iniciación a la Disciplina:" HorizontalAlignment="Left" Margin="25,411,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="lblFormacionDisciplinar" Content="Formación Disciplinar:" HorizontalAlignment="Left" Margin="25,493,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkMetodologiaInv" Content="Metodología de la Investigación&#xD;" HorizontalAlignment="Left" Margin="153,522,0,0" VerticalAlignment="Top" Height="19"/>
+                        <CheckBox x:Name="chkLogica" Content="Lógica" HorizontalAlignment="Left" Margin="40,522,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkCalculo" Content="Calculo" HorizontalAlignment="Left" Margin="40,542,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_9"/>
+                        <CheckBox x:Name="chkIngSoftware" Content="Ingeniería de Software I" HorizontalAlignment="Left" Margin="153,541,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkRedes" Content="Redes I" HorizontalAlignment="Left" Margin="40,562,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkRedes2" Content="Redes II" HorizontalAlignment="Left" Margin="40,583,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkIngSoftware2" Content="Ingeniería de Software II&#xD;" HorizontalAlignment="Left" Margin="153,562,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_10"/>
+                        <CheckBox x:Name="chkSistemasOperativos" Content="Sistemas Operativos" HorizontalAlignment="Left" Margin="153,583,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkBaseDatos" Content="Base de Datos &#xD;" HorizontalAlignment="Left" Margin="39,603,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkTallerIntegracion" Content="Taller de Integración I" HorizontalAlignment="Left" Margin="153,603,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkArquitecturaComputadoras" Content="Arquitectura de Computadoras" HorizontalAlignment="Left" Margin="369,522,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkAlgotimosEstructuraDatos" Content="Algoritmos y Estructuras de Datos" HorizontalAlignment="Left" Margin="369,541,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkOrganizacionArchivos" Content="Organización de Archivos" HorizontalAlignment="Left" Margin="369,562,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkInteligenciaArtificial" Content="Inteligencia Artificial" HorizontalAlignment="Left" Margin="369,583,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkProgramacionAvanzada" Content="Programación Avanzada" HorizontalAlignment="Left" Margin="592,603,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkProgramacionSistemas" Content="Programación de Sistemas" HorizontalAlignment="Left" Margin="592,522,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkEticaLegislacion" Content="Ética y Legislación Informática" HorizontalAlignment="Left" Margin="592,542,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_11"/>
+                        <CheckBox x:Name="chkCompiladores" Content="Compiladores" HorizontalAlignment="Left" Margin="592,562,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkAdmonProyectos" Content="Administración de Proyectos" HorizontalAlignment="Left" Margin="592,581,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkAdmonRecursosInformaticos" Content="Admon. de Recursos Informáticos&#xD;" HorizontalAlignment="Left" Margin="369,606,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="lblAreaTerminal" Content="Área Terminal:" HorizontalAlignment="Left" Margin="25,634,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkServicioSocial" Content="Servicio Social" HorizontalAlignment="Left" Margin="40,665,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkExperienciaRecepcional" Content="Experiencia &#xD;&#xA;Recepcional" HorizontalAlignment="Left" Margin="40,685,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkDesarrolloAplicaciones" Content="Desarrollo de Aplicaciones en Red" HorizontalAlignment="Left" Margin="369,685,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkGraficacion" Content="Graficación" HorizontalAlignment="Left" Margin="39,721,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkSistemasInformacion" Content="Sistemas de Información&#xD;&#xA;Empresarial" HorizontalAlignment="Left" Margin="367,709,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkAdmonSeguraridadServiciosRed" Content="Administración y Seguridad de&#xD;&#xA;Servicios de Red" HorizontalAlignment="Left" Margin="153,665,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkTopicosComputacion" Content="Tópicos Selectos de Computación" HorizontalAlignment="Left" Margin="153,696,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkAuditorioInformatica" Content="Auditoria Informática" HorizontalAlignment="Left" Margin="153,721,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkSistemasInfGeografica" Content="Sistemas de Información Geográfica" HorizontalAlignment="Left" Margin="369,665,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkMultimedia" Content="Multimedia" HorizontalAlignment="Left" Margin="592,665,0,0" VerticalAlignment="Top"/>
+                        <Button x:Name="btnCancelarInfLaboral" Content="Cancelar" HorizontalAlignment="Left" Margin="488,785,0,0" VerticalAlignment="Top" Width="75"/>
+                        <Button x:Name="btnFinalizarInfLaboral" Content="Finalizar" HorizontalAlignment="Left" Margin="607,785,0,0" VerticalAlignment="Top" Width="75"/>
+                    </Grid>
                 </ScrollViewer>
             </TabItem>
         </TabControl>
