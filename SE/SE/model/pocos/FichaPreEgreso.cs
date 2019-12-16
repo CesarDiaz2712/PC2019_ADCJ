@@ -24,7 +24,7 @@ namespace SE.model.pocos
 
         public override string ToString()
         {
-            return String.Format("idFichaPreEgreso: {0}, fechaNacimiento: {1}, sexo: {2}, nacionalidad: {3}, + 
+            return String.Format("idFichaPreEgreso: {0}, fechaNacimiento: {1}, sexo: {2}, nacionalidad: {3}, 
                 "telefono: {4}, email: {5}, calle: {6}, numeroCasa: {7}, colonia: {8}, ciudad: {9}, estado: {10}, codigoPostal: {11}, idEgresado: {12}", idFichaPreEgreso, fechaNacimiento, sexo, nacionalidad, direccion, telefono, email +
                 calle, numeroCasa, colonia, ciudad, estado, codigoPostal, idEgresado);
         }

@@ -18,12 +18,12 @@ namespace SE.View
     /// <summary>
     /// Lógica de interacción para FichaPreEgreso.xaml
     /// </summary>
-    public partial class FichaPreEgreso : Window
+    public partial class VentanaFichaPreEgreso : Window
     {
         private bool nuevo;
         private bool resultado;
         private FichaPreEgreso ficha;
-        public FichaPreEgreso(bool nuevo, FichaPreEgreso ficha)
+        public VentanaFichaPreEgreso(bool nuevo, FichaPreEgreso ficha)
         {
             this.ficha = ficha;
             this.nuevo = nuevo;

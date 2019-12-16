@@ -93,8 +93,8 @@
     <Compile Include="View\CuestionarioEgresado.xaml.cs">
       <DependentUpon>CuestionarioEgresado.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\FichaPreEgreso.xaml.cs">
-      <DependentUpon>FichaPreEgreso.xaml</DependentUpon>
+    <Compile Include="View\VentanaFichaPreEgreso.xaml.cs">
+      <DependentUpon>VentanaFichaPreEgreso.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\IniciarSesion.xaml.cs">
       <DependentUpon>IniciarSesion.xaml</DependentUpon>
@@ -114,7 +114,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\FichaPreEgreso.xaml">
+    <Page Include="View\VentanaFichaPreEgreso.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
