@@ -54,8 +54,8 @@ namespace SE
             {
                 usuario = txtUsuario.Text;
                 contrasena = txtContrasena.Password;
-                Usuario u = UsuarioDAO.getLogin(usuario, contrasena);
-                if (u != null && u.IdUsuario > 0)
+                Egresado u = EgresadoDAO.getLogin(usuario, contrasena);
+                if (u != null && u.IdEgresado > 0)
                 {
                     MessageBox.Show(this, "Bienvenido" + u.NombreUsuario);
                     MenúInicioEgresado menu = new MenúInicioEgresado(u);

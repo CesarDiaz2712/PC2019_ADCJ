@@ -9,11 +9,11 @@ using SE.model.pocos;
 
 namespace SE.model.dao
 {
-    public class UsuarioDAO
+    public class EgresadoDAO
     {
-        public static Usuario getLogin(String usuario, String contrasena)
+        public static Egresado getLogin(String usuario, String contrasena)
         {
-            Usuario u = null;
+            Egresado u = null;
             SqlConnection conn = null;
             try
             {
@@ -33,10 +33,10 @@ namespace SE.model.dao
                     rd = command.ExecuteReader();
                     while (rd.Read())
                     {
-                        u = new Usuario();
-                        u.IdUsuario = (!rd.IsDBNull(0)) ? rd.GetInt32(0) : 0;
+                        u = new Egresado();
+                        u.IdEgresado = (!rd.IsDBNull(0)) ? rd.GetInt32(0) : 0;
                         u.NombreUsuario = (!rd.IsDBNull(1)) ? rd.GetString(1) : "";
-                        u.Contrasena = (!rd.IsDBNull(2)) ? rd.GetString(2) : "";
+                        u.Contrasenia = (!rd.IsDBNull(2)) ? rd.GetString(2) : "";
                     }
                     rd.Close();
                     command.Dispose();

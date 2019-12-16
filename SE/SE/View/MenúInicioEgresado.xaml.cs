@@ -20,9 +20,12 @@ namespace SE.View
     /// </summary>
     public partial class MenúInicioEgresado : Window
     {
-        public MenúInicioEgresado(Usuario u)
+        private Egresado usuarioIniciado { get; set; }
+        public MenúInicioEgresado(Egresado usuario)
         {
+            this.usuarioIniciado = usuario;
             InitializeComponent();
+            lblUserName.Content = usuarioIniciado.NombreUsuario;
         }
 
         private void btn_cuestionario_Click(object sender, RoutedEventArgs e)
