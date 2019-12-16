@@ -82,27 +82,10 @@ namespace SE.model.dao
         public static bool guardar(bool nuevo, FichaPreEgreso ficha)
         {
             String query = "";
-            if (nuevo)
-            {
+       
                 query = "INSERT INTO dbo.FichaPreEgreso(fechaNacimiento, sexo, nacionalidad, telefono, email, calle, numeroCasa, colonia, ciudad, estado, codigoPostal, idEgresado)" +
                        "VALUES(GETDATE(),@sexo,@nacionalidad,@telefono,@email,@calle,@numeroCasa,@colonia,@ciudad,@estado,@codigoPostal,@idEgresado);";
-            }
-            else
-            {
-                query = "UPDATE dbo.fichapreegreso SET" +
-                        "fechaNacimiento = GETDATE()," +
-                        "sexo = @sexo," +
-                        "nacionalidad = @nacionalidad," +
-                        "telefono = @telefono," +
-                        "email = @email"+
-                        "calle = @calle"+
-                        "numeroCasa=@numeroCasa"+
-                        "colonia=@colonia"+
-                        "ciudad=@ciudad"+
-                        "estado=@estado"+
-                        "codigoPostal=@codigoPostal"+
-                        "WHERE idFichaPreEgreso = @idFichaPreEgreso;";
-            }
+            
             SqlConnection conn = null;
             try
             {
@@ -123,14 +106,9 @@ namespace SE.model.dao
                     command.Parameters.AddWithValue("@ciudad", ficha.Ciudad);
                     command.Parameters.AddWithValue("@estado", ficha.Estado);
                     command.Parameters.AddWithValue("@codigoPostal", ficha.CodigoPostal);
-                    if (nuevo)
-                    {
-                        command.Parameters.AddWithValue("@idEgresado", ficha.IdEgresado);
-                    }
-                    else
-                    {
-                        command.Parameters.AddWithValue("@idFichaPreEgreso", ficha.IdFichaPreEgreso);
-                    }
+
+                    command.Parameters.AddWithValue("@idEgresado", ficha.IdEgresado);
+
 
                     int i = command.ExecuteNonQuery();
                     Console.WriteLine("Filas afectadas: " + i);
