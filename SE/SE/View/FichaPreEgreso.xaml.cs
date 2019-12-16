@@ -23,5 +23,10 @@ namespace SE.View
         {
             InitializeComponent();
         }
+
+        private void btnFinalizar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

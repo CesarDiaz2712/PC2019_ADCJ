@@ -15,8 +15,8 @@ namespace SE.model.pocos
 
         public override string ToString()
         {
-            return String.Format("idInformacionAcademica: {0} , respuesta:{1}, idEgresado{2} idRespuestaAcademica{3}" , 
-                   , idInformacionAcademica, respuesta, idEgresado);
+            return String.Format("idInformacionAcademica: {0} , respuesta:{1}, idEgresado{2} ,  idRespuestaAcademica:{3}" , 
+                   idInformacionAcademica, respuesta, idEgresado, idRespuestaAcademica);
         }
         public int IdInformacionAcademica { get => idInformacionAcademica; set => idInformacionAcademica = value; }
         public string Respuesta { get => respuesta; set => respuesta = value; }

@@ -34,4 +34,4 @@ namespace SE.model.pocos
 
     }
 }
-}
+

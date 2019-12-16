@@ -84,8 +84,11 @@
     <Compile Include="model\dao\FichaPreEgresoDAO.cs" />
     <Compile Include="model\dao\UsuarioDAO.cs" />
     <Compile Include="model\db\ConnectionUtils.cs" />
+    <Compile Include="model\pocos\InformacionAcademica.cs" />
     <Compile Include="model\pocos\Egresado.cs" />
     <Compile Include="model\pocos\FichaPreEgreso.cs" />
+    <Compile Include="model\pocos\InformaciónLaboral.cs" />
+    <Compile Include="model\pocos\InformaciónPersonal.cs" />
     <Compile Include="model\pocos\Usuario.cs" />
     <Compile Include="View\CuestionarioEgresado.xaml.cs">
       <DependentUpon>CuestionarioEgresado.xaml</DependentUpon>
