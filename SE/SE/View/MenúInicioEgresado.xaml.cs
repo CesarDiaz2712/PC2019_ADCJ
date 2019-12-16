@@ -28,7 +28,7 @@ namespace SE.View
             lblUserName.Content = usuarioIniciado.NombreUsuario;
         }
 
-        private void btn_cuestionario_Click(object sender, RoutedEventArgs e)
+        private void btn_FichaPreEgreso_Click(object sender, RoutedEventArgs e)
         {
             Close();
             FichaPreEgreso ficha = new FichaPreEgreso();

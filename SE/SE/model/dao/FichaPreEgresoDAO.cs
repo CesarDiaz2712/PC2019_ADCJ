@@ -47,7 +47,7 @@ namespace SE.model.dao
                     {
                         FichaPreEgreso fp = new FichaPreEgreso();
                         fp.IdFichaPreEgreso = (!rd.IsDBNull(0)) ? rd.GetInt32(0) : 0;
-                        fp.FechaNacimiento = (!rd.IsDBNull(1)) ? rd.GetDateTime(1) : new DateTime;
+                        fp.FechaNacimiento = (!rd.IsDBNull(1)) ? rd.GetDateTime(1) : new DateTime();
                         fp.Sexo = (!rd.IsDBNull(2)) ? rd.GetString(2) : "";
                         fp.Nacionalidad = (!rd.IsDBNull(3)) ? rd.GetString(3) : "";
                         fp.Telefono = (!rd.IsDBNull(4)) ? rd.GetString(4) : "";

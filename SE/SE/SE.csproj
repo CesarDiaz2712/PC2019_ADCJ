@@ -82,7 +82,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="model\dao\FichaPreEgresoDAO.cs" />
-    <Compile Include="model\dao\UsuarioDAO.cs" />
+    <Compile Include="model\dao\EgresadoDAO.cs" />
     <Compile Include="model\db\ConnectionUtils.cs" />
     <Compile Include="model\pocos\InformacionAcademica.cs" />
     <Compile Include="model\pocos\Egresado.cs" />
@@ -92,9 +92,6 @@
     <Compile Include="model\pocos\Usuario.cs" />
     <Compile Include="View\CuestionarioEgresado.xaml.cs">
       <DependentUpon>CuestionarioEgresado.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\IniciarSesion.xaml.cs">
-      <DependentUpon>IniciarSesion.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MenúInicioEgresado.xaml.cs">
       <DependentUpon>MenúInicioEgresado.xaml</DependentUpon>
@@ -111,10 +108,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="View\CuestionarioEgresado.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\IniciarSesion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

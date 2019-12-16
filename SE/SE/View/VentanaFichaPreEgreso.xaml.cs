@@ -12,32 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-
 namespace SE.View
 {
     /// <summary>
-    /// Lógica de interacción para FichaPreEgreso.xaml
+    /// Lógica de interacción para VentanaFichaPreEgreso.xaml
     /// </summary>
     public partial class VentanaFichaPreEgreso : Window
     {
-        private bool nuevo;
-        private bool resultado;
-        private FichaPreEgreso ficha;
-        public VentanaFichaPreEgreso(bool nuevo, FichaPreEgreso ficha)
+        public VentanaFichaPreEgreso()
         {
-            this.ficha = ficha;
-            this.nuevo = nuevo;
-
             InitializeComponent();
-            if (!nuevo)
-            {
-            }
-
-        }
-
-        private void btnFinalizar_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

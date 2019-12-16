@@ -14,7 +14,7 @@
         <Label x:Name="lblConsultaInformacion" Content="Consulta Informacion" HorizontalAlignment="Stretch" Margin="94,288,663,0" VerticalAlignment="Top" FontFamily="Microsoft JhengHei" FontSize="16" FontWeight="Bold"/>
         <Label x:Name="lblCuestionarioSatisfaccion"  Content="Cuestionario Satisfacción" HorizontalAlignment="Stretch" Margin="94,374,633,0" VerticalAlignment="Top" FontFamily="Microsoft JhengHei" FontSize="16" FontWeight="Bold"/>
 
-        <Button x:Name="btnFichaPregreso" HorizontalAlignment="Left" Margin="29,94,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="btn_cuestionario_Click">
+        <Button x:Name="btnFichaPregreso" HorizontalAlignment="Left" Margin="29,94,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="btn_FichaPreEgreso_Click">
             <StackPanel>
                 <Image Source="/Resource/ficha.png" Width="50" RenderTransformOrigin="0.5,0.5" Height="44" />
             </StackPanel>
