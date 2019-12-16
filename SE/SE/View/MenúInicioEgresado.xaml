@@ -9,7 +9,7 @@
     <Grid Background="#FFC7C7C7">
         <Label x:Name="lblSistemaEgresados" Content="SISTEMAS DE EGRESADOS" Background="#FF345781" HorizontalAlignment="Left" VerticalAlignment="Top" Width="933" FontSize="24" FontWeight="Bold" Height="89" FontFamily="Microsoft JhengHei"/>
 
-        <Image x:Name="imgFEI" Source="/Resource/slider/imagen1.jpg"  HorizontalAlignment="Stretch" Height="317" Margin="280,88,0,0" VerticalAlignment="Top" Width="602" Stretch="UniformToFill"/>
+        <Image x:Name="imgFEI" Source="/Resource/slider/imagen1.jpg"  HorizontalAlignment="Stretch" Height="317" Margin="306,88,0,0" VerticalAlignment="Top" Stretch="UniformToFill"/>
         <Label x:Name="lblCuestionario" Content="Cuestionario" HorizontalAlignment="Stretch" Margin="94,198,731,0" VerticalAlignment="Top" FontFamily="Microsoft JhengHei" FontSize="16" FontWeight="Bold"/>
         <Label x:Name="lblConsultaInformacion" Content="Consulta Informacion" HorizontalAlignment="Stretch" Margin="94,288,663,0" VerticalAlignment="Top" FontFamily="Microsoft JhengHei" FontSize="16" FontWeight="Bold"/>
         <Label x:Name="lblCuestionarioSatisfaccion"  Content="Cuestionario Satisfacción" HorizontalAlignment="Stretch" Margin="94,374,633,0" VerticalAlignment="Top" FontFamily="Microsoft JhengHei" FontSize="16" FontWeight="Bold"/>
