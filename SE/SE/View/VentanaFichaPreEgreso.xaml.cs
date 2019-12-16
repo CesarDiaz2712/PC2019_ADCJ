@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using SE.model.pocos;
 
 namespace SE.View
 {
@@ -19,9 +20,16 @@ namespace SE.View
     /// </summary>
     public partial class VentanaFichaPreEgreso : Window
     {
-        public VentanaFichaPreEgreso()
+        private FichaPreEgreso ficha;
+        public VentanaFichaPreEgreso(FichaPreEgreso ficha)
         {
+            this.ficha = ficha;
             InitializeComponent();
+        }
+
+        private void Btn_Guardar_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

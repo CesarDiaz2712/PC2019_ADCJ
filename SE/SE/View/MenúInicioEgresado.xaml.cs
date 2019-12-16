@@ -25,14 +25,15 @@ namespace SE.View
         {
             this.usuarioIniciado = usuario;
             InitializeComponent();
-            lblUserName.Content = usuarioIniciado.NombreUsuario;
+            lblUserName.Content=usuario.NombreUsuario;
         }
 
         private void btn_FichaPreEgreso_Click(object sender, RoutedEventArgs e)
         {
-            Close();
             FichaPreEgreso ficha = new FichaPreEgreso();
-            ficha.Show();
+            ficha.IdEgresado = this.usuarioIniciado.IdEgresado;
+            VentanaFichaPreEgreso ventanaFicha = new VentanaFichaPreEgreso(ficha);
+            ventanaFicha.Show();
         }
     }
 }

@@ -54,11 +54,11 @@ namespace SE
             {
                 usuario = txtUsuario.Text;
                 contrasena = txtContrasena.Password;
-                Egresado u = EgresadoDAO.getLogin(usuario, contrasena);
-                if (u != null && u.IdEgresado > 0)
+                Egresado egresado = EgresadoDAO.getLogin(usuario, contrasena);
+                if (egresado != null && egresado.IdEgresado > 0)
                 {
-                    MessageBox.Show(this, "Bienvenido" + u.NombreUsuario);
-                    MenúInicioEgresado menu = new MenúInicioEgresado(u);
+                    MessageBox.Show(this, "Bienvenido" + egresado.NombreUsuario);
+                    MenúInicioEgresado menu = new MenúInicioEgresado(egresado);
                     menu.Show();
                     this.Close();
                 }

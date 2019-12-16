@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SE.model.pocos
 {
-    class FichaPreEgreso
+    public class FichaPreEgreso
     {
         private Int32 idFichaPreEgreso;
         private DateTime fechaNacimiento;

@@ -23,10 +23,10 @@ namespace SE.model.dao
                 if (conn != null)
                 {
                     String query = String.Format("SELECT " +
-                        "x.idUsuario, " +
-                        "x.nombreUsuario," +
+                        "x.idEgresado, " +
+                        "x.nombreUsuario, " +
                         "x.contraseña " +
-                        "FROM dbo.Usuario x " +
+                        "FROM dbo.Egresado x " +
                         "WHERE x.nombreUsuario = '{0}' AND x.contraseña ='{1}';", usuario, contrasena);
                     Console.WriteLine(query);
                     command = new SqlCommand(query, conn);
@@ -35,8 +35,8 @@ namespace SE.model.dao
                     {
                         u = new Egresado();
                         u.IdEgresado = (!rd.IsDBNull(0)) ? rd.GetInt32(0) : 0;
-                        u.NombreUsuario = (!rd.IsDBNull(1)) ? rd.GetString(1) : "";
-                        u.Contrasenia = (!rd.IsDBNull(2)) ? rd.GetString(2) : "";
+                        u.NombreUsuario = (!rd.IsDBNull(4)) ? rd.GetString(4) : "";
+                        u.Contrasenia = (!rd.IsDBNull(5)) ? rd.GetString(5) : "";
                     }
                     rd.Close();
                     command.Dispose();

@@ -10,12 +10,12 @@ using SE.model.pocos;
 
 namespace SE.model.dao
 {
-    class FichaPreEgresoDAO
+    public class FichaPreEgresoDAO
     {
 
-        public static List<FichaPreEgreso> getFichaPreEgresoByIdEgresado(Int32 idEgresado)
+        public static FichaPreEgreso getFichaPreEgresoByIdEgresado(Int32 idEgresado)
         {
-            List<FichaPreEgreso> list = new List<FichaPreEgreso>();
+            FichaPreEgreso egresado = new FichaPreEgreso();
             SqlConnection conn = null;
             try
             {
@@ -30,14 +30,14 @@ namespace SE.model.dao
                                                 "x.sexo, "+
                                                 "x.nacionalidad, "+
                                                 "x.telefono, "+
-                                                "x.email "+
-                                                "x.calle "+
-                                                "x.numeroCasa " +
-                                                "x.colonia " +
-                                                "x.ciudad " +
-                                                "x.estado " +
-                                                "x.codigoPostal  " +
-                                                "x.idEgresado" +
+                                                "x.email, "+
+                                                "x.calle, "+
+                                                "x.numeroCasa, " +
+                                                "x.colonia, " +
+                                                "x.ciudad, " +
+                                                "x.estado, " +
+                                                "x.codigoPostal, " +
+                                                "x.idEgresado " +
                                                 "FROM dbo.fichapreegreso x " +
                                                 "WHERE x.idEgresado = {0}", idEgresado);
                     Console.WriteLine(query);
@@ -59,10 +59,10 @@ namespace SE.model.dao
                         fp.Estado = (!rd.IsDBNull(10)) ? rd.GetString(10) : "";
                         fp.CodigoPostal = (!rd.IsDBNull(11)) ? rd.GetString(11) : "";
                         fp.IdEgresado = (!rd.IsDBNull(12)) ? rd.GetInt32(12) : 0;
-                        list.Add(fp);
                     }
                     rd.Close();
                     command.Dispose();
+                    Console.WriteLine(egresado);
                 }
             }
             catch (Exception e)
@@ -76,10 +76,10 @@ namespace SE.model.dao
                     conn.Close();
                 }
             }
-            return list;
+            return egresado;
         }
 
-        public static bool guardar(bool nuevo, FichaPreEgreso ficha)
+        public static bool guardar(FichaPreEgreso ficha)
         {
             String query = "";
        
@@ -98,6 +98,7 @@ namespace SE.model.dao
                     command.CommandType = CommandType.Text;
                     command.Parameters.AddWithValue("GETDATE()", ficha.FechaNacimiento);
                     command.Parameters.AddWithValue("@sexo", ficha.Sexo);
+                    command.Parameters.AddWithValue("@nacionalidad", ficha.Nacionalidad);
                     command.Parameters.AddWithValue("@telefono", ficha.Telefono);
                     command.Parameters.AddWithValue("@email", ficha.Email);
                     command.Parameters.AddWithValue("@calle", ficha.Calle);
