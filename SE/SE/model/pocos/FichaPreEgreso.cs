@@ -9,7 +9,7 @@ namespace SE.model.pocos
     public class FichaPreEgreso
     {
         private Int32 idFichaPreEgreso;
-        private DateTime fechaNacimiento;
+        private DateTimeOffset fechaNacimiento;
         private String sexo;
         private String nacionalidad;
         private String telefono;
@@ -25,12 +25,11 @@ namespace SE.model.pocos
         public override string ToString()
         {
             return String.Format("idFichaPreEgreso: {0}, fechaNacimiento: {1}, sexo: {2}, nacionalidad: {3}," +
-                "telefono: {4}, email: {5}, calle: {6}, numeroCasa: {7}, colonia: {8}, ciudad: {9}, estado: {10}, codigoPostal: {11}, idEgresado: {12}", idFichaPreEgreso, fechaNacimiento, sexo, nacionalidad, telefono, email +
-                calle, numeroCasa, colonia, ciudad, estado, codigoPostal, idEgresado);
+                "telefono: {4}, email: {5}, calle: {6}, numeroCasa: {7}, colonia: {8}, ciudad: {9}, estado: {10}, codigoPostal: {11}, idEgresado: {12}", idFichaPreEgreso, fechaNacimiento, sexo, nacionalidad, telefono, email, calle, numeroCasa, colonia, ciudad, estado, codigoPostal, idEgresado);
         }
 
         public int IdFichaPreEgreso { get => idFichaPreEgreso; set => idFichaPreEgreso = value; }
-        public DateTime FechaNacimiento { get => fechaNacimiento; set => fechaNacimiento = value; }
+        public DateTimeOffset FechaNacimiento { get => fechaNacimiento; set => fechaNacimiento = value; }
         public string Sexo { get => sexo; set => sexo = value; }
         public string Nacionalidad { get => nacionalidad; set => nacionalidad = value; }
         public string Telefono { get => telefono; set => telefono = value; }
