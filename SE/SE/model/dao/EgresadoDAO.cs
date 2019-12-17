@@ -24,6 +24,9 @@ namespace SE.model.dao
                 {
                     String query = String.Format("SELECT " +
                         "x.idEgresado, " +
+                        "x.matricula, " +
+                        "x.apellidos, " +
+                        "x.nombre, " +
                         "x.nombreUsuario, " +
                         "x.contraseña " +
                         "FROM dbo.Egresado x " +
@@ -35,6 +38,9 @@ namespace SE.model.dao
                     {
                         u = new Egresado();
                         u.IdEgresado = (!rd.IsDBNull(0)) ? rd.GetInt32(0) : 0;
+                        u.Matricula = (!rd.IsDBNull(1)) ? rd.GetString(1) : "";
+                        u.Apellidos = (!rd.IsDBNull(2)) ? rd.GetString(2) : "";
+                        u.Nombre = (!rd.IsDBNull(3)) ? rd.GetString(3) : "";
                         u.NombreUsuario = (!rd.IsDBNull(4)) ? rd.GetString(4) : "";
                         u.Contrasenia = (!rd.IsDBNull(5)) ? rd.GetString(5) : "";
                     }

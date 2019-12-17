@@ -38,8 +38,8 @@ namespace SE.model.dao
                                                 "x.estado, " +
                                                 "x.codigoPostal, " +
                                                 "x.idEgresado " +
-                                                "FROM dbo.fichapreegreso x " +
-                                                "WHERE x.idEgresado = {0}", idEgresado);
+                                                "FROM dbo.FichaPreEgreso x " +
+                                                "WHERE x.idEgresado = {0};", idEgresado);
                     Console.WriteLine(query);
                     command = new SqlCommand(query, conn);
                     rd = command.ExecuteReader();
@@ -47,7 +47,7 @@ namespace SE.model.dao
                     {
                         FichaPreEgreso fp = new FichaPreEgreso();
                         fp.IdFichaPreEgreso = (!rd.IsDBNull(0)) ? rd.GetInt32(0) : 0;
-                        fp.FechaNacimiento = (!rd.IsDBNull(1)) ? rd.GetDateTime(1) : new DateTime();
+                        fp.FechaNacimiento = (!rd.IsDBNull(1)) ? rd.GetDateTimeOffset(1) : new DateTimeOffset();
                         fp.Sexo = (!rd.IsDBNull(2)) ? rd.GetString(2) : "";
                         fp.Nacionalidad = (!rd.IsDBNull(3)) ? rd.GetString(3) : "";
                         fp.Telefono = (!rd.IsDBNull(4)) ? rd.GetString(4) : "";
@@ -83,7 +83,7 @@ namespace SE.model.dao
         {
             String query = "";
        
-                query = "INSERT INTO dbo.FichaPreEgreso(fechaNacimiento, sexo, nacionalidad, telefono, email, calle, numeroCasa, colonia, ciudad, estado, codigoPostal, idEgresado)" +
+                query = "INSERT INTO dbo.FichaPreEgreso (fechaNacimiento,sexo,nacionalidad,telefono,email,calle,numeroCasa,colonia,ciudad,estado,codigoPostal,idEgresado) " +
                        "VALUES(GETDATE(),@sexo,@nacionalidad,@telefono,@email,@calle,@numeroCasa,@colonia,@ciudad,@estado,@codigoPostal,@idEgresado);";
             
             SqlConnection conn = null;
@@ -96,7 +96,6 @@ namespace SE.model.dao
                     Console.WriteLine(query);
                     command = new SqlCommand(query, conn);
                     command.CommandType = CommandType.Text;
-                    command.Parameters.AddWithValue("GETDATE()", ficha.FechaNacimiento);
                     command.Parameters.AddWithValue("@sexo", ficha.Sexo);
                     command.Parameters.AddWithValue("@nacionalidad", ficha.Nacionalidad);
                     command.Parameters.AddWithValue("@telefono", ficha.Telefono);
@@ -122,6 +121,7 @@ namespace SE.model.dao
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.Message);
                 Console.WriteLine("No se pudo guardar la información...");
             }
             finally

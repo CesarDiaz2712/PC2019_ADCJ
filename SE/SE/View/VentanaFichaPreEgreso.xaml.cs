@@ -23,6 +23,8 @@ namespace SE.View
     {
         private FichaPreEgreso ficha;
         private Boolean resultado;
+        private string sexo = "";
+        private string nacionalidad = "";
         public VentanaFichaPreEgreso(FichaPreEgreso ficha)
         {
             this.ficha = ficha;
@@ -30,17 +32,15 @@ namespace SE.View
         }
 
         public bool Resultado { get => resultado; set => resultado = value; }
-        private void btn_Guardar_Click(object sender, RoutedEventArgs e)
+        public void btn_Guardar_Click(object sender, RoutedEventArgs e)
         {
-            string sexo = "";
-            string nacionalidad = "";
             if (rbHombre.IsChecked==true)
             {
-                sexo = "Hombre";
+                this.sexo = "Hombre";
             }
             else
             {
-                sexo = "Mujer";
+                this.sexo = "Mujer";
             }
 
             if (rbMexicana.IsChecked==true)
