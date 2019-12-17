@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using SE.model.dao;
+using SE.model.pocos;
 
 namespace SE.View
 {
@@ -19,12 +21,20 @@ namespace SE.View
     /// </summary>
     public partial class CuestionarioEgresado : Window
     {
-        private  ficha;
-        private Boolean resultado;
-        public VentanaFichaPreEgreso(FichaPreEgreso ficha)
+        
+        private InformacionLaboral cuestionarioLaboral;
+        private InformacionAcademica cuestionarioAcademico;
+        private InformaciónPersonal cuestionarioPersonal;
+        private bool resultado;
+
+       
+        public CuestionarioEgresado(InformacionLaboral cuestionarioLaboral, InformaciónPersonal cuestionarioPersonal, InformacionAcademica cuestionarioAcademico)
         {
-            this.ficha = ficha;
+            this.cuestionarioLaboral = cuestionarioLaboral;
+            this.cuestionarioAcademico = cuestionarioAcademico;
+            this.cuestionarioPersonal = cuestionarioPersonal;
             InitializeComponent();
         }
+        public bool Resultado { get => resultado; set => resultado = value; }
     }
 }

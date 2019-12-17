@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SE.model.pocos
 {
-    class InformaciónPersonal
+    public class InformaciónPersonal
     {
         private Int32 idFichaPreEgreso;
         private String matricula;
