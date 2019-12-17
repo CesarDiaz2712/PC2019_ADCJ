@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace SE.model.pocos
 {
-    class InformaciónLaboral
+    public class InformacionLaboral
     {
         private Int32 idInformacionLaboral;
         private String respuesta;
         private Int32 idEgresado;
-        private Int32 idRespuestaLaboral;
+        
 
         public override string ToString()
         {
-            return String.Format("idInformacionLaboral: {0} , respuesta:{1},  idRespuestaLaboral:{2}"
-                   , idInformacionLaboral, respuesta, idRespuestaLaboral);
+            return String.Format("idInformacionLaboral: {0} , respuesta:{1},  idEgresado:{2}"
+                   , idInformacionLaboral, respuesta, idEgresado);
         }
-        public int IdInformacionAcademica { get => idInformacionLaboral; set => idInformacionLaboral = value; }
+        public int IdInformacionLaboral { get => idInformacionLaboral; set => idInformacionLaboral = value; }
         public string Respuesta { get => respuesta; set => respuesta = value; }
-        private int IdRespuestaLaboral { get => idRespuestaLaboral; set => idRespuestaLaboral = value; }
+        public int IdEgresado { get => idEgresado; set => idEgresado = value; }
     }
 }

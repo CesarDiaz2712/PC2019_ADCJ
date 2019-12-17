@@ -83,6 +83,9 @@
     </Compile>
     <Compile Include="model\dao\FichaPreEgresoDAO.cs" />
     <Compile Include="model\dao\EgresadoDAO.cs" />
+    <Compile Include="model\dao\InformaciónAcadémicaDAO.cs" />
+    <Compile Include="model\dao\InformaciónLaboralDAO.cs" />
+    <Compile Include="model\dao\InformaciónPersonalDAO.cs" />
     <Compile Include="model\db\ConnectionUtils.cs" />
     <Compile Include="model\pocos\InformacionAcademica.cs" />
     <Compile Include="model\pocos\Egresado.cs" />
