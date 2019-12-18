@@ -82,10 +82,11 @@ namespace SE.model.dao
         public static bool guardar(FichaPreEgreso ficha)
         {
             String query = "";
-       
+            
                 query = "INSERT INTO dbo.FichaPreEgreso (fechaNacimiento,sexo,nacionalidad,telefono,email,calle,numeroCasa,colonia,ciudad,estado,codigoPostal,idEgresado) " +
                        "VALUES(GETDATE(),@sexo,@nacionalidad,@telefono,@email,@calle,@numeroCasa,@colonia,@ciudad,@estado,@codigoPostal,@idEgresado);";
             
+
             SqlConnection conn = null;
             try
             {

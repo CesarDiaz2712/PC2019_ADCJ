@@ -36,11 +36,11 @@ namespace SE.View
 
         private void btn_FichaPreEgreso_Click(object sender, RoutedEventArgs e)
         {
-            /*
+            
             FichaPreEgreso ficha = new FichaPreEgreso();
-            ficha.IdEgresado = this.usuarioIniciado.IdEgresado;*/
+            ficha.IdEgresado = this.usuarioIniciado.IdEgresado;
             this.cargarInformacionEgresado();
-            VentanaFichaPreEgreso ventanaFicha = new VentanaFichaPreEgreso(egresado);
+            VentanaFichaPreEgreso ventanaFicha = new VentanaFichaPreEgreso(egresado, ficha);
             ventanaFicha.Show();
         }
 

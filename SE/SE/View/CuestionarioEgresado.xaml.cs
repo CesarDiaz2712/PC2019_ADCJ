@@ -38,14 +38,15 @@ namespace SE.View
         private string actDeportivas;
         private bool resultado;
 
-       /*
+       
         public CuestionarioEgresado()
         {
             InitializeComponent();
         }
-        */
+        
         public bool Resultado { get => resultado; set => resultado = value; }
 
+        
         private void btn_Guardar_Click_Laboral(object sender, RoutedEventArgs e)
         {
             if (rbSi.IsChecked == true)
@@ -130,7 +131,7 @@ namespace SE.View
                     }
                 }
             }
-
+            /*
             this.cuestionarioLaboral.Respuesta = trabajoLigadoFormacion;
             this.cuestionarioLaboral.Respuesta = txtCargoDesempeñado.Text;
             this.cuestionarioLaboral.Respuesta = txtTipoContratacion.Text;
@@ -143,7 +144,7 @@ namespace SE.View
             this.cuestionarioLaboral.Respuesta = promedioIngresoMensual;
             this.resultado = InformaciónLaboralDAO.guardar(this.cuestionarioLaboral);
 
-
+            */
         }
 
 
@@ -338,7 +339,7 @@ namespace SE.View
                 }
             }
 
-
+            /*
             this.cuestionarioAcademico.Respuesta = txtIngreso.Text;
             this.cuestionarioAcademico.Respuesta = txtEgreso.Text;
             this.cuestionarioAcademico.Respuesta = formacionActual;
@@ -349,16 +350,8 @@ namespace SE.View
             this.cuestionarioAcademico.Respuesta = serviciosApoyo;
             this.cuestionarioAcademico.Respuesta = actDeportivas;
             this.resultado = InformaciónAcadémicaDAO.guardar(this.cuestionarioAcademico);
+            */
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

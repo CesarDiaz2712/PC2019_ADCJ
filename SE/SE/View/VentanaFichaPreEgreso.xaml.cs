@@ -26,8 +26,9 @@ namespace SE.View
         private Boolean resultado;
         private string sexo = "";
         private string nacionalidad = "";
-        public VentanaFichaPreEgreso(Egresado egresado)
+        public VentanaFichaPreEgreso(Egresado egresado, FichaPreEgreso ficha)
         {
+            this.ficha = ficha;
             this.egresado = egresado;
             InitializeComponent();
             txtApellidos.Text = egresado.Apellidos;
