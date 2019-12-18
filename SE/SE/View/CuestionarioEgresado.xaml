@@ -1,14 +1,14 @@
-﻿<Window x:Class="SE.View.CuestionarioSatisfaccion"
+﻿<Window x:Class="SE.View.CuestionarioEgresado"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SE.View"
         mc:Ignorable="d"
-        Title="Cuestionario de Egresados" Height="1388.25" Width="800">
+        Title="Cuestionario de Egresados" Height="2177.917" Width="800">
     <Grid Background="#FF345781">
         <Label x:Name="lblSistemaEgresados" Content="SISTEMAS DE EGRESADOS"  HorizontalAlignment="Left" Margin="32,20,0,0" VerticalAlignment="Top" Width="328" FontSize="24" FontWeight="Bold" Height="40" FontFamily="Microsoft JhengHei"/>
-        <TabControl x:Name="tabCuestionarioEgresados" HorizontalAlignment="Left" Height="1282" Margin="0,65,0,0" VerticalAlignment="Top" Width="792" SelectionChanged="TabControl_SelectionChanged" Background="{x:Null}">
+        <TabControl x:Name="tabCuestionarioEgresados" HorizontalAlignment="Left" Height="2082" Margin="0,65,0,0" VerticalAlignment="Top" Width="792" SelectionChanged="TabControl_SelectionChanged" Background="{x:Null}">
             <TabItem x:Name="tabInformacionPersonal" Header="Información Personal" Margin="-2,-3,-137,1" Background="#FF345781">
                 <Grid Background="#FFC7C7C7" >
                     <Label x:Name="lblMatricula" Content="Matricula:" HorizontalAlignment="Left" Margin="10,32,0,0" VerticalAlignment="Top" Width="100" FontFamily="Microsoft YaHei"/>
@@ -41,91 +41,140 @@
                 <ScrollViewer>
                     <Grid Background=" #FFC7C7C7">
 
-                        <Label x:Name="lblConocimientosTeoricos" Content="¿Qué conocimientos (saberes teóricos) no incluidos en el programa de estudios ha considerado o considera necesarios para &#xD;&#xA;su desempeño laboral actual?" HorizontalAlignment="Left" Margin="33,257,0,0" VerticalAlignment="Top" Width="689"/>
-                        <TextBox x:Name="txtConocimientosTeoricos" HorizontalAlignment="Left" Height="27" Margin="33,299,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689"/>
-                        <Label x:Name="lblSaberesHeuristicos" Content="¿Qué habilidades (saberes heurísticos) no contemplados en el programa de estudios ha considerado o considera necesarios &#xD;&#xA;para su desempeño laboral actual?" HorizontalAlignment="Left" Margin="34,340,0,0" VerticalAlignment="Top" Width="689"/>
-                        <TextBox x:Name="txtSaberesHeuristicos" HorizontalAlignment="Left" Height="23" Margin="34,382,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689" TextChanged="TextBox_TextChanged"/>
-                        <Label x:Name="lblEECursadas" Content="¿Cuáles experiencias educativas cursadas son aplicadas en su desempeño laboral actual? " HorizontalAlignment="Left" Margin="34,425,0,0" VerticalAlignment="Top" Width="689"/>
-                        <TextBox x:Name="txtEECursadas" HorizontalAlignment="Left" Height="23" Margin="34,456,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689"/>
-                        <Label x:Name="lblSaberesTeoricosAdquiridos" Content="Indique los conocimientos (saberes teóricos) que considere haber adquirido o desarrollado durante su formación profesional:" HorizontalAlignment="Left" Margin="33,498,0,0" VerticalAlignment="Top" Width="689"/>
-                        <CheckBox x:Name="chkProgramacionEstructuradaAdquirida" Content=" Programación estructurada" HorizontalAlignment="Left" Margin="48,552,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkAlgoritmiaAdquirida" Content="Algorítmia" HorizontalAlignment="Left" Margin="48,532,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkIngenieriaSoftwareAdquirida" Content=" Ingeniería de Software " HorizontalAlignment="Left" Margin="231,572,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkProgramacionConcurrenteAdquirida" Content="Programación Concurrente" HorizontalAlignment="Left" Margin="48,572,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkRedesAdquirida" Content="Redes " HorizontalAlignment="Left" Margin="231,532,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked" RenderTransformOrigin="0.218,0.467"/>
-                        <CheckBox x:Name="chkEstructuraDatosAdquirida" Content="Estructuras de datos " HorizontalAlignment="Left" Margin="231,552,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkProcesosAdquirida" Content="Procesos de desarrollo de software" HorizontalAlignment="Left" Margin="396,532,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkPOOAdquirida" Content="Programación Orientada a Objetos" HorizontalAlignment="Left" Margin="397,552,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkBasesDatosAdquirida" Content="Bases de Datos" HorizontalAlignment="Left" Margin="231,592,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_1"/>
-                        <CheckBox x:Name="chkSistemasInteligentesAdquirida" Content="Sistemas inteligentes" HorizontalAlignment="Left" Margin="48,592,0,0" VerticalAlignment="Top"/>
-                        <Label x:Name="lblDestrezasAdquiridas" Content="Indique las habilidades/destrezas (saberes heurísticos) que considere haber adquirido o desarrollado durante su formación &#xD;&#xA;profesional:" HorizontalAlignment="Left" Margin="32,625,0,0" VerticalAlignment="Top" Width="689"/>
-                        <CheckBox x:Name="chkProblemasAlgoritmicosAdquirido" Content="Planteamiento y solución a&#xD;&#xA;problemas algorítmicos" HorizontalAlignment="Left" Margin="50,672,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkDiseñoImplantacionProgramasAdquirido" Content="Diseño e implantación de&#xD;&#xA;programas" HorizontalAlignment="Left" Margin="50,709,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkAplicacionMetodologiaAdquirido"  Content="Aplicación de una metodología para la obtención de&#xD;&#xA;modelos de análisis y diseño de un sistema de software" HorizontalAlignment="Left" Margin="420,709,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_2"/>
-                        <CheckBox x:Name="chkDiseñoRedesAdquirido" Content="Diseño e implantación de redes" HorizontalAlignment="Left" Margin="233,672,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkDiseñoImplantacionSistemas" Content="Diseño e implantación de&#xD;&#xA;sistemas inteligentes" HorizontalAlignment="Left" Margin="233,697,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkDiseñoImplantacionBD" Content="Diseño e implantación de bases de datos &#xD;" HorizontalAlignment="Left" Margin="48,745,0,0" VerticalAlignment="Top" Height="19"/>
-                        <CheckBox x:Name="chkUsoLenguaje" Content="Uso de un lenguaje de programación y su entorno de&#xD;&#xA;desarrollo para codificar y probar algoritmos" HorizontalAlignment="Left" Margin="420,672,0,0" VerticalAlignment="Top"/>
-                        <Label x:Name="lblActitudesValores" Content="Indique las actitudes/valores (saberes axiológicos) que considere haber adquirido, desarrollado o fortalecido durante su &#xD;&#xA;formación profesional:" HorizontalAlignment="Left" Margin="30,789,0,0" VerticalAlignment="Top" Width="688"/>
-                        <CheckBox x:Name="chkCreatividad" Content="Creatividad" HorizontalAlignment="Left" Margin="43,836,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkResponsabilidad" Content="Responsabilidad" HorizontalAlignment="Left" Margin="43,856,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_3"/>
-                        <CheckBox x:Name="chkPaciencia" Content="Paciencia" HorizontalAlignment="Left" Margin="43,876,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkTrabajoEquipo" Content="Trabajo en equipo" HorizontalAlignment="Left" Margin="43,896,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkImaginacion" Content="Imaginación" HorizontalAlignment="Left" Margin="578,836,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkColaboracion" Content=" Colaboración" HorizontalAlignment="Left" Margin="178,836,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkOriginalidad" Content=" Originalidad" HorizontalAlignment="Left" Margin="178,856,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkHonestidad" Content="Honestidad" HorizontalAlignment="Left" Margin="178,876,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkRespeto" Content=" Respeto" HorizontalAlignment="Left" Margin="178,896,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkTolerencia" Content="Tolerancia" HorizontalAlignment="Left" Margin="578,856,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkAutoAprendizaje" Content="Auto aprendizaje" HorizontalAlignment="Left" Margin="442,856,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkDiscrecion" Content="Discreción" HorizontalAlignment="Left" Margin="312,836,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkCoherencia" Content="Coherencia" HorizontalAlignment="Left" Margin="442,876,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkCuriosidad" Content="Curiosidad" HorizontalAlignment="Left" Margin="442,896,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkCooperacion" Content="Cooperación" HorizontalAlignment="Left" Margin="312,876,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkInteres" Content="Interés" HorizontalAlignment="Left" Margin="442,836,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkMeticulosidad" Content="Meticulosidad " HorizontalAlignment="Left" Margin="312,856,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkIniciativa" Content="Iniciativa" HorizontalAlignment="Left" Margin="312,896,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkConstancia" Content="Constancia" HorizontalAlignment="Left" Margin="578,876,0,0" VerticalAlignment="Top"/>
-                        <Label x:Name="lblFuncionesRealizadas" Content="De las opciones que se le ofrece a continuación señale cuál es el tipo de funciones y/o actividades que realiza en su trabajo: " HorizontalAlignment="Left" Margin="30,926,0,0" VerticalAlignment="Top" Width="689"/>
-                        <CheckBox x:Name="chkOrganizacionRealizada" Content="Organización" HorizontalAlignment="Left" Margin="43,954,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_4"/>
-                        <CheckBox x:Name="chkCooperacionRealizada" Content="Operación" HorizontalAlignment="Left" Margin="179,974,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.141,2.2"/>
-                        <CheckBox x:Name="chkControlRealizado" Content=" Control" HorizontalAlignment="Left" Margin="312,974,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkDiscrecionRealizada" Content="Dirección" HorizontalAlignment="Left" Margin="312,954,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.423,0.6"/>
-                        <CheckBox x:Name="chkPlaneacionRealizada" Content="Planeación" HorizontalAlignment="Left" Margin="43,974,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkDiagnosticoRealizado" Content="Diagnóstico" HorizontalAlignment="Left" Margin="179,954,0,0" VerticalAlignment="Top"/>
-                        <Label x:Name="lblFuncionesDesempeñadas" Content="Describa en forma breve las funciones que desempeña con mayor frecuencia: " HorizontalAlignment="Left" Margin="32,994,0,0" VerticalAlignment="Top" Width="689"/>
-                        <TextBox x:Name="txtFuncionesDesempeñadas" HorizontalAlignment="Left" Height="21" Margin="32,1025,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689"/>
-                        <Label x:Name="lblProblematicasSolucionadas" Content="¿Qué problemática(s) social(es) ha contribuido a solucionar con su desempeño profesional?" HorizontalAlignment="Left" Margin="32,1051,0,0" VerticalAlignment="Top"/>
-                        <TextBox x:Name="txtProblematicasSolucionadas" HorizontalAlignment="Left" Height="23" Margin="32,1077,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689"/>
-                        <Label x:Name="lblIngresoMensual" Content="Indique el promedio de ingreso mensual que percibe como producto de su práctica profesional" HorizontalAlignment="Left" Margin="32,1105,0,0" VerticalAlignment="Top" Width="689"/>
-                        <RadioButton x:Name="rb5000" Content="Menos de $5000.00" HorizontalAlignment="Left" Margin="45,1131,0,0" VerticalAlignment="Top"/>
-                        <RadioButton x:Name="rb5001a10000" Content="De $5001.00 a $10,000.00&#xD;&#xA;" HorizontalAlignment="Left" Margin="45,1151,0,0" VerticalAlignment="Top"/>
-                        <RadioButton x:Name="rb10001a15000" Content="De $10,001.00 a $15,000.00" HorizontalAlignment="Left" Margin="247,1131,0,0" VerticalAlignment="Top"/>
-                        <RadioButton x:Name="rb15001a20000" Content="De $15,001.00 a $20,000.00" HorizontalAlignment="Left" Margin="247,1151,0,0" VerticalAlignment="Top"/>
-                        <RadioButton x:Name="rb20001oMas" Content="De $20,001.00 o más" HorizontalAlignment="Left" Margin="444,1131,0,0" VerticalAlignment="Top"/>
-                        <Label x:Name="lblCargoDesempeñado" Content="Cargo que desempeña: " HorizontalAlignment="Left" Margin="34,33,0,0" VerticalAlignment="Top"/>
-                        <Label x:Name="lblTipoContratacion" Content="Tipo de contratación:" HorizontalAlignment="Left" Margin="34,64,0,0" VerticalAlignment="Top"/>
-                        <Label x:Name="lblTrabajoLigadoAFormacion" Content="El trabajo que realiza actualmente está relacionado con su formación:" HorizontalAlignment="Left" Margin="34,95,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="lblConocimientosTeoricos" Content="¿Qué conocimientos (saberes teóricos) no incluidos en el programa de estudios ha considerado o considera necesarios para &#xD;&#xA;su desempeño laboral actual?" HorizontalAlignment="Left" Margin="29,431,0,0" VerticalAlignment="Top" Width="689"/>
+                        <TextBox x:Name="txtConocimientosTeoricos" HorizontalAlignment="Left" Height="27" Margin="29,473,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689"/>
+                        <Label x:Name="lblSaberesHeuristicos" Content="¿Qué habilidades (saberes heurísticos) no contemplados en el programa de estudios ha considerado o considera necesarios &#xD;&#xA;para su desempeño laboral actual?" HorizontalAlignment="Left" Margin="30,514,0,0" VerticalAlignment="Top" Width="689"/>
+                        <TextBox x:Name="txtSaberesHeuristicos" HorizontalAlignment="Left" Height="23" Margin="30,556,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689" TextChanged="TextBox_TextChanged"/>
+                        <Label x:Name="lblEECursadas" Content="¿Cuáles experiencias educativas cursadas son aplicadas en su desempeño laboral actual? " HorizontalAlignment="Left" Margin="30,599,0,0" VerticalAlignment="Top" Width="689"/>
+                        <TextBox x:Name="txtEECursadas" HorizontalAlignment="Left" Height="23" Margin="30,630,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689"/>
+                        <Label x:Name="lblSaberesTeoricosAdquiridos" Content="Indique los conocimientos (saberes teóricos) que considere haber adquirido o desarrollado durante su formación profesional:" HorizontalAlignment="Left" Margin="32,668,0,0" VerticalAlignment="Top" Width="689"/>
+                        <CheckBox x:Name="chkProgramacionEstructuradaAdquirida" Content=" Programación estructurada" HorizontalAlignment="Left" Margin="51,719,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkAlgoritmiaAdquirida" Content="Algorítmia" HorizontalAlignment="Left" Margin="51,699,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkIngenieriaSoftwareAdquirida" Content=" Ingeniería de Software " HorizontalAlignment="Left" Margin="234,739,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkProgramacionConcurrenteAdquirida" Content="Programación Concurrente" HorizontalAlignment="Left" Margin="51,739,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkRedesAdquirida" Content="Redes " HorizontalAlignment="Left" Margin="234,699,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked" RenderTransformOrigin="0.218,0.467"/>
+                        <CheckBox x:Name="chkEstructuraDatosAdquirida" Content="Estructuras de datos " HorizontalAlignment="Left" Margin="234,719,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkProcesosAdquirida" Content="Procesos de desarrollo de software" HorizontalAlignment="Left" Margin="399,699,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkPOOAdquirida" Content="Programación Orientada a Objetos" HorizontalAlignment="Left" Margin="400,719,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkBasesDatosAdquirida" Content="Bases de Datos" HorizontalAlignment="Left" Margin="234,759,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_1"/>
+                        <CheckBox x:Name="chkSistemasInteligentesAdquirida" Content="Sistemas inteligentes" HorizontalAlignment="Left" Margin="51,759,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="lblDestrezasAdquiridas" Content="Indique las habilidades/destrezas (saberes heurísticos) que considere haber adquirido o desarrollado durante su formación &#xD;&#xA;profesional:" HorizontalAlignment="Left" Margin="32,792,0,0" VerticalAlignment="Top" Width="689"/>
+                        <CheckBox x:Name="chkProblemasAlgoritmicosAdquirido" Content="Planteamiento y solución a&#xD;&#xA;problemas algorítmicos" HorizontalAlignment="Left" Margin="51,839,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkDiseñoImplantacionProgramasAdquirido" Content="Diseño e implantación de&#xD;&#xA;programas" HorizontalAlignment="Left" Margin="51,876,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkAplicacionMetodologiaAdquirido"  Content="Aplicación de una metodología para la obtención de&#xD;&#xA;modelos de análisis y diseño de un sistema de software" HorizontalAlignment="Left" Margin="423,876,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_2"/>
+                        <CheckBox x:Name="chkDiseñoRedesAdquirido" Content="Diseño e implantación de redes" HorizontalAlignment="Left" Margin="234,839,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkDiseñoImplantacionSistemas" Content="Diseño e implantación de&#xD;&#xA;sistemas inteligentes" HorizontalAlignment="Left" Margin="234,864,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkDiseñoImplantacionBD" Content="Diseño e implantación de bases de datos &#xD;" HorizontalAlignment="Left" Margin="51,912,0,0" VerticalAlignment="Top" Height="19"/>
+                        <CheckBox x:Name="chkUsoLenguaje" Content="Uso de un lenguaje de programación y su entorno de&#xD;&#xA;desarrollo para codificar y probar algoritmos" HorizontalAlignment="Left" Margin="423,839,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="lblActitudesValores" Content="Indique las actitudes/valores (saberes axiológicos) que considere haber adquirido, desarrollado o fortalecido durante su &#xD;&#xA;formación profesional:" HorizontalAlignment="Left" Margin="35,942,0,0" VerticalAlignment="Top" Width="688"/>
+                        <CheckBox x:Name="chkCreatividad" Content="Creatividad" HorizontalAlignment="Left" Margin="51,989,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkResponsabilidad" Content="Responsabilidad" HorizontalAlignment="Left" Margin="51,1009,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_3"/>
+                        <CheckBox x:Name="chkPaciencia" Content="Paciencia" HorizontalAlignment="Left" Margin="51,1029,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkTrabajoEquipo" Content="Trabajo en equipo" HorizontalAlignment="Left" Margin="51,1049,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkImaginacion" Content="Imaginación" HorizontalAlignment="Left" Margin="586,989,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkColaboracion" Content=" Colaboración" HorizontalAlignment="Left" Margin="186,989,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkOriginalidad" Content=" Originalidad" HorizontalAlignment="Left" Margin="186,1009,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkHonestidad" Content="Honestidad" HorizontalAlignment="Left" Margin="186,1029,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkRespeto" Content=" Respeto" HorizontalAlignment="Left" Margin="186,1049,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkTolerencia" Content="Tolerancia" HorizontalAlignment="Left" Margin="586,1009,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkAutoAprendizaje" Content="Auto aprendizaje" HorizontalAlignment="Left" Margin="450,1009,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkDiscrecion" Content="Discreción" HorizontalAlignment="Left" Margin="320,989,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkCoherencia" Content="Coherencia" HorizontalAlignment="Left" Margin="450,1029,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkCuriosidad" Content="Curiosidad" HorizontalAlignment="Left" Margin="450,1049,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkCooperacion" Content="Cooperación" HorizontalAlignment="Left" Margin="320,1029,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkInteres" Content="Interés" HorizontalAlignment="Left" Margin="450,989,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkMeticulosidad" Content="Meticulosidad " HorizontalAlignment="Left" Margin="320,1009,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkIniciativa" Content="Iniciativa" HorizontalAlignment="Left" Margin="320,1049,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkConstancia" Content="Constancia" HorizontalAlignment="Left" Margin="586,1029,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="lblFuncionesRealizadas" Content="De las opciones que se le ofrece a continuación señale cuál es el tipo de funciones y/o actividades que realiza en su trabajo: " HorizontalAlignment="Left" Margin="35,1069,0,0" VerticalAlignment="Top" Width="689"/>
+                        <CheckBox x:Name="chkOrganizacionRealizada" Content="Organización" HorizontalAlignment="Left" Margin="49,1103,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_4"/>
+                        <CheckBox x:Name="chkCooperacionRealizada" Content="Operación" HorizontalAlignment="Left" Margin="185,1123,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.141,2.2"/>
+                        <CheckBox x:Name="chkControlRealizado" Content=" Control" HorizontalAlignment="Left" Margin="318,1123,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkDiscrecionRealizada" Content="Dirección" HorizontalAlignment="Left" Margin="318,1103,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.423,0.6"/>
+                        <CheckBox x:Name="chkPlaneacionRealizada" Content="Planeación" HorizontalAlignment="Left" Margin="49,1123,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkDiagnosticoRealizado" Content="Diagnóstico" HorizontalAlignment="Left" Margin="185,1103,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="lblFuncionesDesempeñadas" Content="Describa en forma breve las funciones que desempeña con mayor frecuencia: " HorizontalAlignment="Left" Margin="37,1146,0,0" VerticalAlignment="Top" Width="689"/>
+                        <TextBox x:Name="txtFuncionesDesempeñadas" HorizontalAlignment="Left" Height="22" Margin="37,1177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689"/>
+                        <Label x:Name="lblProblematicasSolucionadas" Content="¿Qué problemática(s) social(es) ha contribuido a solucionar con su desempeño profesional?" HorizontalAlignment="Left" Margin="37,1203,0,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="txtProblematicasSolucionadas" HorizontalAlignment="Left" Height="24" Margin="35,1229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689"/>
+                        <Label x:Name="lblIngresoMensual" Content="Indique el promedio de ingreso mensual que percibe como producto de su práctica profesional" HorizontalAlignment="Left" Margin="36,1257,0,0" VerticalAlignment="Top" Width="689"/>
+                        <RadioButton x:Name="rb5000" Content="Menos de $5000.00" HorizontalAlignment="Left" Margin="52,1283,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rb5001a10000" Content="De $5001.00 a $10,000.00&#xD;&#xA;" HorizontalAlignment="Left" Margin="52,1303,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rb10001a15000" Content="De $10,001.00 a $15,000.00" HorizontalAlignment="Left" Margin="254,1283,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rb15001a20000" Content="De $15,001.00 a $20,000.00" HorizontalAlignment="Left" Margin="254,1303,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rb20001oMas" Content="De $20,001.00 o más" HorizontalAlignment="Left" Margin="451,1283,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="lblCargoDesempeñado" Content="Cargo que desempeña: " HorizontalAlignment="Left" Margin="32,33,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="lblTipoContratacion" Content="Tipo de contratación:" HorizontalAlignment="Left" Margin="32,64,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="lblTrabajoLigadoAFormacion" Content="El trabajo que realiza actualmente está relacionado con su formación:" HorizontalAlignment="Left" Margin="32,95,0,0" VerticalAlignment="Top"/>
                         <TextBox  x:Name="txtCargoDesempeñado" HorizontalAlignment="Left" Height="23" Margin="175,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="367"/>
                         <TextBox x:Name="txtTipoContratacion" HorizontalAlignment="Left" Height="23" Margin="175,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="367"/>
                         <RadioButton x:Name="rbSi" Content="Sí" HorizontalAlignment="Left" Margin="427,101,0,0" VerticalAlignment="Top"/>
                         <RadioButton x:Name="rbNo" Content="No" HorizontalAlignment="Left" Margin="483,101,0,0" VerticalAlignment="Top"/>
                         <Label x:Name="lblTiempoTrancurridoPrimerEmpleo" Content="Seleccione el tiempo transcurrido desde su egreso hasta encontrar un empleo relacionado con su formación académica" HorizontalAlignment="Left" Margin="32,138,0,0" VerticalAlignment="Top" Width="689"/>
                         <RadioButton x:Name="rb12a18Meses" Content="De 12 a 18 meses" HorizontalAlignment="Left" Margin="247,169,0,0" VerticalAlignment="Top" Width="131"/>
-                        <RadioButton x:Name="rbMenosDe6Meses" Content="Menos de 6 meses" HorizontalAlignment="Left" Margin="40,169,0,0" VerticalAlignment="Top" Width="130"/>
-                        <RadioButton x:Name="rb6a12Meses" Content=" 6 a 12 meses" HorizontalAlignment="Left" Margin="40,205,0,0" VerticalAlignment="Top"/>
-                        <RadioButton x:Name="rb18a24Meses" Content="De 18 a 24 meses" HorizontalAlignment="Left" Margin="247,202,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbMenosDe6Meses" Content="Menos de 6 meses" HorizontalAlignment="Left" Margin="49,169,0,0" VerticalAlignment="Top" Width="130"/>
+                        <RadioButton x:Name="rb6a12Meses" Content=" 6 a 12 meses" HorizontalAlignment="Left" Margin="49,193,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rb18a24Meses" Content="De 18 a 24 meses" HorizontalAlignment="Left" Margin="247,193,0,0" VerticalAlignment="Top"/>
                         <RadioButton x:Name="rbMasDe24Meses" Content="Más de 24 meses" HorizontalAlignment="Left" Margin="471,169,0,0" VerticalAlignment="Top" Width="130"/>
-                        <RadioButton x:Name="rbSinTrabajo" Content="No he trabajado " HorizontalAlignment="Left" Margin="471,202,0,0" VerticalAlignment="Top"/>
-                        <Button x:Name="btnCancelarInformacionLaboral" Content="Cancelar" HorizontalAlignment="Left" Margin="471,1213,0,0" VerticalAlignment="Top" Width="75"/>
-                        <Button x:Name="btn_Guardar_InformacionLaboral" Content="Guardar" HorizontalAlignment="Left" Margin="588,1213,0,0" VerticalAlignment="Top" Width="75" Click="btn_Guardar_Click_Laboral"/>
+                        <RadioButton x:Name="rbSinTrabajo" Content="No he trabajado " HorizontalAlignment="Left" Margin="471,193,0,0" VerticalAlignment="Top"/>
+                        <Button x:Name="btnCancelarInformacionLaboral" Content="Cancelar" HorizontalAlignment="Left" Margin="505,1745,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.547,-2.9"/>
+                        <Button x:Name="btn_Guardar_InformacionLaboral" Content="Guardar" HorizontalAlignment="Left" Margin="618,1745,0,0" VerticalAlignment="Top" Width="75" Click="btn_Guardar_Click_Laboral"/>
+                        <Label Content="Tipo de organismo, empresa o institución en la que trabaja:" HorizontalAlignment="Left" Margin="29,354,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Privada" HorizontalAlignment="Left" Margin="49,385,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Pública" HorizontalAlignment="Left" Margin="49,408,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Gubernamental" HorizontalAlignment="Left" Margin="243,385,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Educativa" HorizontalAlignment="Left" Margin="243,405,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Ejerce en forma independiente" HorizontalAlignment="Left" Margin="467,385,0,0" VerticalAlignment="Top"/>
+                        <Label Content="¿Cuáles fueron las razones por las que tardó en emplearse en este tiempo?" HorizontalAlignment="Left" Margin="29,227,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Personales" HorizontalAlignment="Left" Margin="49,258,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No cumplir el perfil solicitado" HorizontalAlignment="Left" Margin="137,258,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Falta de oferta de trabajo" HorizontalAlignment="Left" Margin="326,258,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Otra:" HorizontalAlignment="Left" Margin="483,252,0,0" VerticalAlignment="Top"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="524,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224"/>
+                        <Label Content="¿Qué tan importante fue el contar con experiencia o no para conseguir tu primer trabajo?" HorizontalAlignment="Left" Margin="29,292,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucha" HorizontalAlignment="Left" Margin="49,323,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poca" HorizontalAlignment="Left" Margin="182,323,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Ninguna" HorizontalAlignment="Left" Margin="320,323,0,0" VerticalAlignment="Top"/>
+                        <Label Content="¿Te gustaría crear tu propia empresa o ser tu propio empleador?" HorizontalAlignment="Left" Margin="37,1334,0,0" VerticalAlignment="Top" Width="368"/>
+                        <RadioButton Content="Sí" HorizontalAlignment="Left" Margin="52,1365,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No" HorizontalAlignment="Left" Margin="119,1365,0,0" VerticalAlignment="Top"/>
+                        <Label Content="¿Por qué?" HorizontalAlignment="Left" Margin="190,1357,0,0" VerticalAlignment="Top"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="264,1360,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="460" TextChanged="TextBox_TextChanged"/>
+                        <Label Content="¿En que áreas de conocimiento detectó tener deficiencias al entrar al mercado laboral?" HorizontalAlignment="Left" Margin="37,1396,0,0" VerticalAlignment="Top"/>
+                        <CheckBox Content="Redes" HorizontalAlignment="Left" Margin="52,1427,0,0" VerticalAlignment="Top"/>
+                        <CheckBox Content="Software especializado (paquetes)" HorizontalAlignment="Left" Margin="165,1427,0,0" VerticalAlignment="Top"/>
+                        <CheckBox Content="Programación de sistemas" HorizontalAlignment="Left" Margin="567,1427,0,0" VerticalAlignment="Top"/>
+                        <CheckBox Content="Conocimientos administrativos" HorizontalAlignment="Left" Margin="165,1456,0,0" VerticalAlignment="Top"/>
+                        <CheckBox Content="Ingeniería de software " HorizontalAlignment="Left" Margin="399,1427,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.489,0.267"/>
+                        <CheckBox Content="Dominio de otro idioma" HorizontalAlignment="Left" Margin="399,1456,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Lenguajes de programación. ¿Cuáles?:" HorizontalAlignment="Left" Margin="44,1485,0,0" VerticalAlignment="Top"/>
+                        <CheckBox Content="Paquetería" HorizontalAlignment="Left" Margin="52,1456,0,0" VerticalAlignment="Top"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="266,1488,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="459"/>
+                        <Label Content="Otros:" HorizontalAlignment="Left" Margin="44,1516,0,0" VerticalAlignment="Top"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="94,1516,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="632"/>
+                        <Label Content="¿Cuáles son los conocimientos básicos requeridos por la empresa en la que trabajas actualmente?" HorizontalAlignment="Left" Margin="35,1558,0,0" VerticalAlignment="Top"/>
+                        <CheckBox Content="Manejo de bases de datos" HorizontalAlignment="Left" Margin="52,1589,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked"/>
+                        <CheckBox Content="Programación de sistemas" HorizontalAlignment="Left" Margin="52,1618,0,0" VerticalAlignment="Top"/>
+                        <CheckBox Content="Manejo de redes" HorizontalAlignment="Left" Margin="244,1589,0,0" VerticalAlignment="Top"/>
+                        <CheckBox Content="Manejo de paquetes" HorizontalAlignment="Left" Margin="243,1618,0,0" VerticalAlignment="Top"/>
+                        <CheckBox Content="Mantenimiento de equipos &#xD;&#xA;de cómputo " HorizontalAlignment="Left" Margin="586,1589,-51,0" VerticalAlignment="Top"/>
+                        <CheckBox Content="Manejo de multimedia" HorizontalAlignment="Left" Margin="586,1618,0,0" VerticalAlignment="Top"/>
+                        <CheckBox Content="Manejo de otro idioma " HorizontalAlignment="Left" Margin="400,1618,0,0" VerticalAlignment="Top"/>
+                        <CheckBox Content="Diseño de websites" HorizontalAlignment="Left" Margin="400,1589,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.817,-2.733"/>
+                        <Label Content="Consideras que la formación profesional recibida fue: " HorizontalAlignment="Left" Margin="40,1650,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Excelente" HorizontalAlignment="Left" Margin="51,1681,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Muy buena" HorizontalAlignment="Left" Margin="165,1681,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Buena" HorizontalAlignment="Left" Margin="282,1681,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="385,1681,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mala" HorizontalAlignment="Left" Margin="500,1681,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Muy mala" HorizontalAlignment="Left" Margin="609,1681,0,0" VerticalAlignment="Top"/>
 
                     </Grid>
                 </ScrollViewer>
             </TabItem>
             <TabItem x:Name="tabInformacionAcademica" Header="Información Académica" Margin="270,-3,-382,0" Background="#FF345781">
                 <ScrollViewer Margin="-11,0,2,0">
-                    <Grid Background="#FFC7C7C7" Height="724" Width="775" >
+                    <Grid Background="#FFC7C7C7" Height="2052" Width="774" >
                         <Label x:Name="lblIngreso" Content="Año de ingreso a la licenciatura:" HorizontalAlignment="Left" Margin="25,23,0,0" VerticalAlignment="Top"/>
                         <Label x:Name="lblEgreso" Content="Año de egreso: " HorizontalAlignment="Left" Margin="417,23,0,0" VerticalAlignment="Top"/>
                         <TextBox x:Name="txtIngreso" HorizontalAlignment="Left" Height="23" Margin="209,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185"/>
@@ -168,51 +217,317 @@
                         <RadioButton x:Name="rbRegularActDeportivas" Content="Regular" HorizontalAlignment="Left" Margin="488,277,0,0" VerticalAlignment="Top"/>
                         <RadioButton x:Name="rbDeficienteActDeportivas" Content="Deficiente" HorizontalAlignment="Left" Margin="621,277,0,0" VerticalAlignment="Top"/>
                         <Label x:Name="lblEEUtiles" Content="En relación con las experiencias educativas del Área de formación básica general, señale qué Experiencias Educativas &#xD;&#xA;han tenido utilidad para su desempeño como profesionista: " HorizontalAlignment="Left" Margin="25,329,0,0" VerticalAlignment="Top" Width="693"/>
-                        <CheckBox x:Name="chkIngles1" Content="Inglés I" HorizontalAlignment="Left" Margin="36,382,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_6"/>
-                        <CheckBox x:Name="chkIngles2" Content="Inglés II" HorizontalAlignment="Left" Margin="111,382,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkHP" Content="Habilidades de pensamiento&#xD;&#xA;crítico y creativo&#xD;&#xA;" HorizontalAlignment="Left" Margin="534,381,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_7"/>
-                        <CheckBox x:Name="chkComputacion" Content="Computación Básica" HorizontalAlignment="Left" Margin="178,382,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkLectura" Content="Lectura y redacción a través del &#xD;&#xA;análisis del mundo contemporáneo&#xD;&#xA;" HorizontalAlignment="Left" Margin="325,382,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkAlgebra" Content="Algebra Lineal&#xD;&#xA;" HorizontalAlignment="Left" Margin="36,442,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_6"/>
-                        <CheckBox x:Name="chkIntroduccionProgramacion" Content="Introducción a la Programación &#xD;&#xA;" HorizontalAlignment="Left" Margin="155,442,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkProbabilidad" Content="Probabilidad y Estadística" HorizontalAlignment="Left" Margin="367,442,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_8"/>
-                        <CheckBox x:Name="chkMatematicas" Content="Matemáticas Discretas" HorizontalAlignment="Left" Margin="534,445,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkProgramación" Content="Programación" HorizontalAlignment="Left" Margin="36,473,0,0" VerticalAlignment="Top"/>
-                        <Label x:Name="lblIniciacionDisciplina" Content="Iniciación a la Disciplina:" HorizontalAlignment="Left" Margin="25,411,0,0" VerticalAlignment="Top"/>
-                        <Label x:Name="lblFormacionDisciplinar" Content="Formación Disciplinar:" HorizontalAlignment="Left" Margin="25,493,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkMetodologiaInv" Content="Metodología de la Investigación&#xD;" HorizontalAlignment="Left" Margin="153,522,0,0" VerticalAlignment="Top" Height="19"/>
-                        <CheckBox x:Name="chkLogica" Content="Lógica" HorizontalAlignment="Left" Margin="40,522,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkCalculo" Content="Calculo" HorizontalAlignment="Left" Margin="40,542,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_9"/>
-                        <CheckBox x:Name="chkIngSoftware" Content="Ingeniería de Software I" HorizontalAlignment="Left" Margin="153,541,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkRedes" Content="Redes I" HorizontalAlignment="Left" Margin="40,562,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkRedes2" Content="Redes II" HorizontalAlignment="Left" Margin="40,583,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkIngSoftware2" Content="Ingeniería de Software II&#xD;" HorizontalAlignment="Left" Margin="153,562,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_10"/>
-                        <CheckBox x:Name="chkSistemasOperativos" Content="Sistemas Operativos" HorizontalAlignment="Left" Margin="153,583,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkBaseDatos" Content="Base de Datos &#xD;" HorizontalAlignment="Left" Margin="39,603,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkTallerIntegracion" Content="Taller de Integración I" HorizontalAlignment="Left" Margin="153,603,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkArquitecturaComputadoras" Content="Arquitectura de Computadoras" HorizontalAlignment="Left" Margin="369,522,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkAlgotimosEstructuraDatos" Content="Algoritmos y Estructuras de Datos" HorizontalAlignment="Left" Margin="369,541,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkOrganizacionArchivos" Content="Organización de Archivos" HorizontalAlignment="Left" Margin="369,562,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkInteligenciaArtificial" Content="Inteligencia Artificial" HorizontalAlignment="Left" Margin="369,583,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkProgramacionAvanzada" Content="Programación Avanzada" HorizontalAlignment="Left" Margin="592,603,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkProgramacionSistemas" Content="Programación de Sistemas" HorizontalAlignment="Left" Margin="592,522,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkEticaLegislacion" Content="Ética y Legislación Informática" HorizontalAlignment="Left" Margin="592,542,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked_11"/>
-                        <CheckBox x:Name="chkCompiladores" Content="Compiladores" HorizontalAlignment="Left" Margin="592,562,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkAdmonProyectos" Content="Administración de Proyectos" HorizontalAlignment="Left" Margin="592,581,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkAdmonRecursosInformaticos" Content="Admon. de Recursos Informáticos&#xD;" HorizontalAlignment="Left" Margin="369,606,0,0" VerticalAlignment="Top"/>
-                        <Label x:Name="lblAreaTerminal" Content="Área Terminal:" HorizontalAlignment="Left" Margin="25,634,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkServicioSocial" Content="Servicio Social" HorizontalAlignment="Left" Margin="40,665,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkExperienciaRecepcional" Content="Experiencia &#xD;&#xA;Recepcional" HorizontalAlignment="Left" Margin="40,685,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkDesarrolloAplicaciones" Content="Desarrollo de Aplicaciones en Red" HorizontalAlignment="Left" Margin="369,685,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkGraficacion" Content="Graficación" HorizontalAlignment="Left" Margin="39,721,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkSistemasInformacion" Content="Sistemas de Información&#xD;&#xA;Empresarial" HorizontalAlignment="Left" Margin="367,709,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkAdmonSeguraridadServiciosRed" Content="Administración y Seguridad de&#xD;&#xA;Servicios de Red" HorizontalAlignment="Left" Margin="153,665,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkTopicosComputacion" Content="Tópicos Selectos de Computación" HorizontalAlignment="Left" Margin="153,696,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkAuditorioInformatica" Content="Auditoria Informática" HorizontalAlignment="Left" Margin="153,721,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkSistemasInfGeografica" Content="Sistemas de Información Geográfica" HorizontalAlignment="Left" Margin="369,665,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkMultimedia" Content="Multimedia" HorizontalAlignment="Left" Margin="592,665,0,0" VerticalAlignment="Top"/>
-                        <Button x:Name="btnCancelarInfLaboral" Content="Cancelar" HorizontalAlignment="Left" Margin="488,785,0,0" VerticalAlignment="Top" Width="75"/>
-                        <Button x:Name="btnFinalizarInfLaboral" Content="Finalizar" HorizontalAlignment="Left" Margin="607,785,0,0" VerticalAlignment="Top" Width="75"/>
+                        <Label x:Name="lblIniciacionDisciplina" Content="Iniciación a la Disciplina:" HorizontalAlignment="Left" Margin="25,606,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="lblFormacionDisciplinar" Content="Formación Disciplinar:" HorizontalAlignment="Left" Margin="25,776,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="lblAreaTerminal" Content="Área Terminal:" HorizontalAlignment="Left" Margin="24,1447,0,0" VerticalAlignment="Top"/>
+                        <Button x:Name="btnCancelarInfAcademica" Content="Cancelar" HorizontalAlignment="Left" Margin="550,2022,0,0" VerticalAlignment="Top" Width="75"/>
+                        <Button x:Name="btnFinalizarInfAcademica" Content="Finalizar" HorizontalAlignment="Left" Margin="643,2022,0,0" VerticalAlignment="Top" Width="75" Click="btnFinalizarAcademica_Click" RenderTransformOrigin="1.907,3.65"/>
+                        <Label Content="Inglés I:" HorizontalAlignment="Left" Margin="25,376,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Inglés II:" HorizontalAlignment="Left" Margin="25,402,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Computación básica:" HorizontalAlignment="Left" Margin="25,428,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Habilidades de pensamiento&#xD;&#xA;crítico y creativo:" HorizontalAlignment="Left" Margin="25,512,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Lectura y redacción a través&#xD;&#xA;del análisis del mundo&#xD;&#xA;contemporáneo:" HorizontalAlignment="Left" Margin="25,454,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="240,382,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="367,382,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="488,382,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="621,382,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="240,408,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="367,408,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="488,408,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="621,408,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="240,434,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="367,434,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="488,434,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="621,434,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="240,460,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="367,460,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="488,460,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="621,460,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="240,518,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="367,518,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="488,518,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="621,518,0,0" VerticalAlignment="Top"/>
+                        <Label Content="De las experiencias educativas que integran el Plan de estudios del Programa educativo de la FEI, señale el grado de utilidad que tienen o han tenido para su&#xD;&#xA;desempeño como profesionista:" HorizontalAlignment="Left" Margin="25,559,0,0" VerticalAlignment="Top" Width="693"/>
+                        <Label Content="Algebra Lineal:" HorizontalAlignment="Left" Margin="25,632,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Probabilidad y Estadística:" HorizontalAlignment="Left" Margin="25,658,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Matemáticas Discretas:" HorizontalAlignment="Left" Margin="25,684,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Algoritmos y Estructuras de Datos I:" HorizontalAlignment="Left" Margin="25,710,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Arquitectura de Computadoras I:" HorizontalAlignment="Left" Margin="25,736,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="240,612,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,612,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,612,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,612,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,612,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="240,638,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,638,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,638,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,638,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,638,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="240,664,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,664,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,664,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,664,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,664,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="240,690,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,690,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,690,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,690,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,690,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="240,716,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,716,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,716,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,716,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,716,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="240,742,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,742,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,742,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,742,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,742,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Metodología de la Investigación:" HorizontalAlignment="Left" Margin="25,807,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Lógica:" HorizontalAlignment="Left" Margin="25,833,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.038"/>
+                        <Label Content="Calculo:" HorizontalAlignment="Left" Margin="25,859,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Redes I:" HorizontalAlignment="Left" Margin="25,885,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Redes II:" HorizontalAlignment="Left" Margin="25,911,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Ingeniería de Software I:" HorizontalAlignment="Left" Margin="25,937,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Ingeniería de Software II:" HorizontalAlignment="Left" Margin="25,963,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Base de Datos I:" HorizontalAlignment="Left" Margin="25,989,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Base de Datos II:" HorizontalAlignment="Left" Margin="25,1015,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Taller de Integración I:" HorizontalAlignment="Left" Margin="25,1041,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Sistemas Operativos:" HorizontalAlignment="Left" Margin="25,1067,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Arquitectura de Computadoras II:" HorizontalAlignment="Left" Margin="25,1093,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Algoritmos y Estructuras de Datos II:" HorizontalAlignment="Left" Margin="25,1119,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Organización de Archivos:" HorizontalAlignment="Left" Margin="25,1145,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Inteligencia Artificial:" HorizontalAlignment="Left" Margin="25,1171,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Taller de Integración II:" HorizontalAlignment="Left" Margin="25,1197,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Taller de Integración III:" HorizontalAlignment="Left" Margin="25,1223,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Programación Avanzada:" HorizontalAlignment="Left" Margin="25,1249,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Programación de Sistemas:" HorizontalAlignment="Left" Margin="25,1275,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Ética y Legislación Informática:" HorizontalAlignment="Left" Margin="25,1301,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Fundamentos de Administración:" HorizontalAlignment="Left" Margin="25,1327,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Administración de Proyectos:" HorizontalAlignment="Left" Margin="25,1353,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Compiladores:" HorizontalAlignment="Left" Margin="25,1379,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Admon. de Recursos Informáticos:" HorizontalAlignment="Left" Margin="25,1405,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Servicio Social:" HorizontalAlignment="Left" Margin="25,1478,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="240,813,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,813,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,813,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,813,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,813,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="240,839,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,839,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,839,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,839,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,839,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="240,865,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,865,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,865,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,865,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,865,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="240,891,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,891,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,891,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,891,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,891,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="240,917,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,917,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,917,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,917,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,917,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="240,943,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,943,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,943,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,943,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,943,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="240,969,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,969,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,969,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,969,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,969,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="240,995,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,995,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,995,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,995,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,995,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="240,1021,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1021,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1021,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1021,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1021,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="240,1047,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1047,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1047,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1047,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1047,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="240,1073,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1073,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1073,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1073,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1073,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="240,1099,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1099,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1099,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1099,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1099,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1125,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1125,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1125,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1125,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1125,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1151,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1151,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1151,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1151,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1151,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1177,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1177,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1177,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1177,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1177,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1203,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1203,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1203,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1203,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1203,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1229,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1229,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1229,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1229,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1229,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1255,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1255,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1255,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1255,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1255,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1281,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1281,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1281,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1281,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1281,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1307,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1307,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1307,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1307,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1307,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1333,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1333,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1333,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1333,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1333,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1359,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1359,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1359,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1359,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1359,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1385,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1385,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1385,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1385,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1385,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1411,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1411,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1411,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1411,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1411,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Experiencia Recepcional:" HorizontalAlignment="Left" Margin="25,1504,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Desarrollo de Aplicaciones en Red:" HorizontalAlignment="Left" Margin="25,1530,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Ingeniería de Software III:" HorizontalAlignment="Left" Margin="24,1556,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Graficación:" HorizontalAlignment="Left" Margin="25,1582,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Sistemas de Información&#xD;&#xA;Empresarial:" HorizontalAlignment="Left" Margin="25,1608,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Administración y Seguridad de&#xD;&#xA;Servicios de Red:" HorizontalAlignment="Left" Margin="24,1650,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Tópicos Selectos de Computación I&#xD;&#xA;(Programación):" HorizontalAlignment="Left" Margin="25,1691,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Tópicos Selectos de Computación II&#xD;&#xA;(Matemática Numérica):" HorizontalAlignment="Left" Margin="27,1733,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Tópicos Selectos de Computación&#xD;&#xA;III (Inteligencia Artificial I):" HorizontalAlignment="Left" Margin="27,1775,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Tópicos Selectos de Computación&#xD;&#xA;IV (Inteligencia Artificial II):" HorizontalAlignment="Left" Margin="27,1822,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Sistemas de Información Geográfica:" HorizontalAlignment="Left" Margin="27,1923,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Multimedia:" HorizontalAlignment="Left" Margin="27,1866,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Auditoria Informática:" HorizontalAlignment="Left" Margin="27,1892,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Taller de integración IV" HorizontalAlignment="Left" Margin="27,1954,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Redes III" HorizontalAlignment="Left" Margin="27,1985,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1453,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1453,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1453,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1453,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1453,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1478,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1478,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1478,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1478,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1478,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1510,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1510,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1510,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1510,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1510,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1536,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1536,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1536,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1536,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1536,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1562,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1562,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1562,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1562,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1562,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1588,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1588,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1588,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1588,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1588,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1614,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1614,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1614,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1614,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1614,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1656,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1656,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1656,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1656,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1656,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1697,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1697,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1697,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1697,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1697,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1739,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1739,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1739,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1739,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1739,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1781,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1781,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1781,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1781,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1781,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1828,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1828,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1828,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1828,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1828,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1872,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1872,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1872,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1872,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1872,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1898,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1898,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1898,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1898,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1898,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1929,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1929,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1929,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1929,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1929,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1960,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1960,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1960,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1960,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1960,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Mucho" HorizontalAlignment="Left" Margin="237,1991,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="341,1991,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Poco" HorizontalAlignment="Left" Margin="448,1991,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Nada" HorizontalAlignment="Left" Margin="550,1991,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="No la cursé" HorizontalAlignment="Left" Margin="663,1991,0,0" VerticalAlignment="Top"/>
                     </Grid>
                 </ScrollViewer>
             </TabItem>
