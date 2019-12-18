@@ -13,12 +13,12 @@
         </Grid.ColumnDefinitions>
         <Label x:Name="lblSistemaEgresados" Content="SISTEMAS DE EGRESADOS" Background="#FF345781" HorizontalAlignment="Left" VerticalAlignment="Top" Width="862" FontSize="24" FontWeight="Bold" Height="65" FontFamily="Microsoft JhengHei" Grid.ColumnSpan="2"/>
         <Label x:Name="lblMatricula" Content="Matricula:" HorizontalAlignment="Left" Margin="55,119,0,0" VerticalAlignment="Top" Width="100" FontFamily="Microsoft YaHei"/>
-        <TextBox x:Name="txtMatricula" HorizontalAlignment="Left" Height="23" Margin="118,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
+        <TextBox x:Name="txtMatricula" HorizontalAlignment="Left" Height="23" Margin="118,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" IsEnabled="False"/>
         <Label x:Name="lblContestarFormulario" Content="Contesta el formulario de la Ficha Pre-Egreso:" HorizontalAlignment="Left" Margin="55,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.169,0.423" Width="559" FontSize="14" FontFamily="Microsoft YaHei"/>
         <Label x:Name="lblNombres" Content="Nombre(s):" HorizontalAlignment="Left" Margin="470,119,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
         <Label x:Name="lblApellidos" Content="Apellidos:" HorizontalAlignment="Left" Margin="252,119,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
-        <TextBox x:Name="txtNombres" HorizontalAlignment="Left" Height="23" Margin="544,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="txtApellidos" HorizontalAlignment="Left" Height="23" Margin="318,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152"/>
+        <TextBox x:Name="txtNombres" HorizontalAlignment="Left" Height="23" Margin="544,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Grid.ColumnSpan="2" IsEnabled="False"/>
+        <TextBox x:Name="txtApellidos" HorizontalAlignment="Left" Height="23" Margin="318,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" IsEnabled="False"/>
         <Label x:Name="lblFechaNacimiento" Content="Fecha Nacimiento:" HorizontalAlignment="Left" Margin="55,165,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
         <DatePicker x:Name="dtpFechaNacimiento" HorizontalAlignment="Left" Margin="176,167,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblSexo" Content="Sexo:" HorizontalAlignment="Left" Margin="326,165,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>

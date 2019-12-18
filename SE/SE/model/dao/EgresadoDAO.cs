@@ -63,5 +63,57 @@ namespace SE.model.dao
             return u;
         }
 
+        public static Egresado consultaInformacionEgresado(Int32 idEgresado)
+        {
+            Egresado u = null;
+            SqlConnection conn = null;
+            try
+            {
+                conn = ConnectionUtils.getConnection();
+                SqlCommand command;
+                SqlDataReader rd;
+                if (conn != null)
+                {
+                    String query = String.Format("SELECT " +
+                        "x.idEgresado, " +
+                        "x.matricula, " +
+                        "x.apellidos, " +
+                        "x.nombre, " +
+                        "x.nombreUsuario, " +
+                        "x.contraseña " +
+                        "FROM dbo.Egresado x " +
+                        "WHERE x.idEgresado = '{0}';", idEgresado);
+                    Console.WriteLine(query);
+                    command = new SqlCommand(query, conn);
+                    rd = command.ExecuteReader();
+                    while (rd.Read())
+                    {
+                        u = new Egresado();
+                        u.IdEgresado = (!rd.IsDBNull(0)) ? rd.GetInt32(0) : 0;
+                        u.Matricula = (!rd.IsDBNull(1)) ? rd.GetString(1) : "";
+                        u.Apellidos = (!rd.IsDBNull(2)) ? rd.GetString(2) : "";
+                        u.Nombre = (!rd.IsDBNull(3)) ? rd.GetString(3) : "";
+                        u.NombreUsuario = (!rd.IsDBNull(4)) ? rd.GetString(4) : "";
+                        u.Contrasenia = (!rd.IsDBNull(5)) ? rd.GetString(5) : "";
+                    }
+                    rd.Close();
+                    command.Dispose();
+                    Console.WriteLine(u);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                if (conn != null)
+                {
+                    conn.Close();
+                }
+            }
+            return u;
+        }
+
     }
 }
