@@ -22,13 +22,17 @@ namespace SE.View
     public partial class VentanaFichaPreEgreso : Window
     {
         private FichaPreEgreso ficha;
+        private Egresado egresado;
         private Boolean resultado;
         private string sexo = "";
         private string nacionalidad = "";
-        public VentanaFichaPreEgreso(FichaPreEgreso ficha)
+        public VentanaFichaPreEgreso(Egresado egresado)
         {
-            this.ficha = ficha;
+            this.egresado = egresado;
             InitializeComponent();
+            txtApellidos.Text = egresado.Apellidos;
+            txtNombres.Text = egresado.Nombre;
+            txtMatricula.Text = egresado.Matricula;
         }
 
         public bool Resultado { get => resultado; set => resultado = value; }

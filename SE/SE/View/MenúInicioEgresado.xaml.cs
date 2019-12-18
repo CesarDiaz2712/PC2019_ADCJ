@@ -11,16 +11,16 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using SE.model.dao;
 using SE.model.pocos;
 
 namespace SE.View
 {
-    /// <summary>
-    /// Lógica de interacción para MenúInicioEgresado.xaml
-    /// </summary>
+
     public partial class MenúInicioEgresado : Window
     {
         private Egresado usuarioIniciado { get; set; }
+        private Egresado egresado;
         public MenúInicioEgresado(Egresado usuario)
         {
             this.usuarioIniciado = usuario;
@@ -28,11 +28,19 @@ namespace SE.View
             lblUserName.Content=usuario.NombreUsuario;
         }
 
+        //Carga la Informacion del Egresado
+        private void cargarInformacionEgresado()
+        {
+            egresado = EgresadoDAO.consultaInformacionEgresado(usuarioIniciado.IdEgresado);
+        }
+
         private void btn_FichaPreEgreso_Click(object sender, RoutedEventArgs e)
         {
+            /*
             FichaPreEgreso ficha = new FichaPreEgreso();
-            ficha.IdEgresado = this.usuarioIniciado.IdEgresado;
-            VentanaFichaPreEgreso ventanaFicha = new VentanaFichaPreEgreso(ficha);
+            ficha.IdEgresado = this.usuarioIniciado.IdEgresado;*/
+            this.cargarInformacionEgresado();
+            VentanaFichaPreEgreso ventanaFicha = new VentanaFichaPreEgreso(egresado);
             ventanaFicha.Show();
         }
     }
