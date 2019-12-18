@@ -43,5 +43,11 @@ namespace SE.View
             VentanaFichaPreEgreso ventanaFicha = new VentanaFichaPreEgreso(egresado);
             ventanaFicha.Show();
         }
+
+        private void btnCuestionario_Click(object sender, RoutedEventArgs e)
+        {
+            CuestionarioEgresado cuestionario = new CuestionarioEgresado();
+            cuestionario.Show();
+        }
     }
 }

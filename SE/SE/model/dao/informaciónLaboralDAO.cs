@@ -12,7 +12,6 @@ namespace SE.model.dao
 {
     public class InformaciónLaboralDAO
     {
-            {
         public static InformacionLaboral getInformacionLaboralByIdEgresado(Int32 idEgresado)
         {
             InformacionLaboral egresado = new InformacionLaboral();
@@ -103,5 +102,4 @@ namespace SE.model.dao
             return false;
         }
     }
-}
 }

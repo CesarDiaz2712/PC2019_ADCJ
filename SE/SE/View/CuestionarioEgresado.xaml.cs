@@ -22,19 +22,15 @@ namespace SE.View
     public partial class CuestionarioEgresado : Window
     {
         
-        private InformacionLaboral cuestionarioLaboral;
-        private InformacionAcademica cuestionarioAcademico;
         private InformaciónPersonal cuestionarioPersonal;
         private bool resultado;
 
-       
-        public CuestionarioEgresado(InformacionLaboral cuestionarioLaboral, InformaciónPersonal cuestionarioPersonal, InformacionAcademica cuestionarioAcademico)
+       /*
+        public CuestionarioEgresado()
         {
-            this.cuestionarioLaboral = cuestionarioLaboral;
-            this.cuestionarioAcademico = cuestionarioAcademico;
-            this.cuestionarioPersonal = cuestionarioPersonal;
             InitializeComponent();
         }
+        */
         public bool Resultado { get => resultado; set => resultado = value; }
     }
 }
