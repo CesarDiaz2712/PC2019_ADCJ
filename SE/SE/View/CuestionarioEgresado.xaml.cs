@@ -36,5 +36,6 @@ namespace SE.View
             InitializeComponent();
         }
         public bool Resultado { get => resultado; set => resultado = value; }
+                        if(rb15001a20000.IsChecked == true)
     }
 }
