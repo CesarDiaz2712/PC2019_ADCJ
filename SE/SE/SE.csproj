@@ -92,6 +92,7 @@
     <Compile Include="model\pocos\FichaPreEgreso.cs" />
     <Compile Include="model\pocos\InformaciónLaboral.cs" />
     <Compile Include="model\pocos\InformaciónPersonal.cs" />
+    <Compile Include="model\pocos\Respuesta.cs" />
     <Compile Include="model\pocos\Usuario.cs" />
     <Compile Include="View\CuestionarioEgresado.xaml.cs">
       <DependentUpon>CuestionarioEgresado.xaml</DependentUpon>

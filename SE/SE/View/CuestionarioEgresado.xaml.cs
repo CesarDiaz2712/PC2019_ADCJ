@@ -21,8 +21,10 @@ namespace SE.View
     /// </summary>
     public partial class CuestionarioEgresado : Window
     {
-        
+
         private InformaciónPersonal cuestionarioPersonal;
+        private InformaciónPersonal cuestionarioLaboral;
+        private InformaciónPersonal cuestionarioAcademico;
         private string trabajoLigadoFormacion;
         private string tiempoTranscurridoPrimerEmpleo;
         private string promedioIngresoMensual;
