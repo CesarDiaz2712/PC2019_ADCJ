@@ -11,97 +11,30 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using SE.model.dao;
+using SE.model.pocos;
 
 namespace SE.View
 {
     /// <summary>
     /// Lógica de interacción para CuestionarioSatisfaccion.xaml
     /// </summary>
-    public partial class CuestionarioSatisfaccion : Window
+    public partial class CuestionarioEgresado : Window
     {
-        public CuestionarioSatisfaccion()
+        
+        private InformacionLaboral cuestionarioLaboral;
+        private InformacionAcademica cuestionarioAcademico;
+        private InformaciónPersonal cuestionarioPersonal;
+        private bool resultado;
+
+       
+        public CuestionarioEgresado(InformacionLaboral cuestionarioLaboral, InformaciónPersonal cuestionarioPersonal, InformacionAcademica cuestionarioAcademico)
         {
+            this.cuestionarioLaboral = cuestionarioLaboral;
+            this.cuestionarioAcademico = cuestionarioAcademico;
+            this.cuestionarioPersonal = cuestionarioPersonal;
             InitializeComponent();
         }
-
-        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void CheckBox_Checked_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void CheckBox_Checked_2(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void CheckBox_Checked_3(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void CheckBox_Checked_4(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void CheckBox_Checked_5(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void CheckBox_Checked_6(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void CheckBox_Checked_7(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void CheckBox_Checked_8(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void CheckBox_Checked_9(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void CheckBox_Checked_10(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void CheckBox_Checked_11(object sender, RoutedEventArgs e)
-        {
-
-        }
+        public bool Resultado { get => resultado; set => resultado = value; }
     }
 }
