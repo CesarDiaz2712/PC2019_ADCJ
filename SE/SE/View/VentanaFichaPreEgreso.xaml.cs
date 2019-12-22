@@ -67,10 +67,16 @@ namespace SE.View
             this.ficha.Ciudad = txtCiudad.Text;
             this.ficha.Estado = txtEstado.Text;
             this.ficha.CodigoPostal = txtCP.Text;
-            this.resultado = FichaPreEgresoDAO.guardar(this.ficha);
+            this.resultado = FichaPreEgresoDAO.guardar(this.ficha,true);
             this.Close();
         }
-     }
+
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            this.resultado = false;
+            this.Close();
+        }
+    }
     
  }
 

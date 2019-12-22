@@ -45,7 +45,8 @@
         <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Height="23" Margin="465,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74"/>
         <Label x:Name="lblEmail" Content="Email:" HorizontalAlignment="Left" Margin="539,261,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei"/>
         <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="583,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233" Grid.ColumnSpan="2"/>
-        <Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="47.953,339,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Click="btn_Guardar_Click"/>
+        <Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="58,366,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Click="btn_Guardar_Click"/>
+        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="621,366,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2" Click="btnCancelar_Click"/>
 
     </Grid>
 </Window>

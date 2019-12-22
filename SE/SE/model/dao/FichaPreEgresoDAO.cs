@@ -79,13 +79,31 @@ namespace SE.model.dao
             return egresado;
         }
 
-        public static bool guardar(FichaPreEgreso ficha)
+        public static bool guardar(FichaPreEgreso ficha, bool nuevo)
         {
             String query = "";
-            
+            if (nuevo)
+            {
+
                 query = "INSERT INTO dbo.FichaPreEgreso (fechaNacimiento,sexo,nacionalidad,telefono,email,calle,numeroCasa,colonia,ciudad,estado,codigoPostal,idEgresado) " +
                        "VALUES(GETDATE(),@sexo,@nacionalidad,@telefono,@email,@calle,@numeroCasa,@colonia,@ciudad,@estado,@codigoPostal,@idEgresado);";
-            
+            }
+            else
+            {
+                query = "UPDATE dbo.FichaPreEgreso SET " +
+                        "fechaNacimiento= @fechaNacimiento, " +
+                        "sexo=@sexo, " +
+                        "nacionalidad=@nacionalidad, " +
+                        "telefono=@telefono, " +
+                        "email=@email, " +
+                        "calle=@calle, " +
+                        "numeroCasa=@numeroCasa, " +
+                        "colonia=@colonia, " +
+                        "ciudad=@ciudad, " +
+                        "estado=@estado, " +
+                        "codigoPostal=@codigoPostal " +
+                        "WHERE idFichaPreEgreso=@idFichaPreEgreso;";
+            }
 
             SqlConnection conn = null;
             try
@@ -108,7 +126,14 @@ namespace SE.model.dao
                     command.Parameters.AddWithValue("@estado", ficha.Estado);
                     command.Parameters.AddWithValue("@codigoPostal", ficha.CodigoPostal);
 
-                    command.Parameters.AddWithValue("@idEgresado", ficha.IdEgresado);
+                    if (nuevo)
+                    {
+                        command.Parameters.AddWithValue("@idEgresado", ficha.IdEgresado);
+                    }
+                    else
+                    {
+                        command.Parameters.AddWithValue("@idFichaPreEgreso", ficha.IdFichaPreEgreso);
+                    }
 
 
                     int i = command.ExecuteNonQuery();
