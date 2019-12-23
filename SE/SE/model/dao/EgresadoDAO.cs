@@ -28,7 +28,8 @@ namespace SE.model.dao
                         "x.apellidos, " +
                         "x.nombre, " +
                         "x.nombreUsuario, " +
-                        "x.contraseña " +
+                        "x.contraseña, " +
+                        "x.idFichaPreEgreso " +
                         "FROM dbo.Egresado x " +
                         "WHERE x.nombreUsuario = '{0}' AND x.contraseña ='{1}';", usuario, contrasena);
                     Console.WriteLine(query);
@@ -43,6 +44,7 @@ namespace SE.model.dao
                         u.Nombre = (!rd.IsDBNull(3)) ? rd.GetString(3) : "";
                         u.NombreUsuario = (!rd.IsDBNull(4)) ? rd.GetString(4) : "";
                         u.Contrasenia = (!rd.IsDBNull(5)) ? rd.GetString(5) : "";
+                        u.IdFichaPreEgreso = (!rd.IsDBNull(0)) ? rd.GetInt32(0) : 0;
                     }
                     rd.Close();
                     command.Dispose();

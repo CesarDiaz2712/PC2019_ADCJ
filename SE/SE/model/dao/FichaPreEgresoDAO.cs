@@ -39,7 +39,7 @@ namespace SE.model.dao
                                                 "x.codigoPostal, " +
                                                 "x.idEgresado " +
                                                 "FROM dbo.FichaPreEgreso x " +
-                                                "WHERE x.idEgresado = {0};", idEgresado);
+                                                "WHERE x.idEgresado = '{0}';", idEgresado);
                     Console.WriteLine(query);
                     command = new SqlCommand(query, conn);
                     rd = command.ExecuteReader();
@@ -47,7 +47,7 @@ namespace SE.model.dao
                     {
                         FichaPreEgreso fp = new FichaPreEgreso();
                         fp.IdFichaPreEgreso = (!rd.IsDBNull(0)) ? rd.GetInt32(0) : 0;
-                        fp.FechaNacimiento = (!rd.IsDBNull(1)) ? rd.GetDateTimeOffset(1) : new DateTimeOffset();
+                        fp.FechaNacimiento = (!rd.IsDBNull(1)) ? rd.GetDateTime(1) : new DateTime();
                         fp.Sexo = (!rd.IsDBNull(2)) ? rd.GetString(2) : "";
                         fp.Nacionalidad = (!rd.IsDBNull(3)) ? rd.GetString(3) : "";
                         fp.Telefono = (!rd.IsDBNull(4)) ? rd.GetString(4) : "";
@@ -58,7 +58,7 @@ namespace SE.model.dao
                         fp.Ciudad = (!rd.IsDBNull(9)) ? rd.GetString(9) : "";
                         fp.Estado = (!rd.IsDBNull(10)) ? rd.GetString(10) : "";
                         fp.CodigoPostal = (!rd.IsDBNull(11)) ? rd.GetString(11) : "";
-                        fp.IdEgresado = (!rd.IsDBNull(12)) ? rd.GetInt32(12) : 0;
+                        fp.IdEgresado = (!rd.IsDBNull(0)) ? rd.GetInt32(0) : 0;
                     }
                     rd.Close();
                     command.Dispose();
@@ -67,6 +67,7 @@ namespace SE.model.dao
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.Message);
                 Console.WriteLine("No se encontro ficha del egresado");
             }
             finally
@@ -77,6 +78,73 @@ namespace SE.model.dao
                 }
             }
             return egresado;
+        }
+
+        public static FichaPreEgreso obtenerFichaPreEgreso(Int32 idEgresado)
+        {
+            FichaPreEgreso fp = null;
+            SqlConnection conn = null;
+            try
+            {
+                conn = ConnectionUtils.getConnection();
+                SqlCommand command;
+                SqlDataReader rd;
+                if (conn != null)
+                {
+                    String query = String.Format("SELECT " +
+                                                "x.idFichaPreEgreso, " +
+                                                "x.fechaNacimiento, " +
+                                                "x.sexo, " +
+                                                "x.nacionalidad, " +
+                                                "x.telefono, " +
+                                                "x.email, " +
+                                                "x.calle, " +
+                                                "x.numeroCasa, " +
+                                                "x.colonia, " +
+                                                "x.ciudad, " +
+                                                "x.estado, " +
+                                                "x.codigoPostal, " +
+                                                "x.idEgresado " +
+                                                "FROM dbo.FichaPreEgreso x " +
+                                                "WHERE x.idEgresado = '{0}';", idEgresado);
+                    Console.WriteLine(query);
+                    command = new SqlCommand(query, conn);
+                    rd = command.ExecuteReader();
+                    while (rd.Read())
+                    {
+                        fp = new FichaPreEgreso();
+                        fp.IdFichaPreEgreso = (!rd.IsDBNull(0)) ? rd.GetInt32(0) : 0;
+                        fp.FechaNacimiento = (!rd.IsDBNull(1)) ? rd.GetDateTime(1) : new DateTime();
+                        fp.Sexo = (!rd.IsDBNull(2)) ? rd.GetString(2) : "";
+                        fp.Nacionalidad = (!rd.IsDBNull(3)) ? rd.GetString(3) : "";
+                        fp.Telefono = (!rd.IsDBNull(4)) ? rd.GetString(4) : "";
+                        fp.Email = (!rd.IsDBNull(5)) ? rd.GetString(5) : "";
+                        fp.Calle = (!rd.IsDBNull(6)) ? rd.GetString(6) : "";
+                        fp.NumeroCasa = (!rd.IsDBNull(7)) ? rd.GetString(7) : "";
+                        fp.Colonia = (!rd.IsDBNull(8)) ? rd.GetString(8) : "";
+                        fp.Ciudad = (!rd.IsDBNull(9)) ? rd.GetString(9) : "";
+                        fp.Estado = (!rd.IsDBNull(10)) ? rd.GetString(10) : "";
+                        fp.CodigoPostal = (!rd.IsDBNull(11)) ? rd.GetString(11) : "";
+                        fp.IdEgresado = (!rd.IsDBNull(0)) ? rd.GetInt32(0) : 0;
+                    }
+                    rd.Close();
+                    command.Dispose();
+                    Console.WriteLine(fp);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine("No se encontro ficha del egresado");
+            }
+            finally
+            {
+                if (conn != null)
+                {
+                    conn.Close();
+                }
+            }
+            return fp;
         }
 
         public static bool guardar(FichaPreEgreso ficha, bool nuevo)

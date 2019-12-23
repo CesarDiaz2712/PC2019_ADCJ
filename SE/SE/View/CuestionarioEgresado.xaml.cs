@@ -37,11 +37,25 @@ namespace SE.View
         private string serviciosApoyo;
         private string actDeportivas;
         private bool resultado;
-
+        private Egresado informacionEgresado;
+        private FichaPreEgreso ficha;
        
-        public CuestionarioEgresado()
+        public CuestionarioEgresado(Egresado informacionEgresado, FichaPreEgreso ficha)
         {
+            this.informacionEgresado = informacionEgresado;
+            this.ficha = ficha;
             InitializeComponent();
+            txtNombres.Text = informacionEgresado.Nombre;
+            txtApellidos.Text = informacionEgresado.Apellidos;
+            txtMatricula.Text = informacionEgresado.Matricula;
+            txtCalle.Text = ficha.Calle;
+            txtNumeroCasa.Text = ficha.NumeroCasa;
+            txtColonia.Text = ficha.Colonia;
+            txtCiudad.Text = ficha.Colonia;
+            txtEstado.Text = ficha.Estado;
+            txtCP.Text = ficha.CodigoPostal;
+            txtTelefono.Text = ficha.Telefono;
+            txtEmail.Text = ficha.Email;
         }
         
         public bool Resultado { get => resultado; set => resultado = value; }

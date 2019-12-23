@@ -59,15 +59,16 @@ namespace SE.View
 
             this.ficha.Sexo = sexo;
             this.ficha.Nacionalidad = nacionalidad;
-            this.ficha.Telefono = txtTelefono.Text;
             this.ficha.Calle = txtCalle.Text;
             this.ficha.Email = txtEmail.Text;
-            this.ficha.NumeroCasa = txtNumeroCasa.Text;
             this.ficha.Colonia = txtColonia.Text;
             this.ficha.Ciudad = txtCiudad.Text;
             this.ficha.Estado = txtEstado.Text;
             this.ficha.CodigoPostal = txtCP.Text;
-            this.resultado = FichaPreEgresoDAO.guardar(this.ficha,true);
+            this.ficha.NumeroCasa = txtNumeroCasa.Text;
+            this.ficha.Telefono = txtTelefono.Text;
+            this.resultado = FichaPreEgresoDAO.guardar(this.ficha, true);
+
             this.Close();
         }
 
@@ -76,6 +77,7 @@ namespace SE.View
             this.resultado = false;
             this.Close();
         }
+
     }
     
  }

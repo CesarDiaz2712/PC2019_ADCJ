@@ -21,6 +21,8 @@ namespace SE.View
     {
         private Egresado usuarioIniciado { get; set; }
         private Egresado egresado;
+        private FichaPreEgreso informacionPersonal;
+        private FichaPreEgreso ficha { get; set; }
         public MenúInicioEgresado(Egresado usuario)
         {
             this.usuarioIniciado = usuario;
@@ -34,9 +36,14 @@ namespace SE.View
             egresado = EgresadoDAO.consultaInformacionEgresado(usuarioIniciado.IdEgresado);
         }
 
+        private void cargarInformacionPersonal()
+        {
+            egresado = EgresadoDAO.consultaInformacionEgresado(usuarioIniciado.IdEgresado);
+            informacionPersonal = FichaPreEgresoDAO.obtenerFichaPreEgreso(usuarioIniciado.IdEgresado);
+        }
+
         private void btn_FichaPreEgreso_Click(object sender, RoutedEventArgs e)
         {
-            
             FichaPreEgreso ficha = new FichaPreEgreso();
             ficha.IdEgresado = this.usuarioIniciado.IdEgresado;
             this.cargarInformacionEgresado();
@@ -46,7 +53,8 @@ namespace SE.View
 
         private void btnCuestionario_Click(object sender, RoutedEventArgs e)
         {
-            CuestionarioEgresado cuestionario = new CuestionarioEgresado();
+            this.cargarInformacionPersonal();
+            CuestionarioEgresado cuestionario = new CuestionarioEgresado(egresado,informacionPersonal);
             cuestionario.Show();
         }
     }

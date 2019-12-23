@@ -87,11 +87,6 @@ namespace SE
             {
                 return false;
             }
-
-            if (txtContrasena.Password != null || txtContrasena.Password.Length > 0)
-            {
-                      
-            }
             return true;
         }
 
