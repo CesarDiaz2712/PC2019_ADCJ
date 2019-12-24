@@ -26,7 +26,8 @@ namespace SE.model.dao
                     String query = String.Format("SELECT " +
                                                  "x.idInformacionLabora, " +
                                                  "x.respuesta, " +
-                                                 "x.idEgresado, " +
+                                                 "x.idPreguntaLboral, " +
+                                                 "x.idEgresado " +
                                                  "FROM dbo.InformacionLabora x " +
                                                  "WHERE x.idEgresado = {0)", idEgresado);
                     Console.WriteLine(query);
@@ -85,7 +86,15 @@ namespace SE.model.dao
                     command = new SqlCommand(query, conn);
                     command.CommandType = CommandType.Text;
                     command.Parameters.AddWithValue("@respuesta", cuestionario.Respuesta);
-                    command.Parameters.AddWithValue("@idEgresado", cuestionario.IdEgresado);
+
+                    if (nuevo)
+                    {
+                        command.Parameters.AddWithValue("@idEgresado", cuestionario.IdEgresado);
+                    }
+                    else
+                    {
+                        command.Parameters.AddWithValue("@idInformacionLabora", cuestionario.IdInformacionLaboral);
+                    }
 
                     int i = command.ExecuteNonQuery();
                     Console.WriteLine("Filas afectadas: " + i);

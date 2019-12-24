@@ -45,13 +45,13 @@
                             <ColumnDefinition Width="87*"/>
                         </Grid.ColumnDefinitions>
 
-                        <Label x:Name="lblConocimientosTeoricos" Content="¿Qué conocimientos (saberes teóricos) no incluidos en el programa de estudios ha considerado o considera necesarios para &#xD;&#xA;su desempeño laboral actual?" HorizontalAlignment="Left" Margin="29,431,0,0" VerticalAlignment="Top" Width="689" Grid.ColumnSpan="2"/>
+                        <Label x:Name="lblConocimientosTeoricos" Content="6.- ¿Qué conocimientos (saberes teóricos) no incluidos en el programa de estudios ha considerado o considera necesarios para &#xA;su desempeño laboral actual?" HorizontalAlignment="Left" Margin="29,431,0,0" VerticalAlignment="Top" Width="689" Grid.ColumnSpan="2"/>
                         <TextBox x:Name="txtConocimientosTeoricos" HorizontalAlignment="Left" Height="27" Margin="29,473,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689" Grid.ColumnSpan="2"/>
-                        <Label x:Name="lblSaberesHeuristicos" Content="¿Qué habilidades (saberes heurísticos) no contemplados en el programa de estudios ha considerado o considera necesarios &#xD;&#xA;para su desempeño laboral actual?" HorizontalAlignment="Left" Margin="30,514,0,0" VerticalAlignment="Top" Width="689" Grid.ColumnSpan="2"/>
+                        <Label x:Name="lblSaberesHeuristicos" Content="7.- ¿Qué habilidades (saberes heurísticos) no contemplados en el programa de estudios ha considerado o considera necesarios &#xA;para su desempeño laboral actual?" HorizontalAlignment="Left" Margin="30,514,0,0" VerticalAlignment="Top" Width="689" Grid.ColumnSpan="2"/>
                         <TextBox x:Name="txtSaberesHeuristicos" HorizontalAlignment="Left" Height="23" Margin="30,556,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689" Grid.ColumnSpan="2"/>
-                        <Label x:Name="lblEECursadas" Content="¿Cuáles experiencias educativas cursadas son aplicadas en su desempeño laboral actual? " HorizontalAlignment="Left" Margin="30,599,0,0" VerticalAlignment="Top" Width="689" Grid.ColumnSpan="2"/>
-                        <TextBox x:Name="txtEECursadas" HorizontalAlignment="Left" Height="23" Margin="30,630,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689" Grid.ColumnSpan="2"/>
-                        <Label x:Name="lblSaberesTeoricosAdquiridos" Content="Indique los conocimientos (saberes teóricos) que considere haber adquirido o desarrollado durante su formación profesional:" HorizontalAlignment="Left" Margin="32,668,0,0" VerticalAlignment="Top" Width="689" Grid.ColumnSpan="2"/>
+                        <Label x:Name="lblEECursadas" Content="8.- ¿Cuáles experiencias educativas cursadas son aplicadas en su desempeño laboral actual? " HorizontalAlignment="Left" Margin="30,599,0,0" VerticalAlignment="Top" Width="689" Grid.ColumnSpan="2"/>
+                        <TextBox x:Name="txtExperienciaEducativaCursadas" HorizontalAlignment="Left" Height="23" Margin="30,630,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689" Grid.ColumnSpan="2"/>
+                        <Label x:Name="lblSaberesTeoricosAdquiridos" Content="9.- Indique los conocimientos (saberes teóricos) que considere haber adquirido o desarrollado durante su formación profesional:" HorizontalAlignment="Left" Margin="32,668,0,0" VerticalAlignment="Top" Width="689" Grid.ColumnSpan="2"/>
                         <CheckBox x:Name="chkProgramacionEstructuradaAdquirida" Content=" Programación estructurada" HorizontalAlignment="Left" Margin="51,719,0,0" VerticalAlignment="Top"/>
                         <CheckBox x:Name="chkAlgoritmiaAdquirida" Content="Algorítmia" HorizontalAlignment="Left" Margin="51,699,0,0" VerticalAlignment="Top"/>
                         <CheckBox x:Name="chkIngenieriaSoftwareAdquirida" Content=" Ingeniería de Software " HorizontalAlignment="Left" Margin="234,739,0,0" VerticalAlignment="Top"/>
@@ -59,18 +59,18 @@
                         <CheckBox x:Name="chkRedesAdquirida" Content="Redes " HorizontalAlignment="Left" Margin="234,699,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.218,0.467"/>
                         <CheckBox x:Name="chkEstructuraDatosAdquirida" Content="Estructuras de datos " HorizontalAlignment="Left" Margin="234,719,0,0" VerticalAlignment="Top"/>
                         <CheckBox x:Name="chkProcesosAdquirida" Content="Procesos de desarrollo de software" HorizontalAlignment="Left" Margin="399,699,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkPOOAdquirida" Content="Programación Orientada a Objetos" HorizontalAlignment="Left" Margin="400,719,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkProgramacionObjetosAdquirida" Content="Programación Orientada a Objetos" HorizontalAlignment="Left" Margin="400,719,0,0" VerticalAlignment="Top"/>
                         <CheckBox x:Name="chkBasesDatosAdquirida" Content="Bases de Datos" HorizontalAlignment="Left" Margin="234,759,0,0" VerticalAlignment="Top"/>
                         <CheckBox x:Name="chkSistemasInteligentesAdquirida" Content="Sistemas inteligentes" HorizontalAlignment="Left" Margin="51,759,0,0" VerticalAlignment="Top"/>
-                        <Label x:Name="lblDestrezasAdquiridas" Content="Indique las habilidades/destrezas (saberes heurísticos) que considere haber adquirido o desarrollado durante su formación &#xD;&#xA;profesional:" HorizontalAlignment="Left" Margin="32,792,0,0" VerticalAlignment="Top" Width="689" Grid.ColumnSpan="2"/>
+                        <Label x:Name="lblDestrezasAdquiridas" Content="10.- Indique las habilidades/destrezas (saberes heurísticos) que considere haber adquirido o desarrollado durante su formación &#xA;profesional:" HorizontalAlignment="Left" Margin="32,792,0,0" VerticalAlignment="Top" Width="689" Grid.ColumnSpan="2"/>
                         <CheckBox x:Name="chkProblemasAlgoritmicosAdquirido" Content="Planteamiento y solución a&#xD;&#xA;problemas algorítmicos" HorizontalAlignment="Left" Margin="51,839,0,0" VerticalAlignment="Top"/>
                         <CheckBox x:Name="chkDiseñoImplantacionProgramasAdquirido" Content="Diseño e implantación de&#xD;&#xA;programas" HorizontalAlignment="Left" Margin="51,876,0,0" VerticalAlignment="Top"/>
                         <CheckBox x:Name="chkAplicacionMetodologiaAdquirido"  Content="Aplicación de una metodología para la obtención de&#xD;&#xA;modelos de análisis y diseño de un sistema de software" HorizontalAlignment="Left" Margin="423,876,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" />
                         <CheckBox x:Name="chkDiseñoRedesAdquirido" Content="Diseño e implantación de redes" HorizontalAlignment="Left" Margin="234,839,0,0" VerticalAlignment="Top"/>
                         <CheckBox x:Name="chkDiseñoImplantacionSistemas" Content="Diseño e implantación de&#xD;&#xA;sistemas inteligentes" HorizontalAlignment="Left" Margin="234,864,0,0" VerticalAlignment="Top"/>
-                        <CheckBox x:Name="chkDiseñoImplantacionBD" Content="Diseño e implantación de bases de datos &#xD;" HorizontalAlignment="Left" Margin="51,912,0,0" VerticalAlignment="Top" Height="19"/>
+                        <CheckBox x:Name="chkDiseñoImplantacionBaseDatos" Content="Diseño e implantación de bases de datos &#xD;" HorizontalAlignment="Left" Margin="51,912,0,0" VerticalAlignment="Top" Height="19"/>
                         <CheckBox x:Name="chkUsoLenguaje" Content="Uso de un lenguaje de programación y su entorno de&#xD;&#xA;desarrollo para codificar y probar algoritmos" HorizontalAlignment="Left" Margin="423,839,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-                        <Label x:Name="lblActitudesValores" Content="Indique las actitudes/valores (saberes axiológicos) que considere haber adquirido, desarrollado o fortalecido durante su &#xD;&#xA;formación profesional:" HorizontalAlignment="Left" Margin="35,942,0,0" VerticalAlignment="Top" Width="688" Grid.ColumnSpan="2"/>
+                        <Label x:Name="lblActitudesValores" Content="11.- Indique las actitudes/valores (saberes axiológicos) que considere haber adquirido, desarrollado o fortalecido durante su &#xA;formación profesional:" HorizontalAlignment="Left" Margin="35,942,0,0" VerticalAlignment="Top" Width="688" Grid.ColumnSpan="2"/>
                         <CheckBox x:Name="chkCreatividad" Content="Creatividad" HorizontalAlignment="Left" Margin="51,989,0,0" VerticalAlignment="Top"/>
                         <CheckBox x:Name="chkResponsabilidad" Content="Responsabilidad" HorizontalAlignment="Left" Margin="51,1009,0,0" VerticalAlignment="Top"/>
                         <CheckBox x:Name="chkPaciencia" Content="Paciencia" HorizontalAlignment="Left" Margin="51,1029,0,0" VerticalAlignment="Top"/>
@@ -90,61 +90,61 @@
                         <CheckBox x:Name="chkMeticulosidad" Content="Meticulosidad " HorizontalAlignment="Left" Margin="320,1009,0,0" VerticalAlignment="Top"/>
                         <CheckBox x:Name="chkIniciativa" Content="Iniciativa" HorizontalAlignment="Left" Margin="320,1049,0,0" VerticalAlignment="Top"/>
                         <CheckBox x:Name="chkConstancia" Content="Constancia" HorizontalAlignment="Left" Margin="586,1029,0,0" VerticalAlignment="Top"/>
-                        <Label x:Name="lblFuncionesRealizadas" Content="De las opciones que se le ofrece a continuación señale cuál es el tipo de funciones y/o actividades que realiza en su trabajo: " HorizontalAlignment="Left" Margin="35,1069,0,0" VerticalAlignment="Top" Width="689" Grid.ColumnSpan="2"/>
+                        <Label x:Name="lblFuncionesRealizadas" Content="12.- De las opciones que se le ofrece a continuación señale cuál es el tipo de funciones y/o actividades que realiza en su trabajo: " HorizontalAlignment="Left" Margin="35,1069,0,0" VerticalAlignment="Top" Width="689" Grid.ColumnSpan="2"/>
                         <CheckBox x:Name="chkOrganizacionRealizada" Content="Organización" HorizontalAlignment="Left" Margin="49,1103,0,0" VerticalAlignment="Top"/>
                         <CheckBox x:Name="chkCooperacionRealizada" Content="Operación" HorizontalAlignment="Left" Margin="185,1123,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.141,2.2"/>
                         <CheckBox x:Name="chkControlRealizado" Content=" Control" HorizontalAlignment="Left" Margin="318,1123,0,0" VerticalAlignment="Top"/>
                         <CheckBox x:Name="chkDiscrecionRealizada" Content="Dirección" HorizontalAlignment="Left" Margin="318,1103,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.423,0.6"/>
                         <CheckBox x:Name="chkPlaneacionRealizada" Content="Planeación" HorizontalAlignment="Left" Margin="49,1123,0,0" VerticalAlignment="Top"/>
                         <CheckBox x:Name="chkDiagnosticoRealizado" Content="Diagnóstico" HorizontalAlignment="Left" Margin="185,1103,0,0" VerticalAlignment="Top"/>
-                        <Label x:Name="lblFuncionesDesempeñadas" Content="Describa en forma breve las funciones que desempeña con mayor frecuencia: " HorizontalAlignment="Left" Margin="37,1146,0,0" VerticalAlignment="Top" Width="689" Grid.ColumnSpan="2"/>
+                        <Label x:Name="lblFuncionesDesempeñadas" Content="13.- Describa en forma breve las funciones que desempeña con mayor frecuencia: " HorizontalAlignment="Left" Margin="37,1146,0,0" VerticalAlignment="Top" Width="689" Grid.ColumnSpan="2"/>
                         <TextBox x:Name="txtFuncionesDesempeñadas" HorizontalAlignment="Left" Height="22" Margin="37,1177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689" Grid.ColumnSpan="2"/>
-                        <Label x:Name="lblProblematicasSolucionadas" Content="¿Qué problemática(s) social(es) ha contribuido a solucionar con su desempeño profesional?" HorizontalAlignment="Left" Margin="37,1203,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="lblProblematicasSolucionadas" Content="14.- ¿Qué problemática(s) social(es) ha contribuido a solucionar con su desempeño profesional?" HorizontalAlignment="Left" Margin="37,1203,0,0" VerticalAlignment="Top"/>
                         <TextBox x:Name="txtProblematicasSolucionadas" HorizontalAlignment="Left" Height="24" Margin="35,1229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689" Grid.ColumnSpan="2"/>
-                        <Label x:Name="lblIngresoMensual" Content="Indique el promedio de ingreso mensual que percibe como producto de su práctica profesional" HorizontalAlignment="Left" Margin="36,1257,0,0" VerticalAlignment="Top" Width="689" Grid.ColumnSpan="2"/>
-                        <RadioButton x:Name="rb5000" Content="Menos de $5000.00" HorizontalAlignment="Left" Margin="52,1283,0,0" VerticalAlignment="Top"/>
-                        <RadioButton x:Name="rb5001a10000" Content="De $5001.00 a $10,000.00&#xD;&#xA;" HorizontalAlignment="Left" Margin="52,1303,0,0" VerticalAlignment="Top"/>
-                        <RadioButton x:Name="rb10001a15000" Content="De $10,001.00 a $15,000.00" HorizontalAlignment="Left" Margin="254,1283,0,0" VerticalAlignment="Top"/>
-                        <RadioButton x:Name="rb15001a20000" Content="De $15,001.00 a $20,000.00" HorizontalAlignment="Left" Margin="254,1303,0,0" VerticalAlignment="Top"/>
-                        <RadioButton x:Name="rb20001oMas" Content="De $20,001.00 o más" HorizontalAlignment="Left" Margin="451,1283,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="lblIngresoMensual" Content="15.- Indique el promedio de ingreso mensual que percibe como producto de su práctica profesional" HorizontalAlignment="Left" Margin="36,1257,0,0" VerticalAlignment="Top" Width="689" Grid.ColumnSpan="2"/>
+                        <RadioButton x:Name="rb5000" Content="Menos de $5000.00" HorizontalAlignment="Left" Margin="52,1283,0,0" VerticalAlignment="Top" GroupName="Pregunta15"/>
+                        <RadioButton x:Name="rb5001a10000" Content="De $5001.00 a $10,000.00&#xD;&#xA;" HorizontalAlignment="Left" Margin="52,1303,0,0" VerticalAlignment="Top" GroupName="Pregunta15"/>
+                        <RadioButton x:Name="rb10001a15000" Content="De $10,001.00 a $15,000.00" HorizontalAlignment="Left" Margin="254,1283,0,0" VerticalAlignment="Top" GroupName="Pregunta15"/>
+                        <RadioButton x:Name="rb15001a20000" Content="De $15,001.00 a $20,000.00" HorizontalAlignment="Left" Margin="254,1303,0,0" VerticalAlignment="Top" GroupName="Pregunta15"/>
+                        <RadioButton x:Name="rb20001oMas" Content="De $20,001.00 o más" HorizontalAlignment="Left" Margin="451,1283,0,0" VerticalAlignment="Top" GroupName="Pregunta15"/>
                         <Label x:Name="lblCargoDesempeñado" Content="Cargo que desempeña: " HorizontalAlignment="Left" Margin="32,33,0,0" VerticalAlignment="Top"/>
                         <Label x:Name="lblTipoContratacion" Content="Tipo de contratación:" HorizontalAlignment="Left" Margin="32,64,0,0" VerticalAlignment="Top"/>
-                        <Label x:Name="lblTrabajoLigadoAFormacion" Content="El trabajo que realiza actualmente está relacionado con su formación:" HorizontalAlignment="Left" Margin="32,95,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="lblTrabajoLigadoAFormacion" Content="1.- El trabajo que realiza actualmente está relacionado con su formación:" HorizontalAlignment="Left" Margin="32,95,0,0" VerticalAlignment="Top"/>
                         <TextBox  x:Name="txtCargoDesempeñado" HorizontalAlignment="Left" Height="23" Margin="175,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="367"/>
                         <TextBox x:Name="txtTipoContratacion" HorizontalAlignment="Left" Height="23" Margin="175,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="367"/>
-                        <RadioButton x:Name="rbSi" Content="Sí" HorizontalAlignment="Left" Margin="427,101,0,0" VerticalAlignment="Top"/>
-                        <RadioButton x:Name="rbNo" Content="No" HorizontalAlignment="Left" Margin="483,101,0,0" VerticalAlignment="Top"/>
-                        <Label x:Name="lblTiempoTrancurridoPrimerEmpleo" Content="Seleccione el tiempo transcurrido desde su egreso hasta encontrar un empleo relacionado con su formación académica" HorizontalAlignment="Left" Margin="32,138,0,0" VerticalAlignment="Top" Width="689" Grid.ColumnSpan="2"/>
-                        <RadioButton x:Name="rb12a18Meses" Content="De 12 a 18 meses" HorizontalAlignment="Left" Margin="247,169,0,0" VerticalAlignment="Top" Width="131"/>
-                        <RadioButton x:Name="rbMenosDe6Meses" Content="Menos de 6 meses" HorizontalAlignment="Left" Margin="49,169,0,0" VerticalAlignment="Top" Width="130"/>
-                        <RadioButton x:Name="rb6a12Meses" Content=" 6 a 12 meses" HorizontalAlignment="Left" Margin="49,193,0,0" VerticalAlignment="Top"/>
-                        <RadioButton x:Name="rb18a24Meses" Content="De 18 a 24 meses" HorizontalAlignment="Left" Margin="247,193,0,0" VerticalAlignment="Top"/>
-                        <RadioButton x:Name="rbMasDe24Meses" Content="Más de 24 meses" HorizontalAlignment="Left" Margin="471,169,0,0" VerticalAlignment="Top" Width="130"/>
-                        <RadioButton x:Name="rbSinTrabajo" Content="No he trabajado " HorizontalAlignment="Left" Margin="471,193,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbSi" Content="Sí" HorizontalAlignment="Left" Margin="427,101,0,0" VerticalAlignment="Top" GroupName="Pregunta1"/>
+                        <RadioButton x:Name="rbNo" Content="No" HorizontalAlignment="Left" Margin="483,101,0,0" VerticalAlignment="Top" GroupName="Pregunta1"/>
+                        <Label x:Name="lblTiempoTrancurridoPrimerEmpleo" Content="2.- Seleccione el tiempo transcurrido desde su egreso hasta encontrar un empleo relacionado con su formación académica" HorizontalAlignment="Left" Margin="32,138,0,0" VerticalAlignment="Top" Width="689" Grid.ColumnSpan="2"/>
+                        <RadioButton x:Name="rb12a18Meses" Content="De 12 a 18 meses" HorizontalAlignment="Left" Margin="247,169,0,0" VerticalAlignment="Top" Width="131" GroupName="Pregunta2"/>
+                        <RadioButton x:Name="rbMenosDe6Meses" Content="Menos de 6 meses" HorizontalAlignment="Left" Margin="49,169,0,0" VerticalAlignment="Top" Width="130" GroupName="Pregunta2"/>
+                        <RadioButton x:Name="rb6a12Meses" Content=" 6 a 12 meses" HorizontalAlignment="Left" Margin="49,193,0,0" VerticalAlignment="Top" GroupName="Pregunta2"/>
+                        <RadioButton x:Name="rb18a24Meses" Content="De 18 a 24 meses" HorizontalAlignment="Left" Margin="247,193,0,0" VerticalAlignment="Top" GroupName="Pregunta2"/>
+                        <RadioButton x:Name="rbMasDe24Meses" Content="Más de 24 meses" HorizontalAlignment="Left" Margin="471,169,0,0" VerticalAlignment="Top" Width="130" GroupName="Pregunta2"/>
+                        <RadioButton x:Name="rbSinTrabajo" Content="No he trabajado " HorizontalAlignment="Left" Margin="471,193,0,0" VerticalAlignment="Top" GroupName="Pregunta2"/>
                         <Button x:Name="btnCancelarInformacionLaboral" Content="Cancelar" HorizontalAlignment="Left" Margin="505,1745,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.547,-2.9"/>
                         <Button x:Name="btn_Guardar_InformacionLaboral" Content="Guardar" HorizontalAlignment="Left" Margin="618,1745,0,0" VerticalAlignment="Top" Width="75" Click="btn_Guardar_Click_Laboral" Grid.ColumnSpan="2"/>
-                        <Label Content="Tipo de organismo, empresa o institución en la que trabaja:" HorizontalAlignment="Left" Margin="29,354,0,0" VerticalAlignment="Top"/>
-                        <RadioButton Content="Privada" HorizontalAlignment="Left" Margin="49,385,0,0" VerticalAlignment="Top"/>
-                        <RadioButton Content="Pública" HorizontalAlignment="Left" Margin="49,408,0,0" VerticalAlignment="Top"/>
-                        <RadioButton Content="Gubernamental" HorizontalAlignment="Left" Margin="243,385,0,0" VerticalAlignment="Top"/>
-                        <RadioButton Content="Educativa" HorizontalAlignment="Left" Margin="243,405,0,0" VerticalAlignment="Top"/>
-                        <RadioButton Content="Ejerce en forma independiente" HorizontalAlignment="Left" Margin="467,385,0,0" VerticalAlignment="Top"/>
-                        <Label Content="¿Cuáles fueron las razones por las que tardó en emplearse en este tiempo?" HorizontalAlignment="Left" Margin="29,227,0,0" VerticalAlignment="Top"/>
-                        <RadioButton Content="Personales" HorizontalAlignment="Left" Margin="49,258,0,0" VerticalAlignment="Top"/>
-                        <RadioButton Content="No cumplir el perfil solicitado" HorizontalAlignment="Left" Margin="137,258,0,0" VerticalAlignment="Top"/>
-                        <RadioButton Content="Falta de oferta de trabajo" HorizontalAlignment="Left" Margin="326,258,0,0" VerticalAlignment="Top"/>
+                        <Label Content="5.- Tipo de organismo, empresa o institución en la que trabaja:" HorizontalAlignment="Left" Margin="29,354,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbPrivada" Content="Privada" HorizontalAlignment="Left" Margin="49,385,0,0" VerticalAlignment="Top" GroupName="Pregunta5"/>
+                        <RadioButton x:Name="rbPublica" Content="Pública" HorizontalAlignment="Left" Margin="49,408,0,0" VerticalAlignment="Top" GroupName="Pregunta5"/>
+                        <RadioButton x:Name="rbGubernamental" Content="Gubernamental" HorizontalAlignment="Left" Margin="243,385,0,0" VerticalAlignment="Top" GroupName="Pregunta5"/>
+                        <RadioButton x:Name="rbEducativa" Content="Educativa" HorizontalAlignment="Left" Margin="243,405,0,0" VerticalAlignment="Top" GroupName="Pregunta5"/>
+                        <RadioButton x:Name="rbIndependiente" Content="Ejerce en forma independiente" HorizontalAlignment="Left" Margin="467,385,0,0" VerticalAlignment="Top" GroupName="Pregunta5"/>
+                        <Label Content="3.- ¿Cuáles fueron las razones por las que tardó en emplearse en este tiempo?" HorizontalAlignment="Left" Margin="29,227,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbPersonales" Content="Personales" HorizontalAlignment="Left" Margin="49,258,0,0" VerticalAlignment="Top" GroupName="Pregunta3"/>
+                        <RadioButton x:Name="rbNoPerfil" Content="No cumplir el perfil solicitado" HorizontalAlignment="Left" Margin="137,258,0,0" VerticalAlignment="Top" GroupName="Pregunta3"/>
+                        <RadioButton x:Name="rbFaltaOferta" Content="Falta de oferta de trabajo" HorizontalAlignment="Left" Margin="326,258,0,0" VerticalAlignment="Top" GroupName="Pregunta3"/>
                         <Label Content="Otra:" HorizontalAlignment="Left" Margin="483,252,0,0" VerticalAlignment="Top"/>
-                        <TextBox HorizontalAlignment="Left" Height="23" Margin="524,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Grid.ColumnSpan="2"/>
-                        <Label Content="¿Qué tan importante fue el contar con experiencia o no para conseguir tu primer trabajo?" HorizontalAlignment="Left" Margin="29,292,0,0" VerticalAlignment="Top"/>
-                        <RadioButton Content="Mucha" HorizontalAlignment="Left" Margin="49,323,0,0" VerticalAlignment="Top"/>
-                        <RadioButton Content="Poca" HorizontalAlignment="Left" Margin="182,323,0,0" VerticalAlignment="Top"/>
-                        <RadioButton Content="Ninguna" HorizontalAlignment="Left" Margin="320,323,0,0" VerticalAlignment="Top"/>
-                        <Label Content="¿Te gustaría crear tu propia empresa o ser tu propio empleador?" HorizontalAlignment="Left" Margin="37,1334,0,0" VerticalAlignment="Top" Width="368"/>
-                        <RadioButton Content="Sí" HorizontalAlignment="Left" Margin="52,1365,0,0" VerticalAlignment="Top"/>
-                        <RadioButton Content="No" HorizontalAlignment="Left" Margin="119,1365,0,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="txtOtraRazon" HorizontalAlignment="Left" Height="23" Margin="524,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Grid.ColumnSpan="2"/>
+                        <Label Content="4.- ¿Qué tan importante fue el contar con experiencia o no para conseguir tu primer trabajo?" HorizontalAlignment="Left" Margin="29,292,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbMucha" Content="Mucha" HorizontalAlignment="Left" Margin="49,323,0,0" VerticalAlignment="Top" GroupName="Pregunta4"/>
+                        <RadioButton x:Name="rbPoca" Content="Poca" HorizontalAlignment="Left" Margin="182,323,0,0" VerticalAlignment="Top" GroupName="Pregunta4"/>
+                        <RadioButton x:Name="rbNinguna" Content="Ninguna" HorizontalAlignment="Left" Margin="320,323,0,0" VerticalAlignment="Top" GroupName="Pregunta4"/>
+                        <Label Content="16.- ¿Te gustaría crear tu propia empresa o ser tu propio empleador?" HorizontalAlignment="Left" Margin="37,1334,0,0" VerticalAlignment="Top" Width="368"/>
+                        <RadioButton Content="Sí" HorizontalAlignment="Left" Margin="52,1365,0,0" VerticalAlignment="Top" GroupName="Pregunta16"/>
+                        <RadioButton Content="No" HorizontalAlignment="Left" Margin="119,1365,0,0" VerticalAlignment="Top" GroupName="Pregunta16"/>
                         <Label Content="¿Por qué?" HorizontalAlignment="Left" Margin="190,1357,0,0" VerticalAlignment="Top"/>
                         <TextBox HorizontalAlignment="Left" Height="23" Margin="264,1360,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="460" Grid.ColumnSpan="2"/>
-                        <Label Content="¿En que áreas de conocimiento detectó tener deficiencias al entrar al mercado laboral?" HorizontalAlignment="Left" Margin="37,1396,0,0" VerticalAlignment="Top"/>
+                        <Label Content="17.- ¿En que áreas de conocimiento detectó tener deficiencias al entrar al mercado laboral?" HorizontalAlignment="Left" Margin="37,1396,0,0" VerticalAlignment="Top"/>
                         <CheckBox Content="Redes" HorizontalAlignment="Left" Margin="52,1427,0,0" VerticalAlignment="Top"/>
                         <CheckBox Content="Software especializado (paquetes)" HorizontalAlignment="Left" Margin="165,1427,0,0" VerticalAlignment="Top"/>
                         <CheckBox Content="Programación de sistemas" HorizontalAlignment="Left" Margin="567,1427,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
@@ -156,7 +156,7 @@
                         <TextBox HorizontalAlignment="Left" Height="23" Margin="266,1488,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="459" Grid.ColumnSpan="2"/>
                         <Label Content="Otros:" HorizontalAlignment="Left" Margin="44,1516,0,0" VerticalAlignment="Top"/>
                         <TextBox HorizontalAlignment="Left" Height="23" Margin="94,1516,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="632" Grid.ColumnSpan="2"/>
-                        <Label Content="¿Cuáles son los conocimientos básicos requeridos por la empresa en la que trabajas actualmente?" HorizontalAlignment="Left" Margin="35,1558,0,0" VerticalAlignment="Top"/>
+                        <Label Content="18.- ¿Cuáles son los conocimientos básicos requeridos por la empresa en la que trabajas actualmente?" HorizontalAlignment="Left" Margin="35,1558,0,0" VerticalAlignment="Top"/>
                         <CheckBox Content="Manejo de bases de datos" HorizontalAlignment="Left" Margin="52,1589,0,0" VerticalAlignment="Top"/>
                         <CheckBox Content="Programación de sistemas" HorizontalAlignment="Left" Margin="52,1618,0,0" VerticalAlignment="Top"/>
                         <CheckBox Content="Manejo de redes" HorizontalAlignment="Left" Margin="244,1589,0,0" VerticalAlignment="Top"/>
@@ -165,13 +165,13 @@
                         <CheckBox Content="Manejo de multimedia" HorizontalAlignment="Left" Margin="586,1618,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
                         <CheckBox Content="Manejo de otro idioma " HorizontalAlignment="Left" Margin="400,1618,0,0" VerticalAlignment="Top"/>
                         <CheckBox Content="Diseño de websites" HorizontalAlignment="Left" Margin="400,1589,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.817,-2.733"/>
-                        <Label Content="Consideras que la formación profesional recibida fue: " HorizontalAlignment="Left" Margin="40,1650,0,0" VerticalAlignment="Top"/>
-                        <RadioButton Content="Excelente" HorizontalAlignment="Left" Margin="51,1681,0,0" VerticalAlignment="Top"/>
-                        <RadioButton Content="Muy buena" HorizontalAlignment="Left" Margin="165,1681,0,0" VerticalAlignment="Top"/>
-                        <RadioButton Content="Buena" HorizontalAlignment="Left" Margin="282,1681,0,0" VerticalAlignment="Top"/>
-                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="385,1681,0,0" VerticalAlignment="Top"/>
-                        <RadioButton Content="Mala" HorizontalAlignment="Left" Margin="500,1681,0,0" VerticalAlignment="Top"/>
-                        <RadioButton Content="Muy mala" HorizontalAlignment="Left" Margin="609,1681,0,0" VerticalAlignment="Top"/>
+                        <Label Content="19.- Consideras que la formación profesional recibida fue: " HorizontalAlignment="Left" Margin="40,1650,0,0" VerticalAlignment="Top"/>
+                        <RadioButton Content="Excelente" HorizontalAlignment="Left" Margin="51,1681,0,0" VerticalAlignment="Top" GroupName="Pregunta19"/>
+                        <RadioButton Content="Muy buena" HorizontalAlignment="Left" Margin="165,1681,0,0" VerticalAlignment="Top" GroupName="Pregunta19"/>
+                        <RadioButton Content="Buena" HorizontalAlignment="Left" Margin="282,1681,0,0" VerticalAlignment="Top" GroupName="Pregunta19"/>
+                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="385,1681,0,0" VerticalAlignment="Top" GroupName="Pregunta19"/>
+                        <RadioButton Content="Mala" HorizontalAlignment="Left" Margin="500,1681,0,0" VerticalAlignment="Top" GroupName="Pregunta19"/>
+                        <RadioButton Content="Muy mala" HorizontalAlignment="Left" Margin="609,1681,0,0" VerticalAlignment="Top" GroupName="Pregunta19"/>
 
                     </Grid>
                 </ScrollViewer>
