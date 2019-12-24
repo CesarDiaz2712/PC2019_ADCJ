@@ -145,7 +145,7 @@ namespace SE.View
                     }
                 }
             }
-            /*
+            
             this.cuestionarioLaboral.Respuesta = trabajoLigadoFormacion;
             this.cuestionarioLaboral.Respuesta = txtCargoDesempeñado.Text;
             this.cuestionarioLaboral.Respuesta = txtTipoContratacion.Text;
@@ -158,7 +158,7 @@ namespace SE.View
             this.cuestionarioLaboral.Respuesta = promedioIngresoMensual;
             this.resultado = InformaciónLaboralDAO.guardar(this.cuestionarioLaboral);
 
-            */
+            
         }
 
 

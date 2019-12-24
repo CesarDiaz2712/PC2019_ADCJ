@@ -24,10 +24,10 @@ namespace SE.model.dao
                 if (conn != null)
                 {
                     String query = String.Format("SELECT " +
-                                                 "x.idInformacionLaboral, " +
+                                                 "x.idInformacionLabora, " +
                                                  "x.respuesta, " +
                                                  "x.idEgresado, " +
-                                                 "FROM dbo.informacionlaboral x " +
+                                                 "FROM dbo.InformacionLabora x " +
                                                  "WHERE x.idEgresado = {0)", idEgresado);
                     Console.WriteLine(query);
                     command = new SqlCommand(query, conn);
@@ -59,12 +59,20 @@ namespace SE.model.dao
             return egresado;
         }
 
-        public static bool guardar(InformacionLaboral cuestionario)
+        public static bool guardar(InformacionLaboral cuestionario, bool nuevo)
         {
             String query = "";
 
-            query = "INSERT INTO dbo.InformacionLaboral( respuesta, idEgresado)" +
-                    "VALUES( @respuesta, @idEgresado);";
+            if (nuevo) {
+                query = "INSERT INTO dbo.InformacionLabora (respuesta, idEgresado)" +
+                        "VALUES(@respuesta,@idEgresado);";
+            }
+            else
+            {
+                query = "UPDATE dbo.InformacionLabora SET " +
+                    "respuesta=@respuesta, " +
+                    "WHERE idInformacionLabora=@idInformacionLabora;";
+            }
 
             SqlConnection conn = null;
             try
