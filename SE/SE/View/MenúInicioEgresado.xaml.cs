@@ -22,7 +22,6 @@ namespace SE.View
         private Egresado usuarioIniciado { get; set; }
         private Egresado egresado;
         private FichaPreEgreso informacionPersonal;
-        private FichaPreEgreso ficha { get; set; }
         public MenúInicioEgresado(Egresado usuario)
         {
             this.usuarioIniciado = usuario;

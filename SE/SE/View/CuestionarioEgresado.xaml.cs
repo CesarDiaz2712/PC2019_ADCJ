@@ -22,9 +22,9 @@ namespace SE.View
     public partial class CuestionarioEgresado : Window
     {
 
-        private InformaciónPersonal cuestionarioPersonal;
-        private InformaciónPersonal cuestionarioLaboral;
-        private InformaciónPersonal cuestionarioAcademico;
+        private InformacionPersonal cuestionarioPersonal;
+        private InformacionLaboral cuestionarioLaboral;
+        private InformacionPersonal cuestionarioAcademico;
         private string trabajoLigadoFormacion;
         private string tiempoTranscurridoPrimerEmpleo;
         private string promedioIngresoMensual;
@@ -51,7 +51,7 @@ namespace SE.View
             txtCalle.Text = ficha.Calle;
             txtNumeroCasa.Text = ficha.NumeroCasa;
             txtColonia.Text = ficha.Colonia;
-            txtCiudad.Text = ficha.Colonia;
+            txtCiudad.Text = ficha.Ciudad;
             txtEstado.Text = ficha.Estado;
             txtCP.Text = ficha.CodigoPostal;
             txtTelefono.Text = ficha.Telefono;
