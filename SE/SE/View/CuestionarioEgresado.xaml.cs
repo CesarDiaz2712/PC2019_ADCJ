@@ -67,6 +67,22 @@ namespace SE.View
         private string saberesAxiologicosRespuesta17;
         private string saberesAxiologicosRespuesta18;
         private string saberesAxiologicosRespuesta19;
+        private string funcionesRealizadasRespuesta1;
+        private string funcionesRealizadasRespuesta2;
+        private string funcionesRealizadasRespuesta3;
+        private string funcionesRealizadasRespuesta4;
+        private string funcionesRealizadasRespuesta5;
+        private string funcionesRealizadasRespuesta6;
+        private string propiaEmpresa;
+        private string propiaEmpresaPorque;
+        private string diferenciaConocimientoRespuesta1;
+        private string diferenciaConocimientoRespuesta2;
+        private string diferenciaConocimientoRespuesta3;
+        private string diferenciaConocimientoRespuesta4;
+        private string diferenciaConocimientoRespuesta5;
+        private string diferenciaConocimientoRespuesta6;
+        private string diferenciaConocimientoRespuesta7;
+        private string diferenciaConocimientoRespuesta8;
 
 
         private string formacionActual;
@@ -372,6 +388,78 @@ namespace SE.View
                 this.saberesAxiologicosRespuesta19 = "Constancia";
             }
 
+            if (chkOrganizacionRealizada.IsChecked==true)
+            {
+                this.funcionesRealizadasRespuesta1 = "Organizacion";
+            }
+            if (chkPlaneacionRealizada.IsChecked==true)
+            {
+                this.funcionesRealizadasRespuesta2 = "Planeacion";
+            }
+            if (chkDiagnosticoRealizado.IsChecked==true)
+            {
+                this.funcionesRealizadasRespuesta3 = "Diagnostico";
+            }
+            if (chkCooperacionRealizada.IsChecked==true)
+            {
+                this.funcionesRealizadasRespuesta4 = "Cooperacion";
+            }
+            if (chkDiscrecionRealizada.IsChecked==true)
+            {
+                this.funcionesRealizadasRespuesta5 = "Discrecion";
+            }
+            if (chkControlRealizado.IsChecked==true)
+            {
+                this.funcionesRealizadasRespuesta6 = "Control";
+            }
+
+            if (rbSiPregunta16.IsChecked==true && txtPropiaEmpresa.Text.Length>0)
+            {
+                this.propiaEmpresa = "Si";
+                this.propiaEmpresaPorque = txtPropiaEmpresa.Text;
+            }
+            else
+            {
+                if (rbNoPregunta16.IsChecked==true && txtPropiaEmpresa.Text.Length>0)
+                {
+                    this.propiaEmpresa = "No";
+                    this.propiaEmpresaPorque = txtPropiaEmpresa.Text;
+                }
+            }
+
+            if (chkManejoBaseDatos.IsChecked==true)
+            {
+                this.diferenciaConocimientoRespuesta1 = "Manejo de Bases de Datos";
+            }
+            if (chkSistemas.IsChecked==true)
+            {
+                this.diferenciaConocimientoRespuesta2 = "Programacion de Sistemas";
+            }
+            if (chkManejoRedes.IsChecked==true)
+            {
+                this.diferenciaConocimientoRespuesta3 = "Manejo de Redes";
+            }
+            if (chkManejoPaquetes.IsChecked==true)
+            {
+                this.diferenciaConocimientoRespuesta4 = "Manejo de Paquetes";
+            }
+            if (chkDiseñoWebsites.IsChecked==true)
+            {
+                this.diferenciaConocimientoRespuesta5 = "Disdeño de Websites";
+            }
+            if (chkManejoIdioma.IsChecked==true)
+            {
+                this.diferenciaConocimientoRespuesta6 = "Manejo de otro Idioma";
+            }
+            if (chkMantenimientoComputo.IsChecked==true)
+            {
+                this.diferenciaConocimientoRespuesta7 = "Mantenimiento de equipos de computo";
+            }
+            if (chkManejoMultimedia.IsChecked==true)
+            {
+                this.diferenciaConocimientoRespuesta8 = "Manejo de Multimedia";
+            }
+
             this.cuestionarioLaboral.Respuesta = txtCargoDesempeñado.Text;
             this.cuestionarioLaboral.Respuesta = txtTipoContratacion.Text;
             this.cuestionarioLaboral.Respuesta = trabajoLigadoFormacion;
@@ -418,10 +506,26 @@ namespace SE.View
             this.cuestionarioLaboral.Respuesta = saberesAxiologicosRespuesta17;
             this.cuestionarioLaboral.Respuesta = saberesAxiologicosRespuesta18;
             this.cuestionarioLaboral.Respuesta = saberesAxiologicosRespuesta19;
-
+            this.cuestionarioLaboral.Respuesta = funcionesRealizadasRespuesta1;
+            this.cuestionarioLaboral.Respuesta = funcionesRealizadasRespuesta2;
+            this.cuestionarioLaboral.Respuesta = funcionesRealizadasRespuesta3;
+            this.cuestionarioLaboral.Respuesta = funcionesRealizadasRespuesta4;
+            this.cuestionarioLaboral.Respuesta = funcionesRealizadasRespuesta5;
+            this.cuestionarioLaboral.Respuesta = funcionesRealizadasRespuesta6;
             this.cuestionarioLaboral.Respuesta = txtFuncionesDesempeñadas.Text;
             this.cuestionarioLaboral.Respuesta = txtProblematicasSolucionadas.Text;
             this.cuestionarioLaboral.Respuesta = promedioIngresoMensual;
+            this.cuestionarioLaboral.Respuesta = propiaEmpresa;
+            this.cuestionarioLaboral.Respuesta = propiaEmpresaPorque;
+            this.cuestionarioLaboral.Respuesta = diferenciaConocimientoRespuesta1;
+            this.cuestionarioLaboral.Respuesta = diferenciaConocimientoRespuesta2;
+            this.cuestionarioLaboral.Respuesta = diferenciaConocimientoRespuesta3;
+            this.cuestionarioLaboral.Respuesta = diferenciaConocimientoRespuesta4;
+            this.cuestionarioLaboral.Respuesta = diferenciaConocimientoRespuesta5;
+            this.cuestionarioLaboral.Respuesta = diferenciaConocimientoRespuesta6;
+            this.cuestionarioLaboral.Respuesta = diferenciaConocimientoRespuesta7;
+            this.cuestionarioLaboral.Respuesta = diferenciaConocimientoRespuesta8;
+
             this.resultado = InformaciónLaboralDAO.guardar(this.cuestionarioLaboral,true);
 
             
