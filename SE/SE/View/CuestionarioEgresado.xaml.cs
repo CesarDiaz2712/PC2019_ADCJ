@@ -83,6 +83,7 @@ namespace SE.View
         private string diferenciaConocimientoRespuesta6;
         private string diferenciaConocimientoRespuesta7;
         private string diferenciaConocimientoRespuesta8;
+        private string formacionProfesional;
 
 
         private string formacionActual;
@@ -255,7 +256,7 @@ namespace SE.View
             }
             if (chkSistemasInteligentesAdquirida.IsChecked==true)
             {
-                this.saberesTeoricosRespuesta4="Sistemas Inteligentes":
+                this.saberesTeoricosRespuesta4 = "Sistemas Inteligentes";
             }
             if (chkRedesAdquirida.IsChecked==true)
             {
@@ -296,7 +297,7 @@ namespace SE.View
             }
             if (chkDiseñoRedesAdquirido.IsChecked==true)
             {
-                this.saberesHeuristicosRespuesta4="Diseño e implementacion de redes":
+                this.saberesHeuristicosRespuesta4 = "Diseño e implementacion de redes";
             }
             if (chkDiseñoImplantacionSistemas.IsChecked==true)
             {
@@ -460,6 +461,34 @@ namespace SE.View
                 this.diferenciaConocimientoRespuesta8 = "Manejo de Multimedia";
             }
 
+            if (rbExcelenteFormacion.IsChecked==true)
+            {
+                this.formacionActual = "Excelente";
+            }
+            else
+            {
+                if (rbMuyBuenaFormacion.IsChecked==true)
+                {
+                    this.formacionProfesional = "Muy Buena";
+                }
+                if (rbBuenaFormacion.IsChecked==true)
+                {
+                    this.formacionProfesional = "Buena";
+                }
+                if (rbRegularFormacion.IsChecked==true)
+                {
+                    this.formacionProfesional = "Regular";
+                }
+                if (rbMalaFormacion.IsChecked==true)
+                {
+                    this.formacionProfesional = "Mala";
+                }
+                if (rbMuyMalaFormacion.IsChecked==true)
+                {
+                    this.formacionProfesional = "Muy mala";
+                }
+            }
+
             this.cuestionarioLaboral.Respuesta = txtCargoDesempeñado.Text;
             this.cuestionarioLaboral.Respuesta = txtTipoContratacion.Text;
             this.cuestionarioLaboral.Respuesta = trabajoLigadoFormacion;
@@ -525,6 +554,7 @@ namespace SE.View
             this.cuestionarioLaboral.Respuesta = diferenciaConocimientoRespuesta6;
             this.cuestionarioLaboral.Respuesta = diferenciaConocimientoRespuesta7;
             this.cuestionarioLaboral.Respuesta = diferenciaConocimientoRespuesta8;
+            this.cuestionarioLaboral.Respuesta = formacionProfesional;
 
             this.resultado = InformaciónLaboralDAO.guardar(this.cuestionarioLaboral,true);
 

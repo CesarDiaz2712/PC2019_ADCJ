@@ -166,12 +166,12 @@
                         <CheckBox x:Name="chkManejoMultimedia" Content="Manejo de otro idioma " HorizontalAlignment="Left" Margin="400,1618,0,0" VerticalAlignment="Top"/>
                         <CheckBox x:Name="chkDiseñoWebsites" Content="Diseño de websites" HorizontalAlignment="Left" Margin="400,1589,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.817,-2.733"/>
                         <Label Content="19.- Consideras que la formación profesional recibida fue: " HorizontalAlignment="Left" Margin="40,1650,0,0" VerticalAlignment="Top"/>
-                        <RadioButton Content="Excelente" HorizontalAlignment="Left" Margin="51,1681,0,0" VerticalAlignment="Top" GroupName="Pregunta19"/>
-                        <RadioButton Content="Muy buena" HorizontalAlignment="Left" Margin="165,1681,0,0" VerticalAlignment="Top" GroupName="Pregunta19"/>
-                        <RadioButton Content="Buena" HorizontalAlignment="Left" Margin="282,1681,0,0" VerticalAlignment="Top" GroupName="Pregunta19"/>
-                        <RadioButton Content="Regular" HorizontalAlignment="Left" Margin="385,1681,0,0" VerticalAlignment="Top" GroupName="Pregunta19"/>
-                        <RadioButton Content="Mala" HorizontalAlignment="Left" Margin="500,1681,0,0" VerticalAlignment="Top" GroupName="Pregunta19"/>
-                        <RadioButton Content="Muy mala" HorizontalAlignment="Left" Margin="609,1681,0,0" VerticalAlignment="Top" GroupName="Pregunta19"/>
+                        <RadioButton x:Name="rbExcelenteFormacion" Content="Excelente" HorizontalAlignment="Left" Margin="51,1681,0,0" VerticalAlignment="Top" GroupName="Pregunta19"/>
+                        <RadioButton x:Name="rbMuyBuenaFormacion" Content="Muy buena" HorizontalAlignment="Left" Margin="165,1681,0,0" VerticalAlignment="Top" GroupName="Pregunta19"/>
+                        <RadioButton x:Name="rbBuenaFormacion" Content="Buena" HorizontalAlignment="Left" Margin="282,1681,0,0" VerticalAlignment="Top" GroupName="Pregunta19"/>
+                        <RadioButton x:Name="rbRegularFormacion" Content="Regular" HorizontalAlignment="Left" Margin="385,1681,0,0" VerticalAlignment="Top" GroupName="Pregunta19"/>
+                        <RadioButton x:Name="rbMalaFormacion" Content="Mala" HorizontalAlignment="Left" Margin="500,1681,0,0" VerticalAlignment="Top" GroupName="Pregunta19"/>
+                        <RadioButton x:Name="rbMuyMalaFormacion" Content="Muy mala" HorizontalAlignment="Left" Margin="609,1681,0,0" VerticalAlignment="Top" GroupName="Pregunta19"/>
 
                     </Grid>
                 </ScrollViewer>
