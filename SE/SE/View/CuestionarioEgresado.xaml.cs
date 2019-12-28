@@ -24,7 +24,7 @@ namespace SE.View
 
         private InformacionPersonal cuestionarioPersonal;
         private InformacionLaboral cuestionarioLaboral;
-        private InformacionPersonal cuestionarioAcademico;
+        private InformacionPersonal cuestionarioAcademico; 
         private string trabajoLigadoFormacion;
         private string tiempoTranscurridoPrimerEmpleo;
         private string promedioIngresoMensual;
