@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SE.View"
         mc:Ignorable="d"
-        Title="MenúInicioEgresado" Height="525" Width="941">
+        Title="MenúInicioEgresado" Height="525" Width="941" ResizeMode="NoResize">
     <Grid Background="#FFC7C7C7">
         <Label x:Name="lblSistemaEgresados" Content="SISTEMAS DE EGRESADOS" Background="#FF345781" HorizontalAlignment="Left" VerticalAlignment="Top" Width="933" FontSize="24" FontWeight="Bold" Height="89" FontFamily="Microsoft JhengHei"/>
 

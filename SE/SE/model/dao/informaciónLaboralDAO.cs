@@ -24,10 +24,11 @@ namespace SE.model.dao
                 if (conn != null)
                 {
                     String query = String.Format("SELECT " +
-                                                 "x.idInformacionLaboral, " +
+                                                 "x.idInformacionLabora, " +
                                                  "x.respuesta, " +
-                                                 "x.idEgresado, " +
-                                                 "FROM dbo.informacionlaboral x " +
+                                                 "x.idPreguntaLboral, " +
+                                                 "x.idEgresado " +
+                                                 "FROM dbo.InformacionLabora x " +
                                                  "WHERE x.idEgresado = {0)", idEgresado);
                     Console.WriteLine(query);
                     command = new SqlCommand(query, conn);
@@ -59,12 +60,20 @@ namespace SE.model.dao
             return egresado;
         }
 
-        public static bool guardar(InformacionLaboral cuestionario)
+        public static bool guardar(InformacionLaboral cuestionario, bool nuevo)
         {
             String query = "";
 
-            query = "INSERT INTO dbo.InformacionLaboral( respuesta, idEgresado)" +
-                    "VALUES( @respuesta, @idEgresado);";
+            if (nuevo) {
+                query = "INSERT INTO dbo.InformacionLabora (respuesta, idEgresado)" +
+                        "VALUES(@respuesta,@idEgresado);";
+            }
+            else
+            {
+                query = "UPDATE dbo.InformacionLabora SET " +
+                    "respuesta=@respuesta, " +
+                    "WHERE idInformacionLabora=@idInformacionLabora;";
+            }
 
             SqlConnection conn = null;
             try
@@ -77,7 +86,15 @@ namespace SE.model.dao
                     command = new SqlCommand(query, conn);
                     command.CommandType = CommandType.Text;
                     command.Parameters.AddWithValue("@respuesta", cuestionario.Respuesta);
-                    command.Parameters.AddWithValue("@idEgresado", cuestionario.IdEgresado);
+
+                    if (nuevo)
+                    {
+                        command.Parameters.AddWithValue("@idEgresado", cuestionario.IdEgresado);
+                    }
+                    else
+                    {
+                        command.Parameters.AddWithValue("@idInformacionLabora", cuestionario.IdInformacionLaboral);
+                    }
 
                     int i = command.ExecuteNonQuery();
                     Console.WriteLine("Filas afectadas: " + i);
