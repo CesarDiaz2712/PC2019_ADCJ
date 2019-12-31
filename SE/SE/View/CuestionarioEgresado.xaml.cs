@@ -25,7 +25,6 @@ namespace SE.View
 
         private InformacionPersonal cuestionarioPersonal;
         private InformacionLaboral cuestionarioLaboral;
-<<<<<<< HEAD
         private InformacionPersonal cuestionarioAcademico;
         private string trabajoLigadoFormacion = "";
         private string tiempoTranscurridoPrimerEmpleo = "";
@@ -86,69 +85,6 @@ namespace SE.View
         private string diferenciaConocimientoRespuesta7 = "";
         private string diferenciaConocimientoRespuesta8 = "";
         private string formacionProfesional = "";
-=======
-        private InformacionPersonal cuestionarioAcademico; 
-        private string trabajoLigadoFormacion;
-        private string tiempoTranscurridoPrimerEmpleo;
-        private string promedioIngresoMensual;
-        private string razonNoEncontrartrabajo;
-        private string importanciaExperiencia;
-        private string tipoOrganismo;
-        private string saberesTeoricosRespuesta1;
-        private string saberesTeoricosRespuesta2;
-        private string saberesTeoricosRespuesta3;
-        private string saberesTeoricosRespuesta4;
-        private string saberesTeoricosRespuesta5;
-        private string saberesTeoricosRespuesta6;
-        private string saberesTeoricosRespuesta7;
-        private string saberesTeoricosRespuesta8;
-        private string saberesTeoricosRespuesta9;
-        private string saberesTeoricosRespuesta10;
-        private string saberesHeuristicosRespuesta1;
-        private string saberesHeuristicosRespuesta2;
-        private string saberesHeuristicosRespuesta3;
-        private string saberesHeuristicosRespuesta4;
-        private string saberesHeuristicosRespuesta5;
-        private string saberesHeuristicosRespuesta6;
-        private string saberesHeuristicosRespuesta7;
-        private string saberesAxiologicosRespuesta1;
-        private string saberesAxiologicosRespuesta2;
-        private string saberesAxiologicosRespuesta3;
-        private string saberesAxiologicosRespuesta4;
-        private string saberesAxiologicosRespuesta5;
-        private string saberesAxiologicosRespuesta6;
-        private string saberesAxiologicosRespuesta7;
-        private string saberesAxiologicosRespuesta8;
-        private string saberesAxiologicosRespuesta9;
-        private string saberesAxiologicosRespuesta10;
-        private string saberesAxiologicosRespuesta11;
-        private string saberesAxiologicosRespuesta12;
-        private string saberesAxiologicosRespuesta13;
-        private string saberesAxiologicosRespuesta14;
-        private string saberesAxiologicosRespuesta15;
-        private string saberesAxiologicosRespuesta16;
-        private string saberesAxiologicosRespuesta17;
-        private string saberesAxiologicosRespuesta18;
-        private string saberesAxiologicosRespuesta19;
-        private string funcionesRealizadasRespuesta1;
-        private string funcionesRealizadasRespuesta2;
-        private string funcionesRealizadasRespuesta3;
-        private string funcionesRealizadasRespuesta4;
-        private string funcionesRealizadasRespuesta5;
-        private string funcionesRealizadasRespuesta6;
-        private string propiaEmpresa;
-        private string propiaEmpresaPorque;
-        private string diferenciaConocimientoRespuesta1;
-        private string diferenciaConocimientoRespuesta2;
-        private string diferenciaConocimientoRespuesta3;
-        private string diferenciaConocimientoRespuesta4;
-        private string diferenciaConocimientoRespuesta5;
-        private string diferenciaConocimientoRespuesta6;
-        private string diferenciaConocimientoRespuesta7;
-        private string diferenciaConocimientoRespuesta8;
-        private string formacionProfesional;
->>>>>>> 613bf923f21ba2459d091f13ae68f7df7f46b86a
-
 
         private string formacionActual;
         private string planDeEstudios;
