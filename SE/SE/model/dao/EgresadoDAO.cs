@@ -9,6 +9,10 @@ using SE.model.pocos;
 
 namespace SE.model.dao
 {
+    /*
+     * Clase DAO para la conexion con la base de datos del sistema
+     * Solo informacion del Egresado
+     */
     public class EgresadoDAO
     {
         public static Egresado getLogin(String usuario, String contrasena)

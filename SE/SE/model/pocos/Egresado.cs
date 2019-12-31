@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace SE.model.pocos
 {
+    /* Clase para la obtencion de la 
+     * informacion del Egresado
+     */
     public class Egresado
     {
         private Int32 idEgresado;

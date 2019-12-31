@@ -10,6 +10,10 @@ using SE.model.pocos;
 
 namespace SE.model.dao
 {
+    /*
+     * Clase DAO para la conexion con la base de datos
+     * con la FIchaPreEgreso
+     */
     public class FichaPreEgresoDAO
     {
 

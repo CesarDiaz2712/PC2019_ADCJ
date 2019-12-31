@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace SE.model.db
 {
+    /*
+     * Clase para establecer la conexion con SQLServer
+     */
     class ConnectionUtils
     {
         private static String SERVER = "localhost";

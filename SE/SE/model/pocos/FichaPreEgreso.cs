@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace SE.model.pocos
 {
+    /*  Clase FichaPreEgreso
+     *  Informacion personal del Egresado
+     */
+
     public class FichaPreEgreso
     {
         private Int32 idFichaPreEgreso;

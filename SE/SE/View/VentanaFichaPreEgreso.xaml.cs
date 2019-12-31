@@ -16,9 +16,6 @@ using SE.model.pocos;
 
 namespace SE.View
 {
-    /// <summary>
-    /// Lógica de interacción para VentanaFichaPreEgreso.xaml
-    /// </summary>
     public partial class VentanaFichaPreEgreso : Window
     {
         private FichaPreEgreso ficha;

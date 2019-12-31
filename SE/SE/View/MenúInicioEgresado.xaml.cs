@@ -29,7 +29,6 @@ namespace SE.View
             lblUserName.Content=usuario.NombreUsuario;
         }
 
-        //Carga la Informacion del Egresado
         private void cargarInformacionEgresado()
         {
             egresado = EgresadoDAO.consultaInformacionEgresado(usuarioIniciado.IdEgresado);
