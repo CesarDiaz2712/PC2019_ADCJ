@@ -110,7 +110,7 @@
                     <Label x:Name="lblCargoDesempeñado" Content="Cargo que desempeña: " HorizontalAlignment="Left" Margin="32,33,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lblTipoContratacion" Content="Tipo de contratación:" HorizontalAlignment="Left" Margin="32,64,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lblTrabajoLigadoAFormacion" Content="1.- El trabajo que realiza actualmente está relacionado con su formación:" HorizontalAlignment="Left" Margin="32,95,0,0" VerticalAlignment="Top"/>
-                    <TextBox  x:Name="txtCargoDesempeñado" HorizontalAlignment="Left" Height="23" Margin="175,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="367"/>
+                    <TextBox  x:Name="txtCargoDesempenado" HorizontalAlignment="Left" Height="23" Margin="175,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="367"/>
                     <TextBox x:Name="txtTipoContratacion" HorizontalAlignment="Left" Height="23" Margin="175,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="367"/>
                     <RadioButton x:Name="rbSi" Content="Sí" HorizontalAlignment="Left" Margin="427,101,0,0" VerticalAlignment="Top" GroupName="Pregunta1"/>
                     <RadioButton x:Name="rbNo" Content="No" HorizontalAlignment="Left" Margin="483,101,0,0" VerticalAlignment="Top" GroupName="Pregunta1"/>
@@ -121,7 +121,7 @@
                     <RadioButton x:Name="rb18a24Meses" Content="De 18 a 24 meses" HorizontalAlignment="Left" Margin="247,193,0,0" VerticalAlignment="Top" GroupName="Pregunta2"/>
                     <RadioButton x:Name="rbMasDe24Meses" Content="Más de 24 meses" HorizontalAlignment="Left" Margin="471,169,0,0" VerticalAlignment="Top" Width="130" GroupName="Pregunta2"/>
                     <RadioButton x:Name="rbSinTrabajo" Content="No he trabajado " HorizontalAlignment="Left" Margin="471,193,0,0" VerticalAlignment="Top" GroupName="Pregunta2"/>
-                    <Button x:Name="btnCancelarInformacionLaboral" Content="Cancelar" HorizontalAlignment="Left" Margin="505,1745,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.547,-2.9"/>
+                    <Button x:Name="btnCancelarInformacionLaboral" Content="Cancelar" HorizontalAlignment="Left" Margin="505,1745,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.547,-2.9" Click="btnCancelarInformacionLaboral_Click"/>
                     <Button x:Name="btn_Guardar_InformacionLaboral" Content="Guardar" HorizontalAlignment="Left" Margin="618,1745,0,0" VerticalAlignment="Top" Width="75" Click="btn_Guardar_Click_Laboral" Grid.ColumnSpan="2"/>
                     <Label Content="5.- Tipo de organismo, empresa o institución en la que trabaja:" HorizontalAlignment="Left" Margin="29,354,0,0" VerticalAlignment="Top"/>
                     <RadioButton x:Name="rbPrivada" Content="Privada" HorizontalAlignment="Left" Margin="49,385,0,0" VerticalAlignment="Top" GroupName="Pregunta5"/>

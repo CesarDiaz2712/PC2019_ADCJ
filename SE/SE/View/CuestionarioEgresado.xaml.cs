@@ -22,10 +22,8 @@ namespace SE.View
      */
     public partial class CuestionarioEgresado : Window
     {
-
-        private InformacionPersonal cuestionarioPersonal;
-        private InformacionLaboral cuestionarioLaboral;
         private InformacionPersonal cuestionarioAcademico;
+
         private string trabajoLigadoFormacion = "";
         private string tiempoTranscurridoPrimerEmpleo = "";
         private string promedioIngresoMensual = "";
@@ -85,7 +83,7 @@ namespace SE.View
         private string diferenciaConocimientoRespuesta7 = "";
         private string diferenciaConocimientoRespuesta8 = "";
         private string formacionProfesional = "";
-
+/*
         private string formacionActual;
         private string planDeEstudios;
         private string desempeñoDocentes;
@@ -93,12 +91,15 @@ namespace SE.View
         private string instalacion;
         private string serviciosApoyo;
         private string actDeportivas;
-        private bool resultado;
+        */
+        private Boolean resultado;
         private Egresado informacionEgresado;
         private FichaPreEgreso ficha;
-       
-        public CuestionarioEgresado(Egresado informacionEgresado, FichaPreEgreso ficha)
+        private InformacionLaboral informacionLaboral;
+
+        public CuestionarioEgresado(Egresado informacionEgresado, FichaPreEgreso ficha, InformacionLaboral informacionLaboral)
         {
+            this.informacionLaboral = informacionLaboral;
             this.informacionEgresado = informacionEgresado;
             this.ficha = ficha;
             InitializeComponent();
@@ -117,7 +118,6 @@ namespace SE.View
         
         public bool Resultado { get => resultado; set => resultado = value; }
 
-        
         private void btn_Guardar_Click_Laboral(object sender, RoutedEventArgs e)
         {
             if (rbSi.IsChecked == true)
@@ -463,7 +463,7 @@ namespace SE.View
 
             if (rbExcelenteFormacion.IsChecked==true)
             {
-                this.formacionActual = "Excelente";
+                this.formacionProfesional = "Excelente";
             }
             else
             {
@@ -489,81 +489,82 @@ namespace SE.View
                 }
             }
 
-            this.cuestionarioLaboral.Respuesta = txtCargoDesempeñado.Text;
-            this.cuestionarioLaboral.Respuesta = txtTipoContratacion.Text;
-            this.cuestionarioLaboral.Respuesta = trabajoLigadoFormacion;
-            this.cuestionarioLaboral.Respuesta = tiempoTranscurridoPrimerEmpleo;
-            this.cuestionarioLaboral.Respuesta = razonNoEncontrartrabajo;
-            this.cuestionarioLaboral.Respuesta = importanciaExperiencia;
-            this.cuestionarioLaboral.Respuesta = tipoOrganismo;
-            this.cuestionarioLaboral.Respuesta = txtConocimientosTeoricos.Text;
-            this.cuestionarioLaboral.Respuesta = txtSaberesHeuristicos.Text;
-            this.cuestionarioLaboral.Respuesta = txtExperienciaEducativaCursadas.Text;
-            this.cuestionarioLaboral.Respuesta = saberesTeoricosRespuesta1;
-            this.cuestionarioLaboral.Respuesta = saberesTeoricosRespuesta2;
-            this.cuestionarioLaboral.Respuesta = saberesTeoricosRespuesta3;
-            this.cuestionarioLaboral.Respuesta = saberesTeoricosRespuesta4;
-            this.cuestionarioLaboral.Respuesta = saberesTeoricosRespuesta5;
-            this.cuestionarioLaboral.Respuesta = saberesTeoricosRespuesta6;
-            this.cuestionarioLaboral.Respuesta = saberesTeoricosRespuesta7;
-            this.cuestionarioLaboral.Respuesta = saberesTeoricosRespuesta8;
-            this.cuestionarioLaboral.Respuesta = saberesTeoricosRespuesta9;
-            this.cuestionarioLaboral.Respuesta = saberesTeoricosRespuesta10;
-            this.cuestionarioLaboral.Respuesta = saberesHeuristicosRespuesta1;
-            this.cuestionarioLaboral.Respuesta = saberesHeuristicosRespuesta2;
-            this.cuestionarioLaboral.Respuesta = saberesHeuristicosRespuesta3;
-            this.cuestionarioLaboral.Respuesta = saberesHeuristicosRespuesta4;
-            this.cuestionarioLaboral.Respuesta = saberesHeuristicosRespuesta5;
-            this.cuestionarioLaboral.Respuesta = saberesHeuristicosRespuesta6;
-            this.cuestionarioLaboral.Respuesta = saberesHeuristicosRespuesta7;
-            this.cuestionarioLaboral.Respuesta = saberesAxiologicosRespuesta1;
-            this.cuestionarioLaboral.Respuesta = saberesAxiologicosRespuesta2;
-            this.cuestionarioLaboral.Respuesta = saberesAxiologicosRespuesta3;
-            this.cuestionarioLaboral.Respuesta = saberesAxiologicosRespuesta4;
-            this.cuestionarioLaboral.Respuesta = saberesAxiologicosRespuesta5;
-            this.cuestionarioLaboral.Respuesta = saberesAxiologicosRespuesta6;
-            this.cuestionarioLaboral.Respuesta = saberesAxiologicosRespuesta7;
-            this.cuestionarioLaboral.Respuesta = saberesAxiologicosRespuesta8;
-            this.cuestionarioLaboral.Respuesta = saberesAxiologicosRespuesta9;
-            this.cuestionarioLaboral.Respuesta = saberesAxiologicosRespuesta10;
-            this.cuestionarioLaboral.Respuesta = saberesAxiologicosRespuesta11;
-            this.cuestionarioLaboral.Respuesta = saberesAxiologicosRespuesta12;
-            this.cuestionarioLaboral.Respuesta = saberesAxiologicosRespuesta13;
-            this.cuestionarioLaboral.Respuesta = saberesAxiologicosRespuesta14;
-            this.cuestionarioLaboral.Respuesta = saberesAxiologicosRespuesta15;
-            this.cuestionarioLaboral.Respuesta = saberesAxiologicosRespuesta16;
-            this.cuestionarioLaboral.Respuesta = saberesAxiologicosRespuesta17;
-            this.cuestionarioLaboral.Respuesta = saberesAxiologicosRespuesta18;
-            this.cuestionarioLaboral.Respuesta = saberesAxiologicosRespuesta19;
-            this.cuestionarioLaboral.Respuesta = funcionesRealizadasRespuesta1;
-            this.cuestionarioLaboral.Respuesta = funcionesRealizadasRespuesta2;
-            this.cuestionarioLaboral.Respuesta = funcionesRealizadasRespuesta3;
-            this.cuestionarioLaboral.Respuesta = funcionesRealizadasRespuesta4;
-            this.cuestionarioLaboral.Respuesta = funcionesRealizadasRespuesta5;
-            this.cuestionarioLaboral.Respuesta = funcionesRealizadasRespuesta6;
-            this.cuestionarioLaboral.Respuesta = txtFuncionesDesempeñadas.Text;
-            this.cuestionarioLaboral.Respuesta = txtProblematicasSolucionadas.Text;
-            this.cuestionarioLaboral.Respuesta = promedioIngresoMensual;
-            this.cuestionarioLaboral.Respuesta = propiaEmpresa;
-            this.cuestionarioLaboral.Respuesta = propiaEmpresaPorque;
-            this.cuestionarioLaboral.Respuesta = diferenciaConocimientoRespuesta1;
-            this.cuestionarioLaboral.Respuesta = diferenciaConocimientoRespuesta2;
-            this.cuestionarioLaboral.Respuesta = diferenciaConocimientoRespuesta3;
-            this.cuestionarioLaboral.Respuesta = diferenciaConocimientoRespuesta4;
-            this.cuestionarioLaboral.Respuesta = diferenciaConocimientoRespuesta5;
-            this.cuestionarioLaboral.Respuesta = diferenciaConocimientoRespuesta6;
-            this.cuestionarioLaboral.Respuesta = diferenciaConocimientoRespuesta7;
-            this.cuestionarioLaboral.Respuesta = diferenciaConocimientoRespuesta8;
-            this.cuestionarioLaboral.Respuesta = formacionProfesional;
 
-            this.resultado = InformaciónLaboralDAO.guardar(this.cuestionarioLaboral,true);
-
-            
+             this.informacionLaboral.Respuesta = txtCargoDesempenado.Text;
+             
+            /*
+             this.informacionLaboralEgresado.Respuesta = txtTipoContratacion.Text;
+             this.informacionLaboralEgresado.Respuesta = trabajoLigadoFormacion;
+             this.informacionLaboralEgresado.Respuesta = tiempoTranscurridoPrimerEmpleo;
+             this.informacionLaboralEgresado.Respuesta = razonNoEncontrartrabajo;
+             this.informacionLaboralEgresado.Respuesta = importanciaExperiencia;
+             this.informacionLaboralEgresado.Respuesta = tipoOrganismo;
+             this.informacionLaboralEgresado.Respuesta = txtConocimientosTeoricos.Text;
+             this.informacionLaboralEgresado.Respuesta = txtSaberesHeuristicos.Text;
+             this.informacionLaboralEgresado.Respuesta = txtExperienciaEducativaCursadas.Text;
+             this.informacionLaboralEgresado.Respuesta = saberesTeoricosRespuesta1;
+             this.informacionLaboralEgresado.Respuesta = saberesTeoricosRespuesta2;
+             this.informacionLaboralEgresado.Respuesta = saberesTeoricosRespuesta3;
+             this.informacionLaboralEgresado.Respuesta = saberesTeoricosRespuesta4;
+             this.informacionLaboralEgresado.Respuesta = saberesTeoricosRespuesta5;
+             this.informacionLaboralEgresado.Respuesta = saberesTeoricosRespuesta6;
+             this.informacionLaboralEgresado.Respuesta = saberesTeoricosRespuesta7;
+             this.informacionLaboralEgresado.Respuesta = saberesTeoricosRespuesta8;
+             this.informacionLaboralEgresado.Respuesta = saberesTeoricosRespuesta9;
+             this.informacionLaboralEgresado.Respuesta = saberesTeoricosRespuesta10;
+             this.informacionLaboralEgresado.Respuesta = saberesHeuristicosRespuesta1;
+             this.informacionLaboralEgresado.Respuesta = saberesHeuristicosRespuesta2;
+             this.informacionLaboralEgresado.Respuesta = saberesHeuristicosRespuesta3;
+             this.informacionLaboralEgresado.Respuesta = saberesHeuristicosRespuesta4;
+             this.informacionLaboralEgresado.Respuesta = saberesHeuristicosRespuesta5;
+             this.informacionLaboralEgresado.Respuesta = saberesHeuristicosRespuesta6;
+             this.informacionLaboralEgresado.Respuesta = saberesHeuristicosRespuesta7;
+             this.informacionLaboralEgresado.Respuesta = saberesAxiologicosRespuesta1;
+             this.informacionLaboralEgresado.Respuesta = saberesAxiologicosRespuesta2;
+             this.informacionLaboralEgresado.Respuesta = saberesAxiologicosRespuesta3;
+             this.informacionLaboralEgresado.Respuesta = saberesAxiologicosRespuesta4;
+             this.informacionLaboralEgresado.Respuesta = saberesAxiologicosRespuesta5;
+             this.informacionLaboralEgresado.Respuesta = saberesAxiologicosRespuesta6;
+             this.informacionLaboralEgresado.Respuesta = saberesAxiologicosRespuesta7;
+             this.informacionLaboralEgresado.Respuesta = saberesAxiologicosRespuesta8;
+             this.informacionLaboralEgresado.Respuesta = saberesAxiologicosRespuesta9;
+             this.informacionLaboralEgresado.Respuesta = saberesAxiologicosRespuesta10;
+             this.informacionLaboralEgresado.Respuesta = saberesAxiologicosRespuesta11;
+             this.informacionLaboralEgresado.Respuesta = saberesAxiologicosRespuesta12;
+             this.informacionLaboralEgresado.Respuesta = saberesAxiologicosRespuesta13;
+             this.informacionLaboralEgresado.Respuesta = saberesAxiologicosRespuesta14;
+             this.informacionLaboralEgresado.Respuesta = saberesAxiologicosRespuesta15;
+             this.informacionLaboralEgresado.Respuesta = saberesAxiologicosRespuesta16;
+             this.informacionLaboralEgresado.Respuesta = saberesAxiologicosRespuesta17;
+             this.informacionLaboralEgresado.Respuesta = saberesAxiologicosRespuesta18;
+             this.informacionLaboralEgresado.Respuesta = saberesAxiologicosRespuesta19;
+             this.informacionLaboralEgresado.Respuesta = funcionesRealizadasRespuesta1;
+             this.informacionLaboralEgresado.Respuesta = funcionesRealizadasRespuesta2;
+             this.informacionLaboralEgresado.Respuesta = funcionesRealizadasRespuesta3;
+             this.informacionLaboralEgresado.Respuesta = funcionesRealizadasRespuesta4;
+             this.informacionLaboralEgresado.Respuesta = funcionesRealizadasRespuesta5;
+             this.informacionLaboralEgresado.Respuesta = funcionesRealizadasRespuesta6;
+             this.informacionLaboralEgresado.Respuesta = txtFuncionesDesempeñadas.Text;
+             this.informacionLaboralEgresado.Respuesta = txtProblematicasSolucionadas.Text;
+             this.informacionLaboralEgresado.Respuesta = promedioIngresoMensual;
+             this.informacionLaboralEgresado.Respuesta = propiaEmpresa;
+             this.informacionLaboralEgresado.Respuesta = propiaEmpresaPorque;
+             this.informacionLaboralEgresado.Respuesta = diferenciaConocimientoRespuesta1;
+             this.informacionLaboralEgresado.Respuesta = diferenciaConocimientoRespuesta2;
+             this.informacionLaboralEgresado.Respuesta = diferenciaConocimientoRespuesta3;
+             this.informacionLaboralEgresado.Respuesta = diferenciaConocimientoRespuesta4;
+             this.informacionLaboralEgresado.Respuesta = diferenciaConocimientoRespuesta5;
+             this.informacionLaboralEgresado.Respuesta = diferenciaConocimientoRespuesta6;
+             this.informacionLaboralEgresado.Respuesta = diferenciaConocimientoRespuesta7;
+             this.informacionLaboralEgresado.Respuesta = diferenciaConocimientoRespuesta8;
+             this.informacionLaboralEgresado.Respuesta = formacionProfesional;
+             */
+            this.Resultado = InformaciónLaboralDAO.guardar(this.informacionLaboral,true);
         }
 
-
+        
         private void btnFinalizarAcademica_Click(object sender, RoutedEventArgs e)
-        {
+        {   /*
             if (rbLicenciatura.IsChecked == true)
             {
                 this.formacionActual = "Licenciatura";
@@ -753,7 +754,7 @@ namespace SE.View
                 }
             }
 
-            /*
+            
             this.cuestionarioAcademico.Respuesta = txtIngreso.Text;
             this.cuestionarioAcademico.Respuesta = txtEgreso.Text;
             this.cuestionarioAcademico.Respuesta = formacionActual;
@@ -764,8 +765,13 @@ namespace SE.View
             this.cuestionarioAcademico.Respuesta = serviciosApoyo;
             this.cuestionarioAcademico.Respuesta = actDeportivas;
             this.resultado = InformaciónAcadémicaDAO.guardar(this.cuestionarioAcademico);
-            */
+           */
         }
-
+    
+        private void btnCancelarInformacionLaboral_Click(object sender, RoutedEventArgs e)
+        {
+            this.Resultado = false;
+            this.Close();
+        }
     }
 }

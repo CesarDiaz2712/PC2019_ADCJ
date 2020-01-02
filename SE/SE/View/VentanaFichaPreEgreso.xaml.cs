@@ -64,14 +64,14 @@ namespace SE.View
             this.ficha.CodigoPostal = txtCP.Text;
             this.ficha.NumeroCasa = txtNumeroCasa.Text;
             this.ficha.Telefono = txtTelefono.Text;
-            this.resultado = FichaPreEgresoDAO.guardar(this.ficha, true);
+            this.Resultado = FichaPreEgresoDAO.guardar(this.ficha, true);
 
             this.Close();
         }
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
-            this.resultado = false;
+            this.Resultado = false;
             this.Close();
         }
 
