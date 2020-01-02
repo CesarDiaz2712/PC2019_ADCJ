@@ -51,8 +51,10 @@ namespace SE.View
 
         private void btnCuestionario_Click(object sender, RoutedEventArgs e)
         {
+            InformacionLaboral informacionLaboral = new InformacionLaboral();
+            informacionLaboral.IdEgresado = this.usuarioIniciado.IdEgresado;
             this.cargarInformacionPersonal();
-            CuestionarioEgresado cuestionario = new CuestionarioEgresado(egresado,informacionPersonal);
+            CuestionarioEgresado cuestionario = new CuestionarioEgresado(egresado,informacionPersonal,informacionLaboral);
             cuestionario.Show();
         }
     }

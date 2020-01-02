@@ -14,7 +14,7 @@ namespace SE.model.dao
     {
         public static InformacionLaboral getInformacionLaboralByIdEgresado(Int32 idEgresado)
         {
-            InformacionLaboral egresado = new InformacionLaboral();
+            InformacionLaboral informacionLaboral = new InformacionLaboral();
             SqlConnection conn = null;
             try
             {
@@ -26,10 +26,10 @@ namespace SE.model.dao
                     String query = String.Format("SELECT " +
                                                  "x.idInformacionLabora, " +
                                                  "x.respuesta, " +
-                                                 "x.idPreguntaLboral, " +
+                                                 "x.idPreguntaLaboral, " +
                                                  "x.idEgresado " +
                                                  "FROM dbo.InformacionLabora x " +
-                                                 "WHERE x.idEgresado = {0)", idEgresado);
+                                                 "WHERE x.idEgresado = '{0}';", idEgresado);
                     Console.WriteLine(query);
                     command = new SqlCommand(query, conn);
                     rd = command.ExecuteReader();
@@ -42,12 +42,13 @@ namespace SE.model.dao
                     }
                     rd.Close();
                     command.Dispose();
-                    Console.WriteLine(egresado);
+                    Console.WriteLine(informacionLaboral);
                 }
 
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.Message);
                 Console.WriteLine("No se encontró Información Laboral del egresado");
             }
             finally
@@ -57,15 +58,15 @@ namespace SE.model.dao
                     conn.Close();
                 }
             }
-            return egresado;
+            return informacionLaboral;
         }
 
-        public static bool guardar(InformacionLaboral cuestionario, bool nuevo)
+        public static bool guardar(InformacionLaboral informacionLaboral, bool nuevo)
         {
             String query = "";
 
             if (nuevo) {
-                query = "INSERT INTO dbo.InformacionLabora (respuesta, idEgresado)" +
+                query = "INSERT INTO dbo.InformacionLabora (respuesta, idEgresado) " +
                         "VALUES(@respuesta,@idEgresado);";
             }
             else
@@ -85,15 +86,15 @@ namespace SE.model.dao
                     Console.WriteLine(query);
                     command = new SqlCommand(query, conn);
                     command.CommandType = CommandType.Text;
-                    command.Parameters.AddWithValue("@respuesta", cuestionario.Respuesta);
+                    command.Parameters.AddWithValue("@respuesta", informacionLaboral.Respuesta);
 
                     if (nuevo)
                     {
-                        command.Parameters.AddWithValue("@idEgresado", cuestionario.IdEgresado);
+                        command.Parameters.AddWithValue("@idEgresado", informacionLaboral.IdEgresado);
                     }
                     else
                     {
-                        command.Parameters.AddWithValue("@idInformacionLabora", cuestionario.IdInformacionLaboral);
+                        command.Parameters.AddWithValue("@idInformacionLabora", informacionLaboral.IdInformacionLaboral);
                     }
 
                     int i = command.ExecuteNonQuery();
