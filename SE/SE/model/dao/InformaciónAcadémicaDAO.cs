@@ -59,7 +59,7 @@ namespace SE.model.dao
             return egresado;
         }
 
-        public static bool guardar(InformacionAcademica cuestionario)
+        public static bool Guardar(InformacionAcademica cuestionario)
         {
             String query = "";
 
