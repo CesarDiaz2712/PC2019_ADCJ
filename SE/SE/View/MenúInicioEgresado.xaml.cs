@@ -54,7 +54,7 @@ namespace SE.View
             InformacionLaboral informacionLaboral = new InformacionLaboral();
             informacionLaboral.IdEgresado = this.usuarioIniciado.IdEgresado;
             this.cargarInformacionPersonal();
-            CuestionarioEgresado cuestionario = new CuestionarioEgresado(egresado,informacionPersonal,informacionLaboral);
+            CuestionarioEgresado cuestionario = new CuestionarioEgresado(egresado,informacionPersonal,informacionLaboral, true);
             cuestionario.Show();
         }
     }
