@@ -22,6 +22,8 @@ namespace SE.View
         private Egresado usuarioIniciado { get; set; }
         private Egresado egresado;
         private FichaPreEgreso informacionPersonal;
+        private InformacionLaboral informacionLaboral;
+        private InformacionAcademica informacionAcademica;
         public MenúInicioEgresado(Egresado usuario)
         {
             this.usuarioIniciado = usuario;
@@ -39,6 +41,12 @@ namespace SE.View
             egresado = EgresadoDAO.consultaInformacionEgresado(usuarioIniciado.IdEgresado);
             informacionPersonal = FichaPreEgresoDAO.obtenerFichaPreEgreso(usuarioIniciado.IdEgresado);
         }
+        private void consultaInformacion()
+        {
+            egresado = EgresadoDAO.consultaInformacionEgresado(usuarioIniciado.IdEgresado);
+            informacionPersonal = FichaPreEgresoDAO.obtenerFichaPreEgreso(usuarioIniciado.IdEgresado);
+            informacionAcademica = InformaciónAcadémicaDAO.obtenerInformacionAcademicaByIdEgresado(usuarioIniciado.IdEgresado);
+        }
 
         private void btn_FichaPreEgreso_Click(object sender, RoutedEventArgs e)
         {
@@ -53,9 +61,18 @@ namespace SE.View
         {
             InformacionLaboral informacionLaboral = new InformacionLaboral();
             informacionLaboral.IdEgresado = this.usuarioIniciado.IdEgresado;
+            InformacionAcademica informacionAcademica = new InformacionAcademica();
+            informacionAcademica.IdEgresado = this.usuarioIniciado.IdEgresado;
             this.cargarInformacionPersonal();
-            CuestionarioEgresado cuestionario = new CuestionarioEgresado(egresado,informacionPersonal,informacionLaboral, true);
+            CuestionarioEgresado cuestionario = new CuestionarioEgresado(egresado,informacionPersonal,informacionLaboral, informacionAcademica, true);
             cuestionario.Show();
+        }
+
+        private void btnConsultarInformacion_Click(object sender, RoutedEventArgs e)
+        {
+            this.consultaInformacion();
+            ConsultaInformacion consultaInformacion = new ConsultaInformacion(egresado, informacionPersonal, informacionLaboral, informacionAcademica, false);
+            consultaInformacion.Show();
         }
     }
 }

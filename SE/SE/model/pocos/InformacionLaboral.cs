@@ -9,7 +9,7 @@ namespace SE.model.pocos
     public class InformacionLaboral
     {
         private Int32 idInformacionLaboral; 
-        private string trabajoLigadoFormacion = "";
+        private string trabajoLigadoFormacion;
         private string cargoDesempenado;
         private string tipoContratacion;
         private string tiempoTranscurridoPrimerEmpleo;

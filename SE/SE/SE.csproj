@@ -60,6 +60,7 @@
     <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -94,6 +95,10 @@
     <Compile Include="model\pocos\InformacionPersonal.cs" />
     <Compile Include="model\pocos\Respuesta.cs" />
     <Compile Include="model\pocos\Usuario.cs" />
+    <Compile Include="model\pocos\Validacion.cs" />
+    <Compile Include="View\ConsultaInformacion.xaml.cs">
+      <DependentUpon>ConsultaInformacion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\CuestionarioEgresado.xaml.cs">
       <DependentUpon>CuestionarioEgresado.xaml</DependentUpon>
     </Compile>
@@ -110,6 +115,10 @@
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ConsultaInformacion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\CuestionarioEgresado.xaml">
       <SubType>Designer</SubType>

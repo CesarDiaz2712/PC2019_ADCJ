@@ -27,7 +27,7 @@
                 <Image Source="/SE;component/Resource/cuestionario.png" Width="50" RenderTransformOrigin="0.56,0.5" Height="44" />
             </StackPanel>
         </Button>
-        <Button x:Name="btnConsultarInformacion" HorizontalAlignment="Left" Margin="29,269,0,0" VerticalAlignment="Top" Width="60" Height="60">
+        <Button x:Name="btnConsultarInformacion" HorizontalAlignment="Left" Margin="29,269,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="btnConsultarInformacion_Click">
             <StackPanel>
                 <Image Source="/SE;component/Resource/consultar.png" Width="50" RenderTransformOrigin="0.5,0.5" Height="44" />
             </StackPanel>

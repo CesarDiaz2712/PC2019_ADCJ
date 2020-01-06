@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SE.View"
         mc:Ignorable="d"
-        Title="Cuestionario de Egresados" Height="2167.317" Width="800" ResizeMode="NoResize">
+        Title="Cuestionario de Egresados" Height="547.317" Width="800" ResizeMode="NoResize">
     <ScrollViewer CanContentScroll="True">
         <Grid Background="#FF345781">
         <Label x:Name="lblSistemaEgresados" Content="SISTEMAS DE EGRESADOS"  HorizontalAlignment="Left" Margin="32,20,0,0" VerticalAlignment="Top" Width="328" FontSize="24" FontWeight="Bold" Height="40" FontFamily="Microsoft JhengHei"/>
@@ -179,14 +179,14 @@
                 <Grid Background="#FFC7C7C7" Height="2052" Width="774" >
                     <Label x:Name="lblIngreso" Content="Año de ingreso a la licenciatura:" HorizontalAlignment="Left" Margin="25,23,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lblEgreso" Content="Año de egreso: " HorizontalAlignment="Left" Margin="417,23,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="txtIngreso" HorizontalAlignment="Left" Height="23" Margin="209,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185"/>
+                    <TextBox x:Name="txtIngreso" HorizontalAlignment="Left" Height="23" Margin="209,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185" />
                     <TextBox x:Name="txtEgreso" HorizontalAlignment="Left" Height="23" Margin="515,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                     <Label x:Name="lblFormacionActual" Content="1.- Formación académica actual:" HorizontalAlignment="Left" Margin="25,63,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbLicenciatura" Content=" Licenciatura " HorizontalAlignment="Left" Margin="209,69,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMaestria" Content="Maestría " HorizontalAlignment="Left" Margin="417,69,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbEscpecialidad" Content="Especialidad" HorizontalAlignment="Left" Margin="309,69,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbDoctorado" Content="Doctorado " HorizontalAlignment="Left" Margin="512,69,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPosDoctorado" Content="Posdoctorado" HorizontalAlignment="Left" Margin="607,69,0,0" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="rbLicenciatura" Content=" Licenciatura " HorizontalAlignment="Left" Margin="209,69,0,0" VerticalAlignment="Top" GroupName="gp_FormacionAcademica"/>
+                        <RadioButton x:Name="rbMaestria" Content="Maestría " HorizontalAlignment="Left" Margin="417,69,0,0" VerticalAlignment="Top" GroupName="gp_FormacionAcademica"/>
+                        <RadioButton x:Name="rbEscpecialidad" Content="Especialidad" HorizontalAlignment="Left" Margin="309,69,0,0" VerticalAlignment="Top" GroupName="gp_FormacionAcademica"/>
+                        <RadioButton x:Name="rbDoctorado" Content="Doctorado " HorizontalAlignment="Left" Margin="512,69,0,0" VerticalAlignment="Top" GroupName="gp_FormacionAcademica"/>
+                        <RadioButton x:Name="rbPosDoctorado" Content="Posdoctorado" HorizontalAlignment="Left" Margin="607,69,0,0" VerticalAlignment="Top" GroupName="gp_FormacionAcademica"/>
                     <Label x:Name="lblAspectosInstitucion" Content="A continuación se mencionan aspectos propios de la institución donde realizó sus estudios de licenciatura, indique su opinión &#xD;&#xA;acerca de ellos:" HorizontalAlignment="Left" Margin="25,94,0,0" VerticalAlignment="Top" Width="693"/>
                     <Label x:Name="lblPlanEstudios" Content="2.- Plan de estudios: " HorizontalAlignment="Left" Margin="25,141,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lblDesempeñoDocentes" Content="3.- Desempeño de los docentes:&#xD;&#xA;" HorizontalAlignment="Left" Margin="25,167,0,0" VerticalAlignment="Top" Width="179" Height="26"/>
@@ -194,30 +194,30 @@
                     <Label x:Name="lblInstalaciones" Content="5.- Instalaciones: " HorizontalAlignment="Left" Margin="25,219,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lblServicios" Content="6.- Servicios de apoyo:" HorizontalAlignment="Left" Margin="25,245,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lblActCulturalesDeportivas" Content="7.- Actividades culturales y /o&#xD;&#xA;deportivas:" HorizontalAlignment="Left" Margin="25,271,0,0" VerticalAlignment="Top" Width="171"/>
-                    <RadioButton x:Name="rbEficientePlanEstudiantil" Content="Eficiente" HorizontalAlignment="Left" Margin="240,147,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbAceptablePlanEstudiantil" Content="Aceptable" HorizontalAlignment="Left" Margin="367,147,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularPlanEstudiantil" Content="Regular" HorizontalAlignment="Left" Margin="488,147,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbDeficientePlanEstudiantil" Content="Deficiente" HorizontalAlignment="Left" Margin="621,147,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbEficienteDocentes" Content="Eficiente" HorizontalAlignment="Left" Margin="240,173,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbAceptableDocentes" Content="Aceptable" HorizontalAlignment="Left" Margin="367,173,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularDocentes" Content="Regular" HorizontalAlignment="Left" Margin="488,173,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbDeficienteDocentes" Content="Deficiente" HorizontalAlignment="Left" Margin="621,173,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbEficienteOrganizacion" Content="Eficiente" HorizontalAlignment="Left" Margin="240,199,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbAceptableOrganizacion" Content="Aceptable" HorizontalAlignment="Left" Margin="367,199,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularOrganizacion" Content="Regular" HorizontalAlignment="Left" Margin="488,199,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbDeficienteOrganizacion" Content="Deficiente" HorizontalAlignment="Left" Margin="621,199,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbEficienteInstalacion" Content="Eficiente" HorizontalAlignment="Left" Margin="240,225,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbAceptableInstalacion" Content="Aceptable" HorizontalAlignment="Left" Margin="367,225,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularInstalacion" Content="Regular" HorizontalAlignment="Left" Margin="488,225,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbDeficienteInstalacion" Content="Deficiente" HorizontalAlignment="Left" Margin="621,225,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbEficienteServicio" Content="Eficiente" HorizontalAlignment="Left" Margin="240,251,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbAceptableServicio" Content="Aceptable" HorizontalAlignment="Left" Margin="367,251,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularServicio" Content="Regular" HorizontalAlignment="Left" Margin="488,251,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbDeficienteServicio" Content="Deficiente" HorizontalAlignment="Left" Margin="621,251,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbEficienteActDeportivas" Content="Eficiente" HorizontalAlignment="Left" Margin="240,277,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbAceptableActDeportivas" Content="Aceptable" HorizontalAlignment="Left" Margin="367,277,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularActDeportivas" Content="Regular" HorizontalAlignment="Left" Margin="488,277,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbDeficienteActDeportivas" Content="Deficiente" HorizontalAlignment="Left" Margin="621,277,0,0" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="rbEficientePlanEstudiantil" Content="Eficiente" HorizontalAlignment="Left" Margin="240,147,0,0" VerticalAlignment="Top" GroupName="gp_PlanEstudio"/>
+                        <RadioButton x:Name="rbAceptablePlanEstudiantil" Content="Aceptable" HorizontalAlignment="Left" Margin="367,147,0,0" VerticalAlignment="Top" GroupName="gp_PlanEstudio"/>
+                        <RadioButton x:Name="rbRegularPlanEstudiantil" Content="Regular" HorizontalAlignment="Left" Margin="488,147,0,0" VerticalAlignment="Top" GroupName="gp_PlanEstudio"/>
+                        <RadioButton x:Name="rbDeficientePlanEstudiantil" Content="Deficiente" HorizontalAlignment="Left" Margin="621,147,0,0" VerticalAlignment="Top" GroupName="gp_PlanEstudio"/>
+                    <RadioButton x:Name="rbEficienteDocentes" Content="Eficiente" HorizontalAlignment="Left" Margin="240,173,0,0" VerticalAlignment="Top" GroupName="gp_DesempeñoDocentes"/>
+                        <RadioButton x:Name="rbAceptableDocentes" Content="Aceptable" HorizontalAlignment="Left" Margin="367,173,0,0" VerticalAlignment="Top" GroupName="gp_DesempeñoDocentes"/>
+                        <RadioButton x:Name="rbRegularDocentes" Content="Regular" HorizontalAlignment="Left" Margin="488,173,0,0" VerticalAlignment="Top" GroupName="gp_DesempeñoDocentes"/>
+                        <RadioButton x:Name="rbDeficienteDocentes" Content="Deficiente" HorizontalAlignment="Left" Margin="621,173,0,0" VerticalAlignment="Top" GroupName="gp_DesempeñoDocentes"/>
+                    <RadioButton x:Name="rbEficienteOrganizacion" Content="Eficiente" HorizontalAlignment="Left" Margin="240,199,0,0" VerticalAlignment="Top" GroupName="gp_OrganizacionAdministrativa"/>
+                        <RadioButton x:Name="rbAceptableOrganizacion" Content="Aceptable" HorizontalAlignment="Left" Margin="367,199,0,0" VerticalAlignment="Top" GroupName="gp_OrganizacionAdministrativa"/>
+                        <RadioButton x:Name="rbRegularOrganizacion" Content="Regular" HorizontalAlignment="Left" Margin="488,199,0,0" VerticalAlignment="Top" GroupName="gp_OrganizacionAdministrativa"/>
+                        <RadioButton x:Name="rbDeficienteOrganizacion" Content="Deficiente" HorizontalAlignment="Left" Margin="621,199,0,0" VerticalAlignment="Top" GroupName="gp_OrganizacionAdministrativa"/>
+                    <RadioButton x:Name="rbEficienteInstalacion" Content="Eficiente" HorizontalAlignment="Left" Margin="240,225,0,0" VerticalAlignment="Top" GroupName="gp_Instalacion"/>
+                        <RadioButton x:Name="rbAceptableInstalacion" Content="Aceptable" HorizontalAlignment="Left" Margin="367,225,0,0" VerticalAlignment="Top" GroupName="gp_Instalacion"/>
+                        <RadioButton x:Name="rbRegularInstalacion" Content="Regular" HorizontalAlignment="Left" Margin="488,225,0,0" VerticalAlignment="Top" GroupName="gp_Instalacion"/>
+                        <RadioButton x:Name="rbDeficienteInstalacion" Content="Deficiente" HorizontalAlignment="Left" Margin="621,225,0,0" VerticalAlignment="Top" GroupName="gp_Instalacion"/>
+                    <RadioButton x:Name="rbEficienteServicio" Content="Eficiente" HorizontalAlignment="Left" Margin="240,251,0,0" VerticalAlignment="Top" GroupName="gp_ServicioApoyo"/>
+                        <RadioButton x:Name="rbAceptableServicio" Content="Aceptable" HorizontalAlignment="Left" Margin="367,251,0,0" VerticalAlignment="Top" GroupName="gp_ServicioApoyo"/>
+                        <RadioButton x:Name="rbRegularServicio" Content="Regular" HorizontalAlignment="Left" Margin="488,251,0,0" VerticalAlignment="Top" GroupName="gp_ServicioApoyo"/>
+                        <RadioButton x:Name="rbDeficienteServicio" Content="Deficiente" HorizontalAlignment="Left" Margin="621,251,0,0" VerticalAlignment="Top" GroupName="gp_ServicioApoyo"/>
+                    <RadioButton x:Name="rbEficienteActDeportivas" Content="Eficiente" HorizontalAlignment="Left" Margin="240,277,0,0" VerticalAlignment="Top" GroupName="gp_ActividadesCulturales"/>
+                        <RadioButton x:Name="rbAceptableActDeportivas" Content="Aceptable" HorizontalAlignment="Left" Margin="367,277,0,0" VerticalAlignment="Top" GroupName="gp_ActividadesCulturales"/>
+                        <RadioButton x:Name="rbRegularActDeportivas" Content="Regular" HorizontalAlignment="Left" Margin="488,277,0,0" VerticalAlignment="Top" GroupName="gp_ActividadesCulturales"/>
+                        <RadioButton x:Name="rbDeficienteActDeportivas" Content="Deficiente" HorizontalAlignment="Left" Margin="621,277,0,0" VerticalAlignment="Top" GroupName="gp_ActividadesCulturales"/>
                     <Label x:Name="lblEEUtiles" Content="En relación con las experiencias educativas del Área de formación básica general, señale qué Experiencias Educativas &#xD;&#xA;han tenido utilidad para su desempeño como profesionista: " HorizontalAlignment="Left" Margin="26,329,0,0" VerticalAlignment="Top" Width="693"/>
                     <Label x:Name="lblIniciacionDisciplina" Content="Iniciación a la Disciplina:" HorizontalAlignment="Left" Margin="25,606,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lblFormacionDisciplinar" Content="Formación Disciplinar:" HorizontalAlignment="Left" Margin="25,776,0,0" VerticalAlignment="Top"/>
@@ -229,57 +229,57 @@
                     <Label x:Name="lblComputacionBasica" Content="10.- Computación básica:" HorizontalAlignment="Left" Margin="25,428,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lblHabilidadesDelPensamiento" Content="12.- Habilidades de pensamiento&#xD;&#xA;crítico y creativo:" HorizontalAlignment="Left" Margin="25,512,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lblLecturaYRedaccion" Content="11.- Lectura y redacción a través&#xD;&#xA;del análisis del mundo&#xD;&#xA;contemporáneo:" HorizontalAlignment="Left" Margin="25,454,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoIngles1" Content="Mucho" HorizontalAlignment="Left" Margin="240,382,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularIngles1" Content="Regular" HorizontalAlignment="Left" Margin="367,382,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoIngles1" Content="Poco" HorizontalAlignment="Left" Margin="488,382,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaIngles1" Content="Nada" HorizontalAlignment="Left" Margin="621,382,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoIngles2" Content="Mucho" HorizontalAlignment="Left" Margin="240,408,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularIngles2" Content="Regular" HorizontalAlignment="Left" Margin="367,408,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoIngles2" Content="Poco" HorizontalAlignment="Left" Margin="488,408,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaIngles2" Content="Nada" HorizontalAlignment="Left" Margin="621,408,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoComputacionBasica" Content="Mucho" HorizontalAlignment="Left" Margin="240,434,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularComputacionBasica" Content="Regular" HorizontalAlignment="Left" Margin="367,434,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoComputacionBasica" Content="Poco" HorizontalAlignment="Left" Margin="488,434,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaComputacionBasica" Content="Nada" HorizontalAlignment="Left" Margin="621,434,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoLecturaYRedaccion" Content="Mucho" HorizontalAlignment="Left" Margin="240,460,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularLecturaYRedaccion" Content="Regular" HorizontalAlignment="Left" Margin="367,460,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoLecturaYRedaccion" Content="Poco" HorizontalAlignment="Left" Margin="488,460,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaLecturaYRedaccion" Content="Nada" HorizontalAlignment="Left" Margin="621,460,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoHabilidadesPensamiento" Content="Mucho" HorizontalAlignment="Left" Margin="240,518,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularHabilidadesPensamiento" Content="Regular" HorizontalAlignment="Left" Margin="367,518,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoHabilidadesPensamiento" Content="Poco" HorizontalAlignment="Left" Margin="488,518,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaHabilidadesPensamiento" Content="Nada" HorizontalAlignment="Left" Margin="621,518,0,0" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="rbMuchoIngles1" Content="Mucho" HorizontalAlignment="Left" Margin="240,382,0,0" VerticalAlignment="Top" GroupName="gp_Ingles1"/>
+                        <RadioButton x:Name="rbRegularIngles1" Content="Regular" HorizontalAlignment="Left" Margin="367,382,0,0" VerticalAlignment="Top" GroupName="gp_Ingles1"/>
+                        <RadioButton x:Name="rbPocoIngles1" Content="Poco" HorizontalAlignment="Left" Margin="488,382,0,0" VerticalAlignment="Top" GroupName="gp_Ingles1"/>
+                        <RadioButton x:Name="rbNadaIngles1" Content="Nada" HorizontalAlignment="Left" Margin="621,382,0,0" VerticalAlignment="Top" GroupName="gp_Ingles1"/>
+                    <RadioButton x:Name="rbMuchoIngles2" Content="Mucho" HorizontalAlignment="Left" Margin="240,408,0,0" VerticalAlignment="Top" GroupName="gp_Ingles2"/>
+                        <RadioButton x:Name="rbRegularIngles2" Content="Regular" HorizontalAlignment="Left" Margin="367,408,0,0" VerticalAlignment="Top" GroupName="gp_Ingles2"/>
+                        <RadioButton x:Name="rbPocoIngles2" Content="Poco" HorizontalAlignment="Left" Margin="488,408,0,0" VerticalAlignment="Top" GroupName="gp_Ingles2"/>
+                        <RadioButton x:Name="rbNadaIngles2" Content="Nada" HorizontalAlignment="Left" Margin="621,408,0,0" VerticalAlignment="Top" GroupName="gp_Ingles2"/>
+                    <RadioButton x:Name="rbMuchoComputacionBasica" Content="Mucho" HorizontalAlignment="Left" Margin="240,434,0,0" VerticalAlignment="Top" GroupName="gp_ComputacionBasica"/>
+                        <RadioButton x:Name="rbRegularComputacionBasica" Content="Regular" HorizontalAlignment="Left" Margin="367,434,0,0" VerticalAlignment="Top" GroupName="gp_ComputacionBasica"/>
+                        <RadioButton x:Name="rbPocoComputacionBasica" Content="Poco" HorizontalAlignment="Left" Margin="488,434,0,0" VerticalAlignment="Top" GroupName="gp_ComputacionBasica"/>
+                        <RadioButton x:Name="rbNadaComputacionBasica" Content="Nada" HorizontalAlignment="Left" Margin="621,434,0,0" VerticalAlignment="Top" GroupName="gp_ComputacionBasica"/>
+                    <RadioButton x:Name="rbMuchoLecturaYRedaccion" Content="Mucho" HorizontalAlignment="Left" Margin="240,460,0,0" VerticalAlignment="Top" GroupName="gp_LecturaRedaccion"/>
+                        <RadioButton x:Name="rbRegularLecturaYRedaccion" Content="Regular" HorizontalAlignment="Left" Margin="367,460,0,0" VerticalAlignment="Top" GroupName="gp_LecturaRedaccion"/>
+                        <RadioButton x:Name="rbPocoLecturaYRedaccion" Content="Poco" HorizontalAlignment="Left" Margin="488,460,0,0" VerticalAlignment="Top" GroupName="gp_LecturaRedaccion"/>
+                        <RadioButton x:Name="rbNadaLecturaYRedaccion" Content="Nada" HorizontalAlignment="Left" Margin="621,460,0,0" VerticalAlignment="Top" GroupName="gp_LecturaRedaccion"/>
+                    <RadioButton x:Name="rbMuchoHabilidadesPensamiento" Content="Mucho" HorizontalAlignment="Left" Margin="240,518,0,0" VerticalAlignment="Top" GroupName="gp_HabilidadesPensamiento"/>
+                        <RadioButton x:Name="rbRegularHabilidadesPensamiento" Content="Regular" HorizontalAlignment="Left" Margin="367,518,0,0" VerticalAlignment="Top" GroupName="gp_HabilidadesPensamiento"/>
+                        <RadioButton x:Name="rbPocoHabilidadesPensamiento" Content="Poco" HorizontalAlignment="Left" Margin="488,518,0,0" VerticalAlignment="Top" GroupName="gp_HabilidadesPensamiento"/>
+                        <RadioButton x:Name="rbNadaHabilidadesPensamiento" Content="Nada" HorizontalAlignment="Left" Margin="621,518,0,0" VerticalAlignment="Top" GroupName="gp_HabilidadesPensamiento"/>
                     <Label x:Name="lblExperienciasEducativasUtiles" Content="De las experiencias educativas que integran el Plan de estudios del Programa educativo de la FEI, señale el grado de utilidad que tienen o han tenido para su&#xD;&#xA;desempeño como profesionista:" HorizontalAlignment="Left" Margin="25,559,0,0" VerticalAlignment="Top" Width="693"/>
                     <Label x:Name="lblAlgebraLineal" Content="13.- Algebra Lineal:" HorizontalAlignment="Left" Margin="25,632,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lblProbabilidad" Content="14.- Probabilidad y Estadística:" HorizontalAlignment="Left" Margin="25,658,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lblMatematicasDiscretas" Content="15.- Matemáticas Discretas:" HorizontalAlignment="Left" Margin="25,684,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lblAlgoritmosEstrucutrasDatos1" Content="16.- Algoritmos y Estructuras de Datos I:" HorizontalAlignment="Left" Margin="25,710,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lblArquitecturaDeComputadoras1" Content="17.- Arquitectura de Computadoras I:" HorizontalAlignment="Left" Margin="25,736,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoAlgebraLineal" Content="Mucho" HorizontalAlignment="Left" Margin="240,638,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularAlgebraLineal" Content="Regular" HorizontalAlignment="Left" Margin="341,638,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoAlgebraLineal" Content="Poco" HorizontalAlignment="Left" Margin="448,638,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaAlgebraLineal" Content="Nada" HorizontalAlignment="Left" Margin="550,638,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoAlgebraLineal" Content="No la cursé" HorizontalAlignment="Left" Margin="663,638,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoProbabilidad" Content="Mucho" HorizontalAlignment="Left" Margin="240,664,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularProbabilidad" Content="Regular" HorizontalAlignment="Left" Margin="341,664,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoProbabilidad" Content="Poco" HorizontalAlignment="Left" Margin="448,664,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaProbabilidad" Content="Nada" HorizontalAlignment="Left" Margin="550,664,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoProbabilidad"  Content="No la cursé" HorizontalAlignment="Left" Margin="663,664,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoMatematicasDiscretas" Content="Mucho" HorizontalAlignment="Left" Margin="240,690,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularMatematicasDiscretas" Content="Regular" HorizontalAlignment="Left" Margin="341,690,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoMatematicasDiscretas" Content="Poco" HorizontalAlignment="Left" Margin="448,690,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaMatematicasDiscretas" Content="Nada" HorizontalAlignment="Left" Margin="550,690,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoMatematicasDiscretas" Content="No la cursé" HorizontalAlignment="Left" Margin="663,690,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoAlgoritmosEstrucutrasDatos1" Content="Mucho" HorizontalAlignment="Left" Margin="240,716,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularAlgoritmosEstrucutrasDatos1" Content="Regular" HorizontalAlignment="Left" Margin="341,716,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoAlgoritmosEstrucutrasDatos1" Content="Poco" HorizontalAlignment="Left" Margin="448,716,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaAlgoritmosEstrucutrasDatos1" Content="Nada" HorizontalAlignment="Left" Margin="550,716,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoAlgoritmosEstrucutrasDatos1" Content="No la cursé" HorizontalAlignment="Left" Margin="663,716,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoArquitecturaDeComputadoras1" Content="Mucho" HorizontalAlignment="Left" Margin="240,742,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularArquitecturaDeComputadoras1" Content="Regular" HorizontalAlignment="Left" Margin="341,742,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoArquitecturaDeComputadoras1" Content="Poco" HorizontalAlignment="Left" Margin="448,742,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaArquitecturaDeComputadoras1" Content="Nada" HorizontalAlignment="Left" Margin="550,742,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoArquitecturaDeComputadoras1" Content="No la cursé" HorizontalAlignment="Left" Margin="663,742,0,0" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="rbMuchoAlgebraLineal" Content="Mucho" HorizontalAlignment="Left" Margin="240,638,0,0" VerticalAlignment="Top" GroupName="gp_AlgebraLineal"/>
+                        <RadioButton x:Name="rbRegularAlgebraLineal" Content="Regular" HorizontalAlignment="Left" Margin="341,638,0,0" VerticalAlignment="Top" GroupName="gp_AlgebraLineal"/>
+                        <RadioButton x:Name="rbPocoAlgebraLineal" Content="Poco" HorizontalAlignment="Left" Margin="448,638,0,0" VerticalAlignment="Top" GroupName="gp_AlgebraLineal"/>
+                        <RadioButton x:Name="rbNadaAlgebraLineal" Content="Nada" HorizontalAlignment="Left" Margin="550,638,0,0" VerticalAlignment="Top" GroupName="gp_AlgebraLineal"/>
+                        <RadioButton x:Name="rbNoCursoAlgebraLineal" Content="No la cursé" HorizontalAlignment="Left" Margin="663,638,0,0" VerticalAlignment="Top" GroupName="gp_AlgebraLineal"/>
+                    <RadioButton x:Name="rbMuchoProbabilidad" Content="Mucho" HorizontalAlignment="Left" Margin="240,664,0,0" VerticalAlignment="Top" GroupName="gp_Probabilidad"/>
+                        <RadioButton x:Name="rbRegularProbabilidad" Content="Regular" HorizontalAlignment="Left" Margin="341,664,0,0" VerticalAlignment="Top" GroupName="gp_Probabilidad"/>
+                        <RadioButton x:Name="rbPocoProbabilidad" Content="Poco" HorizontalAlignment="Left" Margin="448,664,0,0" VerticalAlignment="Top" GroupName="gp_Probabilidad"/>
+                        <RadioButton x:Name="rbNadaProbabilidad" Content="Nada" HorizontalAlignment="Left" Margin="550,664,0,0" VerticalAlignment="Top" GroupName="gp_Probabilidad"/>
+                        <RadioButton x:Name="rbNoCursoProbabilidad"  Content="No la cursé" HorizontalAlignment="Left" Margin="663,664,0,0" VerticalAlignment="Top" GroupName="gp_Probabilidad"/>
+                    <RadioButton x:Name="rbMuchoMatematicasDiscretas" Content="Mucho" HorizontalAlignment="Left" Margin="240,690,0,0" VerticalAlignment="Top" GroupName="gp_MatematicasDiscretas"/>
+                        <RadioButton x:Name="rbRegularMatematicasDiscretas" Content="Regular" HorizontalAlignment="Left" Margin="341,690,0,0" VerticalAlignment="Top" GroupName="gp_MatematicasDiscretas"/>
+                        <RadioButton x:Name="rbPocoMatematicasDiscretas" Content="Poco" HorizontalAlignment="Left" Margin="448,690,0,0" VerticalAlignment="Top" GroupName="gp_MatematicasDiscretas"/>
+                        <RadioButton x:Name="rbNadaMatematicasDiscretas" Content="Nada" HorizontalAlignment="Left" Margin="550,690,0,0" VerticalAlignment="Top" GroupName="gp_MatematicasDiscretas"/>
+                        <RadioButton x:Name="rbNoCursoMatematicasDiscretas" Content="No la cursé" HorizontalAlignment="Left" Margin="663,690,0,0" VerticalAlignment="Top" GroupName="gp_MatematicasDiscretas"/>
+                    <RadioButton x:Name="rbMuchoAlgoritmosEstrucutrasDatos1" Content="Mucho" HorizontalAlignment="Left" Margin="240,716,0,0" VerticalAlignment="Top" GroupName="gp_AlgoritmoEstructuras"/>
+                        <RadioButton x:Name="rbRegularAlgoritmosEstrucutrasDatos1" Content="Regular" HorizontalAlignment="Left" Margin="341,716,0,0" VerticalAlignment="Top" GroupName="gp_AlgoritmoEstructuras"/>
+                        <RadioButton x:Name="rbPocoAlgoritmosEstrucutrasDatos1" Content="Poco" HorizontalAlignment="Left" Margin="448,716,0,0" VerticalAlignment="Top" GroupName="gp_AlgoritmoEstructuras"/>
+                        <RadioButton x:Name="rbNadaAlgoritmosEstrucutrasDatos1" Content="Nada" HorizontalAlignment="Left" Margin="550,716,0,0" VerticalAlignment="Top" GroupName="gp_AlgoritmoEstructuras"/>
+                        <RadioButton x:Name="rbNoCursoAlgoritmosEstrucutrasDatos1" Content="No la cursé" HorizontalAlignment="Left" Margin="663,716,0,0" VerticalAlignment="Top" GroupName="gp_AlgoritmoEstructuras"/>
+                    <RadioButton x:Name="rbMuchoArquitecturaDeComputadoras1" Content="Mucho" HorizontalAlignment="Left" Margin="240,742,0,0" VerticalAlignment="Top" GroupName="gp_Arquitectura1"/>
+                        <RadioButton x:Name="rbRegularArquitecturaDeComputadoras1" Content="Regular" HorizontalAlignment="Left" Margin="341,742,0,0" VerticalAlignment="Top" GroupName="gp_Arquitectura1"/>
+                        <RadioButton x:Name="rbPocoArquitecturaDeComputadoras1" Content="Poco" HorizontalAlignment="Left" Margin="448,742,0,0" VerticalAlignment="Top" GroupName="gp_Arquitectura1"/>
+                        <RadioButton x:Name="rbNadaArquitecturaDeComputadoras1" Content="Nada" HorizontalAlignment="Left" Margin="550,742,0,0" VerticalAlignment="Top" GroupName="gp_Arquitectura1"/>
+                        <RadioButton x:Name="rbNoCursoArquitecturaDeComputadoras1" Content="No la cursé" HorizontalAlignment="Left" Margin="663,742,0,0" VerticalAlignment="Top" GroupName="gp_Arquitectura1"/>
                     <Label x:Name="lblMetodologiaInv" Content="18.- Metodología de la Investigación:" HorizontalAlignment="Left" Margin="25,807,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lblLogica" Content="19.- Lógica:" HorizontalAlignment="Left" Margin="25,833,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.038"/>
                     <Label x:Name="lblCalculo" Content="20.- Calculo:" HorizontalAlignment="Left" Margin="25,859,0,0" VerticalAlignment="Top"/>
@@ -305,126 +305,126 @@
                     <Label x:Name="lblCompiladores" Content="40.- Compiladores:" HorizontalAlignment="Left" Margin="25,1379,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lblAdministracionRecursosInformaticos" Content="41.- Admon. de Recursos Informáticos:" HorizontalAlignment="Left" Margin="25,1405,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lblServicioSocial" Content="42.- Servicio Social:" HorizontalAlignment="Left" Margin="25,1478,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoMetodologiaInv" Content="Mucho" HorizontalAlignment="Left" Margin="240,813,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularMetodologiaInv" Content="Regular" HorizontalAlignment="Left" Margin="341,813,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoMetodologiaInv" Content="Poco" HorizontalAlignment="Left" Margin="448,813,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaMetodologiaInv" Content="Nada" HorizontalAlignment="Left" Margin="550,813,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoMetodologiaInv" Content="No la cursé" HorizontalAlignment="Left" Margin="663,813,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoLogica" Content="Mucho" HorizontalAlignment="Left" Margin="240,839,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularLogica" Content="Regular" HorizontalAlignment="Left" Margin="341,839,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoLogica" Content="Poco" HorizontalAlignment="Left" Margin="448,839,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaLogica" Content="Nada" HorizontalAlignment="Left" Margin="550,839,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoLogica" Content="No la cursé" HorizontalAlignment="Left" Margin="663,839,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoCalculo" Content="Mucho" HorizontalAlignment="Left" Margin="240,865,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularCalculo" Content="Regular" HorizontalAlignment="Left" Margin="341,865,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoCalculo" Content="Poco" HorizontalAlignment="Left" Margin="448,865,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaCalculo" Content="Nada" HorizontalAlignment="Left" Margin="550,865,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoCalculo" Content="No la cursé" HorizontalAlignment="Left" Margin="663,865,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoRedes1" Content="Mucho" HorizontalAlignment="Left" Margin="240,891,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularRedes1" Content="Regular" HorizontalAlignment="Left" Margin="341,891,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoRedes1" Content="Poco" HorizontalAlignment="Left" Margin="448,891,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaRedes1" Content="Nada" HorizontalAlignment="Left" Margin="550,893,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoRedes1" Content="No la cursé" HorizontalAlignment="Left" Margin="663,891,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoRedes2" Content="Mucho" HorizontalAlignment="Left" Margin="240,917,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularRedes2" Content="Regular" HorizontalAlignment="Left" Margin="341,917,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoRedes2" Content="Poco" HorizontalAlignment="Left" Margin="448,917,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaRedes2" Content="Nada" HorizontalAlignment="Left" Margin="550,917,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoRedes2" Content="No la cursé" HorizontalAlignment="Left" Margin="663,917,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoIngeniriaSoftware1" Content="Mucho" HorizontalAlignment="Left" Margin="240,943,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularIngeniriaSoftware1" Content="Regular" HorizontalAlignment="Left" Margin="341,943,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoIngenieriaSoftware1" Content="Poco" HorizontalAlignment="Left" Margin="448,943,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaIngenieriaSoftware1" Content="Nada" HorizontalAlignment="Left" Margin="550,943,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoIngenieriaSoftware1" Content="No la cursé" HorizontalAlignment="Left" Margin="663,943,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoIngenieriaSoftware2" Content="Mucho" HorizontalAlignment="Left" Margin="240,969,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularIngenieriaSoftware2" Content="Regular" HorizontalAlignment="Left" Margin="341,969,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoIngenieriaSoftware2" Content="Poco" HorizontalAlignment="Left" Margin="448,969,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaIngenieriaSoftware2" Content="Nada" HorizontalAlignment="Left" Margin="550,969,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoIngenieriaSoftware2" Content="No la cursé" HorizontalAlignment="Left" Margin="663,969,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoBasesDatos1" Content="Mucho" HorizontalAlignment="Left" Margin="240,995,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularBasesDatos1" Content="Regular" HorizontalAlignment="Left" Margin="341,995,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoBasesDatos1" Content="Poco" HorizontalAlignment="Left" Margin="448,995,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaBasesDatos1" Content="Nada" HorizontalAlignment="Left" Margin="550,995,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoBasesDatos1" Content="No la cursé" HorizontalAlignment="Left" Margin="663,995,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoBasesDatos2" Content="Mucho" HorizontalAlignment="Left" Margin="240,1021,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularBasesDatos2" Content="Regular" HorizontalAlignment="Left" Margin="341,1021,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoBasesDatos2" Content="Poco" HorizontalAlignment="Left" Margin="448,1021,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaBasesDatos2" Content="Nada" HorizontalAlignment="Left" Margin="550,1021,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoBasesDatos2" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1021,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoTallerIntegracion1" Content="Mucho" HorizontalAlignment="Left" Margin="240,1047,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularTallerIntegracion1" Content="Regular" HorizontalAlignment="Left" Margin="341,1047,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoTallerIntegracion1" Content="Poco" HorizontalAlignment="Left" Margin="448,1047,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaTallerIntegracion1" Content="Nada" HorizontalAlignment="Left" Margin="550,1047,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoTallerIntegracion1" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1047,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoSistemasOperativos" Content="Mucho" HorizontalAlignment="Left" Margin="240,1073,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularSistemasOperativos" Content="Regular" HorizontalAlignment="Left" Margin="341,1073,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoSistemasOperativos" Content="Poco" HorizontalAlignment="Left" Margin="448,1073,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaSistemasOperativos" Content="Nada" HorizontalAlignment="Left" Margin="550,1073,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoSistemasOperativos" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1073,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoArquitecturaDeComputadoras2" Content="Mucho" HorizontalAlignment="Left" Margin="240,1099,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularArquitecturaDeComputadoras2" Content="Regular" HorizontalAlignment="Left" Margin="341,1099,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoArquitecturaDeComputadoras2" Content="Poco" HorizontalAlignment="Left" Margin="448,1099,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaArquitecturaDeComputadoras2" Content="Nada" HorizontalAlignment="Left" Margin="550,1099,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoArquitecturaDeComputadoras2" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1099,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoAlgoritmosEstructurasDatos2" Content="Mucho" HorizontalAlignment="Left" Margin="237,1125,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularAlgoritmosEstructurasDatos2" Content="Regular" HorizontalAlignment="Left" Margin="341,1125,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoAlgoritmosEstructurasDatos2" Content="Poco" HorizontalAlignment="Left" Margin="448,1125,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaAlgoritmosEstructurasDatos2" Content="Nada" HorizontalAlignment="Left" Margin="550,1125,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoAlgoritmosEstructurasDatos2" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1125,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoOrganizacionArchivos" Content="Mucho" HorizontalAlignment="Left" Margin="237,1151,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularOrganizacionArchivos" Content="Regular" HorizontalAlignment="Left" Margin="341,1151,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoOrganizacionArchivos" Content="Poco" HorizontalAlignment="Left" Margin="448,1151,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaOrganizacionArchivos" Content="Nada" HorizontalAlignment="Left" Margin="550,1151,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoOrganizacionArchivos" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1151,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoInteligenciaArtificial" Content="Mucho" HorizontalAlignment="Left" Margin="237,1177,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularInteligenciaArtificial" Content="Regular" HorizontalAlignment="Left" Margin="341,1177,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoInteligenciaArtificial" Content="Poco" HorizontalAlignment="Left" Margin="448,1177,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaInteligenciaArtificial" Content="Nada" HorizontalAlignment="Left" Margin="550,1177,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoInteligenciaArtificial" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1177,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoTallerIntegracion2" Content="Mucho" HorizontalAlignment="Left" Margin="237,1203,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularTallerIntegracion2" Content="Regular" HorizontalAlignment="Left" Margin="341,1203,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoTallerIntegracion2" Content="Poco" HorizontalAlignment="Left" Margin="448,1203,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaTallerIntegracion2" Content="Nada" HorizontalAlignment="Left" Margin="550,1203,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoTallerIntegracion2" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1203,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoTallerIntegracion3" Content="Mucho" HorizontalAlignment="Left" Margin="237,1229,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularTallerIntegracion3" Content="Regular" HorizontalAlignment="Left" Margin="341,1229,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoTallerIntegracion3" Content="Poco" HorizontalAlignment="Left" Margin="448,1229,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaTallerIntegracion3" Content="Nada" HorizontalAlignment="Left" Margin="550,1229,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoTallerIntegracion3" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1229,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoProgramacionAvanzada" Content="Mucho" HorizontalAlignment="Left" Margin="237,1255,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularProgramacionAvanzada" Content="Regular" HorizontalAlignment="Left" Margin="341,1255,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoProgramacionAvanzada" Content="Poco" HorizontalAlignment="Left" Margin="448,1255,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaProgramacionAvanzada" Content="Nada" HorizontalAlignment="Left" Margin="550,1255,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoProgramacionAvanzada" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1255,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoProgramacionDeSistemas" Content="Mucho" HorizontalAlignment="Left" Margin="237,1281,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularProgramacionDeSistemas" Content="Regular" HorizontalAlignment="Left" Margin="341,1281,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoProgramacionDeSistemas" Content="Poco" HorizontalAlignment="Left" Margin="448,1281,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaProgramacionDeSistemas" Content="Nada" HorizontalAlignment="Left" Margin="550,1281,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoProgramacionDeSistemas" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1281,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoEticaLEgislacionInformatica" Content="Mucho" HorizontalAlignment="Left" Margin="237,1307,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularEticaLEgislacionInformatica" Content="Regular" HorizontalAlignment="Left" Margin="341,1307,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoEticaLEgislacionInformatica" Content="Poco" HorizontalAlignment="Left" Margin="448,1307,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaEticaLEgislacionInformatica" Content="Nada" HorizontalAlignment="Left" Margin="550,1307,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoEticaLEgislacionInformatica" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1307,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoFundamentosAdministracion" Content="Mucho" HorizontalAlignment="Left" Margin="237,1333,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularFundamentosAdministracion" Content="Regular" HorizontalAlignment="Left" Margin="341,1333,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoFundamentosAdministracion" Content="Poco" HorizontalAlignment="Left" Margin="448,1333,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaFundamentosAdministracion" Content="Nada" HorizontalAlignment="Left" Margin="550,1333,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoFundamentosAdministracion"  Content="No la cursé" HorizontalAlignment="Left" Margin="663,1333,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoAdministracionProyectos" Content="Mucho" HorizontalAlignment="Left" Margin="237,1359,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularAdministracionProyectos" Content="Regular" HorizontalAlignment="Left" Margin="341,1359,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoAdministracionProyectos" Content="Poco" HorizontalAlignment="Left" Margin="448,1359,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaAdministracionProyectos" Content="Nada" HorizontalAlignment="Left" Margin="550,1359,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoAdministracionProyectos" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1359,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoCompiladores" Content="Mucho" HorizontalAlignment="Left" Margin="237,1385,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularCompiladores" Content="Regular" HorizontalAlignment="Left" Margin="341,1385,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoCompiladores" Content="Poco" HorizontalAlignment="Left" Margin="448,1385,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaCompiladores" Content="Nada" HorizontalAlignment="Left" Margin="550,1385,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoCompiladores" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1385,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoAdministracionRecursosInformaticos" Content="Mucho" HorizontalAlignment="Left" Margin="237,1411,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularAdministracionRecursosInformaticos" Content="Regular" HorizontalAlignment="Left" Margin="341,1411,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoAdministracionRecursosInformaticos" Content="Poco" HorizontalAlignment="Left" Margin="448,1411,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaAdministracionRecursosInformaticos" Content="Nada" HorizontalAlignment="Left" Margin="550,1411,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoAdministracionRecursosInformaticos" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1411,0,0" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="rbMuchoMetodologiaInv" Content="Mucho" HorizontalAlignment="Left" Margin="240,813,0,0" VerticalAlignment="Top" GroupName="gp_MetodologiaInvestigacion"/>
+                        <RadioButton x:Name="rbRegularMetodologiaInv" Content="Regular" HorizontalAlignment="Left" Margin="341,813,0,0" VerticalAlignment="Top" GroupName="gp_MetodologiaInvestigacion"/>
+                        <RadioButton x:Name="rbPocoMetodologiaInv" Content="Poco" HorizontalAlignment="Left" Margin="448,813,0,0" VerticalAlignment="Top" GroupName="gp_MetodologiaInvestigacion"/>
+                        <RadioButton x:Name="rbNadaMetodologiaInv" Content="Nada" HorizontalAlignment="Left" Margin="550,813,0,0" VerticalAlignment="Top" GroupName="gp_MetodologiaInvestigacion"/>
+                        <RadioButton x:Name="rbNoCursoMetodologiaInv" Content="No la cursé" HorizontalAlignment="Left" Margin="663,813,0,0" VerticalAlignment="Top" GroupName="gp_MetodologiaInvestigacion"/>
+                        <RadioButton x:Name="rbMuchoLogica" Content="Mucho" HorizontalAlignment="Left" Margin="240,839,0,0" VerticalAlignment="Top" GroupName="gp_Logica"/>
+                        <RadioButton x:Name="rbRegularLogica" Content="Regular" HorizontalAlignment="Left" Margin="341,839,0,0" VerticalAlignment="Top" GroupName="gp_Logica"/>
+                        <RadioButton x:Name="rbPocoLogica" Content="Poco" HorizontalAlignment="Left" Margin="448,839,0,0" VerticalAlignment="Top" GroupName="gp_Logica"/>
+                        <RadioButton x:Name="rbNadaLogica" Content="Nada" HorizontalAlignment="Left" Margin="550,839,0,0" VerticalAlignment="Top" GroupName="gp_Logica"/>
+                        <RadioButton x:Name="rbNoCursoLogica" Content="No la cursé" HorizontalAlignment="Left" Margin="663,839,0,0" VerticalAlignment="Top" GroupName="gp_Logica"/>
+                    <RadioButton x:Name="rbMuchoCalculo" Content="Mucho" HorizontalAlignment="Left" Margin="240,865,0,0" VerticalAlignment="Top" GroupName="gp_Calculo"/>
+                        <RadioButton x:Name="rbRegularCalculo" Content="Regular" HorizontalAlignment="Left" Margin="341,865,0,0" VerticalAlignment="Top" GroupName="gp_Calculo"/>
+                        <RadioButton x:Name="rbPocoCalculo" Content="Poco" HorizontalAlignment="Left" Margin="448,865,0,0" VerticalAlignment="Top" GroupName="gp_Calculo"/>
+                        <RadioButton x:Name="rbNadaCalculo" Content="Nada" HorizontalAlignment="Left" Margin="550,865,0,0" VerticalAlignment="Top" GroupName="gp_Calculo"/>
+                        <RadioButton x:Name="rbNoCursoCalculo" Content="No la cursé" HorizontalAlignment="Left" Margin="663,865,0,0" VerticalAlignment="Top" GroupName="gp_Calculo"/>
+                    <RadioButton x:Name="rbMuchoRedes1" Content="Mucho" HorizontalAlignment="Left" Margin="240,891,0,0" VerticalAlignment="Top" GroupName="gp_Redes1"/>
+                        <RadioButton x:Name="rbRegularRedes1" Content="Regular" HorizontalAlignment="Left" Margin="341,891,0,0" VerticalAlignment="Top" GroupName="gp_Redes1"/>
+                        <RadioButton x:Name="rbPocoRedes1" Content="Poco" HorizontalAlignment="Left" Margin="448,891,0,0" VerticalAlignment="Top" GroupName="gp_Redes1"/>
+                        <RadioButton x:Name="rbNadaRedes1" Content="Nada" HorizontalAlignment="Left" Margin="550,893,0,0" VerticalAlignment="Top" GroupName="gp_Redes1"/>
+                        <RadioButton x:Name="rbNoCursoRedes1" Content="No la cursé" HorizontalAlignment="Left" Margin="663,891,0,0" VerticalAlignment="Top" GroupName="gp_Redes1"/>
+                    <RadioButton x:Name="rbMuchoRedes2" Content="Mucho" HorizontalAlignment="Left" Margin="240,917,0,0" VerticalAlignment="Top" GroupName="gp_Redes2"/>
+                        <RadioButton x:Name="rbRegularRedes2" Content="Regular" HorizontalAlignment="Left" Margin="341,917,0,0" VerticalAlignment="Top" GroupName="gp_Redes2"/>
+                        <RadioButton x:Name="rbPocoRedes2" Content="Poco" HorizontalAlignment="Left" Margin="448,917,0,0" VerticalAlignment="Top" GroupName="gp_Redes2"/>
+                        <RadioButton x:Name="rbNadaRedes2" Content="Nada" HorizontalAlignment="Left" Margin="550,917,0,0" VerticalAlignment="Top" GroupName="gp_Redes2"/>
+                        <RadioButton x:Name="rbNoCursoRedes2" Content="No la cursé" HorizontalAlignment="Left" Margin="663,917,0,0" VerticalAlignment="Top" GroupName="gp_Redes2"/>
+                    <RadioButton x:Name="rbMuchoIngeniriaSoftware1" Content="Mucho" HorizontalAlignment="Left" Margin="240,943,0,0" VerticalAlignment="Top" GroupName="gp_Ingeniera1"/>
+                        <RadioButton x:Name="rbRegularIngeniriaSoftware1" Content="Regular" HorizontalAlignment="Left" Margin="341,943,0,0" VerticalAlignment="Top" GroupName="gp_Ingeniera1"/>
+                        <RadioButton x:Name="rbPocoIngenieriaSoftware1" Content="Poco" HorizontalAlignment="Left" Margin="448,943,0,0" VerticalAlignment="Top" GroupName="gp_Ingeniera1"/>
+                        <RadioButton x:Name="rbNadaIngenieriaSoftware1" Content="Nada" HorizontalAlignment="Left" Margin="550,943,0,0" VerticalAlignment="Top" GroupName="gp_Ingeniera1"/>
+                        <RadioButton x:Name="rbNoCursoIngenieriaSoftware1" Content="No la cursé" HorizontalAlignment="Left" Margin="663,943,0,0" VerticalAlignment="Top" GroupName="gp_Ingeniera1"/>
+                    <RadioButton x:Name="rbMuchoIngenieriaSoftware2" Content="Mucho" HorizontalAlignment="Left" Margin="240,969,0,0" VerticalAlignment="Top" GroupName="gp_Ingeniera2"/>
+                        <RadioButton x:Name="rbRegularIngenieriaSoftware2" Content="Regular" HorizontalAlignment="Left" Margin="341,969,0,0" VerticalAlignment="Top" GroupName="gp_Ingeniera2"/>
+                        <RadioButton x:Name="rbPocoIngenieriaSoftware2" Content="Poco" HorizontalAlignment="Left" Margin="448,969,0,0" VerticalAlignment="Top" GroupName="gp_Ingeniera2"/>
+                        <RadioButton x:Name="rbNadaIngenieriaSoftware2" Content="Nada" HorizontalAlignment="Left" Margin="550,969,0,0" VerticalAlignment="Top" GroupName="gp_Ingeniera2"/>
+                        <RadioButton x:Name="rbNoCursoIngenieriaSoftware2" Content="No la cursé" HorizontalAlignment="Left" Margin="663,969,0,0" VerticalAlignment="Top" GroupName="gp_Ingeniera2"/>
+                    <RadioButton x:Name="rbMuchoBasesDatos1" Content="Mucho" HorizontalAlignment="Left" Margin="240,995,0,0" VerticalAlignment="Top" GroupName="gp_BaseDatos1"/>
+                        <RadioButton x:Name="rbRegularBasesDatos1" Content="Regular" HorizontalAlignment="Left" Margin="341,995,0,0" VerticalAlignment="Top" GroupName="gp_BaseDatos1"/>
+                        <RadioButton x:Name="rbPocoBasesDatos1" Content="Poco" HorizontalAlignment="Left" Margin="448,995,0,0" VerticalAlignment="Top" GroupName="gp_BaseDatos1"/>
+                        <RadioButton x:Name="rbNadaBasesDatos1" Content="Nada" HorizontalAlignment="Left" Margin="550,995,0,0" VerticalAlignment="Top" GroupName="gp_BaseDatos1"/>
+                        <RadioButton x:Name="rbNoCursoBasesDatos1" Content="No la cursé" HorizontalAlignment="Left" Margin="663,995,0,0" VerticalAlignment="Top" GroupName="gp_BaseDatos1"/>
+                        <RadioButton x:Name="rbMuchoBasesDatos2" Content="Mucho" HorizontalAlignment="Left" Margin="240,1021,0,0" VerticalAlignment="Top" GroupName="gp_BaseDatos2"/>
+                        <RadioButton x:Name="rbRegularBasesDatos2" Content="Regular" HorizontalAlignment="Left" Margin="341,1021,0,0" VerticalAlignment="Top" GroupName="gp_BaseDatos2"/>
+                        <RadioButton x:Name="rbPocoBasesDatos2" Content="Poco" HorizontalAlignment="Left" Margin="448,1021,0,0" VerticalAlignment="Top" GroupName="gp_BaseDatos2"/>
+                        <RadioButton x:Name="rbNadaBasesDatos2" Content="Nada" HorizontalAlignment="Left" Margin="550,1021,0,0" VerticalAlignment="Top" GroupName="gp_BaseDatos2"/>
+                        <RadioButton x:Name="rbNoCursoBasesDatos2" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1021,0,0" VerticalAlignment="Top" GroupName="gp_BaseDatos2"/>
+                    <RadioButton x:Name="rbMuchoTallerIntegracion1" Content="Mucho" HorizontalAlignment="Left" Margin="240,1047,0,0" VerticalAlignment="Top" GroupName="gp_TallerIntegracion1"/>
+                        <RadioButton x:Name="rbRegularTallerIntegracion1" Content="Regular" HorizontalAlignment="Left" Margin="341,1047,0,0" VerticalAlignment="Top" GroupName="gp_TallerIntegracion1"/>
+                        <RadioButton x:Name="rbPocoTallerIntegracion1" Content="Poco" HorizontalAlignment="Left" Margin="448,1047,0,0" VerticalAlignment="Top" GroupName="gp_TallerIntegracion1"/>
+                        <RadioButton x:Name="rbNadaTallerIntegracion1" Content="Nada" HorizontalAlignment="Left" Margin="550,1047,0,0" VerticalAlignment="Top" GroupName="gp_TallerIntegracion1"/>
+                        <RadioButton x:Name="rbNoCursoTallerIntegracion1" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1047,0,0" VerticalAlignment="Top" GroupName="gp_TallerIntegracion1"/>
+                        <RadioButton x:Name="rbMuchoSistemasOperativos" Content="Mucho" HorizontalAlignment="Left" Margin="240,1073,0,0" VerticalAlignment="Top" GroupName="gp_SistemasOperativos"/>
+                        <RadioButton x:Name="rbRegularSistemasOperativos" Content="Regular" HorizontalAlignment="Left" Margin="341,1073,0,0" VerticalAlignment="Top" GroupName="gp_SistemasOperativos"/>
+                        <RadioButton x:Name="rbPocoSistemasOperativos" Content="Poco" HorizontalAlignment="Left" Margin="448,1073,0,0" VerticalAlignment="Top" GroupName="gp_SistemasOperativos"/>
+                        <RadioButton x:Name="rbNadaSistemasOperativos" Content="Nada" HorizontalAlignment="Left" Margin="550,1073,0,0" VerticalAlignment="Top" GroupName="gp_SistemasOperativos"/>
+                        <RadioButton x:Name="rbNoCursoSistemasOperativos" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1073,0,0" VerticalAlignment="Top" GroupName="gp_SistemasOperativos"/>
+                    <RadioButton x:Name="rbMuchoArquitecturaDeComputadoras2" Content="Mucho" HorizontalAlignment="Left" Margin="240,1099,0,0" VerticalAlignment="Top" GroupName="gp_Arquitectura2"/>
+                        <RadioButton x:Name="rbRegularArquitecturaDeComputadoras2" Content="Regular" HorizontalAlignment="Left" Margin="341,1099,0,0" VerticalAlignment="Top" GroupName="gp_Arquitectura2"/>
+                        <RadioButton x:Name="rbPocoArquitecturaDeComputadoras2" Content="Poco" HorizontalAlignment="Left" Margin="448,1099,0,0" VerticalAlignment="Top" GroupName="gp_Arquitectura2"/>
+                        <RadioButton x:Name="rbNadaArquitecturaDeComputadoras2" Content="Nada" HorizontalAlignment="Left" Margin="550,1099,0,0" VerticalAlignment="Top" GroupName="gp_Arquitectura2"/>
+                        <RadioButton x:Name="rbNoCursoArquitecturaDeComputadoras2" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1099,0,0" VerticalAlignment="Top" GroupName="gp_Arquitectura2"/>
+                        <RadioButton x:Name="rbMuchoAlgoritmosEstructurasDatos2" Content="Mucho" HorizontalAlignment="Left" Margin="237,1125,0,0" VerticalAlignment="Top" GroupName="gp_AlgoritmoEstructuras2"/>
+                        <RadioButton x:Name="rbRegularAlgoritmosEstructurasDatos2" Content="Regular" HorizontalAlignment="Left" Margin="341,1125,0,0" VerticalAlignment="Top" GroupName="gp_AlgoritmoEstructuras2"/>
+                        <RadioButton x:Name="rbPocoAlgoritmosEstructurasDatos2" Content="Poco" HorizontalAlignment="Left" Margin="448,1125,0,0" VerticalAlignment="Top" GroupName="gp_AlgoritmoEstructuras2"/>
+                        <RadioButton x:Name="rbNadaAlgoritmosEstructurasDatos2" Content="Nada" HorizontalAlignment="Left" Margin="550,1125,0,0" VerticalAlignment="Top" GroupName="gp_AlgoritmoEstructuras2"/>
+                        <RadioButton x:Name="rbNoCursoAlgoritmosEstructurasDatos2" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1125,0,0" VerticalAlignment="Top" GroupName="gp_AlgoritmoEstructuras2"/>
+                        <RadioButton x:Name="rbMuchoOrganizacionArchivos" Content="Mucho" HorizontalAlignment="Left" Margin="237,1151,0,0" VerticalAlignment="Top" GroupName="gp_OrganizacionArchivos"/>
+                        <RadioButton x:Name="rbRegularOrganizacionArchivos" Content="Regular" HorizontalAlignment="Left" Margin="341,1151,0,0" VerticalAlignment="Top" GroupName="gp_OrganizacionArchivos"/>
+                        <RadioButton x:Name="rbPocoOrganizacionArchivos" Content="Poco" HorizontalAlignment="Left" Margin="448,1151,0,0" VerticalAlignment="Top" GroupName="gp_OrganizacionArchivos"/>
+                        <RadioButton x:Name="rbNadaOrganizacionArchivos" Content="Nada" HorizontalAlignment="Left" Margin="550,1151,0,0" VerticalAlignment="Top" GroupName="gp_OrganizacionArchivos"/>
+                        <RadioButton x:Name="rbNoCursoOrganizacionArchivos" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1151,0,0" VerticalAlignment="Top" GroupName="gp_OrganizacionArchivos"/>
+                    <RadioButton x:Name="rbMuchoInteligenciaArtificial" Content="Mucho" HorizontalAlignment="Left" Margin="237,1177,0,0" VerticalAlignment="Top" GroupName="gp_InteligenciaArtificial"/>
+                        <RadioButton x:Name="rbRegularInteligenciaArtificial" Content="Regular" HorizontalAlignment="Left" Margin="341,1177,0,0" VerticalAlignment="Top" GroupName="gp_InteligenciaArtificial"/>
+                        <RadioButton x:Name="rbPocoInteligenciaArtificial" Content="Poco" HorizontalAlignment="Left" Margin="448,1177,0,0" VerticalAlignment="Top" GroupName="gp_InteligenciaArtificial"/>
+                        <RadioButton x:Name="rbNadaInteligenciaArtificial" Content="Nada" HorizontalAlignment="Left" Margin="550,1177,0,0" VerticalAlignment="Top" GroupName="gp_InteligenciaArtificial"/>
+                        <RadioButton x:Name="rbNoCursoInteligenciaArtificial" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1177,0,0" VerticalAlignment="Top" GroupName="gp_InteligenciaArtificial"/>
+                        <RadioButton x:Name="rbMuchoTallerIntegracion2" Content="Mucho" HorizontalAlignment="Left" Margin="237,1203,0,0" VerticalAlignment="Top" GroupName="gp_TallerIntegracion2"/>
+                        <RadioButton x:Name="rbRegularTallerIntegracion2" Content="Regular" HorizontalAlignment="Left" Margin="341,1203,0,0" VerticalAlignment="Top" GroupName="gp_TallerIntegracion2"/>
+                        <RadioButton x:Name="rbPocoTallerIntegracion2" Content="Poco" HorizontalAlignment="Left" Margin="448,1203,0,0" VerticalAlignment="Top" GroupName="gp_TallerIntegracion2"/>
+                        <RadioButton x:Name="rbNadaTallerIntegracion2" Content="Nada" HorizontalAlignment="Left" Margin="550,1203,0,0" VerticalAlignment="Top" GroupName="gp_TallerIntegracion2"/>
+                        <RadioButton x:Name="rbNoCursoTallerIntegracion2" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1203,0,0" VerticalAlignment="Top" GroupName="gp_TallerIntegracion2"/>
+                        <RadioButton x:Name="rbMuchoTallerIntegracion3" Content="Mucho" HorizontalAlignment="Left" Margin="237,1229,0,0" VerticalAlignment="Top" GroupName="gp_TallerIntegracion3"/>
+                        <RadioButton x:Name="rbRegularTallerIntegracion3" Content="Regular" HorizontalAlignment="Left" Margin="341,1229,0,0" VerticalAlignment="Top" GroupName="gp_TallerIntegracion3"/>
+                        <RadioButton x:Name="rbPocoTallerIntegracion3" Content="Poco" HorizontalAlignment="Left" Margin="448,1229,0,0" VerticalAlignment="Top" GroupName="gp_TallerIntegracion3"/>
+                        <RadioButton x:Name="rbNadaTallerIntegracion3" Content="Nada" HorizontalAlignment="Left" Margin="550,1229,0,0" VerticalAlignment="Top" GroupName="gp_TallerIntegracion3"/>
+                        <RadioButton x:Name="rbNoCursoTallerIntegracion3" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1229,0,0" VerticalAlignment="Top" GroupName="gp_TallerIntegracion3"/>
+                        <RadioButton x:Name="rbMuchoProgramacionAvanzada" Content="Mucho" HorizontalAlignment="Left" Margin="237,1255,0,0" VerticalAlignment="Top" GroupName="gp_ProgramacionAvanzada"/>
+                        <RadioButton x:Name="rbRegularProgramacionAvanzada" Content="Regular" HorizontalAlignment="Left" Margin="341,1255,0,0" VerticalAlignment="Top" GroupName="gp_ProgramacionAvanzada"/>
+                        <RadioButton x:Name="rbPocoProgramacionAvanzada" Content="Poco" HorizontalAlignment="Left" Margin="448,1255,0,0" VerticalAlignment="Top" GroupName="gp_ProgramacionAvanzada"/>
+                        <RadioButton x:Name="rbNadaProgramacionAvanzada" Content="Nada" HorizontalAlignment="Left" Margin="550,1255,0,0" VerticalAlignment="Top" GroupName="gp_ProgramacionAvanzada"/>
+                        <RadioButton x:Name="rbNoCursoProgramacionAvanzada" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1255,0,0" VerticalAlignment="Top" GroupName="gp_ProgramacionAvanzada"/>
+                    <RadioButton x:Name="rbMuchoProgramacionDeSistemas" Content="Mucho" HorizontalAlignment="Left" Margin="237,1281,0,0" VerticalAlignment="Top" GroupName="gp_ProgramacionSistemas"/>
+                        <RadioButton x:Name="rbRegularProgramacionDeSistemas" Content="Regular" HorizontalAlignment="Left" Margin="341,1281,0,0" VerticalAlignment="Top" GroupName="gp_ProgramacionSistemas"/>
+                        <RadioButton x:Name="rbPocoProgramacionDeSistemas" Content="Poco" HorizontalAlignment="Left" Margin="448,1281,0,0" VerticalAlignment="Top" GroupName="gp_ProgramacionSistemas"/>
+                        <RadioButton x:Name="rbNadaProgramacionDeSistemas" Content="Nada" HorizontalAlignment="Left" Margin="550,1281,0,0" VerticalAlignment="Top" GroupName="gp_ProgramacionSistemas"/>
+                        <RadioButton x:Name="rbNoCursoProgramacionDeSistemas" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1281,0,0" VerticalAlignment="Top" GroupName="gp_ProgramacionSistemas"/>
+                    <RadioButton x:Name="rbMuchoEticaLEgislacionInformatica" Content="Mucho" HorizontalAlignment="Left" Margin="237,1307,0,0" VerticalAlignment="Top" GroupName="gp_EticaInformatica"/>
+                        <RadioButton x:Name="rbRegularEticaLEgislacionInformatica" Content="Regular" HorizontalAlignment="Left" Margin="341,1307,0,0" VerticalAlignment="Top" GroupName="gp_EticaInformatica"/>
+                        <RadioButton x:Name="rbPocoEticaLEgislacionInformatica" Content="Poco" HorizontalAlignment="Left" Margin="448,1307,0,0" VerticalAlignment="Top" GroupName="gp_EticaInformatica"/>
+                        <RadioButton x:Name="rbNadaEticaLEgislacionInformatica" Content="Nada" HorizontalAlignment="Left" Margin="550,1307,0,0" VerticalAlignment="Top" GroupName="gp_EticaInformatica"/>
+                        <RadioButton x:Name="rbNoCursoEticaLEgislacionInformatica" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1307,0,0" VerticalAlignment="Top" GroupName="gp_EticaInformatica"/>
+                        <RadioButton x:Name="rbMuchoFundamentosAdministracion" Content="Mucho" HorizontalAlignment="Left" Margin="237,1333,0,0" VerticalAlignment="Top" GroupName="gp_FundamentosAdministracion"/>
+                        <RadioButton x:Name="rbRegularFundamentosAdministracion" Content="Regular" HorizontalAlignment="Left" Margin="341,1333,0,0" VerticalAlignment="Top" GroupName="gp_FundamentosAdministracion"/>
+                        <RadioButton x:Name="rbPocoFundamentosAdministracion" Content="Poco" HorizontalAlignment="Left" Margin="448,1333,0,0" VerticalAlignment="Top" GroupName="gp_FundamentosAdministracion"/>
+                        <RadioButton x:Name="rbNadaFundamentosAdministracion" Content="Nada" HorizontalAlignment="Left" Margin="550,1333,0,0" VerticalAlignment="Top" GroupName="gp_FundamentosAdministracion"/>
+                        <RadioButton x:Name="rbNoCursoFundamentosAdministracion"  Content="No la cursé" HorizontalAlignment="Left" Margin="663,1333,0,0" VerticalAlignment="Top" GroupName="gp_FundamentosAdministracion"/>
+                    <RadioButton x:Name="rbMuchoAdministracionProyectos" Content="Mucho" HorizontalAlignment="Left" Margin="237,1359,0,0" VerticalAlignment="Top" GroupName="gp_AdministracionProyectos"/>
+                        <RadioButton x:Name="rbRegularAdministracionProyectos" Content="Regular" HorizontalAlignment="Left" Margin="341,1359,0,0" VerticalAlignment="Top" GroupName="gp_AdministracionProyectos"/>
+                        <RadioButton x:Name="rbPocoAdministracionProyectos" Content="Poco" HorizontalAlignment="Left" Margin="448,1359,0,0" VerticalAlignment="Top" GroupName="gp_AdministracionProyectos"/>
+                        <RadioButton x:Name="rbNadaAdministracionProyectos" Content="Nada" HorizontalAlignment="Left" Margin="550,1359,0,0" VerticalAlignment="Top" GroupName="gp_AdministracionProyectos"/>
+                        <RadioButton x:Name="rbNoCursoAdministracionProyectos" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1359,0,0" VerticalAlignment="Top" GroupName="gp_AdministracionProyectos"/>
+                    <RadioButton x:Name="rbMuchoCompiladores" Content="Mucho" HorizontalAlignment="Left" Margin="237,1385,0,0" VerticalAlignment="Top" GroupName="gp_Compilacion"/>
+                        <RadioButton x:Name="rbRegularCompiladores" Content="Regular" HorizontalAlignment="Left" Margin="341,1385,0,0" VerticalAlignment="Top" GroupName="gp_Compilacion"/>
+                        <RadioButton x:Name="rbPocoCompiladores" Content="Poco" HorizontalAlignment="Left" Margin="448,1385,0,0" VerticalAlignment="Top" GroupName="gp_Compilacion"/>
+                        <RadioButton x:Name="rbNadaCompiladores" Content="Nada" HorizontalAlignment="Left" Margin="550,1385,0,0" VerticalAlignment="Top" GroupName="gp_Compilacion"/>
+                        <RadioButton x:Name="rbNoCursoCompiladores" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1385,0,0" VerticalAlignment="Top" GroupName="gp_Compilacion"/>
+                    <RadioButton x:Name="rbMuchoAdministracionRecursosInformaticos" Content="Mucho" HorizontalAlignment="Left" Margin="237,1411,0,0" VerticalAlignment="Top" GroupName="gp_AdministracionRecursosInf"/>
+                        <RadioButton x:Name="rbRegularAdministracionRecursosInformaticos" Content="Regular" HorizontalAlignment="Left" Margin="341,1411,0,0" VerticalAlignment="Top" GroupName="gp_AdministracionRecursosInf"/>
+                        <RadioButton x:Name="rbPocoAdministracionRecursosInformaticos" Content="Poco" HorizontalAlignment="Left" Margin="448,1411,0,0" VerticalAlignment="Top" GroupName="gp_AdministracionRecursosInf"/>
+                        <RadioButton x:Name="rbNadaAdministracionRecursosInformaticos" Content="Nada" HorizontalAlignment="Left" Margin="550,1411,0,0" VerticalAlignment="Top" GroupName="gp_AdministracionRecursosInf"/>
+                        <RadioButton x:Name="rbNoCursoAdministracionRecursosInformaticos" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1411,0,0" VerticalAlignment="Top" GroupName="gp_AdministracionRecursosInf"/>
                     <Label x:Name="lblExperienciaRecepcional" Content="43.- Experiencia Recepcional:" HorizontalAlignment="Left" Margin="25,1504,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lblDesarrolloAplicacionesEnRed" Content="44.- Desarrollo de Aplicaciones en Red:" HorizontalAlignment="Left" Margin="25,1530,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lblIngenieriaSoftware3" Content="45.- Ingeniería de Software III:" HorizontalAlignment="Left" Margin="24,1556,0,0" VerticalAlignment="Top"/>
@@ -440,86 +440,86 @@
                     <Label x:Name="lblAuditoriaInformatica" Content="55.- Auditoria Informática:" HorizontalAlignment="Left" Margin="23,1929,0,0" VerticalAlignment="Top" Width="164"/>
                     <Label x:Name="lblTallerIntegracion4" Content="56.- Taller de integración IV:" HorizontalAlignment="Left" Margin="23,1960,0,0" VerticalAlignment="Top" Width="167"/>
                     <Label x:Name="lblRedes3" Content="57.- Redes III:" HorizontalAlignment="Left" Margin="23,1988,0,0" VerticalAlignment="Top" Width="112"/>
-                    <RadioButton x:Name="rbMuchoServicioSocial" Content="Mucho" HorizontalAlignment="Left" Margin="237,1479,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularServicioSocial"  Content="Regular" HorizontalAlignment="Left" Margin="341,1478,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoServicioSocial"  Content="Poco" HorizontalAlignment="Left" Margin="448,1478,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaServicioSocial"  Content="Nada" HorizontalAlignment="Left" Margin="550,1478,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoServicioSocial"  Content="No la cursé" HorizontalAlignment="Left" Margin="663,1478,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoExperienciaRecepcional" Content="Mucho" HorizontalAlignment="Left" Margin="237,1511,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularExperienciaRecepcional" Content="Regular" HorizontalAlignment="Left" Margin="341,1510,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoExperienciaRecepcional" Content="Poco" HorizontalAlignment="Left" Margin="448,1510,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaExperienciaRecepcional" Content="Nada" HorizontalAlignment="Left" Margin="550,1510,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoExperienciaRecepcional" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1510,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoDesarrolloAplicacionesEnRed" Content="Mucho" HorizontalAlignment="Left" Margin="237,1536,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularDesarrolloAplicacionesEnRed" Content="Regular" HorizontalAlignment="Left" Margin="341,1536,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoDesarrolloAplicacionesEnRed" Content="Poco" HorizontalAlignment="Left" Margin="448,1536,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaDesarrolloAplicacionesEnRed" Content="Nada" HorizontalAlignment="Left" Margin="550,1536,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoDesarrolloAplicacionesEnRed" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1536,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoIngenieriaSoftware3" Content="Mucho" HorizontalAlignment="Left" Margin="237,1562,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularIngenieriaSoftware3" Content="Regular" HorizontalAlignment="Left" Margin="341,1562,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoIngenieriaSoftware3" Content="Poco" HorizontalAlignment="Left" Margin="448,1562,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaIngenieriaSoftware3" Content="Nada" HorizontalAlignment="Left" Margin="550,1562,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoIngenieriaSoftware3" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1562,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoGraficacion" Content="Mucho" HorizontalAlignment="Left" Margin="237,1588,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularGraficacion" Content="Regular" HorizontalAlignment="Left" Margin="341,1588,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoGraficacion" Content="Poco" HorizontalAlignment="Left" Margin="448,1588,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaGraficacion" Content="Nada" HorizontalAlignment="Left" Margin="550,1588,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoGraficacion" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1588,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoSistemasInformacionEmpresarial" Content="Mucho" HorizontalAlignment="Left" Margin="237,1614,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularSistemasInformacionEmpresarial" Content="Regular" HorizontalAlignment="Left" Margin="341,1614,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoSistemasInformacionEmpresarial" Content="Poco" HorizontalAlignment="Left" Margin="448,1614,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaSistemasInformacionEmpresarial" Content="Nada" HorizontalAlignment="Left" Margin="550,1614,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoSistemasInformacionEmpresarial" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1614,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoAdminsitracionYSeguridadDeServiciosDeRed" Content="Mucho" HorizontalAlignment="Left" Margin="237,1656,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularAdminsitracionYSeguridadDeServiciosDeRed" Content="Regular" HorizontalAlignment="Left" Margin="341,1656,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoAdminsitracionYSeguridadDeServiciosDeRed" Content="Poco" HorizontalAlignment="Left" Margin="448,1656,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaAdminsitracionYSeguridadDeServiciosDeRed" Content="Nada" HorizontalAlignment="Left" Margin="550,1656,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoAdminsitracionYSeguridadDeServiciosDeRed" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1656,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoTopicosSelectosComputacion1" Content="Mucho" HorizontalAlignment="Left" Margin="237,1697,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMRegularTopicosSelectosComputacion1" Content="Regular" HorizontalAlignment="Left" Margin="341,1697,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoTopicosSelectosComputacion1" Content="Poco" HorizontalAlignment="Left" Margin="448,1697,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaTopicosSelectosComputacion1" Content="Nada" HorizontalAlignment="Left" Margin="550,1697,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoTopicosSelectosComputacion1" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1697,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoTopicosSelectosComputacion2" Content="Mucho" HorizontalAlignment="Left" Margin="237,1739,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularTopicosSelectosComputacion2" Content="Regular" HorizontalAlignment="Left" Margin="341,1739,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoTopicosSelectosComputacion2" Content="Poco" HorizontalAlignment="Left" Margin="448,1739,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaTopicosSelectosComputacion2" Content="Nada" HorizontalAlignment="Left" Margin="550,1739,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoTopicosSelectosComputacion2" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1739,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoTopicosSelectosComputacion3" Content="Mucho" HorizontalAlignment="Left" Margin="237,1781,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularTopicosSelectosComputacion3" Content="Regular" HorizontalAlignment="Left" Margin="341,1781,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoTopicosSelectosComputacion3" Content="Poco" HorizontalAlignment="Left" Margin="448,1781,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaTopicosSelectosComputacion3" Content="Nada" HorizontalAlignment="Left" Margin="550,1781,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoTopicosSelectosComputacion3" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1781,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoTopicosSelectosComputacion4" Content="Mucho" HorizontalAlignment="Left" Margin="237,1828,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularTopicosSelectosComputacion4" Content="Regular" HorizontalAlignment="Left" Margin="341,1828,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoTopicosSelectosComputacion4" Content="Poco" HorizontalAlignment="Left" Margin="448,1828,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaTopicosSelectosComputacion4" Content="Nada" HorizontalAlignment="Left" Margin="550,1828,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoTopicosSelectosComputacion4" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1828,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoSistemasInformacionGeografica" Content="Mucho" HorizontalAlignment="Left" Margin="237,1872,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularSistemasInformacionGeografica" Content="Regular" HorizontalAlignment="Left" Margin="341,1872,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoSistemasInformacionGeografica" Content="Poco" HorizontalAlignment="Left" Margin="448,1872,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaSistemasInformacionGeografica" Content="Nada" HorizontalAlignment="Left" Margin="550,1872,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoSistemasInformacionGeografica" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1872,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoMultimedia" Content="Mucho" HorizontalAlignment="Left" Margin="237,1904,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularMultimedia" Content="Regular" HorizontalAlignment="Left" Margin="341,1904,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoMultimedia" Content="Poco" HorizontalAlignment="Left" Margin="448,1904,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaMultimedia" Content="Nada" HorizontalAlignment="Left" Margin="550,1904,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoMultimedia" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1904,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoAuditoriaInformatica" Content="Mucho" HorizontalAlignment="Left" Margin="237,1935,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularAuditoriaInformatica" Content="Regular" HorizontalAlignment="Left" Margin="341,1935,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoAuditoriaInformatica" Content="Poco" HorizontalAlignment="Left" Margin="448,1935,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaAuditoriaInformatica" Content="Nada" HorizontalAlignment="Left" Margin="550,1935,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoAuditoriaInformatica" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1935,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoTallerIntegracion4" Content="Mucho" HorizontalAlignment="Left" Margin="237,1966,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularTallerIntegracion4" Content="Regular" HorizontalAlignment="Left" Margin="341,1966,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoTallerIntegracion4" Content="Poco" HorizontalAlignment="Left" Margin="448,1966,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaTallerIntegracion4" Content="Nada" HorizontalAlignment="Left" Margin="550,1966,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoTallerIntegracion4" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1966,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbMuchoRedes3" Content="Mucho" HorizontalAlignment="Left" Margin="237,1994,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbRegularRedes3" Content="Regular" HorizontalAlignment="Left" Margin="341,1994,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbPocoRedes3" Content="Poco" HorizontalAlignment="Left" Margin="448,1994,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNadaRedes3" Content="Nada" HorizontalAlignment="Left" Margin="550,1994,0,0" VerticalAlignment="Top"/>
-                    <RadioButton x:Name="rbNoCursoRedes3" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1994,0,0" VerticalAlignment="Top"/>
+                        <RadioButton x:Name="rbMuchoServicioSocial" Content="Mucho" HorizontalAlignment="Left" Margin="237,1479,0,0" VerticalAlignment="Top" GroupName="gp_ServicioSocial"/>
+                        <RadioButton x:Name="rbRegularServicioSocial"  Content="Regular" HorizontalAlignment="Left" Margin="341,1478,0,0" VerticalAlignment="Top" GroupName="gp_ServicioSocial"/>
+                        <RadioButton x:Name="rbPocoServicioSocial"  Content="Poco" HorizontalAlignment="Left" Margin="448,1478,0,0" VerticalAlignment="Top" GroupName="gp_ServicioSocial"/>
+                        <RadioButton x:Name="rbNadaServicioSocial"  Content="Nada" HorizontalAlignment="Left" Margin="550,1478,0,0" VerticalAlignment="Top" GroupName="gp_ServicioSocial"/>
+                        <RadioButton x:Name="rbNoCursoServicioSocial"  Content="No la cursé" HorizontalAlignment="Left" Margin="663,1478,0,0" VerticalAlignment="Top" GroupName="gp_ServicioSocial"/>
+                    <RadioButton x:Name="rbMuchoExperienciaRecepcional" Content="Mucho" HorizontalAlignment="Left" Margin="237,1511,0,0" VerticalAlignment="Top" GroupName="gp_ExperienciaRecepcional"/>
+                        <RadioButton x:Name="rbRegularExperienciaRecepcional" Content="Regular" HorizontalAlignment="Left" Margin="341,1510,0,0" VerticalAlignment="Top" GroupName="gp_ExperienciaRecepcional"/>
+                        <RadioButton x:Name="rbPocoExperienciaRecepcional" Content="Poco" HorizontalAlignment="Left" Margin="448,1510,0,0" VerticalAlignment="Top" GroupName="gp_ExperienciaRecepcional"/>
+                        <RadioButton x:Name="rbNadaExperienciaRecepcional" Content="Nada" HorizontalAlignment="Left" Margin="550,1510,0,0" VerticalAlignment="Top" GroupName="gp_ExperienciaRecepcional"/>
+                        <RadioButton x:Name="rbNoCursoExperienciaRecepcional" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1510,0,0" VerticalAlignment="Top" GroupName="gp_ExperienciaRecepcional"/>
+                        <RadioButton x:Name="rbMuchoDesarrolloAplicacionesEnRed" Content="Mucho" HorizontalAlignment="Left" Margin="237,1536,0,0" VerticalAlignment="Top" GroupName="gp_DesarrolloAplicacionesRed"/>
+                        <RadioButton x:Name="rbRegularDesarrolloAplicacionesEnRed" Content="Regular" HorizontalAlignment="Left" Margin="341,1536,0,0" VerticalAlignment="Top" GroupName="gp_DesarrolloAplicacionesRed"/>
+                        <RadioButton x:Name="rbPocoDesarrolloAplicacionesEnRed" Content="Poco" HorizontalAlignment="Left" Margin="448,1536,0,0" VerticalAlignment="Top" GroupName="gp_DesarrolloAplicacionesRed"/>
+                        <RadioButton x:Name="rbNadaDesarrolloAplicacionesEnRed" Content="Nada" HorizontalAlignment="Left" Margin="550,1536,0,0" VerticalAlignment="Top" GroupName="gp_DesarrolloAplicacionesRed"/>
+                        <RadioButton x:Name="rbNoCursoDesarrolloAplicacionesEnRed" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1536,0,0" VerticalAlignment="Top" GroupName="gp_DesarrolloAplicacionesRed"/>
+                        <RadioButton x:Name="rbMuchoIngenieriaSoftware3" Content="Mucho" HorizontalAlignment="Left" Margin="237,1562,0,0" VerticalAlignment="Top" GroupName="gp_Ingenieria3"/>
+                        <RadioButton x:Name="rbRegularIngenieriaSoftware3" Content="Regular" HorizontalAlignment="Left" Margin="341,1562,0,0" VerticalAlignment="Top" GroupName="gp_Ingenieria3"/>
+                        <RadioButton x:Name="rbPocoIngenieriaSoftware3" Content="Poco" HorizontalAlignment="Left" Margin="448,1562,0,0" VerticalAlignment="Top" GroupName="gp_Ingenieria3"/>
+                        <RadioButton x:Name="rbNadaIngenieriaSoftware3" Content="Nada" HorizontalAlignment="Left" Margin="550,1562,0,0" VerticalAlignment="Top" GroupName="gp_Ingenieria3"/>
+                        <RadioButton x:Name="rbNoCursoIngenieriaSoftware3" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1562,0,0" VerticalAlignment="Top" GroupName="gp_Ingenieria3"/>
+                    <RadioButton x:Name="rbMuchoGraficacion" Content="Mucho" HorizontalAlignment="Left" Margin="237,1588,0,0" VerticalAlignment="Top" GroupName="gp_Graficacion"/>
+                        <RadioButton x:Name="rbRegularGraficacion" Content="Regular" HorizontalAlignment="Left" Margin="341,1588,0,0" VerticalAlignment="Top" GroupName="gp_Graficacion"/>
+                        <RadioButton x:Name="rbPocoGraficacion" Content="Poco" HorizontalAlignment="Left" Margin="448,1588,0,0" VerticalAlignment="Top" GroupName="gp_Graficacion"/>
+                        <RadioButton x:Name="rbNadaGraficacion" Content="Nada" HorizontalAlignment="Left" Margin="550,1588,0,0" VerticalAlignment="Top" GroupName="gp_Graficacion"/>
+                        <RadioButton x:Name="rbNoCursoGraficacion" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1588,0,0" VerticalAlignment="Top" GroupName="gp_Graficacion"/>
+                    <RadioButton x:Name="rbMuchoSistemasInformacionEmpresarial" Content="Mucho" HorizontalAlignment="Left" Margin="237,1614,0,0" VerticalAlignment="Top" GroupName="gp_SistemaInformacionEmpresarial"/>
+                        <RadioButton x:Name="rbRegularSistemasInformacionEmpresarial" Content="Regular" HorizontalAlignment="Left" Margin="341,1614,0,0" VerticalAlignment="Top" GroupName="gp_SistemaInformacionEmpresarial"/>
+                        <RadioButton x:Name="rbPocoSistemasInformacionEmpresarial" Content="Poco" HorizontalAlignment="Left" Margin="448,1614,0,0" VerticalAlignment="Top" GroupName="gp_SistemaInformacionEmpresarial"/>
+                        <RadioButton x:Name="rbNadaSistemasInformacionEmpresarial" Content="Nada" HorizontalAlignment="Left" Margin="550,1614,0,0" VerticalAlignment="Top" GroupName="gp_SistemaInformacionEmpresarial"/>
+                        <RadioButton x:Name="rbNoCursoSistemasInformacionEmpresarial" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1614,0,0" VerticalAlignment="Top" GroupName="gp_SistemaInformacionEmpresarial"/>
+                    <RadioButton x:Name="rbMuchoAdminsitracionYSeguridadDeServiciosDeRed" Content="Mucho" HorizontalAlignment="Left" Margin="237,1656,0,0" VerticalAlignment="Top" GroupName="gp_AdministracionSeguridad"/>
+                        <RadioButton x:Name="rbRegularAdminsitracionYSeguridadDeServiciosDeRed" Content="Regular" HorizontalAlignment="Left" Margin="341,1656,0,0" VerticalAlignment="Top" GroupName="gp_AdministracionSeguridad"/>
+                        <RadioButton x:Name="rbPocoAdminsitracionYSeguridadDeServiciosDeRed" Content="Poco" HorizontalAlignment="Left" Margin="448,1656,0,0" VerticalAlignment="Top" GroupName="gp_AdministracionSeguridad"/>
+                        <RadioButton x:Name="rbNadaAdminsitracionYSeguridadDeServiciosDeRed" Content="Nada" HorizontalAlignment="Left" Margin="550,1656,0,0" VerticalAlignment="Top" GroupName="gp_AdministracionSeguridad"/>
+                        <RadioButton x:Name="rbNoCursoAdminsitracionYSeguridadDeServiciosDeRed" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1656,0,0" VerticalAlignment="Top" GroupName="gp_AdministracionSeguridad"/>
+                    <RadioButton x:Name="rbMuchoTopicosSelectosComputacion1" Content="Mucho" HorizontalAlignment="Left" Margin="237,1697,0,0" VerticalAlignment="Top" GroupName="gp_Topicos1"/>
+                        <RadioButton x:Name="rbMRegularTopicosSelectosComputacion1" Content="Regular" HorizontalAlignment="Left" Margin="341,1697,0,0" VerticalAlignment="Top" GroupName="gp_Topicos1"/>
+                        <RadioButton x:Name="rbPocoTopicosSelectosComputacion1" Content="Poco" HorizontalAlignment="Left" Margin="448,1697,0,0" VerticalAlignment="Top" GroupName="gp_Topicos1"/>
+                        <RadioButton x:Name="rbNadaTopicosSelectosComputacion1" Content="Nada" HorizontalAlignment="Left" Margin="550,1697,0,0" VerticalAlignment="Top" GroupName="gp_Topicos1"/>
+                        <RadioButton x:Name="rbNoCursoTopicosSelectosComputacion1" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1697,0,0" VerticalAlignment="Top" GroupName="gp_Topicos1"/>
+                    <RadioButton x:Name="rbMuchoTopicosSelectosComputacion2" Content="Mucho" HorizontalAlignment="Left" Margin="237,1739,0,0" VerticalAlignment="Top" GroupName="gp_Topicos2"/>
+                        <RadioButton x:Name="rbRegularTopicosSelectosComputacion2" Content="Regular" HorizontalAlignment="Left" Margin="341,1739,0,0" VerticalAlignment="Top" GroupName="gp_Topicos2"/>
+                        <RadioButton x:Name="rbPocoTopicosSelectosComputacion2" Content="Poco" HorizontalAlignment="Left" Margin="448,1739,0,0" VerticalAlignment="Top" GroupName="gp_Topicos2"/>
+                        <RadioButton x:Name="rbNadaTopicosSelectosComputacion2" Content="Nada" HorizontalAlignment="Left" Margin="550,1739,0,0" VerticalAlignment="Top" GroupName="gp_Topicos2"/>
+                        <RadioButton x:Name="rbNoCursoTopicosSelectosComputacion2" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1739,0,0" VerticalAlignment="Top" GroupName="gp_Topicos2"/>
+                    <RadioButton x:Name="rbMuchoTopicosSelectosComputacion3" Content="Mucho" HorizontalAlignment="Left" Margin="237,1781,0,0" VerticalAlignment="Top" GroupName="gp_Topicos3"/>
+                        <RadioButton x:Name="rbRegularTopicosSelectosComputacion3" Content="Regular" HorizontalAlignment="Left" Margin="341,1781,0,0" VerticalAlignment="Top" GroupName="gp_Topicos3"/>
+                        <RadioButton x:Name="rbPocoTopicosSelectosComputacion3" Content="Poco" HorizontalAlignment="Left" Margin="448,1781,0,0" VerticalAlignment="Top" GroupName="gp_Topicos3"/>
+                        <RadioButton x:Name="rbNadaTopicosSelectosComputacion3" Content="Nada" HorizontalAlignment="Left" Margin="550,1781,0,0" VerticalAlignment="Top" GroupName="gp_Topicos3"/>
+                        <RadioButton x:Name="rbNoCursoTopicosSelectosComputacion3" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1781,0,0" VerticalAlignment="Top" GroupName="gp_Topicos3"/>
+                    <RadioButton x:Name="rbMuchoTopicosSelectosComputacion4" Content="Mucho" HorizontalAlignment="Left" Margin="237,1828,0,0" VerticalAlignment="Top" GroupName="gp_Topicos4"/>
+                        <RadioButton x:Name="rbRegularTopicosSelectosComputacion4" Content="Regular" HorizontalAlignment="Left" Margin="341,1828,0,0" VerticalAlignment="Top" GroupName="gp_Topicos4"/>
+                        <RadioButton x:Name="rbPocoTopicosSelectosComputacion4" Content="Poco" HorizontalAlignment="Left" Margin="448,1828,0,0" VerticalAlignment="Top" GroupName="gp_Topicos4"/>
+                        <RadioButton x:Name="rbNadaTopicosSelectosComputacion4" Content="Nada" HorizontalAlignment="Left" Margin="550,1828,0,0" VerticalAlignment="Top" GroupName="gp_Topicos4"/>
+                        <RadioButton x:Name="rbNoCursoTopicosSelectosComputacion4" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1828,0,0" VerticalAlignment="Top" GroupName="gp_Topicos4"/>
+                    <RadioButton x:Name="rbMuchoSistemasInformacionGeografica" Content="Mucho" HorizontalAlignment="Left" Margin="237,1872,0,0" VerticalAlignment="Top" GroupName="gp_SistemasGeografica"/>
+                        <RadioButton x:Name="rbRegularSistemasInformacionGeografica" Content="Regular" HorizontalAlignment="Left" Margin="341,1872,0,0" VerticalAlignment="Top" GroupName="gp_SistemasGeografica"/>
+                        <RadioButton x:Name="rbPocoSistemasInformacionGeografica" Content="Poco" HorizontalAlignment="Left" Margin="448,1872,0,0" VerticalAlignment="Top" GroupName="gp_SistemasGeografica"/>
+                        <RadioButton x:Name="rbNadaSistemasInformacionGeografica" Content="Nada" HorizontalAlignment="Left" Margin="550,1872,0,0" VerticalAlignment="Top" GroupName="gp_SistemasGeografica"/>
+                        <RadioButton x:Name="rbNoCursoSistemasInformacionGeografica" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1872,0,0" VerticalAlignment="Top" GroupName="gp_SistemasGeografica"/>
+                    <RadioButton x:Name="rbMuchoMultimedia" Content="Mucho" HorizontalAlignment="Left" Margin="237,1904,0,0" VerticalAlignment="Top" GroupName="gp_Multimedia"/>
+                        <RadioButton x:Name="rbRegularMultimedia" Content="Regular" HorizontalAlignment="Left" Margin="341,1904,0,0" VerticalAlignment="Top" GroupName="gp_Multimedia"/>
+                        <RadioButton x:Name="rbPocoMultimedia" Content="Poco" HorizontalAlignment="Left" Margin="448,1904,0,0" VerticalAlignment="Top" GroupName="gp_Multimedia"/>
+                        <RadioButton x:Name="rbNadaMultimedia" Content="Nada" HorizontalAlignment="Left" Margin="550,1904,0,0" VerticalAlignment="Top" GroupName="gp_Multimedia"/>
+                        <RadioButton x:Name="rbNoCursoMultimedia" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1904,0,0" VerticalAlignment="Top" GroupName="gp_Multimedia"/>
+                    <RadioButton x:Name="rbMuchoAuditoriaInformatica" Content="Mucho" HorizontalAlignment="Left" Margin="237,1935,0,0" VerticalAlignment="Top" GroupName="gp_AuditoriaInformatica"/>
+                        <RadioButton x:Name="rbRegularAuditoriaInformatica" Content="Regular" HorizontalAlignment="Left" Margin="341,1935,0,0" VerticalAlignment="Top" GroupName="gp_AuditoriaInformatica"/>
+                        <RadioButton x:Name="rbPocoAuditoriaInformatica" Content="Poco" HorizontalAlignment="Left" Margin="448,1935,0,0" VerticalAlignment="Top" GroupName="gp_AuditoriaInformatica"/>
+                        <RadioButton x:Name="rbNadaAuditoriaInformatica" Content="Nada" HorizontalAlignment="Left" Margin="550,1935,0,0" VerticalAlignment="Top" GroupName="gp_AuditoriaInformatica"/>
+                        <RadioButton x:Name="rbNoCursoAuditoriaInformatica" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1935,0,0" VerticalAlignment="Top" GroupName="gp_AuditoriaInformatica"/>
+                    <RadioButton x:Name="rbMuchoTallerIntegracion4" Content="Mucho" HorizontalAlignment="Left" Margin="237,1966,0,0" VerticalAlignment="Top" GroupName="gp_TallerIntegracion4"/>
+                        <RadioButton x:Name="rbRegularTallerIntegracion4" Content="Regular" HorizontalAlignment="Left" Margin="341,1966,0,0" VerticalAlignment="Top" GroupName="gp_TallerIntegracion4"/>
+                        <RadioButton x:Name="rbPocoTallerIntegracion4" Content="Poco" HorizontalAlignment="Left" Margin="448,1966,0,0" VerticalAlignment="Top" GroupName="gp_TallerIntegracion4"/>
+                        <RadioButton x:Name="rbNadaTallerIntegracion4" Content="Nada" HorizontalAlignment="Left" Margin="550,1966,0,0" VerticalAlignment="Top" GroupName="gp_TallerIntegracion4"/>
+                        <RadioButton x:Name="rbNoCursoTallerIntegracion4" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1966,0,0" VerticalAlignment="Top" GroupName="gp_TallerIntegracion4"/>
+                    <RadioButton x:Name="rbMuchoRedes3" Content="Mucho" HorizontalAlignment="Left" Margin="237,1994,0,0" VerticalAlignment="Top" GroupName="gp_Redes3"/>
+                        <RadioButton x:Name="rbRegularRedes3" Content="Regular" HorizontalAlignment="Left" Margin="341,1994,0,0" VerticalAlignment="Top" GroupName="gp_Redes3"/>
+                        <RadioButton x:Name="rbPocoRedes3" Content="Poco" HorizontalAlignment="Left" Margin="448,1994,0,0" VerticalAlignment="Top" GroupName="gp_Redes3"/>
+                        <RadioButton x:Name="rbNadaRedes3" Content="Nada" HorizontalAlignment="Left" Margin="550,1994,0,0" VerticalAlignment="Top" GroupName="gp_Redes3"/>
+                        <RadioButton x:Name="rbNoCursoRedes3" Content="No la cursé" HorizontalAlignment="Left" Margin="663,1994,0,0" VerticalAlignment="Top" GroupName="gp_Redes3"/>
                 </Grid>
             </TabItem>
         </TabControl>

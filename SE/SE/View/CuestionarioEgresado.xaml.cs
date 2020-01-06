@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -22,7 +23,7 @@ namespace SE.View
      */
     public partial class CuestionarioEgresado : Window
     {
-        private InformacionPersonal cuestionarioAcademico;
+        private InformacionAcademica informacionAcademica;
         private bool nuevo;
         private string trabajoLigadoFormacion = "";
         private string tiempoTranscurridoPrimerEmpleo = "";
@@ -87,7 +88,7 @@ namespace SE.View
         private string formacionActual = "";
         private string planDeEstudios = "";
         private string desempeñoDocentes = "";
-        private string organizacionAdmin = "";
+        private string organizacionAdministrativa = "";
         private string instalacion = "";
         private string serviciosApoyo = "";
         private string actCulturalesYDeportivas = "";
@@ -148,9 +149,10 @@ namespace SE.View
         private FichaPreEgreso ficha;
         private InformacionLaboral informacionLaboral;
 
-        public CuestionarioEgresado(Egresado informacionEgresado, FichaPreEgreso ficha, InformacionLaboral informacionLaboral, Boolean nuevo)
+        public CuestionarioEgresado(Egresado informacionEgresado, FichaPreEgreso ficha, InformacionLaboral informacionLaboral, InformacionAcademica informacionAcademica,Boolean nuevo)
         {
             this.nuevo=nuevo;
+            this.informacionAcademica = informacionAcademica;
             this.informacionLaboral = informacionLaboral;
             this.informacionEgresado = informacionEgresado;
             this.ficha = ficha;
@@ -681,21 +683,21 @@ namespace SE.View
 
             if (rbEficienteOrganizacion.IsChecked == true)
             {
-                this.organizacionAdmin = "Eficiente";
+                this.organizacionAdministrativa = "Eficiente";
             }
             else
             {
                 if (rbAceptableOrganizacion.IsChecked == true)
                 {
-                    this.organizacionAdmin = "Aceptable";
+                    this.organizacionAdministrativa = "Aceptable";
                 }
                 if (rbRegularOrganizacion.IsChecked == true)
                 {
-                    this.organizacionAdmin = "Regular";
+                    this.organizacionAdministrativa = "Regular";
                 }
                 if (rbDeficienteOrganizacion.IsChecked == true)
                 {
-                    this.organizacionAdmin = "Deficiente";
+                    this.organizacionAdministrativa = "Deficiente";
                 }
             }
 
@@ -1939,11 +1941,80 @@ namespace SE.View
                     this.redes3 = "No la cursé";
                 }
             }
-            /*
-            this.cuestionarioAcademico.Respuesta = txtIngreso.Text;
-            this.cuestionarioAcademico.Respuesta = txtEgreso.Text;
-            this.resultado = InformaciónAcadémicaDAO.guardar(this.cuestionarioAcademico);
-           */
+
+            this.informacionAcademica.IngresoLicenciatura = txtIngreso.Text;
+            this.informacionAcademica.EgresoLicenciatrua = txtEgreso.Text;
+            this.informacionAcademica.FormacionActual = formacionActual;
+            this.informacionAcademica.PlanDeEstudios = planDeEstudios;
+            this.informacionAcademica.DesempeñoDocentes = desempeñoDocentes;
+            this.informacionAcademica.OrganizacionAdministrativa = organizacionAdministrativa;
+            this.informacionAcademica.Instalacion = instalacion;
+            this.informacionAcademica.ServiciosApoyo = serviciosApoyo;
+            this.informacionAcademica.ActCulturalesYDeportivas = actCulturalesYDeportivas;
+            this.informacionAcademica.Ingles1 = ingles1;
+            this.informacionAcademica.Ingles2 = ingles2;
+            this.informacionAcademica.ComputacionBasica = computacionBasica;
+            this.informacionAcademica.LecturaRedaccion = lecturaRedaccion;
+            this.informacionAcademica.HabilidadesPensamiento = habilidadesPensamiento;
+            this.informacionAcademica.AlgebraLineal = algebraLineal;
+            this.informacionAcademica.Probabilidad = probabilidad;
+            this.informacionAcademica.MatematicasDiscretas = matematicasDiscretas;
+            this.informacionAcademica.AlgoritmosEstucturasDatos1 = algoritmosEstucturasDatos1;
+            this.informacionAcademica.ArquitecturaComputadoras1 = arquitecturaComputadoras1;
+            this.informacionAcademica.MetodologiaInvestigacion = metodologiaInvestigacion;
+            this.informacionAcademica.Logica = logica;
+            this.informacionAcademica.Calculo = calculo;
+            this.informacionAcademica.Redes1 = redes1;
+            this.informacionAcademica.Redes2 = redes2;
+            this.informacionAcademica.IngenieriaSoftware1 = ingenieriaSoftware1;
+            this.informacionAcademica.IngenieriaSoftware2 = ingenieriaSoftware2;
+            this.informacionAcademica.BasesDatos1 = basesDatos1;
+            this.informacionAcademica.BasesDatos2 = basesDatos2;
+            this.informacionAcademica.TallerIntegracion1 = tallerIntegracion1;
+            this.informacionAcademica.SistemasOperativos = sistemasOperativos;
+            this.informacionAcademica.ArquitecturaComputadoras2 = arquitecturaComputadoras2;
+            this.informacionAcademica.AlgoritmosEstructurasDatos2 = algoritmosEstructurasDatos2;
+            this.informacionAcademica.OrganizacionArchivos = organizacionArchivos;
+            this.informacionAcademica.InteligenciaArtificial = inteligenciaArtificial;
+            this.informacionAcademica.TallerIntegracion2 = tallerIntegracion2;
+            this.informacionAcademica.TallerIntegracion3 = tallerIntegracion3;
+            this.informacionAcademica.ProgramacionAvanzada = programacionAvanzada;
+            this.informacionAcademica.ProgramacionDeSistemas = programacionDeSistemas;
+            this.informacionAcademica.EticaLegislacionInformatica = eticaLegislacionInformatica;
+            this.informacionAcademica.FundamentosAdministracion = fundamentosAdministracion;
+            this.informacionAcademica.AdministracionProyectos = administracionProyectos;
+            this.informacionAcademica.Compiladores = compiladores;
+            this.informacionAcademica.AdministracionRecursosInformaticos = administracionRecursosInformaticos;
+            this.informacionAcademica.ServicioSocial = servicioSocial;
+            this.informacionAcademica.ExperienciaRecepcional = experienciaRecepcional;
+            this.informacionAcademica.DesarrolloAplicacionesEnRed = desarrolloAplicacionesEnRed;
+            this.informacionAcademica.IngenieriaSoftware3 = ingenieriaSoftware3;
+            this.informacionAcademica.Graficacion = graficacion;
+            this.informacionAcademica.SistemasInformacionEmpresarial = sistemasInformacionEmpresarial;
+            this.informacionAcademica.AdministracionSeguridadDeServiciosEnRed = administracionSeguridadDeServiciosEnRed;
+            this.informacionAcademica.TopicosSelectos1 = topicosSelectos1;
+            this.informacionAcademica.TopicosSelectos2 = topicosSelectos2;
+            this.informacionAcademica.TopicosSelectos3 = topicosSelectos3;
+            this.informacionAcademica.TopicosSelectos4 = topicosSelectos4;
+            this.informacionAcademica.SistemasInformacionGeografica = sistemasInformacionGeografica;
+            this.informacionAcademica.Multimedia = multimedia;
+            this.informacionAcademica.AuditoriaInformatica = auditoriaInformatica;
+            this.informacionAcademica.TallerIntegracion4 = tallerIntegracion4;
+            this.informacionAcademica.Redes3 = redes3;
+
+            if (this.informacionAcademica.IngresoLicenciatura == "" || this.informacionAcademica.EgresoLicenciatrua == "" || this.informacionAcademica.FormacionActual == "" || this.informacionAcademica.PlanDeEstudios == "" || this.informacionAcademica.DesempeñoDocentes == "" || this.informacionAcademica.OrganizacionAdministrativa == "" || this.informacionAcademica.Instalacion == "" || this.informacionAcademica.ServiciosApoyo == "" || this.informacionAcademica.ActCulturalesYDeportivas == "" || this.informacionAcademica.Ingles1 == "" || this.informacionAcademica.Ingles2 == "" ||
+                this.informacionAcademica.ComputacionBasica == "" || this.informacionAcademica.HabilidadesPensamiento == "" || this.informacionAcademica.AlgebraLineal == "" || this.informacionAcademica.Probabilidad == "" || this.informacionAcademica.MatematicasDiscretas == "" || this.informacionAcademica.AlgoritmosEstucturasDatos1 == "" || this.informacionAcademica.ArquitecturaComputadoras1 == "" || this.informacionAcademica.MetodologiaInvestigacion == "" || this.informacionAcademica.Logica == "" || this.informacionAcademica.Redes1 == "" || this.informacionAcademica.Redes2 == "" ||
+                this.informacionAcademica.IngenieriaSoftware1 == "" || this.informacionAcademica.IngenieriaSoftware2 == "" || this.informacionAcademica.BasesDatos1 == "" || this.informacionAcademica.BasesDatos2 == "" || this.informacionAcademica.TallerIntegracion1 == "" || this.informacionAcademica.SistemasOperativos == "" || this.informacionAcademica.ArquitecturaComputadoras2 == "" || this.informacionAcademica.AlgoritmosEstructurasDatos2 == "" || this.informacionAcademica.OrganizacionArchivos == "" || this.informacionAcademica.InteligenciaArtificial == "" || this.informacionAcademica.TallerIntegracion2 == "" ||
+                this.informacionAcademica.TallerIntegracion3 == "" || this.informacionAcademica.ProgramacionAvanzada == "" || this.informacionAcademica.ProgramacionDeSistemas == "" || this.informacionAcademica.EticaLegislacionInformatica == "" || this.informacionAcademica.FundamentosAdministracion == "" || this.informacionAcademica.AdministracionProyectos == "" || this.informacionAcademica.Compiladores == "" || this.informacionAcademica.AdministracionRecursosInformaticos == "" || this.informacionAcademica.ServicioSocial == "" || this.informacionAcademica.ExperienciaRecepcional == "" || this.informacionAcademica.DesarrolloAplicacionesEnRed == "" ||
+                this.informacionAcademica.IngenieriaSoftware3 == "" || this.informacionAcademica.Graficacion == "" || this.informacionAcademica.SistemasInformacionEmpresarial == "" || this.informacionAcademica.AdministracionSeguridadDeServiciosEnRed == "" || this.informacionAcademica.TopicosSelectos1 == "" || this.informacionAcademica.TopicosSelectos2 == "" || this.informacionAcademica.TopicosSelectos3 == "" || this.informacionAcademica.TopicosSelectos4 == "" || this.informacionAcademica.SistemasInformacionGeografica == "" || this.informacionAcademica.Multimedia == "" || this.informacionAcademica.AuditoriaInformatica == "" ||
+                this.informacionAcademica.TallerIntegracion4 == "" || this.informacionAcademica.Redes3 == "")
+            {
+                System.Windows.MessageBox.Show(this, "LLena todos los campos");
+            }
+            else
+            {
+                this.Resultado = InformaciónAcadémicaDAO.guardar(this.informacionAcademica, this.nuevo);
+            }
         }
     
         private void btnCancelarInformacionLaboral_Click(object sender, RoutedEventArgs e)
@@ -1951,5 +2022,7 @@ namespace SE.View
             this.Resultado = false;
             this.Close();
         }
+
+
     }
 }

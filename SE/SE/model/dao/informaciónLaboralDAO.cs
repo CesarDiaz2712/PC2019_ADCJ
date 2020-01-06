@@ -168,7 +168,7 @@ namespace SE.model.dao
                         il.DiferenciaConocimientoRespuesta7 = (!rd.IsDBNull(64)) ? rd.GetString(64) : "";
                         il.DiferenciaConocimientoRespuesta8 = (!rd.IsDBNull(65)) ? rd.GetString(65) : "";
                         il.FormacionProfesional = (!rd.IsDBNull(66)) ? rd.GetString(66) : "";
-                        il.IdEgresado = (!rd.IsDBNull(68)) ? rd.GetInt32(68) : 68;
+                        il.IdEgresado = (!rd.IsDBNull(0)) ? rd.GetInt32(0) : 0;
                     }
                     rd.Close();
                     command.Dispose();
