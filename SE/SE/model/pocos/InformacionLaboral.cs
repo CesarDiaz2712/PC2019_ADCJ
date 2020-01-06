@@ -73,7 +73,14 @@ namespace SE.model.pocos
         private string diferenciaConocimientoRespuesta5;
         private string diferenciaConocimientoRespuesta6;
         private string diferenciaConocimientoRespuesta7;
-        private string diferenciaConocimientoRespuesta8;
+        private string conocimientosBasico1;
+        private string conocimientosBasico2;
+        private string conocimientosBasico3;
+        private string conocimientosBasico4;
+        private string conocimientosBasico5;
+        private string conocimientosBasico6;
+        private string conocimientosBasico7;
+        private string conocimientosBasico8;
         private string formacionProfesional;
         private Int32 idEgresado;
         
@@ -147,8 +154,15 @@ namespace SE.model.pocos
         public string DiferenciaConocimientoRespuesta5 { get => diferenciaConocimientoRespuesta5; set => diferenciaConocimientoRespuesta5 = value; }
         public string DiferenciaConocimientoRespuesta6 { get => diferenciaConocimientoRespuesta6; set => diferenciaConocimientoRespuesta6 = value; }
         public string DiferenciaConocimientoRespuesta7 { get => diferenciaConocimientoRespuesta7; set => diferenciaConocimientoRespuesta7 = value; }
-        public string DiferenciaConocimientoRespuesta8 { get => diferenciaConocimientoRespuesta8; set => diferenciaConocimientoRespuesta8 = value; }
         public string FormacionProfesional { get => formacionProfesional; set => formacionProfesional = value; }
         public string TrabajoLigadoFormacion { get => trabajoLigadoFormacion; set => trabajoLigadoFormacion = value; }
+        public string ConocimientosBasico1 { get => conocimientosBasico1; set => conocimientosBasico1 = value; }
+        public string ConocimientosBasico2 { get => conocimientosBasico2; set => conocimientosBasico2 = value; }
+        public string ConocimientosBasico3 { get => conocimientosBasico3; set => conocimientosBasico3 = value; }
+        public string ConocimientosBasico4 { get => conocimientosBasico4; set => conocimientosBasico4 = value; }
+        public string ConocimientosBasico5 { get => conocimientosBasico5; set => conocimientosBasico5 = value; }
+        public string ConocimientosBasico6 { get => conocimientosBasico6; set => conocimientosBasico6 = value; }
+        public string ConocimientosBasico7 { get => conocimientosBasico7; set => conocimientosBasico7 = value; }
+        public string ConocimientosBasico8 { get => conocimientosBasico8; set => conocimientosBasico8 = value; }
     }
 }

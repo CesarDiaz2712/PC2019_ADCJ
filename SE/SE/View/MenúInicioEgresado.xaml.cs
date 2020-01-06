@@ -45,6 +45,7 @@ namespace SE.View
         {
             egresado = EgresadoDAO.consultaInformacionEgresado(usuarioIniciado.IdEgresado);
             informacionPersonal = FichaPreEgresoDAO.obtenerFichaPreEgreso(usuarioIniciado.IdEgresado);
+            informacionLaboral = InformaciónLaboralDAO.obtenerInformacionLaboralByIdEgresado(usuarioIniciado.IdEgresado);
             informacionAcademica = InformaciónAcadémicaDAO.obtenerInformacionAcademicaByIdEgresado(usuarioIniciado.IdEgresado);
         }
 
@@ -73,6 +74,13 @@ namespace SE.View
             this.consultaInformacion();
             ConsultaInformacion consultaInformacion = new ConsultaInformacion(egresado, informacionPersonal, informacionLaboral, informacionAcademica, false);
             consultaInformacion.Show();
+        }
+
+        private void btnCerrarSesion_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow inicio = new MainWindow();
+            this.Close();
+            inicio.Show();
         }
     }
 }

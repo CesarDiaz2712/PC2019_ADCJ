@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SE.View"
         mc:Ignorable="d"
-        Title="Cuestionario de Egresados" Height="547.317" Width="800" ResizeMode="NoResize">
+        Title="Cuestionario de Egresados" Height="2163.317" Width="800" ResizeMode="NoResize">
     <ScrollViewer CanContentScroll="True">
         <Grid Background="#FF345781">
         <Label x:Name="lblSistemaEgresados" Content="SISTEMAS DE EGRESADOS"  HorizontalAlignment="Left" Margin="32,20,0,0" VerticalAlignment="Top" Width="328" FontSize="24" FontWeight="Bold" Height="40" FontFamily="Microsoft JhengHei"/>
@@ -35,7 +35,7 @@
                     <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Height="22" Margin="421,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74"/>
                     <Label x:Name="lblEmail" Content="Email:" HorizontalAlignment="Left" Margin="495,152,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei" RenderTransformOrigin="3.295,0.462"/>
                     <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="22" Margin="544,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232"/>
-                    <Button x:Name="btnFinalizar" Content="Finalizar" HorizontalAlignment="Left" Margin="690,207,0,0" VerticalAlignment="Top" Width="74"/>
+                    <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="690,207,0,0" VerticalAlignment="Top" Width="74" Click="btnCancelar_Click"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="tabInformacionLaboral" Header="Información Laboral" Background="#FF345781" Margin="136,-3,-270,1">
@@ -145,15 +145,15 @@
                     <Label Content="¿Por qué?" HorizontalAlignment="Left" Margin="190,1357,0,0" VerticalAlignment="Top"/>
                     <TextBox x:Name="txtPropiaEmpresa" HorizontalAlignment="Left" Height="23" Margin="264,1360,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="460" Grid.ColumnSpan="2"/>
                     <Label Content="17.- ¿En que áreas de conocimiento detectó tener deficiencias al entrar al mercado laboral?" HorizontalAlignment="Left" Margin="37,1396,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Redes" HorizontalAlignment="Left" Margin="52,1427,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Software especializado (paquetes)" HorizontalAlignment="Left" Margin="165,1427,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Programación de sistemas" HorizontalAlignment="Left" Margin="567,1427,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-                    <CheckBox Content="Conocimientos administrativos" HorizontalAlignment="Left" Margin="165,1456,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Ingeniería de software " HorizontalAlignment="Left" Margin="399,1427,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.489,0.267"/>
-                    <CheckBox Content="Dominio de otro idioma" HorizontalAlignment="Left" Margin="399,1456,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Lenguajes de programación. ¿Cuáles?:" HorizontalAlignment="Left" Margin="44,1485,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Paquetería" HorizontalAlignment="Left" Margin="52,1456,0,0" VerticalAlignment="Top"/>
-                    <TextBox HorizontalAlignment="Left" Height="23" Margin="266,1488,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="459" Grid.ColumnSpan="2"/>
+                        <CheckBox x:Name="chkRedesDiferencias" Content="Redes" HorizontalAlignment="Left" Margin="52,1427,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkSoftwareDiferencias" Content="Software especializado (paquetes)" HorizontalAlignment="Left" Margin="165,1427,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkProgramacionDiferencias" Content="Programación de sistemas" HorizontalAlignment="Left" Margin="567,1427,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                        <CheckBox x:Name="chkConocimientosAdministrativosDiferencias" Content="Conocimientos administrativos" HorizontalAlignment="Left" Margin="165,1456,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkIngenieriaDiferencias" Content="Ingeniería de software " HorizontalAlignment="Left" Margin="399,1427,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.489,0.267"/>
+                        <CheckBox x:Name="chkIdiomaDiferencias" Content="Dominio de otro idioma" HorizontalAlignment="Left" Margin="399,1456,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Lenguajes de programación. ¿Cuáles?:" HorizontalAlignment="Left" Margin="44,1485,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkPaqueteriaDiferencias" Content="Paquetería" HorizontalAlignment="Left" Margin="52,1456,0,0" VerticalAlignment="Top"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="266,1488,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="459" Grid.ColumnSpan="2"/>
                     <Label Content="Otros:" HorizontalAlignment="Left" Margin="44,1516,0,0" VerticalAlignment="Top"/>
                     <TextBox HorizontalAlignment="Left" Height="23" Margin="94,1516,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="632" Grid.ColumnSpan="2"/>
                     <Label Content="18.- ¿Cuáles son los conocimientos básicos requeridos por la empresa en la que trabajas actualmente?" HorizontalAlignment="Left" Margin="35,1558,0,0" VerticalAlignment="Top"/>
@@ -222,8 +222,8 @@
                     <Label x:Name="lblIniciacionDisciplina" Content="Iniciación a la Disciplina:" HorizontalAlignment="Left" Margin="25,606,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lblFormacionDisciplinar" Content="Formación Disciplinar:" HorizontalAlignment="Left" Margin="25,776,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lblAreaTerminal" Content="Área Terminal:" HorizontalAlignment="Left" Margin="24,1447,0,0" VerticalAlignment="Top"/>
-                    <Button x:Name="btnCancelarInfAcademica" Content="Cancelar" HorizontalAlignment="Left" Margin="550,2022,0,0" VerticalAlignment="Top" Width="75"/>
-                    <Button x:Name="btnFinalizarInfAcademica" Content="Finalizar" HorizontalAlignment="Left" Margin="643,2022,0,0" VerticalAlignment="Top" Width="75" Click="btnFinalizarAcademica_Click" RenderTransformOrigin="1.907,3.65"/>
+                    <Button x:Name="btnCancelarInfAcademica" Content="Cancelar" HorizontalAlignment="Left" Margin="550,2022,0,0" VerticalAlignment="Top" Width="75" Click="btnCancelarInfAcademica_Click"/>
+                    <Button x:Name="btnGuardarInfAcademica" Content="Guardar" HorizontalAlignment="Left" Margin="643,2022,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.907,3.65"/>
                     <Label x:Name="lblIngles1" Content="8.- Inglés I:" HorizontalAlignment="Left" Margin="25,376,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lblIngles2" Content="9.- Inglés II:" HorizontalAlignment="Left" Margin="25,402,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lblComputacionBasica" Content="10.- Computación básica:" HorizontalAlignment="Left" Margin="25,428,0,0" VerticalAlignment="Top"/>

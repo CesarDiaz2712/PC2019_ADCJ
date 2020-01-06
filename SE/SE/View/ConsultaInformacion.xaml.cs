@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using SE.model.dao;
 using SE.model.pocos;
 
 namespace SE.View
@@ -25,6 +26,78 @@ namespace SE.View
         private InformacionLaboral informacionLaboral;
         private InformacionAcademica informacionAcademica;
         private bool nuevo;
+        private Boolean resultado;
+
+
+        private string trabajoLigadoFormacion = "";
+        private string tiempoTranscurridoPrimerEmpleo = "";
+        private string promedioIngresoMensual = "";
+        private string razonNoEncontrartrabajo = "";
+        private string importanciaExperiencia = "";
+        private string tipoOrganismo = "";
+        private string saberesTeoricosRespuesta1 = "";
+        private string saberesTeoricosRespuesta2 = "";
+        private string saberesTeoricosRespuesta3 = "";
+        private string saberesTeoricosRespuesta4 = "";
+        private string saberesTeoricosRespuesta5 = "";
+        private string saberesTeoricosRespuesta6 = "";
+        private string saberesTeoricosRespuesta7 = "";
+        private string saberesTeoricosRespuesta8 = "";
+        private string saberesTeoricosRespuesta9 = "";
+        private string saberesTeoricosRespuesta10 = "";
+        private string saberesHeuristicosRespuesta1 = "";
+        private string saberesHeuristicosRespuesta2 = "";
+        private string saberesHeuristicosRespuesta3 = "";
+        private string saberesHeuristicosRespuesta4 = "";
+        private string saberesHeuristicosRespuesta5 = "";
+        private string saberesHeuristicosRespuesta6 = "";
+        private string saberesHeuristicosRespuesta7 = "";
+        private string saberesAxiologicosRespuesta1 = "";
+        private string saberesAxiologicosRespuesta2 = "";
+        private string saberesAxiologicosRespuesta3 = "";
+        private string saberesAxiologicosRespuesta4 = "";
+        private string saberesAxiologicosRespuesta5 = "";
+        private string saberesAxiologicosRespuesta6 = "";
+        private string saberesAxiologicosRespuesta7 = "";
+        private string saberesAxiologicosRespuesta8 = "";
+        private string saberesAxiologicosRespuesta9 = "";
+        private string saberesAxiologicosRespuesta10 = "";
+        private string saberesAxiologicosRespuesta11 = "";
+        private string saberesAxiologicosRespuesta12 = "";
+        private string saberesAxiologicosRespuesta13 = "";
+        private string saberesAxiologicosRespuesta14 = "";
+        private string saberesAxiologicosRespuesta15 = "";
+        private string saberesAxiologicosRespuesta16 = "";
+        private string saberesAxiologicosRespuesta17 = "";
+        private string saberesAxiologicosRespuesta18 = "";
+        private string saberesAxiologicosRespuesta19 = "";
+        private string funcionesRealizadasRespuesta1 = "";
+        private string funcionesRealizadasRespuesta2 = "";
+        private string funcionesRealizadasRespuesta3 = "";
+        private string funcionesRealizadasRespuesta4 = "";
+        private string funcionesRealizadasRespuesta5 = "";
+        private string funcionesRealizadasRespuesta6 = "";
+        private string propiaEmpresa = "";
+        private string propiaEmpresaPorque = "";
+        private string diferenciaConocimientoRespuesta1 = "";
+        private string diferenciaConocimientoRespuesta2 = "";
+        private string diferenciaConocimientoRespuesta3 = "";
+        private string diferenciaConocimientoRespuesta4 = "";
+        private string diferenciaConocimientoRespuesta5 = "";
+        private string diferenciaConocimientoRespuesta6 = "";
+        private string diferenciaConocimientoRespuesta7 = "";
+        private string conocmientosBasicos1 = "";
+        private string conocmientosBasicos2 = "";
+        private string conocmientosBasicos3 = "";
+        private string conocmientosBasicos4 = "";
+        private string conocmientosBasicos5 = "";
+        private string conocmientosBasicos6 = "";
+        private string conocmientosBasicos7 = "";
+        private string conocmientosBasicos8 = "";
+        private string formacionProfesional = "";
+
+        public bool Resultado { get => resultado; set => resultado = value; }
+
         public ConsultaInformacion(Egresado egresado, FichaPreEgreso ficha, InformacionLaboral informacionLaboral, InformacionAcademica informacionAcademica, Boolean nuevo)
         {
             this.egresado = egresado;
@@ -33,6 +106,424 @@ namespace SE.View
             this.informacionAcademica = informacionAcademica;
             this.nuevo = nuevo;
             InitializeComponent();
+
+            txtMatricula.Text = egresado.Matricula;
+            txtApellidos.Text = egresado.Apellidos;
+            txtNombres.Text = egresado.Nombre;
+            txtCalle.Text = ficha.Calle;
+            txtNumeroCasa.Text = ficha.NumeroCasa;
+            txtColonia.Text = ficha.Colonia;
+            txtCiudad.Text = ficha.Ciudad;
+            txtEstado.Text = ficha.Estado;
+            txtCP.Text = ficha.CodigoPostal;
+            txtTelefono.Text = ficha.Telefono;
+            txtEmail.Text = ficha.Email;
+
+            /*
+             * Consulta Informacion Laboral
+             */
+
+            txtCargoDesempenado.Text = informacionLaboral.CargoDesempenado;
+            txtTipoContratacion.Text = informacionLaboral.TipoContratacion;
+
+            if (informacionLaboral.TrabajoLigadoFormacion == "Sí")
+            {
+                rbSi.IsChecked = true;
+            }
+            else
+            {
+                rbNo.IsChecked = true;
+            }
+
+            if (informacionLaboral.TiempoTranscurridoPrimerEmpleo == "12 a 18 meses")
+            {
+                rb12a18Meses.IsChecked = true;
+            }else
+            {
+                if (informacionLaboral.TiempoTranscurridoPrimerEmpleo == "Menos de 6 meses")
+                {
+                    rbMenosDe6Meses.IsChecked = true;
+                }
+                if (informacionLaboral.TiempoTranscurridoPrimerEmpleo == "6 a 12 meses")
+                {
+                    rb6a12Meses.IsChecked = true;
+                }
+                if (informacionLaboral.TiempoTranscurridoPrimerEmpleo == "18 a 24 meses")
+                {
+                    rb18a24Meses.IsChecked = true;
+                }
+                if (informacionLaboral.TiempoTranscurridoPrimerEmpleo == "Mas de 24 meses")
+                {
+                    rbMasDe24Meses.IsChecked = true;
+                }
+                if (informacionLaboral.TiempoTranscurridoPrimerEmpleo == "No he trabajado")
+                {
+                    rbSinTrabajo.IsChecked = true;
+                }
+            }
+
+            if (informacionLaboral.RazonNoEncontrartrabajo == "Personales")
+            {
+                rbPersonales.IsChecked = true;
+            }
+            else
+            {
+                if (informacionLaboral.RazonNoEncontrartrabajo == "No cumplir el perfil solicitado")
+                {
+                    rbNoPerfil.IsChecked = true;
+                }
+                if (informacionLaboral.RazonNoEncontrartrabajo == "Falta de oferta de trabajo")
+                {
+                    rbFaltaOferta.IsChecked = true;
+                }
+                if (informacionLaboral.RazonNoEncontrartrabajo != "")
+                {
+                    txtOtraRazon.Text = informacionLaboral.RazonNoEncontrartrabajo; ;
+                }
+            }
+
+            if (informacionLaboral.ImportanciaExperiencia == "Mucha")
+            {
+                rbMucha.IsChecked = true;
+            }
+            else
+            {
+                if (informacionLaboral.ImportanciaExperiencia == "Poca")
+                {
+                    rbPoca.IsChecked = true;
+                }
+                if (informacionLaboral.ImportanciaExperiencia == "Ninguna")
+                {
+                    rbNinguna.IsChecked = true;
+                }
+            }
+
+            if (informacionLaboral.TipoOrganismo == "Privada")
+            {
+                rbPrivada.IsChecked = true;
+            }
+            else
+            {
+                if (informacionLaboral.TipoOrganismo == "Pública")
+                {
+                    rbPublica.IsChecked = true;
+                }
+                if (informacionLaboral.TipoOrganismo == "Gubernamental")
+                {
+                    rbGubernamental.IsChecked = true;
+                }
+                if (informacionLaboral.TipoOrganismo == "Educativa")
+                {
+                    rbEducativa.IsChecked = true;
+                }
+                if (informacionLaboral.TipoOrganismo == "Ejerce en forma independiente")
+                {
+                    rbIndependiente.IsChecked = true;
+                }
+            }
+
+            txtConocimientosTeoricos.Text = informacionLaboral.ConocimientosTeoricos;
+            txtSaberesHeuristicos.Text = informacionLaboral.SaberesHeuristicos;
+            txtExperienciaEducativaCursadas.Text = informacionLaboral.ExperienciaEducativaCursada;
+
+            if (informacionLaboral.SaberesTeoricosRespuesta1 == "Algorítmia")
+            {
+                chkAlgoritmiaAdquirida.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesTeoricosRespuesta2 == "Programación estructurada")
+            {
+                chkProgramacionEstructuradaAdquirida.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesTeoricosRespuesta3 == "Programación Concurrente")
+            {
+                chkProgramacionConcurrenteAdquirida.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesTeoricosRespuesta4 == "Sistemas inteligentes")
+            {
+                chkSistemasInteligentesAdquirida.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesTeoricosRespuesta5 == "Estructuras de datos")
+            {
+                chkEstructuraDatosAdquirida.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesTeoricosRespuesta6 == "Ingeniería de Software")
+            {
+                chkIngenieriaSoftwareAdquirida.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesTeoricosRespuesta7 == "Base de Datos")
+            {
+                chkBasesDatosAdquirida.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesTeoricosRespuesta8 == "Procesos de desarrollo de software")
+            {
+                chkProcesosAdquirida.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesTeoricosRespuesta9 == "Programación Orientada a Objetos")
+            {
+                chkProgramacionObjetosAdquirida.IsChecked = true;
+            }
+
+            if (informacionLaboral.SaberesHeuristicosRespuesta1 == "Planteamiento y Solucion a Problemas algoritmicos")
+            {
+                chkProblemasAlgoritmicosAdquirido.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesHeuristicosRespuesta2 == "Diseño e Implantacion de Programas")
+            {
+                chkDiseñoImplantacionProgramasAdquirido.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesHeuristicosRespuesta3 == "Diseño e implementacion de base de datos")
+            {
+                chkDiseñoImplantacionBaseDatos.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesHeuristicosRespuesta4 == "Diseño e implementacion de redes")
+            {
+                chkDiseñoRedesAdquirido.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesHeuristicosRespuesta5 == "Diseño e implementacion de sistemas inteligentes")
+            {
+                chkDiseñoImplantacionSistemas.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesHeuristicosRespuesta6 == "Uso de un lenguaje de programación y su entorno de desarrollo para codificar y probar algoritmos")
+            {
+                chkUsoLenguaje.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesHeuristicosRespuesta7 == "Aplicación de una metodología para la obtención de modelos de análisis y diseño de un sistema de software")
+            {
+                chkAplicacionMetodologiaAdquirido.IsChecked = true;
+            }
+
+            if (informacionLaboral.SaberesAxiologicosRespuesta1 == "Creatividad")
+            {
+                chkCreatividad.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesAxiologicosRespuesta2 == "Responsabilidad")
+            {
+                chkResponsabilidad.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesAxiologicosRespuesta3 == "Paciencia")
+            {
+                chkPaciencia.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesAxiologicosRespuesta4 == "Trabajo en Equipo")
+            {
+                chkTrabajoEquipo.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesAxiologicosRespuesta5 == "Colaboracion")
+            {
+                chkColaboracion.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesAxiologicosRespuesta6 == "Originalidad")
+            {
+                chkOriginalidad.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesAxiologicosRespuesta7 == "Honetidad")
+            {
+                chkHonestidad.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesAxiologicosRespuesta8 == "Respeto")
+            {
+                chkRespeto.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesAxiologicosRespuesta9 == "Discrecion")
+            {
+                chkDiscrecion.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesAxiologicosRespuesta10 == "Meticulosidad")
+            {
+                chkMeticulosidad.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesAxiologicosRespuesta11 == "Cooperacion")
+            {
+                chkCooperacion.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesAxiologicosRespuesta12 == "Iniciativa")
+            {
+                chkIniciativa.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesAxiologicosRespuesta13 == "Interes")
+            {
+                chkInteres.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesAxiologicosRespuesta14 == "AutoAprendizaje")
+            {
+                chkAutoAprendizaje.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesAxiologicosRespuesta15 == "Coherencia")
+            {
+                chkCoherencia.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesAxiologicosRespuesta16 == "Curiosidad")
+            {
+                chkCuriosidad.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesAxiologicosRespuesta17 == "Imaginacion")
+            {
+                chkImaginacion.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesAxiologicosRespuesta18 == "Tolerancia")
+            {
+                chkTolerencia.IsChecked = true;
+            }
+            if (informacionLaboral.SaberesAxiologicosRespuesta19 == "Constancia")
+            {
+                chkConstancia.IsChecked = true;
+            }
+
+            if (informacionLaboral.FuncionesRealizadasRespuesta1 == "Organizacion")
+            {
+                chkOrganizacionRealizada.IsChecked = true;
+            }
+            if (informacionLaboral.FuncionesRealizadasRespuesta2 == "Planeacion")
+            {
+                chkPlaneacionRealizada.IsChecked = true;
+            }
+            if (informacionLaboral.FuncionesRealizadasRespuesta3 == "Diagnostico")
+            {
+                chkDiagnosticoRealizado.IsChecked = true;
+            }
+            if (informacionLaboral.FuncionesRealizadasRespuesta4 == "Cooperacion")
+            {
+                chkCooperacionRealizada.IsChecked = true;
+            }
+            if (informacionLaboral.FuncionesRealizadasRespuesta5 == "Discrecion")
+            {
+                chkDiscrecionRealizada.IsChecked = true;
+            }
+            if (informacionLaboral.FuncionesRealizadasRespuesta6 == "Control")
+            {
+                chkControlRealizado.IsChecked = true;
+            }
+
+            txtFuncionesDesempeñadas.Text = informacionLaboral.FuncionesDesempenadas;
+            txtProblematicasSolucionadas.Text = informacionLaboral.ProblematicasSolucionadas;
+
+            if (informacionLaboral.PromedioIngresoMensual == "Menos de 5000")
+            {
+                rb5000.IsChecked = true;
+            }
+            else
+            {
+                if (informacionLaboral.PromedioIngresoMensual == "De 5000 a 10000")
+                {
+                    rb5001a10000.IsChecked = true;
+                }
+                if (informacionLaboral.PromedioIngresoMensual == "De 10001 a 15000")
+                {
+                    rb10001a15000.IsChecked = true;
+                }
+                if (informacionLaboral.PromedioIngresoMensual == "De 15001 a 20000")
+                {
+                    rb15001a20000.IsChecked = true;
+                }
+                if (informacionLaboral.PromedioIngresoMensual == "20001 o mas")
+                {
+                    rb20001oMas.IsChecked = true;
+                }
+            }
+
+            if (informacionLaboral.PropiaEmpresa == "Sí")
+            {
+                rbSiPregunta16.IsChecked = true;
+                txtPropiaEmpresa.Text = informacionLaboral.PropiaEmpresaPorque;
+            }
+            else
+            {
+                rbNoPregunta16.IsChecked = true;
+                txtPropiaEmpresa.Text = informacionLaboral.PropiaEmpresaPorque;
+            }
+
+            if (informacionLaboral.DiferenciaConocimientoRespuesta1 == "Redes")
+            {
+                chkRedesDiferencias.IsChecked = true;
+            }
+            if (informacionLaboral.DiferenciaConocimientoRespuesta2 == "Paquetería")
+            {
+                chkPaqueteriaDiferencias.IsChecked = true;
+            }
+            if (informacionLaboral.DiferenciaConocimientoRespuesta3 == "Software especializado (paquetes)")
+            {
+                chkSoftwareDiferencias.IsChecked = true;
+            }
+            if (informacionLaboral.DiferenciaConocimientoRespuesta4 == "Conocimientos administrativos")
+            {
+                chkConocimientosAdministrativosDiferencias.IsChecked = true;
+            }
+            if (informacionLaboral.DiferenciaConocimientoRespuesta5 == "Ingeniería de software")
+            {
+                chkIngenieriaDiferencias.IsChecked = true;
+            }
+            if (informacionLaboral.DiferenciaConocimientoRespuesta6 == "Dominio de otro idioma")
+            {
+                chkIdiomaDiferencias.IsChecked = true;
+            }
+            if (informacionLaboral.DiferenciaConocimientoRespuesta7 == "Programación de sistemas")
+            {
+                chkProgramacionDiferencias.IsChecked = true;
+            }
+
+
+            if (informacionLaboral.ConocimientosBasico1 == "Manejo de Bases de Datos")
+            {
+                chkManejoBaseDatos.IsChecked = true;
+            }
+            if (informacionLaboral.ConocimientosBasico2 == "Programacion de Sistemas")
+            {
+                chkSistemas.IsChecked = true;
+            }
+            if (informacionLaboral.ConocimientosBasico3 == "Manejo de Redes")
+            {
+                chkManejoRedes.IsChecked = true;
+            }
+            if (informacionLaboral.ConocimientosBasico4 == "Manejo de Paquetes")
+            {
+                chkManejoPaquetes.IsChecked = true;
+            }
+            if (informacionLaboral.ConocimientosBasico5 == "Disdeño de Websites")
+            {
+                chkDiseñoWebsites.IsChecked = true;
+            }
+            if (informacionLaboral.ConocimientosBasico6 == "Manejo de otro Idioma")
+            {
+                chkManejoIdioma.IsChecked = true;
+            }
+            if (informacionLaboral.ConocimientosBasico7 == "Mantenimiento de equipos de computo")
+            {
+                chkMantenimientoComputo.IsChecked = true;
+            }
+            if (informacionLaboral.ConocimientosBasico8 == "Manejo de Multimedia")
+            {
+                chkManejoMultimedia.IsChecked = true;
+            }
+
+
+            if (informacionLaboral.FormacionProfesional == "Excelente")
+            {
+                rbExcelenteFormacion.IsChecked = true;
+            }
+            else
+            {
+                if (informacionLaboral.FormacionProfesional == "Muy Buena")
+                {
+                    rbMuyBuenaFormacion.IsChecked = true;
+                }
+                if (informacionLaboral.FormacionProfesional == "Buena")
+                {
+                    rbBuenaFormacion.IsChecked = true;
+                }
+                if (informacionLaboral.FormacionProfesional == "Regular")
+                {
+                    rbRegularFormacion.IsChecked = true;
+                }
+                if (informacionLaboral.FormacionProfesional == "Mala")
+                {
+                    rbMalaFormacion.IsChecked = true;
+                }
+            }
+
+
+            /*
+             * Consulta InformacionAcademica
+             */
             txtIngreso.Text = informacionAcademica.IngresoLicenciatura;
             txtEgreso.Text = informacionAcademica.EgresoLicenciatrua;
 
@@ -1359,6 +1850,607 @@ namespace SE.View
                     rbNoCursoRedes3.IsChecked = true;
                 }
             }
+        }
+
+        private void btnRegresar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnRegresarInformacionLaboral_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnRegresarInfAcademica_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnModificar_Click(object sender, RoutedEventArgs e)
+        {
+            txtCargoDesempenado.IsEnabled = true;
+            txtTipoContratacion.IsEnabled = true;
+            rbSi.IsEnabled = true;
+            rbNo.IsEnabled = true;
+            rbMasDe24Meses.IsEnabled = true;
+            rb12a18Meses.IsEnabled = true;
+            rb18a24Meses.IsEnabled = true;
+            rb6a12Meses.IsEnabled = true;
+            rbMenosDe6Meses.IsEnabled = true;
+            rbSinTrabajo.IsEnabled = true;
+            rbPersonales.IsEnabled = true;
+            rbNoPerfil.IsEnabled = true;
+            rbFaltaOferta.IsEnabled = true;
+            txtOtraRazon.IsEnabled = true;
+            rbMucha.IsEnabled = true;
+            rbPoca.IsEnabled = true;
+            rbNinguna.IsEnabled = true;
+            rbPrivada.IsEnabled = true;
+            rbPublica.IsEnabled = true;
+            rbGubernamental.IsEnabled = true;
+            rbEducativa.IsEnabled = true;
+            rbIndependiente.IsEnabled = true;
+            txtConocimientosTeoricos.IsEnabled = true;
+            txtSaberesHeuristicos.IsEnabled = true;
+            txtExperienciaEducativaCursadas.IsEnabled = true;
+            chkAlgoritmiaAdquirida.IsEnabled = true;
+            chkProgramacionEstructuradaAdquirida.IsEnabled = true;
+            chkProgramacionConcurrenteAdquirida.IsEnabled = true;
+            chkSistemasInteligentesAdquirida.IsEnabled = true;
+            chkRedesAdquirida.IsEnabled = true;
+            chkEstructuraDatosAdquirida.IsEnabled = true;
+            chkIngenieriaSoftwareAdquirida.IsEnabled = true;
+            chkBasesDatosAdquirida.IsEnabled = true;
+            chkProcesosAdquirida.IsEnabled = true;
+            chkProgramacionObjetosAdquirida.IsEnabled = true;
+            chkProblemasAlgoritmicosAdquirido.IsEnabled = true;
+            chkDiseñoImplantacionProgramasAdquirido.IsEnabled = true;
+            chkDiseñoImplantacionBaseDatos.IsEnabled = true;
+            chkDiseñoRedesAdquirido.IsEnabled = true;
+            chkDiseñoImplantacionSistemas.IsEnabled = true;
+            chkUsoLenguaje.IsEnabled = true;
+            chkAplicacionMetodologiaAdquirido.IsEnabled = true;
+            chkCreatividad.IsEnabled = true;
+            chkResponsabilidad.IsEnabled = true;
+            chkPaciencia.IsEnabled = true;
+            chkTrabajoEquipo.IsEnabled = true;
+            chkColaboracion.IsEnabled = true;
+            chkOriginalidad.IsEnabled = true;
+            chkHonestidad.IsEnabled = true;
+            chkRespeto.IsEnabled = true;
+            chkDiscrecion.IsEnabled = true;
+            chkMeticulosidad.IsEnabled = true;
+            chkCooperacion.IsEnabled = true;
+            chkIniciativa.IsEnabled = true;
+            chkInteres.IsEnabled = true;
+            chkAutoAprendizaje.IsEnabled = true;
+            chkCoherencia.IsEnabled = true;
+            chkCuriosidad.IsEnabled = true;
+            chkImaginacion.IsEnabled = true;
+            chkTolerencia.IsEnabled = true;
+            chkConstancia.IsEnabled = true;
+            chkOrganizacionRealizada.IsEnabled = true;
+            chkPlaneacionRealizada.IsEnabled = true;
+            chkDiagnosticoRealizado.IsEnabled = true;
+            chkCooperacionRealizada.IsEnabled = true;
+            chkDiscrecionRealizada.IsEnabled = true;
+            chkControlRealizado.IsEnabled = true;
+            txtFuncionesDesempeñadas.IsEnabled = true;
+            txtProblematicasSolucionadas.IsEnabled = true;
+            rb5000.IsEnabled = true;
+            rb5001a10000.IsEnabled = true;
+            rb10001a15000.IsEnabled = true;
+            rb15001a20000.IsEnabled = true;
+            rb20001oMas.IsEnabled = true;
+            rbSiPregunta16.IsEnabled = true;
+            rbNoPregunta16.IsEnabled = true;
+            txtPropiaEmpresa.IsEnabled = true;
+            chkRedesDiferencias.IsEnabled = true;
+            chkIdiomaDiferencias.IsEnabled = true;
+            chkPaqueteriaDiferencias.IsEnabled = true;
+            chkSoftwareDiferencias.IsEnabled = true;
+            chkConocimientosAdministrativosDiferencias.IsEnabled = true;
+            chkIngenieriaDiferencias.IsEnabled = true;
+            chkProgramacionDiferencias.IsEnabled = true;
+            txtLenguajes.IsEnabled = true;
+            txtOtrosLenguajes.IsEnabled = true;
+            chkManejoBaseDatos.IsEnabled = true;
+            chkSistemas.IsEnabled = true;
+            chkManejoRedes.IsEnabled = true;
+            chkManejoPaquetes.IsEnabled = true;
+            chkDiseñoWebsites.IsEnabled = true;
+            chkManejoIdioma.IsEnabled = true;
+            chkMantenimientoComputo.IsEnabled = true;
+            chkManejoMultimedia.IsEnabled = true;
+            rbExcelenteFormacion.IsEnabled = true;
+            rbBuenaFormacion.IsEnabled = true;
+            rbRegularFormacion.IsEnabled = true;
+            rbMuyBuenaFormacion.IsEnabled = true;
+            rbMalaFormacion.IsEnabled = true;
+            rbMuyMalaFormacion.IsEnabled = true;
+            btnGuardaInformacionLaboral.IsEnabled = true;
+        }
+
+
+        private void btnGuardarLaboral_Click(object sender, RoutedEventArgs e)
+        {
+            if (rbSi.IsChecked == true)
+            {
+                this.trabajoLigadoFormacion = "Sí";
+            }
+            else
+            {
+                this.trabajoLigadoFormacion = "No";
+            }
+
+
+            if (rbMenosDe6Meses.IsChecked == true)
+            {
+                this.tiempoTranscurridoPrimerEmpleo = "Menos de 6 meses";
+            }
+            else
+            {
+                if (rb6a12Meses.IsChecked == true)
+                {
+                    this.tiempoTranscurridoPrimerEmpleo = "6 a 12 meses";
+                }
+                if (rb12a18Meses.IsChecked == true)
+                {
+                    this.tiempoTranscurridoPrimerEmpleo = "12 a 18 meses";
+                }
+                if (rb18a24Meses.IsChecked == true)
+                {
+                    this.tiempoTranscurridoPrimerEmpleo = "18 a 24 meses";
+                }
+                if (rbMasDe24Meses.IsChecked == true)
+                {
+                    this.tiempoTranscurridoPrimerEmpleo = "Mas de 24 meses";
+                }
+                if (rbSinTrabajo.IsChecked == true)
+                {
+                    this.tiempoTranscurridoPrimerEmpleo = "No he trabajado";
+                }
+            }
+
+            if (rb5000.IsChecked == true)
+            {
+                this.promedioIngresoMensual = "Menos de 5000";
+            }
+            else
+            {
+                if (rb5001a10000.IsChecked == true)
+                {
+                    this.promedioIngresoMensual = "De 5000 a 10000";
+                }
+                if (rb10001a15000.IsChecked == true)
+                {
+                    this.promedioIngresoMensual = "De 10001 a 15000";
+                }
+                if (rb15001a20000.IsChecked == true)
+                {
+                    this.promedioIngresoMensual = "De 15001 a 20000";
+                }
+                if (rb20001oMas.IsChecked == true)
+                {
+                    this.promedioIngresoMensual = "20001 o mas";
+                }
+            }
+
+            if (rbPersonales.IsChecked == true)
+            {
+                this.razonNoEncontrartrabajo = "Personales";
+            }
+            else
+            {
+                if (rbNoPerfil.IsChecked == true)
+                {
+                    this.razonNoEncontrartrabajo = "No cumplir perfil solicitado";
+                }
+                if (rbFaltaOferta.IsChecked == true)
+                {
+                    this.razonNoEncontrartrabajo = "Falta de oferta de trabajo";
+                }
+                if (txtOtraRazon.Text.Length > 0 || txtOtraRazon.Text != null)
+                {
+                    this.razonNoEncontrartrabajo = txtOtraRazon.Text;
+                }
+            }
+
+            if (rbMucha.IsChecked == true)
+            {
+                this.importanciaExperiencia = "Mucha";
+            }
+            else
+            {
+                if (rbPoca.IsChecked == true)
+                {
+                    this.importanciaExperiencia = "Poca";
+                }
+                if (rbNinguna.IsChecked == true)
+                {
+                    this.importanciaExperiencia = "Ninguna";
+                }
+            }
+
+            if (rbPrivada.IsChecked == true)
+            {
+                this.tipoOrganismo = "Privada";
+            }
+            else
+            {
+                if (rbPublica.IsChecked == true)
+                {
+                    this.tipoOrganismo = "Publica";
+                }
+                if (rbIndependiente.IsChecked == true)
+                {
+                    this.tipoOrganismo = "Ejerce en forma Independiente";
+                }
+                if (rbGubernamental.IsChecked == true)
+                {
+                    this.tipoOrganismo = "Gubernamental";
+                }
+                if (rbEducativa.IsChecked == true)
+                {
+                    this.tipoOrganismo = "Educativa";
+                }
+            }
+
+            if (chkAlgoritmiaAdquirida.IsChecked == true)
+            {
+                this.saberesTeoricosRespuesta1 = "Algoritmia";
+            }
+            if (chkProgramacionEstructuradaAdquirida.IsChecked == true)
+            {
+                this.saberesTeoricosRespuesta2 = "Programacion Estructurada";
+            }
+            if (chkProgramacionConcurrenteAdquirida.IsChecked == true)
+            {
+                this.saberesTeoricosRespuesta3 = "Programacion Concurrente";
+            }
+            if (chkSistemasInteligentesAdquirida.IsChecked == true)
+            {
+                this.saberesTeoricosRespuesta4 = "Sistemas Inteligentes";
+            }
+            if (chkRedesAdquirida.IsChecked == true)
+            {
+                this.saberesTeoricosRespuesta5 = "Redes";
+            }
+            if (chkEstructuraDatosAdquirida.IsChecked == true)
+            {
+                this.saberesTeoricosRespuesta6 = "Estructura de Datos";
+            }
+            if (chkIngenieriaSoftwareAdquirida.IsChecked == true)
+            {
+                this.saberesTeoricosRespuesta7 = "Ingenieria de Software";
+            }
+            if (chkBasesDatosAdquirida.IsChecked == true)
+            {
+                this.saberesTeoricosRespuesta8 = "Base de Datos";
+            }
+            if (chkProcesosAdquirida.IsChecked == true)
+            {
+                this.saberesTeoricosRespuesta9 = "Procesos de Desarrollo de Software";
+            }
+            if (chkProgramacionObjetosAdquirida.IsChecked == true)
+            {
+                this.saberesTeoricosRespuesta10 = "Programacion Orientada a Objetos";
+            }
+
+            if (chkProblemasAlgoritmicosAdquirido.IsChecked == true)
+            {
+                this.saberesHeuristicosRespuesta1 = "Planteamiento y Solucion a Problemas algoritmicos";
+            }
+            if (chkDiseñoImplantacionProgramasAdquirido.IsChecked == true)
+            {
+                this.saberesHeuristicosRespuesta2 = "Diseño e Implantacion de Programas";
+            }
+            if (chkDiseñoImplantacionBaseDatos.IsChecked == true)
+            {
+                this.saberesHeuristicosRespuesta3 = "Diseño e implementacion de base de datos";
+            }
+            if (chkDiseñoRedesAdquirido.IsChecked == true)
+            {
+                this.saberesHeuristicosRespuesta4 = "Diseño e implementacion de redes";
+            }
+            if (chkDiseñoImplantacionSistemas.IsChecked == true)
+            {
+                this.saberesHeuristicosRespuesta5 = "Diseño e implementacion de sistemas inteligentes";
+            }
+            if (chkUsoLenguaje.IsChecked == true)
+            {
+                this.saberesHeuristicosRespuesta6 = "Uso de un lenguaje de programación y su entorno de desarrollo para codificar y probar algoritmos";
+            }
+            if (chkAplicacionMetodologiaAdquirido.IsChecked == true)
+            {
+                this.saberesHeuristicosRespuesta7 = "Aplicación de una metodología para la obtención de modelos de análisis y diseño de un sistema de software";
+            }
+
+            if (chkCreatividad.IsChecked == true)
+            {
+                this.saberesAxiologicosRespuesta1 = "Creatividad";
+            }
+            if (chkResponsabilidad.IsChecked == true)
+            {
+                this.saberesAxiologicosRespuesta2 = "Responsabilidad";
+            }
+            if (chkPaciencia.IsChecked == true)
+            {
+                this.saberesAxiologicosRespuesta3 = "Paciencia";
+            }
+            if (chkTrabajoEquipo.IsChecked == true)
+            {
+                this.saberesAxiologicosRespuesta4 = "Trabajo en Equipo";
+            }
+            if (chkColaboracion.IsChecked == true)
+            {
+                this.saberesAxiologicosRespuesta5 = "Colaboracion";
+            }
+            if (chkOriginalidad.IsChecked == true)
+            {
+                this.saberesAxiologicosRespuesta6 = "Originalidad";
+            }
+            if (chkHonestidad.IsChecked == true)
+            {
+                this.saberesAxiologicosRespuesta7 = "Honetidad";
+            }
+            if (chkRespeto.IsChecked == true)
+            {
+                this.saberesAxiologicosRespuesta8 = "Respeto";
+            }
+            if (chkDiscrecion.IsChecked == true)
+            {
+                this.saberesAxiologicosRespuesta9 = "Discrecion";
+            }
+            if (chkMeticulosidad.IsChecked == true)
+            {
+                this.saberesAxiologicosRespuesta10 = "Meticulosidad";
+            }
+            if (chkCooperacion.IsChecked == true)
+            {
+                this.saberesAxiologicosRespuesta11 = "Cooperacion";
+            }
+            if (chkIniciativa.IsChecked == true)
+            {
+                this.saberesAxiologicosRespuesta12 = "Iniciativa";
+            }
+            if (chkInteres.IsChecked == true)
+            {
+                this.saberesAxiologicosRespuesta13 = "Interes";
+            }
+            if (chkAutoAprendizaje.IsChecked == true)
+            {
+                this.saberesAxiologicosRespuesta14 = "AutoAprendizaje";
+            }
+            if (chkCoherencia.IsChecked == true)
+            {
+                this.saberesAxiologicosRespuesta15 = "Coherencia";
+            }
+            if (chkCuriosidad.IsChecked == true)
+            {
+                this.saberesAxiologicosRespuesta16 = "Curiosidad";
+            }
+            if (chkImaginacion.IsChecked == true)
+            {
+                this.saberesAxiologicosRespuesta17 = "Imaginacion";
+            }
+            if (chkTolerencia.IsChecked == true)
+            {
+                this.saberesAxiologicosRespuesta18 = "Tolerancia";
+            }
+            if (chkConstancia.IsChecked == true)
+            {
+                this.saberesAxiologicosRespuesta19 = "Constancia";
+            }
+
+            if (chkOrganizacionRealizada.IsChecked == true)
+            {
+                this.funcionesRealizadasRespuesta1 = "Organizacion";
+            }
+            if (chkPlaneacionRealizada.IsChecked == true)
+            {
+                this.funcionesRealizadasRespuesta2 = "Planeacion";
+            }
+            if (chkDiagnosticoRealizado.IsChecked == true)
+            {
+                this.funcionesRealizadasRespuesta3 = "Diagnostico";
+            }
+            if (chkCooperacionRealizada.IsChecked == true)
+            {
+                this.funcionesRealizadasRespuesta4 = "Cooperacion";
+            }
+            if (chkDiscrecionRealizada.IsChecked == true)
+            {
+                this.funcionesRealizadasRespuesta5 = "Discrecion";
+            }
+            if (chkControlRealizado.IsChecked == true)
+            {
+                this.funcionesRealizadasRespuesta6 = "Control";
+            }
+
+            if (rbSiPregunta16.IsChecked == true && txtPropiaEmpresa.Text.Length > 0)
+            {
+                this.propiaEmpresa = "Si";
+                this.propiaEmpresaPorque = txtPropiaEmpresa.Text;
+            }
+            else
+            {
+                if (rbNoPregunta16.IsChecked == true && txtPropiaEmpresa.Text.Length > 0)
+                {
+                    this.propiaEmpresa = "No";
+                    this.propiaEmpresaPorque = txtPropiaEmpresa.Text;
+                }
+            }
+
+            if (chkRedesDiferencias.IsChecked == true)
+            {
+                this.diferenciaConocimientoRespuesta1 = "Redes";
+            }
+            if (chkRedesDiferencias.IsChecked == true)
+            {
+                this.diferenciaConocimientoRespuesta2 = "Paquetería";
+            }
+            if (chkRedesDiferencias.IsChecked == true)
+            {
+                this.diferenciaConocimientoRespuesta3 = "Software especializado (paquetes)";
+            }
+            if (chkRedesDiferencias.IsChecked == true)
+            {
+                this.diferenciaConocimientoRespuesta4 = "Conocimientos administrativos";
+            }
+            if (chkRedesDiferencias.IsChecked == true)
+            {
+                this.diferenciaConocimientoRespuesta5 = "Ingeniería de software";
+            }
+            if (chkRedesDiferencias.IsChecked == true)
+            {
+                this.diferenciaConocimientoRespuesta6 = "Dominio de otro idioma";
+            }
+            if (chkRedesDiferencias.IsChecked == true)
+            {
+                this.diferenciaConocimientoRespuesta7 = "Programación de sistemas";
+            }
+
+
+
+            if (chkManejoBaseDatos.IsChecked == true)
+            {
+                this.conocmientosBasicos1 = "Manejo de Bases de Datos";
+            }
+            if (chkSistemas.IsChecked == true)
+            {
+                this.conocmientosBasicos2 = "Programacion de Sistemas";
+            }
+            if (chkManejoRedes.IsChecked == true)
+            {
+                this.conocmientosBasicos3 = "Manejo de Redes";
+            }
+            if (chkManejoPaquetes.IsChecked == true)
+            {
+                this.conocmientosBasicos4 = "Manejo de Paquetes";
+            }
+            if (chkDiseñoWebsites.IsChecked == true)
+            {
+                this.conocmientosBasicos5 = "Disdeño de Websites";
+            }
+            if (chkManejoIdioma.IsChecked == true)
+            {
+                this.conocmientosBasicos6 = "Manejo de otro Idioma";
+            }
+            if (chkMantenimientoComputo.IsChecked == true)
+            {
+                this.conocmientosBasicos7 = "Mantenimiento de equipos de computo";
+            }
+            if (chkManejoMultimedia.IsChecked == true)
+            {
+                this.conocmientosBasicos8 = "Manejo de Multimedia";
+            }
+
+            if (rbExcelenteFormacion.IsChecked == true)
+            {
+                this.formacionProfesional = "Excelente";
+            }
+            else
+            {
+                if (rbMuyBuenaFormacion.IsChecked == true)
+                {
+                    this.formacionProfesional = "Muy Buena";
+                }
+                if (rbBuenaFormacion.IsChecked == true)
+                {
+                    this.formacionProfesional = "Buena";
+                }
+                if (rbRegularFormacion.IsChecked == true)
+                {
+                    this.formacionProfesional = "Regular";
+                }
+                if (rbMalaFormacion.IsChecked == true)
+                {
+                    this.formacionProfesional = "Mala";
+                }
+                if (rbMuyMalaFormacion.IsChecked == true)
+                {
+                    this.formacionProfesional = "Muy mala";
+                }
+            }
+
+
+            this.informacionLaboral.CargoDesempenado = txtCargoDesempenado.Text;
+            this.informacionLaboral.TipoContratacion = txtTipoContratacion.Text;
+            this.informacionLaboral.TrabajoLigadoFormacion = trabajoLigadoFormacion;
+            this.informacionLaboral.TiempoTranscurridoPrimerEmpleo = tiempoTranscurridoPrimerEmpleo;
+            this.informacionLaboral.RazonNoEncontrartrabajo = razonNoEncontrartrabajo;
+            this.informacionLaboral.ImportanciaExperiencia = importanciaExperiencia;
+            this.informacionLaboral.TipoOrganismo = tipoOrganismo;
+            this.informacionLaboral.ConocimientosTeoricos = txtConocimientosTeoricos.Text;
+            this.informacionLaboral.SaberesHeuristicos = txtSaberesHeuristicos.Text;
+            this.informacionLaboral.ExperienciaEducativaCursada = txtExperienciaEducativaCursadas.Text;
+            this.informacionLaboral.SaberesTeoricosRespuesta1 = saberesTeoricosRespuesta1;
+            this.informacionLaboral.SaberesTeoricosRespuesta2 = saberesTeoricosRespuesta2;
+            this.informacionLaboral.SaberesTeoricosRespuesta3 = saberesTeoricosRespuesta3;
+            this.informacionLaboral.SaberesTeoricosRespuesta4 = saberesTeoricosRespuesta4;
+            this.informacionLaboral.SaberesTeoricosRespuesta5 = saberesTeoricosRespuesta5;
+            this.informacionLaboral.SaberesTeoricosRespuesta6 = saberesTeoricosRespuesta6;
+            this.informacionLaboral.SaberesTeoricosRespuesta7 = saberesTeoricosRespuesta7;
+            this.informacionLaboral.SaberesTeoricosRespuesta8 = saberesTeoricosRespuesta8;
+            this.informacionLaboral.SaberesTeoricosRespuesta9 = saberesTeoricosRespuesta9;
+            this.informacionLaboral.SaberesTeoricosRespuesta10 = saberesTeoricosRespuesta10;
+            this.informacionLaboral.SaberesHeuristicosRespuesta1 = saberesHeuristicosRespuesta1;
+            this.informacionLaboral.SaberesHeuristicosRespuesta2 = saberesHeuristicosRespuesta2;
+            this.informacionLaboral.SaberesHeuristicosRespuesta3 = saberesHeuristicosRespuesta3;
+            this.informacionLaboral.SaberesHeuristicosRespuesta4 = saberesHeuristicosRespuesta4;
+            this.informacionLaboral.SaberesHeuristicosRespuesta5 = saberesHeuristicosRespuesta5;
+            this.informacionLaboral.SaberesHeuristicosRespuesta6 = saberesHeuristicosRespuesta6;
+            this.informacionLaboral.SaberesHeuristicosRespuesta7 = saberesHeuristicosRespuesta7;
+            this.informacionLaboral.SaberesAxiologicosRespuesta1 = saberesAxiologicosRespuesta1;
+            this.informacionLaboral.SaberesAxiologicosRespuesta2 = saberesAxiologicosRespuesta2;
+            this.informacionLaboral.SaberesAxiologicosRespuesta3 = saberesAxiologicosRespuesta3;
+            this.informacionLaboral.SaberesAxiologicosRespuesta4 = saberesAxiologicosRespuesta4;
+            this.informacionLaboral.SaberesAxiologicosRespuesta5 = saberesAxiologicosRespuesta5;
+            this.informacionLaboral.SaberesAxiologicosRespuesta6 = saberesAxiologicosRespuesta6;
+            this.informacionLaboral.SaberesAxiologicosRespuesta7 = saberesAxiologicosRespuesta7;
+            this.informacionLaboral.SaberesAxiologicosRespuesta8 = saberesAxiologicosRespuesta8;
+            this.informacionLaboral.SaberesAxiologicosRespuesta9 = saberesAxiologicosRespuesta9;
+            this.informacionLaboral.SaberesAxiologicosRespuesta10 = saberesAxiologicosRespuesta10;
+            this.informacionLaboral.SaberesAxiologicosRespuesta11 = saberesAxiologicosRespuesta11;
+            this.informacionLaboral.SaberesAxiologicosRespuesta12 = saberesAxiologicosRespuesta12;
+            this.informacionLaboral.SaberesAxiologicosRespuesta13 = saberesAxiologicosRespuesta13;
+            this.informacionLaboral.SaberesAxiologicosRespuesta14 = saberesAxiologicosRespuesta14;
+            this.informacionLaboral.SaberesAxiologicosRespuesta15 = saberesAxiologicosRespuesta15;
+            this.informacionLaboral.SaberesAxiologicosRespuesta16 = saberesAxiologicosRespuesta16;
+            this.informacionLaboral.SaberesAxiologicosRespuesta17 = saberesAxiologicosRespuesta17;
+            this.informacionLaboral.SaberesAxiologicosRespuesta18 = saberesAxiologicosRespuesta18;
+            this.informacionLaboral.SaberesAxiologicosRespuesta19 = saberesAxiologicosRespuesta19;
+            this.informacionLaboral.FuncionesRealizadasRespuesta1 = funcionesRealizadasRespuesta1;
+            this.informacionLaboral.FuncionesRealizadasRespuesta2 = funcionesRealizadasRespuesta2;
+            this.informacionLaboral.FuncionesRealizadasRespuesta3 = funcionesRealizadasRespuesta3;
+            this.informacionLaboral.FuncionesRealizadasRespuesta4 = funcionesRealizadasRespuesta4;
+            this.informacionLaboral.FuncionesRealizadasRespuesta5 = funcionesRealizadasRespuesta5;
+            this.informacionLaboral.FuncionesRealizadasRespuesta6 = funcionesRealizadasRespuesta6;
+            this.informacionLaboral.FuncionesDesempenadas = txtFuncionesDesempeñadas.Text;
+            this.informacionLaboral.ProblematicasSolucionadas = txtProblematicasSolucionadas.Text;
+            this.informacionLaboral.PromedioIngresoMensual = promedioIngresoMensual;
+            this.informacionLaboral.PropiaEmpresa = propiaEmpresa;
+            this.informacionLaboral.PropiaEmpresaPorque = propiaEmpresaPorque;
+            this.informacionLaboral.DiferenciaConocimientoRespuesta1 = diferenciaConocimientoRespuesta1;
+            this.informacionLaboral.DiferenciaConocimientoRespuesta2 = diferenciaConocimientoRespuesta2;
+            this.informacionLaboral.DiferenciaConocimientoRespuesta3 = diferenciaConocimientoRespuesta3;
+            this.informacionLaboral.DiferenciaConocimientoRespuesta4 = diferenciaConocimientoRespuesta4;
+            this.informacionLaboral.DiferenciaConocimientoRespuesta5 = diferenciaConocimientoRespuesta5;
+            this.informacionLaboral.DiferenciaConocimientoRespuesta6 = diferenciaConocimientoRespuesta6;
+            this.informacionLaboral.DiferenciaConocimientoRespuesta7 = diferenciaConocimientoRespuesta7;
+            this.informacionLaboral.ConocimientosBasico1 = conocmientosBasicos1;
+            this.informacionLaboral.ConocimientosBasico2 = conocmientosBasicos2;
+            this.informacionLaboral.ConocimientosBasico3 = conocmientosBasicos3;
+            this.informacionLaboral.ConocimientosBasico4 = conocmientosBasicos4;
+            this.informacionLaboral.ConocimientosBasico5 = conocmientosBasicos5;
+            this.informacionLaboral.ConocimientosBasico6 = conocmientosBasicos6;
+            this.informacionLaboral.ConocimientosBasico7 = conocmientosBasicos7;
+            this.informacionLaboral.ConocimientosBasico8 = conocmientosBasicos8;
+            this.informacionLaboral.FormacionProfesional = formacionProfesional;
+
+            this.Resultado = InformaciónLaboralDAO.guardar(this.informacionLaboral, this.nuevo);
         }
     }
 }

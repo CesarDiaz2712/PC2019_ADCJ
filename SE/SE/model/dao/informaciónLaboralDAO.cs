@@ -12,9 +12,9 @@ namespace SE.model.dao
 {
     public class InformaciónLaboralDAO
     {
-        public static InformacionLaboral getInformacionLaboralByIdEgresado(Int32 idEgresado)
+        public static InformacionLaboral obtenerInformacionLaboralByIdEgresado(Int32 idEgresado)
         {
-            InformacionLaboral informacionLaboral = new InformacionLaboral();
+            InformacionLaboral informacionLaboral = null;
             SqlConnection conn = null;
             try
             {
@@ -89,9 +89,15 @@ namespace SE.model.dao
                                                  "x.diferenciaConocimientoRespuesta5, " +
                                                  "x.diferenciaConocimientoRespuesta6, " +
                                                  "x.diferenciaConocimientoRespuesta7, " +
-                                                 "x.diferenciaConocimientoRespuesta8, " +
+                                                 "x.conocimientoBasico1, " +
+                                                 "x.conocimientoBasico2, " +
+                                                 "x.conocimientoBasico3, " +
+                                                 "x.conocimientoBasico4, " +
+                                                 "x.conocimientoBasico5, " +
+                                                 "x.conocimientoBasico6, " +
+                                                 "x.conocimientoBasico7, " +
+                                                 "x.conocimientoBasico8, " +
                                                  "x.formacionProfesional, " +
-                                                 "x.idPreguntaLaboral, " +
                                                  "x.idEgresado " +
                                                  "FROM dbo.InformacionLabora x " +
                                                  "WHERE x.idEgresado = '{0}';", idEgresado);
@@ -100,75 +106,82 @@ namespace SE.model.dao
                     rd = command.ExecuteReader();
                     while (rd.Read())
                     {
-                        InformacionLaboral il = new InformacionLaboral();
-                        il.IdInformacionLaboral = (!rd.IsDBNull(0)) ? rd.GetInt32(0) : 0;
-                        il.CargoDesempenado = (!rd.IsDBNull(1)) ? rd.GetString(1) : "";
-                        il.TipoContratacion = (!rd.IsDBNull(2)) ? rd.GetString(2) : "";
-                        il.TrabajoLigadoFormacion = (!rd.IsDBNull(3)) ? rd.GetString(3) : "";
-                        il.TiempoTranscurridoPrimerEmpleo = (!rd.IsDBNull(4)) ? rd.GetString(4) : "";
-                        il.PromedioIngresoMensual = (!rd.IsDBNull(5)) ? rd.GetString(5) : "";
-                        il.RazonNoEncontrartrabajo = (!rd.IsDBNull(6)) ? rd.GetString(6) : "";
-                        il.ImportanciaExperiencia = (!rd.IsDBNull(7)) ? rd.GetString(7) : "";
-                        il.TipoOrganismo = (!rd.IsDBNull(8)) ? rd.GetString(8) : "";
-                        il.ConocimientosTeoricos = (!rd.IsDBNull(9)) ? rd.GetString(9) : "";
-                        il.SaberesHeuristicos = (!rd.IsDBNull(10)) ? rd.GetString(10) : "";
-                        il.ExperienciaEducativaCursada = (!rd.IsDBNull(11)) ? rd.GetString(11) : "";
-                        il.SaberesTeoricosRespuesta1 = (!rd.IsDBNull(12)) ? rd.GetString(12) : "";
-                        il.SaberesTeoricosRespuesta2 = (!rd.IsDBNull(13)) ? rd.GetString(13) : "";
-                        il.SaberesTeoricosRespuesta3 = (!rd.IsDBNull(14)) ? rd.GetString(14) : "";
-                        il.SaberesTeoricosRespuesta4 = (!rd.IsDBNull(15)) ? rd.GetString(15) : "";
-                        il.SaberesTeoricosRespuesta5 = (!rd.IsDBNull(16)) ? rd.GetString(16) : "";
-                        il.SaberesTeoricosRespuesta6 = (!rd.IsDBNull(17)) ? rd.GetString(17) : "";
-                        il.SaberesTeoricosRespuesta7 = (!rd.IsDBNull(18)) ? rd.GetString(18) : "";
-                        il.SaberesTeoricosRespuesta8 = (!rd.IsDBNull(19)) ? rd.GetString(19) : "";
-                        il.SaberesTeoricosRespuesta9 = (!rd.IsDBNull(20)) ? rd.GetString(20) : "";
-                        il.SaberesTeoricosRespuesta10 = (!rd.IsDBNull(21)) ? rd.GetString(21) : "";
-                        il.SaberesHeuristicosRespuesta1 = (!rd.IsDBNull(22)) ? rd.GetString(22) : "";
-                        il.SaberesHeuristicosRespuesta2 = (!rd.IsDBNull(23)) ? rd.GetString(23) : "";
-                        il.SaberesHeuristicosRespuesta3 = (!rd.IsDBNull(24)) ? rd.GetString(24) : "";
-                        il.SaberesHeuristicosRespuesta4 = (!rd.IsDBNull(25)) ? rd.GetString(25) : "";
-                        il.SaberesHeuristicosRespuesta5 = (!rd.IsDBNull(26)) ? rd.GetString(26) : "";
-                        il.SaberesHeuristicosRespuesta6 = (!rd.IsDBNull(27)) ? rd.GetString(27) : "";
-                        il.SaberesHeuristicosRespuesta7 = (!rd.IsDBNull(28)) ? rd.GetString(28) : "";
-                        il.SaberesAxiologicosRespuesta1 = (!rd.IsDBNull(29)) ? rd.GetString(29) : "";
-                        il.SaberesAxiologicosRespuesta2 = (!rd.IsDBNull(30)) ? rd.GetString(30) : "";
-                        il.SaberesAxiologicosRespuesta3 = (!rd.IsDBNull(31)) ? rd.GetString(31) : "";
-                        il.SaberesAxiologicosRespuesta4 = (!rd.IsDBNull(32)) ? rd.GetString(32) : "";
-                        il.SaberesAxiologicosRespuesta5 = (!rd.IsDBNull(33)) ? rd.GetString(33) : "";
-                        il.SaberesAxiologicosRespuesta6 = (!rd.IsDBNull(34)) ? rd.GetString(34) : "";
-                        il.SaberesAxiologicosRespuesta7 = (!rd.IsDBNull(35)) ? rd.GetString(35) : "";
-                        il.SaberesAxiologicosRespuesta8 = (!rd.IsDBNull(36)) ? rd.GetString(36) : "";
-                        il.SaberesAxiologicosRespuesta9 = (!rd.IsDBNull(37)) ? rd.GetString(37) : "";
-                        il.SaberesAxiologicosRespuesta10 = (!rd.IsDBNull(38)) ? rd.GetString(38) : "";
-                        il.SaberesAxiologicosRespuesta11 = (!rd.IsDBNull(39)) ? rd.GetString(39) : "";
-                        il.SaberesAxiologicosRespuesta12 = (!rd.IsDBNull(40)) ? rd.GetString(40) : "";
-                        il.SaberesAxiologicosRespuesta13 = (!rd.IsDBNull(41)) ? rd.GetString(41) : "";
-                        il.SaberesAxiologicosRespuesta14 = (!rd.IsDBNull(42)) ? rd.GetString(42) : "";
-                        il.SaberesAxiologicosRespuesta15 = (!rd.IsDBNull(43)) ? rd.GetString(43) : "";
-                        il.SaberesAxiologicosRespuesta16 = (!rd.IsDBNull(44)) ? rd.GetString(44) : "";
-                        il.SaberesAxiologicosRespuesta17 = (!rd.IsDBNull(45)) ? rd.GetString(45) : "";
-                        il.SaberesAxiologicosRespuesta18 = (!rd.IsDBNull(46)) ? rd.GetString(46) : "";
-                        il.SaberesAxiologicosRespuesta19 = (!rd.IsDBNull(47)) ? rd.GetString(47) : "";
-                        il.FuncionesRealizadasRespuesta1 = (!rd.IsDBNull(48)) ? rd.GetString(48) : "";
-                        il.FuncionesRealizadasRespuesta2 = (!rd.IsDBNull(49)) ? rd.GetString(49) : "";
-                        il.FuncionesRealizadasRespuesta3 = (!rd.IsDBNull(50)) ? rd.GetString(50) : "";
-                        il.FuncionesRealizadasRespuesta4 = (!rd.IsDBNull(51)) ? rd.GetString(51) : "";
-                        il.FuncionesRealizadasRespuesta5 = (!rd.IsDBNull(52)) ? rd.GetString(52) : "";
-                        il.FuncionesRealizadasRespuesta6 = (!rd.IsDBNull(53)) ? rd.GetString(53) : "";
-                        il.FuncionesDesempenadas = (!rd.IsDBNull(54)) ? rd.GetString(54) : "";
-                        il.ProblematicasSolucionadas = (!rd.IsDBNull(55)) ? rd.GetString(55) : "";
-                        il.PropiaEmpresa = (!rd.IsDBNull(56)) ? rd.GetString(56) : "";
-                        il.PropiaEmpresaPorque = (!rd.IsDBNull(57)) ? rd.GetString(57) : "";
-                        il.DiferenciaConocimientoRespuesta1 = (!rd.IsDBNull(58)) ? rd.GetString(58) : "";
-                        il.DiferenciaConocimientoRespuesta2 = (!rd.IsDBNull(59)) ? rd.GetString(59) : "";
-                        il.DiferenciaConocimientoRespuesta3 = (!rd.IsDBNull(60)) ? rd.GetString(60) : "";
-                        il.DiferenciaConocimientoRespuesta4 = (!rd.IsDBNull(61)) ? rd.GetString(61) : "";
-                        il.DiferenciaConocimientoRespuesta5 = (!rd.IsDBNull(62)) ? rd.GetString(62) : "";
-                        il.DiferenciaConocimientoRespuesta6 = (!rd.IsDBNull(63)) ? rd.GetString(63) : "";
-                        il.DiferenciaConocimientoRespuesta7 = (!rd.IsDBNull(64)) ? rd.GetString(64) : "";
-                        il.DiferenciaConocimientoRespuesta8 = (!rd.IsDBNull(65)) ? rd.GetString(65) : "";
-                        il.FormacionProfesional = (!rd.IsDBNull(66)) ? rd.GetString(66) : "";
-                        il.IdEgresado = (!rd.IsDBNull(0)) ? rd.GetInt32(0) : 0;
+                        informacionLaboral = new InformacionLaboral();
+                        informacionLaboral.IdInformacionLaboral = (!rd.IsDBNull(0)) ? rd.GetInt32(0) : 0;
+                        informacionLaboral.CargoDesempenado = (!rd.IsDBNull(1)) ? rd.GetString(1) : "";
+                        informacionLaboral.TipoContratacion = (!rd.IsDBNull(2)) ? rd.GetString(2) : "";
+                        informacionLaboral.TrabajoLigadoFormacion = (!rd.IsDBNull(3)) ? rd.GetString(3) : "";
+                        informacionLaboral.TiempoTranscurridoPrimerEmpleo = (!rd.IsDBNull(4)) ? rd.GetString(4) : "";
+                        informacionLaboral.PromedioIngresoMensual = (!rd.IsDBNull(5)) ? rd.GetString(5) : "";
+                        informacionLaboral.RazonNoEncontrartrabajo = (!rd.IsDBNull(6)) ? rd.GetString(6) : "";
+                        informacionLaboral.ImportanciaExperiencia = (!rd.IsDBNull(7)) ? rd.GetString(7) : "";
+                        informacionLaboral.TipoOrganismo = (!rd.IsDBNull(8)) ? rd.GetString(8) : "";
+                        informacionLaboral.ConocimientosTeoricos = (!rd.IsDBNull(9)) ? rd.GetString(9) : "";
+                        informacionLaboral.SaberesHeuristicos = (!rd.IsDBNull(10)) ? rd.GetString(10) : "";
+                        informacionLaboral.ExperienciaEducativaCursada = (!rd.IsDBNull(11)) ? rd.GetString(11) : "";
+                        informacionLaboral.SaberesTeoricosRespuesta1 = (!rd.IsDBNull(12)) ? rd.GetString(12) : "";
+                        informacionLaboral.SaberesTeoricosRespuesta2 = (!rd.IsDBNull(13)) ? rd.GetString(13) : "";
+                        informacionLaboral.SaberesTeoricosRespuesta3 = (!rd.IsDBNull(14)) ? rd.GetString(14) : "";
+                        informacionLaboral.SaberesTeoricosRespuesta4 = (!rd.IsDBNull(15)) ? rd.GetString(15) : "";
+                        informacionLaboral.SaberesTeoricosRespuesta5 = (!rd.IsDBNull(16)) ? rd.GetString(16) : "";
+                        informacionLaboral.SaberesTeoricosRespuesta6 = (!rd.IsDBNull(17)) ? rd.GetString(17) : "";
+                        informacionLaboral.SaberesTeoricosRespuesta7 = (!rd.IsDBNull(18)) ? rd.GetString(18) : "";
+                        informacionLaboral.SaberesTeoricosRespuesta8 = (!rd.IsDBNull(19)) ? rd.GetString(19) : "";
+                        informacionLaboral.SaberesTeoricosRespuesta9 = (!rd.IsDBNull(20)) ? rd.GetString(20) : "";
+                        informacionLaboral.SaberesTeoricosRespuesta10 = (!rd.IsDBNull(21)) ? rd.GetString(21) : "";
+                        informacionLaboral.SaberesHeuristicosRespuesta1 = (!rd.IsDBNull(22)) ? rd.GetString(22) : "";
+                        informacionLaboral.SaberesHeuristicosRespuesta2 = (!rd.IsDBNull(23)) ? rd.GetString(23) : "";
+                        informacionLaboral.SaberesHeuristicosRespuesta3 = (!rd.IsDBNull(24)) ? rd.GetString(24) : "";
+                        informacionLaboral.SaberesHeuristicosRespuesta4 = (!rd.IsDBNull(25)) ? rd.GetString(25) : "";
+                        informacionLaboral.SaberesHeuristicosRespuesta5 = (!rd.IsDBNull(26)) ? rd.GetString(26) : "";
+                        informacionLaboral.SaberesHeuristicosRespuesta6 = (!rd.IsDBNull(27)) ? rd.GetString(27) : "";
+                        informacionLaboral.SaberesHeuristicosRespuesta7 = (!rd.IsDBNull(28)) ? rd.GetString(28) : "";
+                        informacionLaboral.SaberesAxiologicosRespuesta1 = (!rd.IsDBNull(29)) ? rd.GetString(29) : "";
+                        informacionLaboral.SaberesAxiologicosRespuesta2 = (!rd.IsDBNull(30)) ? rd.GetString(30) : "";
+                        informacionLaboral.SaberesAxiologicosRespuesta3 = (!rd.IsDBNull(31)) ? rd.GetString(31) : "";
+                        informacionLaboral.SaberesAxiologicosRespuesta4 = (!rd.IsDBNull(32)) ? rd.GetString(32) : "";
+                        informacionLaboral.SaberesAxiologicosRespuesta5 = (!rd.IsDBNull(33)) ? rd.GetString(33) : "";
+                        informacionLaboral.SaberesAxiologicosRespuesta6 = (!rd.IsDBNull(34)) ? rd.GetString(34) : "";
+                        informacionLaboral.SaberesAxiologicosRespuesta7 = (!rd.IsDBNull(35)) ? rd.GetString(35) : "";
+                        informacionLaboral.SaberesAxiologicosRespuesta8 = (!rd.IsDBNull(36)) ? rd.GetString(36) : "";
+                        informacionLaboral.SaberesAxiologicosRespuesta9 = (!rd.IsDBNull(37)) ? rd.GetString(37) : "";
+                        informacionLaboral.SaberesAxiologicosRespuesta10 = (!rd.IsDBNull(38)) ? rd.GetString(38) : "";
+                        informacionLaboral.SaberesAxiologicosRespuesta11 = (!rd.IsDBNull(39)) ? rd.GetString(39) : "";
+                        informacionLaboral.SaberesAxiologicosRespuesta12 = (!rd.IsDBNull(40)) ? rd.GetString(40) : "";
+                        informacionLaboral.SaberesAxiologicosRespuesta13 = (!rd.IsDBNull(41)) ? rd.GetString(41) : "";
+                        informacionLaboral.SaberesAxiologicosRespuesta14 = (!rd.IsDBNull(42)) ? rd.GetString(42) : "";
+                        informacionLaboral.SaberesAxiologicosRespuesta15 = (!rd.IsDBNull(43)) ? rd.GetString(43) : "";
+                        informacionLaboral.SaberesAxiologicosRespuesta16 = (!rd.IsDBNull(44)) ? rd.GetString(44) : "";
+                        informacionLaboral.SaberesAxiologicosRespuesta17 = (!rd.IsDBNull(45)) ? rd.GetString(45) : "";
+                        informacionLaboral.SaberesAxiologicosRespuesta18 = (!rd.IsDBNull(46)) ? rd.GetString(46) : "";
+                        informacionLaboral.SaberesAxiologicosRespuesta19 = (!rd.IsDBNull(47)) ? rd.GetString(47) : "";
+                        informacionLaboral.FuncionesRealizadasRespuesta1 = (!rd.IsDBNull(48)) ? rd.GetString(48) : "";
+                        informacionLaboral.FuncionesRealizadasRespuesta2 = (!rd.IsDBNull(49)) ? rd.GetString(49) : "";
+                        informacionLaboral.FuncionesRealizadasRespuesta3 = (!rd.IsDBNull(50)) ? rd.GetString(50) : "";
+                        informacionLaboral.FuncionesRealizadasRespuesta4 = (!rd.IsDBNull(51)) ? rd.GetString(51) : "";
+                        informacionLaboral.FuncionesRealizadasRespuesta5 = (!rd.IsDBNull(52)) ? rd.GetString(52) : "";
+                        informacionLaboral.FuncionesRealizadasRespuesta6 = (!rd.IsDBNull(53)) ? rd.GetString(53) : "";
+                        informacionLaboral.FuncionesDesempenadas = (!rd.IsDBNull(54)) ? rd.GetString(54) : "";
+                        informacionLaboral.ProblematicasSolucionadas = (!rd.IsDBNull(55)) ? rd.GetString(55) : "";
+                        informacionLaboral.PropiaEmpresa = (!rd.IsDBNull(56)) ? rd.GetString(56) : "";
+                        informacionLaboral.PropiaEmpresaPorque = (!rd.IsDBNull(57)) ? rd.GetString(57) : "";
+                        informacionLaboral.DiferenciaConocimientoRespuesta1 = (!rd.IsDBNull(58)) ? rd.GetString(58) : "";
+                        informacionLaboral.DiferenciaConocimientoRespuesta2 = (!rd.IsDBNull(59)) ? rd.GetString(59) : "";
+                        informacionLaboral.DiferenciaConocimientoRespuesta3 = (!rd.IsDBNull(60)) ? rd.GetString(60) : "";
+                        informacionLaboral.DiferenciaConocimientoRespuesta4 = (!rd.IsDBNull(61)) ? rd.GetString(61) : "";
+                        informacionLaboral.DiferenciaConocimientoRespuesta5 = (!rd.IsDBNull(62)) ? rd.GetString(62) : "";
+                        informacionLaboral.DiferenciaConocimientoRespuesta6 = (!rd.IsDBNull(63)) ? rd.GetString(63) : "";
+                        informacionLaboral.DiferenciaConocimientoRespuesta7 = (!rd.IsDBNull(64)) ? rd.GetString(64) : "";
+                        informacionLaboral.ConocimientosBasico1 = (!rd.IsDBNull(65)) ? rd.GetString(65) : "";
+                        informacionLaboral.ConocimientosBasico2 = (!rd.IsDBNull(66)) ? rd.GetString(66) : "";
+                        informacionLaboral.ConocimientosBasico3 = (!rd.IsDBNull(67)) ? rd.GetString(67) : "";
+                        informacionLaboral.ConocimientosBasico4 = (!rd.IsDBNull(68)) ? rd.GetString(68) : "";
+                        informacionLaboral.ConocimientosBasico5 = (!rd.IsDBNull(69)) ? rd.GetString(69) : "";
+                        informacionLaboral.ConocimientosBasico6 = (!rd.IsDBNull(70)) ? rd.GetString(70) : "";
+                        informacionLaboral.ConocimientosBasico7 = (!rd.IsDBNull(71)) ? rd.GetString(71) : "";
+                        informacionLaboral.ConocimientosBasico8 = (!rd.IsDBNull(72)) ? rd.GetString(72) : "";
+                        informacionLaboral.FormacionProfesional = (!rd.IsDBNull(73)) ? rd.GetString(73) : "";
+                        informacionLaboral.IdEgresado = (!rd.IsDBNull(0)) ? rd.GetInt32(0) : 0;
                     }
                     rd.Close();
                     command.Dispose();
@@ -199,11 +212,11 @@ namespace SE.model.dao
                 query = "INSERT INTO dbo.InformacionLabora (cargoDesempeñado, tipoContrato, trabajoLigadoFormacion, tiempoPrimerEmpleo, promedioIngresoMensual, razonNoEncontrarTrabajo, importanciaExperiencia, tipoOrganismo, conocimientosTeoricos, saberesHeuristicos, experienciaEducativaCursada, saberesTeoricosRespuesta1, saberesTeoricosRespuesta2, saberesTeoricosRespuesta3, saberesTeoricosRespuesta4, saberesTeoricosRespuesta5, saberesTeoricosRespuesta6, saberesTeoricosRespuesta7, saberesTeoricosRespuesta8, saberesTeoricosRespuesta9, saberesTeoricosRespuesta10, " +
                         "saberesHeuristicosRespuesta1, saberesHeuristicosRespuesta2, saberesHeuristicosRespuesta3, saberesHeuristicosRespuesta4, saberesHeuristicosRespuesta5, saberesHeuristicosRespuesta6, saberesHeuristicosRespuesta7, saberesAxiologicosRespuesta1, saberesAxiologicosRespuesta2, saberesAxiologicosRespuesta3, saberesAxiologicosRespuesta4, saberesAxiologicosRespuesta5, saberesAxiologicosRespuesta6, saberesAxiologicosRespuesta7, saberesAxiologicosRespuesta8, saberesAxiologicosRespuesta9, saberesAxiologicosRespuesta10, saberesAxiologicosRespuesta11, " +
                         "saberesAxiologicosRespuesta12, saberesAxiologicosRespuesta13, saberesAxiologicosRespuesta14, saberesAxiologicosRespuesta15, saberesAxiologicosRespuesta16, saberesAxiologicosRespuesta17, saberesAxiologicosRespuesta18, saberesAxiologicosRespuesta19, funcionesRealizadasRespuesta1, funcionesRealizadasRespuesta2, funcionesRealizadasRespuesta3, funcionesRealizadasRespuesta4, funcionesRealizadasRespuesta5, funcionesRealizadasRespuesta6, funcionesDesempeñadas, problematicasSolucionadas, propiaEmpresa, propiaEmpresaPorque, " +
-                        "diferenciaConocimientoRespuesta1, diferenciaConocimientoRespuesta2, diferenciaConocimientoRespuesta3, diferenciaConocimientoRespuesta4, diferenciaConocimientoRespuesta5, diferenciaConocimientoRespuesta6, diferenciaConocimientoRespuesta7, diferenciaConocimientoRespuesta8, formacionProfesional,idEgresado) " +
-                        "VALUES(@cargoDesempeñado, @tipoContrato, @trabajoLigadoFormacion, @tiempoPrimerEmpleo, @promedioIngresoMensual, @razonNoEncontrarTrabajo, @importanciaExperiencia, @tipoOrganismo, @conocimientosTeoricos, @saberesHeuristicos, @experienciaEducativaCursada, @saberesTeoricosRespuesta1, @saberesTeoricosRespuesta2, @saberesTeoricosRespuesta3, @saberesTeoricosRespuesta4, @saberesTeoricosRespuesta5, @saberesTeoricosRespuesta6, @saberesTeoricosRespuesta7, @saberesTeoricosRespuesta8, @saberesTeoricosRespuesta9, @saberesTeoricosRespuesta10, " +
-                        "@saberesHeuristicosRespuesta1, @saberesHeuristicosRespuesta2, @saberesHeuristicosRespuesta3, @saberesHeuristicosRespuesta4, @saberesHeuristicosRespuesta5, @saberesHeuristicosRespuesta6, @saberesHeuristicosRespuesta7, @saberesAxiologicosRespuesta1, @saberesAxiologicosRespuesta2, @saberesAxiologicosRespuesta3, @saberesAxiologicosRespuesta4, @saberesAxiologicosRespuesta5, @saberesAxiologicosRespuesta6, @saberesAxiologicosRespuesta7, @saberesAxiologicosRespuesta8, @saberesAxiologicosRespuesta9, @saberesAxiologicosRespuesta10, @saberesAxiologicosRespuesta11, " +
-                        "@saberesAxiologicosRespuesta12, @saberesAxiologicosRespuesta13, @saberesAxiologicosRespuesta14, @saberesAxiologicosRespuesta15, @saberesAxiologicosRespuesta16, @saberesAxiologicosRespuesta17, @saberesAxiologicosRespuesta18, @saberesAxiologicosRespuesta19, @funcionesRealizadasRespuesta1, @funcionesRealizadasRespuesta2, @funcionesRealizadasRespuesta3, @funcionesRealizadasRespuesta4, @funcionesRealizadasRespuesta5, @funcionesRealizadasRespuesta6, @funcionesDesempeñadas, @problematicasSolucionadas, @propiaEmpresa, @propiaEmpresaPorque, " +
-                        "@diferenciaConocimientoRespuesta1, @diferenciaConocimientoRespuesta2, @diferenciaConocimientoRespuesta3, @diferenciaConocimientoRespuesta4, @diferenciaConocimientoRespuesta5, @diferenciaConocimientoRespuesta6, @diferenciaConocimientoRespuesta7, @diferenciaConocimientoRespuesta8, @formacionProfesional,@idEgresado);";
+                        "diferenciaConocimientoRespuesta1, diferenciaConocimientoRespuesta2, diferenciaConocimientoRespuesta3, diferenciaConocimientoRespuesta4, diferenciaConocimientoRespuesta5, diferenciaConocimientoRespuesta6, diferenciaConocimientoRespuesta7, conocimientoBasico1, conocimientoBasico2, conocimientoBasico3, conocimientoBasico4, conocimientoBasico5, conocimientoBasico6, conocimientoBasico7, conocimientoBasico8, formacionProfesional,idEgresado) " +
+                        "VALUES(@cargoDesempeñado,@tipoContrato,@trabajoLigadoFormacion,@tiempoPrimerEmpleo,@promedioIngresoMensual,@razonNoEncontrarTrabajo,@importanciaExperiencia, @tipoOrganismo,@conocimientosTeoricos,@saberesHeuristicos,@experienciaEducativaCursada,@saberesTeoricosRespuesta1,@saberesTeoricosRespuesta2,@saberesTeoricosRespuesta3,@saberesTeoricosRespuesta4,@saberesTeoricosRespuesta5,@saberesTeoricosRespuesta6,@saberesTeoricosRespuesta7,@saberesTeoricosRespuesta8,@saberesTeoricosRespuesta9,@saberesTeoricosRespuesta10, " +
+                        "@saberesHeuristicosRespuesta1,@saberesHeuristicosRespuesta2,@saberesHeuristicosRespuesta3,@saberesHeuristicosRespuesta4,@saberesHeuristicosRespuesta5,@saberesHeuristicosRespuesta6,@saberesHeuristicosRespuesta7,@saberesAxiologicosRespuesta1,@saberesAxiologicosRespuesta2,@saberesAxiologicosRespuesta3,@saberesAxiologicosRespuesta4,@saberesAxiologicosRespuesta5,@saberesAxiologicosRespuesta6,@saberesAxiologicosRespuesta7,@saberesAxiologicosRespuesta8, @saberesAxiologicosRespuesta9,@saberesAxiologicosRespuesta10,@saberesAxiologicosRespuesta11, " +
+                        "@saberesAxiologicosRespuesta12,@saberesAxiologicosRespuesta13,@saberesAxiologicosRespuesta14,@saberesAxiologicosRespuesta15,@saberesAxiologicosRespuesta16,@saberesAxiologicosRespuesta17,@saberesAxiologicosRespuesta18,@saberesAxiologicosRespuesta19,@funcionesRealizadasRespuesta1,@funcionesRealizadasRespuesta2,@funcionesRealizadasRespuesta3,@funcionesRealizadasRespuesta4,@funcionesRealizadasRespuesta5, @funcionesRealizadasRespuesta6,@funcionesDesempeñadas,@problematicasSolucionadas,@propiaEmpresa,@propiaEmpresaPorque, " +
+                        "@diferenciaConocimientoRespuesta1,@diferenciaConocimientoRespuesta2,@diferenciaConocimientoRespuesta3,@diferenciaConocimientoRespuesta4,@diferenciaConocimientoRespuesta5,@diferenciaConocimientoRespuesta6,@diferenciaConocimientoRespuesta7,@conocimientoBasico1,@conocimientoBasico2,@conocimientoBasico3,@conocimientoBasico4,@conocimientoBasico5,@conocimientoBasico6,@conocimientoBasico7,@conocimientoBasico8,@formacionProfesional,@idEgresado);";
             }
             else
             {
@@ -272,7 +285,14 @@ namespace SE.model.dao
                     "diferenciaConocimientoRespuesta5 = @diferenciaConocimientoRespuesta5, " +
                     "diferenciaConocimientoRespuesta6 = @diferenciaConocimientoRespuesta6, " +
                     "diferenciaConocimientoRespuesta7 = @diferenciaConocimientoRespuesta7, " +
-                    "diferenciaConocimientoRespuesta8 = @diferenciaConocimientoRespuesta8, " +
+                    "conocimientoBasico1 = @conocimientobasico1, " +
+                    "conocimientoBasico2 = @conocimientobasico2, " +
+                    "conocimientoBasico3 = @conocimientobasico3, " +
+                    "conocimientoBasico4 = @conocimientobasico4, " +
+                    "conocimientoBasico5 = @conocimientobasico5, " +
+                    "conocimientoBasico6 = @conocimientobasico6, " +
+                    "conocimientoBasico7 = @conocimientobasico7, " +
+                    "conocimientoBasico8 = @conocimientobasico8, " +
                     "formacionProfesional = @formacionProfesional " +
                     "WHERE idInformacionLabora = @idInformacionLabora;";
             }
@@ -351,7 +371,14 @@ namespace SE.model.dao
                     command.Parameters.AddWithValue("@diferenciaConocimientoRespuesta5", informacionLaboral.DiferenciaConocimientoRespuesta5);
                     command.Parameters.AddWithValue("@diferenciaConocimientoRespuesta6", informacionLaboral.DiferenciaConocimientoRespuesta6);
                     command.Parameters.AddWithValue("@diferenciaConocimientoRespuesta7", informacionLaboral.DiferenciaConocimientoRespuesta7);
-                    command.Parameters.AddWithValue("@diferenciaConocimientoRespuesta8", informacionLaboral.DiferenciaConocimientoRespuesta8);
+                    command.Parameters.AddWithValue("@conocimientoBasico1", informacionLaboral.ConocimientosBasico1);
+                    command.Parameters.AddWithValue("@conocimientoBasico2", informacionLaboral.ConocimientosBasico2);
+                    command.Parameters.AddWithValue("@conocimientoBasico3", informacionLaboral.ConocimientosBasico3);
+                    command.Parameters.AddWithValue("@conocimientoBasico4", informacionLaboral.ConocimientosBasico4);
+                    command.Parameters.AddWithValue("@conocimientoBasico5", informacionLaboral.ConocimientosBasico5);
+                    command.Parameters.AddWithValue("@conocimientoBasico6", informacionLaboral.ConocimientosBasico6);
+                    command.Parameters.AddWithValue("@conocimientoBasico7", informacionLaboral.ConocimientosBasico7);
+                    command.Parameters.AddWithValue("@conocimientoBasico8", informacionLaboral.ConocimientosBasico8);
                     command.Parameters.AddWithValue("@formacionProfesional", informacionLaboral.FormacionProfesional);
 
                     if (nuevo)

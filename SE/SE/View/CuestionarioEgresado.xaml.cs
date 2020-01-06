@@ -82,7 +82,14 @@ namespace SE.View
         private string diferenciaConocimientoRespuesta5 = "";
         private string diferenciaConocimientoRespuesta6 = "";
         private string diferenciaConocimientoRespuesta7 = "";
-        private string diferenciaConocimientoRespuesta8 = "";
+        private string conocmientosBasicos1 = "";
+        private string conocmientosBasicos2 = "";
+        private string conocmientosBasicos3 = "";
+        private string conocmientosBasicos4 = "";
+        private string conocmientosBasicos5 = "";
+        private string conocmientosBasicos6 = "";
+        private string conocmientosBasicos7 = "";
+        private string conocmientosBasicos8 = "";
         private string formacionProfesional = "";
 
         private string formacionActual = "";
@@ -482,37 +489,68 @@ namespace SE.View
                 }
             }
 
+            if (chkRedesDiferencias.IsChecked==true)
+            {
+                this.diferenciaConocimientoRespuesta1 = "Redes";
+            }
+            if (chkRedesDiferencias.IsChecked == true)
+            {
+                this.diferenciaConocimientoRespuesta2 = "Paquetería";
+            }
+            if (chkRedesDiferencias.IsChecked == true)
+            {
+                this.diferenciaConocimientoRespuesta3 = "Software especializado (paquetes)";
+            }
+            if (chkRedesDiferencias.IsChecked == true)
+            {
+                this.diferenciaConocimientoRespuesta4 = "Conocimientos administrativos";
+            }
+            if (chkRedesDiferencias.IsChecked == true)
+            {
+                this.diferenciaConocimientoRespuesta5 = "Ingeniería de software";
+            }
+            if (chkRedesDiferencias.IsChecked == true)
+            {
+                this.diferenciaConocimientoRespuesta6 = "Dominio de otro idioma";
+            }
+            if (chkRedesDiferencias.IsChecked == true)
+            {
+                this.diferenciaConocimientoRespuesta7 = "Programación de sistemas";
+            }
+
+
+
             if (chkManejoBaseDatos.IsChecked==true)
             {
-                this.diferenciaConocimientoRespuesta1 = "Manejo de Bases de Datos";
+                this.conocmientosBasicos1 = "Manejo de Bases de Datos";
             }
             if (chkSistemas.IsChecked==true)
             {
-                this.diferenciaConocimientoRespuesta2 = "Programacion de Sistemas";
+                this.conocmientosBasicos2 = "Programacion de Sistemas";
             }
             if (chkManejoRedes.IsChecked==true)
             {
-                this.diferenciaConocimientoRespuesta3 = "Manejo de Redes";
+                this.conocmientosBasicos3 = "Manejo de Redes";
             }
             if (chkManejoPaquetes.IsChecked==true)
             {
-                this.diferenciaConocimientoRespuesta4 = "Manejo de Paquetes";
+                this.conocmientosBasicos4 = "Manejo de Paquetes";
             }
             if (chkDiseñoWebsites.IsChecked==true)
             {
-                this.diferenciaConocimientoRespuesta5 = "Disdeño de Websites";
+                this.conocmientosBasicos5 = "Disdeño de Websites";
             }
             if (chkManejoIdioma.IsChecked==true)
             {
-                this.diferenciaConocimientoRespuesta6 = "Manejo de otro Idioma";
+                this.conocmientosBasicos6 = "Manejo de otro Idioma";
             }
             if (chkMantenimientoComputo.IsChecked==true)
             {
-                this.diferenciaConocimientoRespuesta7 = "Mantenimiento de equipos de computo";
+                this.conocmientosBasicos7 = "Mantenimiento de equipos de computo";
             }
             if (chkManejoMultimedia.IsChecked==true)
             {
-                this.diferenciaConocimientoRespuesta8 = "Manejo de Multimedia";
+                this.conocmientosBasicos8 = "Manejo de Multimedia";
             }
 
             if (rbExcelenteFormacion.IsChecked==true)
@@ -608,14 +646,21 @@ namespace SE.View
              this.informacionLaboral.DiferenciaConocimientoRespuesta5 = diferenciaConocimientoRespuesta5;
              this.informacionLaboral.DiferenciaConocimientoRespuesta6 = diferenciaConocimientoRespuesta6;
              this.informacionLaboral.DiferenciaConocimientoRespuesta7 = diferenciaConocimientoRespuesta7;
-             this.informacionLaboral.DiferenciaConocimientoRespuesta8 = diferenciaConocimientoRespuesta8;
-             this.informacionLaboral.FormacionProfesional = formacionProfesional;
+             this.informacionLaboral.ConocimientosBasico1 = conocmientosBasicos1;
+            this.informacionLaboral.ConocimientosBasico2 = conocmientosBasicos2;
+            this.informacionLaboral.ConocimientosBasico3 = conocmientosBasicos3;
+            this.informacionLaboral.ConocimientosBasico4 = conocmientosBasicos4;
+            this.informacionLaboral.ConocimientosBasico5 = conocmientosBasicos5;
+            this.informacionLaboral.ConocimientosBasico6 = conocmientosBasicos6;
+            this.informacionLaboral.ConocimientosBasico7 = conocmientosBasicos7;
+            this.informacionLaboral.ConocimientosBasico8 = conocmientosBasicos8;
+            this.informacionLaboral.FormacionProfesional = formacionProfesional;
 
             this.Resultado = InformaciónLaboralDAO.guardar(this.informacionLaboral,this.nuevo);
         }
 
 
-        private void btnFinalizarAcademica_Click(object sender, RoutedEventArgs e)
+        private void btnGuardarrAcademica_Click(object sender, RoutedEventArgs e)
         {
             if (rbLicenciatura.IsChecked == true)
             {
@@ -2023,6 +2068,16 @@ namespace SE.View
             this.Close();
         }
 
+        private void btnCancelarInfAcademica_Click(object sender, RoutedEventArgs e)
+        {
+            this.Resultado = false;
+            this.Close();
+        }
 
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Resultado = false;
+            this.Close();
+        }
     }
 }

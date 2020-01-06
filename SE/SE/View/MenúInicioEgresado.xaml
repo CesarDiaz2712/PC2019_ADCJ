@@ -21,7 +21,7 @@
         </Button>
         <Image x:Name="imgUserName" Source="/Resource/usuario.png" HorizontalAlignment="Left" Height="54" Margin="849,10,0,0" VerticalAlignment="Top" Width="44"/>
         <Label x:Name="lblUserName" Content="username" HorizontalAlignment="Left" Margin="830,54,0,0" VerticalAlignment="Top" Width="78" FontFamily="Microsoft JhengHei" FontSize="14" Foreground="White"/>
-        <Button x:Name="btnCerrarSesion" Content="Cerrar Sesión" HorizontalAlignment="Left" Margin="768,29,0,0" VerticalAlignment="Top" Width="76"/>
+        <Button x:Name="btnCerrarSesion" Content="Cerrar Sesión" HorizontalAlignment="Left" Margin="768,29,0,0" VerticalAlignment="Top" Width="76" Click="btnCerrarSesion_Click"/>
         <Button x:Name="btnCuestionario" HorizontalAlignment="Left" Margin="29,182,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="btnCuestionario_Click">
             <StackPanel>
                 <Image Source="/SE;component/Resource/cuestionario.png" Width="50" RenderTransformOrigin="0.56,0.5" Height="44" />
