@@ -64,6 +64,7 @@ namespace SE.View
             this.ficha.CodigoPostal = txtCP.Text;
             this.ficha.NumeroCasa = txtNumeroCasa.Text;
             this.ficha.Telefono = txtTelefono.Text;
+
             this.Resultado = FichaPreEgresoDAO.guardar(this.ficha, true);
 
             this.Close();

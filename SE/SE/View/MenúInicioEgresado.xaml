@@ -9,12 +9,11 @@
     <Grid Background="#FFC7C7C7">
         <Label x:Name="lblSistemaEgresados" Content="SISTEMAS DE EGRESADOS" Background="#FF345781" HorizontalAlignment="Left" VerticalAlignment="Top" Width="933" FontSize="24" FontWeight="Bold" Height="89" FontFamily="Microsoft JhengHei"/>
 
-        <Image x:Name="imgFEI" Source="/Resource/slider/imagen1.jpg"  HorizontalAlignment="Stretch" Height="317" Margin="306,88,0,0" VerticalAlignment="Top" Stretch="UniformToFill"/>
-        <Label x:Name="lblCuestionario" Content="Cuestionario" HorizontalAlignment="Stretch" Margin="94,198,731,0" VerticalAlignment="Top" FontFamily="Microsoft JhengHei" FontSize="16" FontWeight="Bold"/>
-        <Label x:Name="lblConsultaInformacion" Content="Consulta Informacion" HorizontalAlignment="Stretch" Margin="94,288,663,0" VerticalAlignment="Top" FontFamily="Microsoft JhengHei" FontSize="16" FontWeight="Bold"/>
-        <Label x:Name="lblCuestionarioSatisfaccion"  Content="Cuestionario Satisfacción" HorizontalAlignment="Stretch" Margin="94,374,633,0" VerticalAlignment="Top" FontFamily="Microsoft JhengHei" FontSize="16" FontWeight="Bold"/>
+        <Image x:Name="imgFEI" Source="/Resource/slider/imagen1.jpg"  HorizontalAlignment="Stretch" Height="285" Margin="325,137,42,0" VerticalAlignment="Top" Stretch="UniformToFill"/>
+        <Label x:Name="lblCuestionario" Content="Cuestionario" HorizontalAlignment="Stretch" Margin="97,268,728,0" VerticalAlignment="Top" FontFamily="Microsoft JhengHei" FontSize="16" FontWeight="Bold"/>
+        <Label x:Name="lblConsultaInformacion" Content="Consulta Informacion" HorizontalAlignment="Stretch" Margin="97,358,660,0" VerticalAlignment="Top" FontFamily="Microsoft JhengHei" FontSize="16" FontWeight="Bold"/>
 
-        <Button x:Name="btnFichaPregreso" HorizontalAlignment="Left" Margin="29,94,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="btn_FichaPreEgreso_Click">
+        <Button x:Name="btnFichaPregreso" HorizontalAlignment="Left" Margin="32,164,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="btn_FichaPreEgreso_Click">
             <StackPanel>
                 <Image Source="/Resource/ficha.png" Width="50" RenderTransformOrigin="0.5,0.5" Height="44" />
             </StackPanel>
@@ -22,22 +21,17 @@
         <Image x:Name="imgUserName" Source="/Resource/usuario.png" HorizontalAlignment="Left" Height="54" Margin="849,10,0,0" VerticalAlignment="Top" Width="44"/>
         <Label x:Name="lblUserName" Content="username" HorizontalAlignment="Left" Margin="830,54,0,0" VerticalAlignment="Top" Width="78" FontFamily="Microsoft JhengHei" FontSize="14" Foreground="White"/>
         <Button x:Name="btnCerrarSesion" Content="Cerrar Sesión" HorizontalAlignment="Left" Margin="768,29,0,0" VerticalAlignment="Top" Width="76" Click="btnCerrarSesion_Click"/>
-        <Button x:Name="btnCuestionario" HorizontalAlignment="Left" Margin="29,182,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="btnCuestionario_Click">
+        <Button x:Name="btnCuestionario" HorizontalAlignment="Left" Margin="32,252,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="btnCuestionario_Click">
             <StackPanel>
                 <Image Source="/SE;component/Resource/cuestionario.png" Width="50" RenderTransformOrigin="0.56,0.5" Height="44" />
             </StackPanel>
         </Button>
-        <Button x:Name="btnConsultarInformacion" HorizontalAlignment="Left" Margin="29,269,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="btnConsultarInformacion_Click">
+        <Button x:Name="btnConsultarInformacion" HorizontalAlignment="Left" Margin="32,339,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="btnConsultarInformacion_Click">
             <StackPanel>
                 <Image Source="/SE;component/Resource/consultar.png" Width="50" RenderTransformOrigin="0.5,0.5" Height="44" />
             </StackPanel>
         </Button>
-        <Button x:Name="btnCuestionarioSatisfaccion" HorizontalAlignment="Left" Margin="29,360,0,0" VerticalAlignment="Top" Width="60" Height="60">
-            <StackPanel>
-                <Image Source="/SE;component/Resource/satisfaccion.png" Width="50" RenderTransformOrigin="0.5,0.5" Height="44" />
-            </StackPanel>
-        </Button>
-        <Label x:Name="lblPregreso" Content="Ficha Pre-Egreso" HorizontalAlignment="Stretch" Margin="94,108,697,0" VerticalAlignment="Top" FontFamily="Microsoft JhengHei" FontSize="16" FontWeight="Bold"/>
+        <Label x:Name="lblPregreso" Content="Ficha Pre-Egreso" HorizontalAlignment="Stretch" Margin="97,178,685,0" VerticalAlignment="Top" FontFamily="Microsoft JhengHei" FontSize="16" FontWeight="Bold"/>
 
     </Grid>
 </Window>
