@@ -48,7 +48,7 @@ namespace SE
             txtUsuario.Text = "USUARIO";
         }
 
-        private void btn_ingresar_Click(object sender, RoutedEventArgs e)
+        private void btningresarClick(object sender, RoutedEventArgs e)
         {
             if (validarCampos())
             {

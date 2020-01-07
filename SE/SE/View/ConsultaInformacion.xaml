@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SE.View"
         mc:Ignorable="d"
-        Title="ConsultaInformacion" Height="497" Width="800">
+        Title="ConsultaInformacion" Height="479" Width="800">
     <ScrollViewer CanContentScroll="True">
         <Grid Background="#FF345781">
             <Label x:Name="lblSistemaEgresados" Content="SISTEMAS DE EGRESADOS"  HorizontalAlignment="Left" Margin="32,20,0,0" VerticalAlignment="Top" Width="328" FontSize="24" FontWeight="Bold" Height="40" FontFamily="Microsoft JhengHei"/>
@@ -35,7 +35,7 @@
                         <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Height="22" Margin="421,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" IsEnabled="False"/>
                         <Label x:Name="lblEmail" Content="Email:" HorizontalAlignment="Left" Margin="495,152,0,0" VerticalAlignment="Top" FontFamily="Microsoft YaHei" RenderTransformOrigin="3.295,0.462"/>
                         <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="22" Margin="544,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" IsEnabled="False"/>
-                        <Button x:Name="btnRegresar" Content="Regresar" HorizontalAlignment="Left" Margin="690,207,0,0" VerticalAlignment="Top" Width="74" Click="btnRegresar_Click"/>
+                        <Button x:Name="btnRegresar" Content="Regresar" HorizontalAlignment="Left" Margin="690,207,0,0" VerticalAlignment="Top" Width="74" Click="btnRegresarClick"/>
                     </Grid>
                 </TabItem>
                 <TabItem x:Name="tabInformacionLaboral" Header="Información Laboral" Background="#FF345781" Margin="136,-3,-270,1">
@@ -121,8 +121,8 @@
                         <RadioButton x:Name="rb18a24Meses" Content="De 18 a 24 meses" HorizontalAlignment="Left" Margin="247,193,0,0" VerticalAlignment="Top" GroupName="Pregunta2" IsEnabled="False"/>
                         <RadioButton x:Name="rbMasDe24Meses" Content="Más de 24 meses" HorizontalAlignment="Left" Margin="471,169,0,0" VerticalAlignment="Top" Width="130" GroupName="Pregunta2" IsEnabled="False"/>
                         <RadioButton x:Name="rbSinTrabajo" Content="No he trabajado " HorizontalAlignment="Left" Margin="471,193,0,0" VerticalAlignment="Top" GroupName="Pregunta2" IsEnabled="False"/>
-                        <Button x:Name="btnRegresarInformacionLaboral" Content="Regresar" HorizontalAlignment="Left" Margin="551,1742,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.547,-2.9" Click="btnRegresarInformacionLaboral_Click" />
-                        <Button x:Name="btnGuardaInformacionLaboral" Content="Guardar" HorizontalAlignment="Left" Margin="648,1742,0,0" VerticalAlignment="Top" Width="75" Click="btnGuardarLaboral_Click" RenderTransformOrigin="1.907,3.65" Grid.ColumnSpan="2" IsEnabled="False"/>
+                        <Button x:Name="btnRegresarInformacionLaboral" Content="Regresar" HorizontalAlignment="Left" Margin="551,1742,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.547,-2.9" Click="btnRegresarInformacionLaboralClick" />
+                        <Button x:Name="btnGuardaInformacionLaboral" Content="Guardar" HorizontalAlignment="Left" Margin="648,1742,0,0" VerticalAlignment="Top" Width="75" Click="btnGuardarLaboralClick" RenderTransformOrigin="1.907,3.65" Grid.ColumnSpan="2" IsEnabled="False"/>
                         <Label Content="5.- Tipo de organismo, empresa o institución en la que trabaja:" HorizontalAlignment="Left" Margin="29,354,0,0" VerticalAlignment="Top"/>
                         <RadioButton x:Name="rbPrivada" Content="Privada" HorizontalAlignment="Left" Margin="49,385,0,0" VerticalAlignment="Top" GroupName="Pregunta5" IsEnabled="False"/>
                         <RadioButton x:Name="rbPublica" Content="Pública" HorizontalAlignment="Left" Margin="49,408,0,0" VerticalAlignment="Top" GroupName="Pregunta5" IsEnabled="False"/>
@@ -172,7 +172,7 @@
                         <RadioButton x:Name="rbRegularFormacion" Content="Regular" HorizontalAlignment="Left" Margin="385,1681,0,0" VerticalAlignment="Top" GroupName="Pregunta19" IsEnabled="False"/>
                         <RadioButton x:Name="rbMalaFormacion" Content="Mala" HorizontalAlignment="Left" Margin="500,1681,0,0" VerticalAlignment="Top" GroupName="Pregunta19" IsEnabled="False"/>
                         <RadioButton x:Name="rbMuyMalaFormacion" Content="Muy mala" HorizontalAlignment="Left" Margin="609,1681,0,0" VerticalAlignment="Top" GroupName="Pregunta19" IsEnabled="False"/>
-                        <Button x:Name="btnModificar" Content="Modificar" HorizontalAlignment="Left" Margin="661,39,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2" Click="btnModificar_Click"/>
+                        <Button x:Name="btnModificar" Content="Modificar" HorizontalAlignment="Left" Margin="661,39,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2" Click="btnModificarClick"/>
 
                     </Grid>
                 </TabItem>
@@ -223,8 +223,8 @@
                         <Label x:Name="lblIniciacionDisciplina" Content="Iniciación a la Disciplina:" HorizontalAlignment="Left" Margin="25,606,0,0" VerticalAlignment="Top"/>
                         <Label x:Name="lblFormacionDisciplinar" Content="Formación Disciplinar:" HorizontalAlignment="Left" Margin="25,776,0,0" VerticalAlignment="Top"/>
                         <Label x:Name="lblAreaTerminal" Content="Área Terminal:" HorizontalAlignment="Left" Margin="24,1447,0,0" VerticalAlignment="Top"/>
-                        <Button x:Name="btnRegresarInfAcademica" Content="Regresar" HorizontalAlignment="Left" Margin="569,2022,0,0" VerticalAlignment="Top" Width="75" Click="btnRegresarInfAcademica_Click"/>
-                        <Button x:Name="btnGuardarInfAcademica" Content="Guardar" HorizontalAlignment="Left" Margin="663,2022,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.907,3.65"/>
+                        <Button x:Name="btnRegresarInfAcademica" Content="Regresar" HorizontalAlignment="Left" Margin="569,2022,0,0" VerticalAlignment="Top" Width="75" Click="btnRegresarAcademicaClick"/>
+                        <Button x:Name="btnGuardarInfAcademica" Content="Guardar" HorizontalAlignment="Left" Margin="663,2022,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.907,3.65" Click="btnGuardarrAcademicaClick"/>
                         <Label x:Name="lblIngles1" Content="8.- Inglés I:" HorizontalAlignment="Left" Margin="25,376,0,0" VerticalAlignment="Top"/>
                         <Label x:Name="lblIngles2" Content="9.- Inglés II:" HorizontalAlignment="Left" Margin="25,402,0,0" VerticalAlignment="Top"/>
                         <Label x:Name="lblComputacionBasica" Content="10.- Computación básica:" HorizontalAlignment="Left" Margin="25,428,0,0" VerticalAlignment="Top"/>

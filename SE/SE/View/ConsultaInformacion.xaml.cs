@@ -16,9 +16,6 @@ using SE.model.pocos;
 
 namespace SE.View
 {
-    /// <summary>
-    /// Lógica de interacción para ConsultaInformacion.xaml
-    /// </summary>
     public partial class ConsultaInformacion : Window
     {
         private Egresado egresado;
@@ -28,7 +25,9 @@ namespace SE.View
         private bool nuevo;
         private Boolean resultado;
 
-
+        /*
+         * Atributos para las respuestas de Informacion Laboral
+         */
         private string trabajoLigadoFormacion = "";
         private string tiempoTranscurridoPrimerEmpleo = "";
         private string promedioIngresoMensual = "";
@@ -96,6 +95,68 @@ namespace SE.View
         private string conocmientosBasicos8 = "";
         private string formacionProfesional = "";
 
+        /*
+         * Atributos de la Informacion Academica
+         */
+
+        private string formacionActual = "";
+        private string planDeEstudios = "";
+        private string desempeñoDocentes = "";
+        private string organizacionAdministrativa = "";
+        private string instalacion = "";
+        private string serviciosApoyo = "";
+        private string actCulturalesYDeportivas = "";
+        private string ingles1 = "";
+        private string ingles2 = "";
+        private string computacionBasica = "";
+        private string lecturaRedaccion = "";
+        private string habilidadesPensamiento = "";
+        private string algebraLineal = "";
+        private string probabilidad = "";
+        private string matematicasDiscretas = "";
+        private string algoritmosEstucturasDatos1 = "";
+        private string arquitecturaComputadoras1 = "";
+        private string metodologiaInvestigacion = "";
+        private string logica = "";
+        private string calculo = "";
+        private string redes1 = "";
+        private string redes2 = "";
+        private string ingenieriaSoftware1 = "";
+        private string ingenieriaSoftware2 = "";
+        private string basesDatos1 = "";
+        private string basesDatos2 = "";
+        private string tallerIntegracion1 = "";
+        private string sistemasOperativos = "";
+        private string arquitecturaComputadoras2 = "";
+        private string algoritmosEstructurasDatos2 = "";
+        private string organizacionArchivos = "";
+        private string inteligenciaArtificial = "";
+        private string tallerIntegracion2 = "";
+        private string tallerIntegracion3 = "";
+        private string programacionAvanzada = "";
+        private string programacionDeSistemas = "";
+        private string eticaLegislacionInformatica = "";
+        private string fundamentosAdministracion = "";
+        private string administracionProyectos = "";
+        private string compiladores = "";
+        private string administracionRecursosInformaticos = "";
+        private string servicioSocial = "";
+        private string experienciaRecepcional = "";
+        private string desarrolloAplicacionesEnRed = "";
+        private string ingenieriaSoftware3 = "";
+        private string graficacion = "";
+        private string sistemasInformacionEmpresarial = "";
+        private string administracionSeguridadDeServiciosEnRed = "";
+        private string topicosSelectos1 = "";
+        private string topicosSelectos2 = "";
+        private string topicosSelectos3 = "";
+        private string topicosSelectos4 = "";
+        private string sistemasInformacionGeografica = "";
+        private string multimedia = "";
+        private string auditoriaInformatica = "";
+        private string tallerIntegracion4 = "";
+        private string redes3 = "";
+
         public bool Resultado { get => resultado; set => resultado = value; }
 
         public ConsultaInformacion(Egresado egresado, FichaPreEgreso ficha, InformacionLaboral informacionLaboral, InformacionAcademica informacionAcademica, Boolean nuevo)
@@ -120,7 +181,7 @@ namespace SE.View
             txtEmail.Text = ficha.Email;
 
             /*
-             * Consulta Informacion Laboral
+             * Parte de la pestaña Informacion Laboral
              */
 
             txtCargoDesempenado.Text = informacionLaboral.CargoDesempenado;
@@ -520,10 +581,10 @@ namespace SE.View
                 }
             }
 
-
             /*
-             * Consulta InformacionAcademica
+             * Parte de la Informacion Academica
              */
+
             txtIngreso.Text = informacionAcademica.IngresoLicenciatura;
             txtEgreso.Text = informacionAcademica.EgresoLicenciatrua;
 
@@ -1852,22 +1913,1424 @@ namespace SE.View
             }
         }
 
-        private void btnRegresar_Click(object sender, RoutedEventArgs e)
+        private void btnGuardarrAcademicaClick(object sender, RoutedEventArgs e)
+        {
+            if (rbLicenciatura.IsChecked == true)
+            {
+                this.formacionActual = "Licenciatura";
+            }
+            else
+            {
+                if (rbEscpecialidad.IsChecked == true)
+                {
+                    this.formacionActual = "Especialidad";
+                }
+                if (rbMaestria.IsChecked == true)
+                {
+                    this.formacionActual = "Maestria";
+                }
+                if (rbDoctorado.IsChecked == true)
+                {
+                    this.formacionActual = "Doctorado";
+                }
+                if (rbPosDoctorado.IsChecked == true)
+                {
+                    this.formacionActual = "Posdoctorado";
+                }
+            }
+
+            if (rbEficientePlanEstudiantil.IsChecked == true)
+            {
+                this.planDeEstudios = "Eficiente";
+            }
+            else
+            {
+                if (rbAceptablePlanEstudiantil.IsChecked == true)
+                {
+                    this.planDeEstudios = "Aceptable";
+                }
+                if (rbRegularPlanEstudiantil.IsChecked == true)
+                {
+                    this.planDeEstudios = "Regular";
+                }
+                if (rbDeficientePlanEstudiantil.IsChecked == true)
+                {
+                    this.planDeEstudios = "Deficiente";
+                }
+            }
+
+            if (rbEficienteDocentes.IsChecked == true)
+            {
+                this.desempeñoDocentes = "Eficiente";
+            }
+            else
+            {
+                if (rbAceptableDocentes.IsChecked == true)
+                {
+                    this.desempeñoDocentes = "Aceptable";
+                }
+                if (rbRegularDocentes.IsChecked == true)
+                {
+                    this.desempeñoDocentes = "Regular";
+                }
+                if (rbDeficienteDocentes.IsChecked == true)
+                {
+                    this.desempeñoDocentes = "Deficiente";
+                }
+            }
+
+            if (rbEficienteOrganizacion.IsChecked == true)
+            {
+                this.organizacionAdministrativa = "Eficiente";
+            }
+            else
+            {
+                if (rbAceptableOrganizacion.IsChecked == true)
+                {
+                    this.organizacionAdministrativa = "Aceptable";
+                }
+                if (rbRegularOrganizacion.IsChecked == true)
+                {
+                    this.organizacionAdministrativa = "Regular";
+                }
+                if (rbDeficienteOrganizacion.IsChecked == true)
+                {
+                    this.organizacionAdministrativa = "Deficiente";
+                }
+            }
+
+            if (rbEficienteInstalacion.IsChecked == true)
+            {
+                this.instalacion = "Eficiente";
+            }
+            else
+            {
+                if (rbAceptableInstalacion.IsChecked == true)
+                {
+                    this.instalacion = "Aceptable";
+                }
+                if (rbRegularInstalacion.IsChecked == true)
+                {
+                    this.instalacion = "Regular";
+                }
+                if (rbDeficienteInstalacion.IsChecked == true)
+                {
+                    this.instalacion = "Deficiente";
+                }
+            }
+
+            if (rbEficienteServicio.IsChecked == true)
+            {
+                this.serviciosApoyo = "Eficiente";
+            }
+            else
+            {
+                if (rbAceptableServicio.IsChecked == true)
+                {
+                    this.serviciosApoyo = "Aceptable";
+                }
+                if (rbRegularServicio.IsChecked == true)
+                {
+                    this.serviciosApoyo = "Regular";
+                }
+                if (rbDeficienteServicio.IsChecked == true)
+                {
+                    this.serviciosApoyo = "Deficiente";
+                }
+            }
+
+            if (rbEficienteActDeportivas.IsChecked == true)
+            {
+                this.actCulturalesYDeportivas = "Eficiente";
+            }
+            else
+            {
+                if (rbAceptableActDeportivas.IsChecked == true)
+                {
+                    this.actCulturalesYDeportivas = "Aceptable";
+                }
+                if (rbRegularActDeportivas.IsChecked == true)
+                {
+                    this.actCulturalesYDeportivas = "Regular";
+                }
+                if (rbDeficienteActDeportivas.IsChecked == true)
+                {
+                    this.actCulturalesYDeportivas = "Deficiente";
+                }
+            }
+
+            if (rbMuchoIngles1.IsChecked == true)
+            {
+                this.ingles1 = "Mucho";
+            }
+            else
+            {
+                if (rbRegularIngles1.IsChecked == true)
+                {
+                    this.ingles1 = "Regular";
+                }
+                if (rbPocoIngles1.IsChecked == true)
+                {
+                    this.ingles1 = "Poco";
+                }
+                if (rbNadaIngles1.IsChecked == true)
+                {
+                    this.ingles1 = "Nada";
+                }
+            }
+
+            if (rbMuchoIngles2.IsChecked == true)
+            {
+                this.ingles2 = "Mucho";
+            }
+            else
+            {
+                if (rbRegularIngles2.IsChecked == true)
+                {
+                    this.ingles2 = "Regular";
+                }
+                if (rbPocoIngles2.IsChecked == true)
+                {
+                    this.ingles2 = "Poco";
+                }
+                if (rbNadaIngles2.IsChecked == true)
+                {
+                    this.ingles2 = "Nada";
+                }
+            }
+
+            if (rbMuchoComputacionBasica.IsChecked == true)
+            {
+                this.computacionBasica = "Mucho";
+            }
+            else
+            {
+                if (rbRegularComputacionBasica.IsChecked == true)
+                {
+                    this.computacionBasica = "Regular";
+                }
+                if (rbPocoComputacionBasica.IsChecked == true)
+                {
+                    this.computacionBasica = "Poco";
+                }
+                if (rbNadaComputacionBasica.IsChecked == true)
+                {
+                    this.computacionBasica = "Nada";
+                }
+            }
+
+            if (rbMuchoLecturaYRedaccion.IsChecked == true)
+            {
+                this.lecturaRedaccion = "Mucho";
+            }
+            else
+            {
+                if (rbRegularLecturaYRedaccion.IsChecked == true)
+                {
+                    this.lecturaRedaccion = "Regular";
+                }
+                if (rbPocoLecturaYRedaccion.IsChecked == true)
+                {
+                    this.lecturaRedaccion = "Poco";
+                }
+                if (rbNadaLecturaYRedaccion.IsChecked == true)
+                {
+                    this.lecturaRedaccion = "Nada";
+                }
+            }
+
+            if (rbMuchoHabilidadesPensamiento.IsChecked == true)
+            {
+                this.habilidadesPensamiento = "Mucho";
+            }
+            else
+            {
+                if (rbRegularHabilidadesPensamiento.IsChecked == true)
+                {
+                    this.habilidadesPensamiento = "Regular";
+                }
+                if (rbPocoHabilidadesPensamiento.IsChecked == true)
+                {
+                    this.habilidadesPensamiento = "Poco";
+                }
+                if (rbNadaHabilidadesPensamiento.IsChecked == true)
+                {
+                    this.habilidadesPensamiento = "Nada";
+                }
+            }
+
+            if (rbMuchoAlgebraLineal.IsChecked == true)
+            {
+                this.algebraLineal = "Mucho";
+            }
+            else
+            {
+                if (rbRegularAlgebraLineal.IsChecked == true)
+                {
+                    this.algebraLineal = "Regular";
+                }
+                if (rbPocoAlgebraLineal.IsChecked == true)
+                {
+                    this.algebraLineal = "Poco";
+                }
+                if (rbNadaAlgebraLineal.IsChecked == true)
+                {
+                    this.algebraLineal = "Nada";
+                }
+                if (rbNoCursoAlgebraLineal.IsChecked == true)
+                {
+                    this.algebraLineal = "No la cursé";
+                }
+            }
+
+            if (rbMuchoProbabilidad.IsChecked == true)
+            {
+                this.probabilidad = "Mucho";
+            }
+            else
+            {
+                if (rbRegularProbabilidad.IsChecked == true)
+                {
+                    this.probabilidad = "Regular";
+                }
+                if (rbPocoProbabilidad.IsChecked == true)
+                {
+                    this.probabilidad = "Poco";
+                }
+                if (rbNadaProbabilidad.IsChecked == true)
+                {
+                    this.probabilidad = "Nada";
+                }
+                if (rbNoCursoProbabilidad.IsChecked == true)
+                {
+                    this.probabilidad = "No la cursé";
+                }
+            }
+
+            if (rbMuchoMatematicasDiscretas.IsChecked == true)
+            {
+                this.matematicasDiscretas = "Mucho";
+            }
+            else
+            {
+                if (rbRegularMatematicasDiscretas.IsChecked == true)
+                {
+                    this.matematicasDiscretas = "Regular";
+                }
+                if (rbPocoMatematicasDiscretas.IsChecked == true)
+                {
+                    this.matematicasDiscretas = "Poco";
+                }
+                if (rbNadaMatematicasDiscretas.IsChecked == true)
+                {
+                    this.matematicasDiscretas = "Nada";
+                }
+                if (rbNoCursoMatematicasDiscretas.IsChecked == true)
+                {
+                    this.matematicasDiscretas = "No la cursé";
+                }
+            }
+
+            if (rbMuchoAlgoritmosEstrucutrasDatos1.IsChecked == true)
+            {
+                this.algoritmosEstucturasDatos1 = "Mucho";
+            }
+            else
+            {
+                if (rbRegularAlgoritmosEstrucutrasDatos1.IsChecked == true)
+                {
+                    this.algoritmosEstucturasDatos1 = "Regular";
+                }
+                if (rbPocoAlgoritmosEstrucutrasDatos1.IsChecked == true)
+                {
+                    this.algoritmosEstucturasDatos1 = "Poco";
+                }
+                if (rbNadaAlgoritmosEstrucutrasDatos1.IsChecked == true)
+                {
+                    this.algoritmosEstucturasDatos1 = "Nada";
+                }
+                if (rbNoCursoAlgoritmosEstrucutrasDatos1.IsChecked == true)
+                {
+                    this.algoritmosEstucturasDatos1 = "No la cursé";
+                }
+            }
+
+            if (rbMuchoArquitecturaDeComputadoras1.IsChecked == true)
+            {
+                this.arquitecturaComputadoras1 = "Mucho";
+            }
+            else
+            {
+                if (rbRegularArquitecturaDeComputadoras1.IsChecked == true)
+                {
+                    this.arquitecturaComputadoras1 = "Regular";
+                }
+                if (rbPocoArquitecturaDeComputadoras1.IsChecked == true)
+                {
+                    this.arquitecturaComputadoras1 = "Poco";
+                }
+                if (rbNadaArquitecturaDeComputadoras1.IsChecked == true)
+                {
+                    this.arquitecturaComputadoras1 = "Nada";
+                }
+                if (rbNoCursoArquitecturaDeComputadoras1.IsChecked == true)
+                {
+                    this.arquitecturaComputadoras1 = "No la cursé";
+                }
+            }
+
+            if (rbMuchoMetodologiaInv.IsChecked == true)
+            {
+                this.metodologiaInvestigacion = "Mucho";
+            }
+            else
+            {
+                if (rbRegularMetodologiaInv.IsChecked == true)
+                {
+                    this.metodologiaInvestigacion = "Regular";
+                }
+                if (rbPocoMetodologiaInv.IsChecked == true)
+                {
+                    this.metodologiaInvestigacion = "Poco";
+                }
+                if (rbNadaMetodologiaInv.IsChecked == true)
+                {
+                    this.metodologiaInvestigacion = "Nada";
+                }
+                if (rbNoCursoMetodologiaInv.IsChecked == true)
+                {
+                    this.metodologiaInvestigacion = "No la cursé";
+                }
+            }
+
+            if (rbMuchoLogica.IsChecked == true)
+            {
+                this.logica = "Mucho";
+            }
+            else
+            {
+                if (rbRegularLogica.IsChecked == true)
+                {
+                    this.logica = "Regular";
+                }
+                if (rbPocoLogica.IsChecked == true)
+                {
+                    this.logica = "Poco";
+                }
+                if (rbNadaLogica.IsChecked == true)
+                {
+                    this.logica = "Nada";
+                }
+                if (rbNoCursoLogica.IsChecked == true)
+                {
+                    this.logica = "No la cursé";
+                }
+            }
+
+            if (rbMuchoCalculo.IsChecked == true)
+            {
+                this.calculo = "Mucho";
+            }
+            else
+            {
+                if (rbRegularCalculo.IsChecked == true)
+                {
+                    this.calculo = "Regular";
+                }
+                if (rbPocoCalculo.IsChecked == true)
+                {
+                    this.calculo = "Poco";
+                }
+                if (rbNadaCalculo.IsChecked == true)
+                {
+                    this.calculo = "Nada";
+                }
+                if (rbNoCursoCalculo.IsChecked == true)
+                {
+                    this.calculo = "No la cursé";
+                }
+            }
+
+            if (rbMuchoRedes1.IsChecked == true)
+            {
+                this.redes1 = "Mucho";
+            }
+            else
+            {
+                if (rbRegularRedes1.IsChecked == true)
+                {
+                    this.redes1 = "Regular";
+                }
+                if (rbPocoRedes1.IsChecked == true)
+                {
+                    this.redes1 = "Poco";
+                }
+                if (rbNadaRedes1.IsChecked == true)
+                {
+                    this.redes1 = "Nada";
+                }
+                if (rbNoCursoRedes1.IsChecked == true)
+                {
+                    this.redes1 = "No la cursé";
+                }
+            }
+
+            if (rbMuchoRedes2.IsChecked == true)
+            {
+                this.redes2 = "Mucho";
+            }
+            else
+            {
+                if (rbRegularRedes2.IsChecked == true)
+                {
+                    this.redes2 = "Regular";
+                }
+                if (rbPocoRedes2.IsChecked == true)
+                {
+                    this.redes2 = "Poco";
+                }
+                if (rbNadaRedes2.IsChecked == true)
+                {
+                    this.redes2 = "Nada";
+                }
+                if (rbNoCursoRedes2.IsChecked == true)
+                {
+                    this.redes2 = "No la cursé";
+                }
+            }
+
+            if (rbMuchoIngeniriaSoftware1.IsChecked == true)
+            {
+                this.ingenieriaSoftware1 = "Mucho";
+            }
+            else
+            {
+                if (rbRegularIngeniriaSoftware1.IsChecked == true)
+                {
+                    this.ingenieriaSoftware1 = "Regular";
+                }
+                if (rbPocoIngenieriaSoftware1.IsChecked == true)
+                {
+                    this.ingenieriaSoftware1 = "Poco";
+                }
+                if (rbNadaIngenieriaSoftware1.IsChecked == true)
+                {
+                    this.ingenieriaSoftware1 = "Nada";
+                }
+                if (rbNoCursoIngenieriaSoftware1.IsChecked == true)
+                {
+                    this.ingenieriaSoftware1 = "No la cursé";
+                }
+            }
+
+            if (rbMuchoIngenieriaSoftware2.IsChecked == true)
+            {
+                this.ingenieriaSoftware2 = "Mucho";
+            }
+            else
+            {
+                if (rbRegularIngenieriaSoftware2.IsChecked == true)
+                {
+                    this.ingenieriaSoftware2 = "Regular";
+                }
+                if (rbPocoIngenieriaSoftware2.IsChecked == true)
+                {
+                    this.ingenieriaSoftware2 = "Poco";
+                }
+                if (rbNadaIngenieriaSoftware2.IsChecked == true)
+                {
+                    this.ingenieriaSoftware2 = "Nada";
+                }
+                if (rbNoCursoIngenieriaSoftware2.IsChecked == true)
+                {
+                    this.ingenieriaSoftware2 = "No la cursé";
+                }
+            }
+
+            if (rbMuchoBasesDatos1.IsChecked == true)
+            {
+                this.basesDatos1 = "Mucho";
+            }
+            else
+            {
+                if (rbRegularBasesDatos1.IsChecked == true)
+                {
+                    this.basesDatos1 = "Regular";
+                }
+                if (rbPocoBasesDatos1.IsChecked == true)
+                {
+                    this.basesDatos1 = "Poco";
+                }
+                if (rbNadaBasesDatos1.IsChecked == true)
+                {
+                    this.basesDatos1 = "Nada";
+                }
+                if (rbNoCursoBasesDatos1.IsChecked == true)
+                {
+                    this.basesDatos1 = "No la cursé";
+                }
+            }
+
+            if (rbMuchoBasesDatos2.IsChecked == true)
+            {
+                this.basesDatos2 = "Mucho";
+            }
+            else
+            {
+                if (rbRegularBasesDatos2.IsChecked == true)
+                {
+                    this.basesDatos2 = "Regular";
+                }
+                if (rbPocoBasesDatos2.IsChecked == true)
+                {
+                    this.basesDatos2 = "Poco";
+                }
+                if (rbNadaBasesDatos2.IsChecked == true)
+                {
+                    this.basesDatos2 = "Nada";
+                }
+                if (rbNoCursoBasesDatos2.IsChecked == true)
+                {
+                    this.basesDatos2 = "No la cursé";
+                }
+            }
+
+            if (rbMuchoTallerIntegracion1.IsChecked == true)
+            {
+                this.tallerIntegracion1 = "Mucho";
+            }
+            else
+            {
+                if (rbRegularTallerIntegracion1.IsChecked == true)
+                {
+                    this.tallerIntegracion1 = "Regular";
+                }
+                if (rbPocoTallerIntegracion1.IsChecked == true)
+                {
+                    this.tallerIntegracion1 = "Poco";
+                }
+                if (rbNadaTallerIntegracion1.IsChecked == true)
+                {
+                    this.tallerIntegracion1 = "Nada";
+                }
+                if (rbNoCursoTallerIntegracion1.IsChecked == true)
+                {
+                    this.tallerIntegracion1 = "No la cursé";
+                }
+            }
+
+            if (rbMuchoSistemasOperativos.IsChecked == true)
+            {
+                this.sistemasOperativos = "Mucho";
+            }
+            else
+            {
+                if (rbRegularSistemasOperativos.IsChecked == true)
+                {
+                    this.sistemasOperativos = "Regular";
+                }
+                if (rbPocoSistemasOperativos.IsChecked == true)
+                {
+                    this.sistemasOperativos = "Poco";
+                }
+                if (rbNadaSistemasOperativos.IsChecked == true)
+                {
+                    this.sistemasOperativos = "Nada";
+                }
+                if (rbNoCursoSistemasOperativos.IsChecked == true)
+                {
+                    this.sistemasOperativos = "No la cursé";
+                }
+            }
+
+            if (rbMuchoArquitecturaDeComputadoras2.IsChecked == true)
+            {
+                this.arquitecturaComputadoras2 = "Mucho";
+            }
+            else
+            {
+                if (rbRegularArquitecturaDeComputadoras2.IsChecked == true)
+                {
+                    this.arquitecturaComputadoras2 = "Regular";
+                }
+                if (rbPocoArquitecturaDeComputadoras2.IsChecked == true)
+                {
+                    this.arquitecturaComputadoras2 = "Poco";
+                }
+                if (rbNadaArquitecturaDeComputadoras2.IsChecked == true)
+                {
+                    this.arquitecturaComputadoras2 = "Nada";
+                }
+                if (rbNoCursoArquitecturaDeComputadoras2.IsChecked == true)
+                {
+                    this.arquitecturaComputadoras2 = "No la cursé";
+                }
+            }
+
+            if (rbMuchoAlgoritmosEstructurasDatos2.IsChecked == true)
+            {
+                this.algoritmosEstructurasDatos2 = "Mucho";
+            }
+            else
+            {
+                if (rbRegularAlgoritmosEstructurasDatos2.IsChecked == true)
+                {
+                    this.algoritmosEstructurasDatos2 = "Regular";
+                }
+                if (rbPocoAlgoritmosEstructurasDatos2.IsChecked == true)
+                {
+                    this.algoritmosEstructurasDatos2 = "Poco";
+                }
+                if (rbNadaAlgoritmosEstructurasDatos2.IsChecked == true)
+                {
+                    this.algoritmosEstructurasDatos2 = "Nada";
+                }
+                if (rbNoCursoAlgoritmosEstructurasDatos2.IsChecked == true)
+                {
+                    this.algoritmosEstructurasDatos2 = "No la cursé";
+                }
+            }
+
+            if (rbMuchoOrganizacionArchivos.IsChecked == true)
+            {
+                this.organizacionArchivos = "Mucho";
+            }
+            else
+            {
+                if (rbRegularOrganizacionArchivos.IsChecked == true)
+                {
+                    this.organizacionArchivos = "Regular";
+                }
+                if (rbPocoOrganizacionArchivos.IsChecked == true)
+                {
+                    this.organizacionArchivos = "Poco";
+                }
+                if (rbNadaOrganizacionArchivos.IsChecked == true)
+                {
+                    this.organizacionArchivos = "Nada";
+                }
+                if (rbNoCursoOrganizacionArchivos.IsChecked == true)
+                {
+                    this.organizacionArchivos = "No la cursé";
+                }
+            }
+
+            if (rbMuchoInteligenciaArtificial.IsChecked == true)
+            {
+                this.inteligenciaArtificial = "Mucho";
+            }
+            else
+            {
+                if (rbRegularInteligenciaArtificial.IsChecked == true)
+                {
+                    this.inteligenciaArtificial = "Regular";
+                }
+                if (rbPocoInteligenciaArtificial.IsChecked == true)
+                {
+                    this.inteligenciaArtificial = "Poco";
+                }
+                if (rbNadaInteligenciaArtificial.IsChecked == true)
+                {
+                    this.inteligenciaArtificial = "Nada";
+                }
+                if (rbNoCursoInteligenciaArtificial.IsChecked == true)
+                {
+                    this.inteligenciaArtificial = "No la cursé";
+                }
+            }
+
+            if (rbMuchoTallerIntegracion2.IsChecked == true)
+            {
+                this.tallerIntegracion2 = "Mucho";
+            }
+            else
+            {
+                if (rbRegularTallerIntegracion2.IsChecked == true)
+                {
+                    this.tallerIntegracion2 = "Regular";
+                }
+                if (rbPocoTallerIntegracion2.IsChecked == true)
+                {
+                    this.tallerIntegracion2 = "Poco";
+                }
+                if (rbNadaTallerIntegracion2.IsChecked == true)
+                {
+                    this.tallerIntegracion2 = "Nada";
+                }
+                if (rbNoCursoTallerIntegracion2.IsChecked == true)
+                {
+                    this.tallerIntegracion2 = "No la cursé";
+                }
+            }
+
+            if (rbMuchoTallerIntegracion3.IsChecked == true)
+            {
+                this.tallerIntegracion3 = "Mucho";
+            }
+            else
+            {
+                if (rbRegularTallerIntegracion3.IsChecked == true)
+                {
+                    this.tallerIntegracion3 = "Regular";
+                }
+                if (rbPocoTallerIntegracion3.IsChecked == true)
+                {
+                    this.tallerIntegracion3 = "Poco";
+                }
+                if (rbNadaTallerIntegracion3.IsChecked == true)
+                {
+                    this.tallerIntegracion3 = "Nada";
+                }
+                if (rbNoCursoTallerIntegracion3.IsChecked == true)
+                {
+                    this.tallerIntegracion3 = "No la cursé";
+                }
+            }
+
+            if (rbMuchoProgramacionAvanzada.IsChecked == true)
+            {
+                this.programacionAvanzada = "Mucho";
+            }
+            else
+            {
+                if (rbRegularProgramacionAvanzada.IsChecked == true)
+                {
+                    this.programacionAvanzada = "Regular";
+                }
+                if (rbPocoProgramacionAvanzada.IsChecked == true)
+                {
+                    this.programacionAvanzada = "Poco";
+                }
+                if (rbNadaProgramacionAvanzada.IsChecked == true)
+                {
+                    this.programacionAvanzada = "Nada";
+                }
+                if (rbNoCursoProgramacionAvanzada.IsChecked == true)
+                {
+                    this.programacionAvanzada = "No la cursé";
+                }
+            }
+
+            if (rbMuchoProgramacionDeSistemas.IsChecked == true)
+            {
+                this.programacionDeSistemas = "Mucho";
+            }
+            else
+            {
+                if (rbRegularProgramacionDeSistemas.IsChecked == true)
+                {
+                    this.programacionDeSistemas = "Regular";
+                }
+                if (rbPocoProgramacionDeSistemas.IsChecked == true)
+                {
+                    this.programacionDeSistemas = "Poco";
+                }
+                if (rbNadaProgramacionDeSistemas.IsChecked == true)
+                {
+                    this.programacionDeSistemas = "Nada";
+                }
+                if (rbNoCursoProgramacionDeSistemas.IsChecked == true)
+                {
+                    this.programacionDeSistemas = "No la cursé";
+                }
+            }
+
+            if (rbMuchoEticaLEgislacionInformatica.IsChecked == true)
+            {
+                this.eticaLegislacionInformatica = "Mucho";
+            }
+            else
+            {
+                if (rbRegularEticaLEgislacionInformatica.IsChecked == true)
+                {
+                    this.eticaLegislacionInformatica = "Regular";
+                }
+                if (rbPocoEticaLEgislacionInformatica.IsChecked == true)
+                {
+                    this.eticaLegislacionInformatica = "Poco";
+                }
+                if (rbNadaEticaLEgislacionInformatica.IsChecked == true)
+                {
+                    this.eticaLegislacionInformatica = "Nada";
+                }
+                if (rbNoCursoEticaLEgislacionInformatica.IsChecked == true)
+                {
+                    this.eticaLegislacionInformatica = "No la cursé";
+                }
+            }
+
+            if (rbMuchoFundamentosAdministracion.IsChecked == true)
+            {
+                this.fundamentosAdministracion = "Mucho";
+            }
+            else
+            {
+                if (rbRegularFundamentosAdministracion.IsChecked == true)
+                {
+                    this.fundamentosAdministracion = "Regular";
+                }
+                if (rbPocoFundamentosAdministracion.IsChecked == true)
+                {
+                    this.fundamentosAdministracion = "Poco";
+                }
+                if (rbNadaFundamentosAdministracion.IsChecked == true)
+                {
+                    this.fundamentosAdministracion = "Nada";
+                }
+                if (rbNoCursoFundamentosAdministracion.IsChecked == true)
+                {
+                    this.fundamentosAdministracion = "No la cursé";
+                }
+            }
+
+            if (rbMuchoAdministracionProyectos.IsChecked == true)
+            {
+                this.administracionProyectos = "Mucho";
+            }
+            else
+            {
+                if (rbRegularAdministracionProyectos.IsChecked == true)
+                {
+                    this.administracionProyectos = "Regular";
+                }
+                if (rbPocoAdministracionProyectos.IsChecked == true)
+                {
+                    this.administracionProyectos = "Poco";
+                }
+                if (rbNadaAdministracionProyectos.IsChecked == true)
+                {
+                    this.administracionProyectos = "Nada";
+                }
+                if (rbNoCursoAdministracionProyectos.IsChecked == true)
+                {
+                    this.administracionProyectos = "No la cursé";
+                }
+            }
+
+            if (rbMuchoCompiladores.IsChecked == true)
+            {
+                this.compiladores = "Mucho";
+            }
+            else
+            {
+                if (rbRegularCompiladores.IsChecked == true)
+                {
+                    this.compiladores = "Regular";
+                }
+                if (rbPocoCompiladores.IsChecked == true)
+                {
+                    this.compiladores = "Poco";
+                }
+                if (rbNadaCompiladores.IsChecked == true)
+                {
+                    this.compiladores = "Nada";
+                }
+                if (rbNoCursoCompiladores.IsChecked == true)
+                {
+                    this.compiladores = "No la cursé";
+                }
+            }
+
+            if (rbMuchoAdministracionRecursosInformaticos.IsChecked == true)
+            {
+                this.administracionRecursosInformaticos = "Mucho";
+            }
+            else
+            {
+                if (rbRegularAdministracionRecursosInformaticos.IsChecked == true)
+                {
+                    this.administracionRecursosInformaticos = "Regular";
+                }
+                if (rbPocoAdministracionRecursosInformaticos.IsChecked == true)
+                {
+                    this.administracionRecursosInformaticos = "Poco";
+                }
+                if (rbNadaAdministracionRecursosInformaticos.IsChecked == true)
+                {
+                    this.administracionRecursosInformaticos = "Nada";
+                }
+                if (rbNoCursoAdministracionRecursosInformaticos.IsChecked == true)
+                {
+                    this.administracionRecursosInformaticos = "No la cursé";
+                }
+            }
+
+            if (rbMuchoServicioSocial.IsChecked == true)
+            {
+                this.servicioSocial = "Mucho";
+            }
+            else
+            {
+                if (rbRegularServicioSocial.IsChecked == true)
+                {
+                    this.servicioSocial = "Regular";
+                }
+                if (rbPocoServicioSocial.IsChecked == true)
+                {
+                    this.servicioSocial = "Poco";
+                }
+                if (rbNadaServicioSocial.IsChecked == true)
+                {
+                    this.servicioSocial = "Nada";
+                }
+                if (rbNoCursoServicioSocial.IsChecked == true)
+                {
+                    this.servicioSocial = "No la cursé";
+                }
+            }
+
+            if (rbMuchoExperienciaRecepcional.IsChecked == true)
+            {
+                this.experienciaRecepcional = "Mucho";
+            }
+            else
+            {
+                if (rbRegularExperienciaRecepcional.IsChecked == true)
+                {
+                    this.experienciaRecepcional = "Regular";
+                }
+                if (rbPocoExperienciaRecepcional.IsChecked == true)
+                {
+                    this.experienciaRecepcional = "Poco";
+                }
+                if (rbNadaExperienciaRecepcional.IsChecked == true)
+                {
+                    this.experienciaRecepcional = "Nada";
+                }
+                if (rbNoCursoExperienciaRecepcional.IsChecked == true)
+                {
+                    this.experienciaRecepcional = "No la cursé";
+                }
+            }
+
+            if (rbMuchoDesarrolloAplicacionesEnRed.IsChecked == true)
+            {
+                this.desarrolloAplicacionesEnRed = "Mucho";
+            }
+            else
+            {
+                if (rbRegularDesarrolloAplicacionesEnRed.IsChecked == true)
+                {
+                    this.desarrolloAplicacionesEnRed = "Regular";
+                }
+                if (rbPocoDesarrolloAplicacionesEnRed.IsChecked == true)
+                {
+                    this.desarrolloAplicacionesEnRed = "Poco";
+                }
+                if (rbNadaDesarrolloAplicacionesEnRed.IsChecked == true)
+                {
+                    this.desarrolloAplicacionesEnRed = "Nada";
+                }
+                if (rbNoCursoDesarrolloAplicacionesEnRed.IsChecked == true)
+                {
+                    this.desarrolloAplicacionesEnRed = "No la cursé";
+                }
+            }
+
+            if (rbMuchoIngenieriaSoftware3.IsChecked == true)
+            {
+                this.ingenieriaSoftware3 = "Mucho";
+            }
+            else
+            {
+                if (rbRegularIngenieriaSoftware3.IsChecked == true)
+                {
+                    this.ingenieriaSoftware3 = "Regular";
+                }
+                if (rbPocoIngenieriaSoftware3.IsChecked == true)
+                {
+                    this.ingenieriaSoftware3 = "Poco";
+                }
+                if (rbNadaIngenieriaSoftware3.IsChecked == true)
+                {
+                    this.ingenieriaSoftware3 = "Nada";
+                }
+                if (rbNoCursoIngenieriaSoftware3.IsChecked == true)
+                {
+                    this.ingenieriaSoftware3 = "No la cursé";
+                }
+            }
+
+            if (rbMuchoGraficacion.IsChecked == true)
+            {
+                this.graficacion = "Mucho";
+            }
+            else
+            {
+                if (rbRegularGraficacion.IsChecked == true)
+                {
+                    this.graficacion = "Regular";
+                }
+                if (rbPocoGraficacion.IsChecked == true)
+                {
+                    this.graficacion = "Poco";
+                }
+                if (rbNadaGraficacion.IsChecked == true)
+                {
+                    this.graficacion = "Nada";
+                }
+                if (rbNoCursoGraficacion.IsChecked == true)
+                {
+                    this.graficacion = "No la cursé";
+                }
+            }
+
+            if (rbMuchoSistemasInformacionEmpresarial.IsChecked == true)
+            {
+                this.sistemasInformacionEmpresarial = "Mucho";
+            }
+            else
+            {
+                if (rbRegularSistemasInformacionEmpresarial.IsChecked == true)
+                {
+                    this.sistemasInformacionEmpresarial = "Regular";
+                }
+                if (rbPocoSistemasInformacionEmpresarial.IsChecked == true)
+                {
+                    this.sistemasInformacionEmpresarial = "Poco";
+                }
+                if (rbNadaSistemasInformacionEmpresarial.IsChecked == true)
+                {
+                    this.sistemasInformacionEmpresarial = "Nada";
+                }
+                if (rbNoCursoSistemasInformacionEmpresarial.IsChecked == true)
+                {
+                    this.sistemasInformacionEmpresarial = "No la cursé";
+                }
+            }
+
+            if (rbMuchoAdminsitracionYSeguridadDeServiciosDeRed.IsChecked == true)
+            {
+                this.administracionSeguridadDeServiciosEnRed = "Mucho";
+            }
+            else
+            {
+                if (rbRegularAdminsitracionYSeguridadDeServiciosDeRed.IsChecked == true)
+                {
+                    this.administracionSeguridadDeServiciosEnRed = "Regular";
+                }
+                if (rbPocoAdminsitracionYSeguridadDeServiciosDeRed.IsChecked == true)
+                {
+                    this.administracionSeguridadDeServiciosEnRed = "Poco";
+                }
+                if (rbNadaAdminsitracionYSeguridadDeServiciosDeRed.IsChecked == true)
+                {
+                    this.administracionSeguridadDeServiciosEnRed = "Nada";
+                }
+                if (rbNoCursoAdminsitracionYSeguridadDeServiciosDeRed.IsChecked == true)
+                {
+                    this.administracionSeguridadDeServiciosEnRed = "No la cursé";
+                }
+            }
+
+            if (rbMuchoTopicosSelectosComputacion1.IsChecked == true)
+            {
+                this.topicosSelectos1 = "Mucho";
+            }
+            else
+            {
+                if (rbMRegularTopicosSelectosComputacion1.IsChecked == true)
+                {
+                    this.topicosSelectos1 = "Regular";
+                }
+                if (rbPocoTopicosSelectosComputacion1.IsChecked == true)
+                {
+                    this.topicosSelectos1 = "Poco";
+                }
+                if (rbNadaTopicosSelectosComputacion1.IsChecked == true)
+                {
+                    this.topicosSelectos1 = "Nada";
+                }
+                if (rbNoCursoTopicosSelectosComputacion1.IsChecked == true)
+                {
+                    this.topicosSelectos1 = "No la cursé";
+                }
+            }
+
+
+            if (rbMuchoTopicosSelectosComputacion2.IsChecked == true)
+            {
+                this.topicosSelectos2 = "Mucho";
+            }
+            else
+            {
+                if (rbRegularTopicosSelectosComputacion2.IsChecked == true)
+                {
+                    this.topicosSelectos2 = "Regular";
+                }
+                if (rbPocoTopicosSelectosComputacion2.IsChecked == true)
+                {
+                    this.topicosSelectos2 = "Poco";
+                }
+                if (rbNadaTopicosSelectosComputacion2.IsChecked == true)
+                {
+                    this.topicosSelectos2 = "Nada";
+                }
+                if (rbNoCursoTopicosSelectosComputacion2.IsChecked == true)
+                {
+                    this.topicosSelectos2 = "No la cursé";
+                }
+            }
+
+            if (rbMuchoTopicosSelectosComputacion3.IsChecked == true)
+            {
+                this.topicosSelectos3 = "Mucho";
+            }
+            else
+            {
+                if (rbRegularTopicosSelectosComputacion3.IsChecked == true)
+                {
+                    this.topicosSelectos3 = "Regular";
+                }
+                if (rbPocoTopicosSelectosComputacion3.IsChecked == true)
+                {
+                    this.topicosSelectos3 = "Poco";
+                }
+                if (rbNadaTopicosSelectosComputacion3.IsChecked == true)
+                {
+                    this.topicosSelectos3 = "Nada";
+                }
+                if (rbNoCursoTopicosSelectosComputacion3.IsChecked == true)
+                {
+                    this.topicosSelectos3 = "No la cursé";
+                }
+            }
+
+            if (rbMuchoTopicosSelectosComputacion4.IsChecked == true)
+            {
+                this.topicosSelectos4 = "Mucho";
+            }
+            else
+            {
+                if (rbRegularTopicosSelectosComputacion4.IsChecked == true)
+                {
+                    this.topicosSelectos4 = "Regular";
+                }
+                if (rbPocoTopicosSelectosComputacion4.IsChecked == true)
+                {
+                    this.topicosSelectos4 = "Poco";
+                }
+                if (rbNadaTopicosSelectosComputacion4.IsChecked == true)
+                {
+                    this.topicosSelectos4 = "Nada";
+                }
+                if (rbNoCursoTopicosSelectosComputacion4.IsChecked == true)
+                {
+                    this.topicosSelectos4 = "No la cursé";
+                }
+            }
+
+            if (rbMuchoSistemasInformacionGeografica.IsChecked == true)
+            {
+                this.sistemasInformacionGeografica = "Mucho";
+            }
+            else
+            {
+                if (rbRegularSistemasInformacionGeografica.IsChecked == true)
+                {
+                    this.sistemasInformacionGeografica = "Regular";
+                }
+                if (rbPocoSistemasInformacionGeografica.IsChecked == true)
+                {
+                    this.sistemasInformacionGeografica = "Poco";
+                }
+                if (rbNadaSistemasInformacionGeografica.IsChecked == true)
+                {
+                    this.sistemasInformacionGeografica = "Nada";
+                }
+                if (rbNoCursoSistemasInformacionGeografica.IsChecked == true)
+                {
+                    this.sistemasInformacionGeografica = "No la cursé";
+                }
+            }
+
+            if (rbMuchoMultimedia.IsChecked == true)
+            {
+                this.multimedia = "Mucho";
+            }
+            else
+            {
+                if (rbRegularMultimedia.IsChecked == true)
+                {
+                    this.multimedia = "Regular";
+                }
+                if (rbPocoMultimedia.IsChecked == true)
+                {
+                    this.multimedia = "Poco";
+                }
+                if (rbNadaMultimedia.IsChecked == true)
+                {
+                    this.multimedia = "Nada";
+                }
+                if (rbNoCursoMultimedia.IsChecked == true)
+                {
+                    this.multimedia = "No la cursé";
+                }
+            }
+
+            if (rbMuchoAuditoriaInformatica.IsChecked == true)
+            {
+                this.auditoriaInformatica = "Mucho";
+            }
+            else
+            {
+                if (rbRegularAuditoriaInformatica.IsChecked == true)
+                {
+                    this.auditoriaInformatica = "Regular";
+                }
+                if (rbPocoAuditoriaInformatica.IsChecked == true)
+                {
+                    this.auditoriaInformatica = "Poco";
+                }
+                if (rbNadaAuditoriaInformatica.IsChecked == true)
+                {
+                    this.auditoriaInformatica = "Nada";
+                }
+                if (rbNoCursoAuditoriaInformatica.IsChecked == true)
+                {
+                    this.auditoriaInformatica = "No la cursé";
+                }
+            }
+
+            if (rbMuchoTallerIntegracion4.IsChecked == true)
+            {
+                this.tallerIntegracion4 = "Mucho";
+            }
+            else
+            {
+                if (rbRegularTallerIntegracion4.IsChecked == true)
+                {
+                    this.tallerIntegracion4 = "Regular";
+                }
+                if (rbPocoTallerIntegracion4.IsChecked == true)
+                {
+                    this.tallerIntegracion4 = "Poco";
+                }
+                if (rbNadaTallerIntegracion4.IsChecked == true)
+                {
+                    this.tallerIntegracion4 = "Nada";
+                }
+                if (rbNoCursoTallerIntegracion4.IsChecked == true)
+                {
+                    this.tallerIntegracion4 = "No la cursé";
+                }
+            }
+
+            if (rbMuchoRedes3.IsChecked == true)
+            {
+                this.redes3 = "Mucho";
+            }
+            else
+            {
+                if (rbRegularRedes3.IsChecked == true)
+                {
+                    this.redes3 = "Regular";
+                }
+                if (rbPocoRedes3.IsChecked == true)
+                {
+                    this.redes3 = "Poco";
+                }
+                if (rbNadaRedes3.IsChecked == true)
+                {
+                    this.redes3 = "Nada";
+                }
+                if (rbNoCursoRedes3.IsChecked == true)
+                {
+                    this.redes3 = "No la cursé";
+                }
+            }
+
+            this.informacionAcademica.IngresoLicenciatura = txtIngreso.Text;
+            this.informacionAcademica.EgresoLicenciatrua = txtEgreso.Text;
+            this.informacionAcademica.FormacionActual = formacionActual;
+            this.informacionAcademica.PlanDeEstudios = planDeEstudios;
+            this.informacionAcademica.DesempeñoDocentes = desempeñoDocentes;
+            this.informacionAcademica.OrganizacionAdministrativa = organizacionAdministrativa;
+            this.informacionAcademica.Instalacion = instalacion;
+            this.informacionAcademica.ServiciosApoyo = serviciosApoyo;
+            this.informacionAcademica.ActCulturalesYDeportivas = actCulturalesYDeportivas;
+            this.informacionAcademica.Ingles1 = ingles1;
+            this.informacionAcademica.Ingles2 = ingles2;
+            this.informacionAcademica.ComputacionBasica = computacionBasica;
+            this.informacionAcademica.LecturaRedaccion = lecturaRedaccion;
+            this.informacionAcademica.HabilidadesPensamiento = habilidadesPensamiento;
+            this.informacionAcademica.AlgebraLineal = algebraLineal;
+            this.informacionAcademica.Probabilidad = probabilidad;
+            this.informacionAcademica.MatematicasDiscretas = matematicasDiscretas;
+            this.informacionAcademica.AlgoritmosEstucturasDatos1 = algoritmosEstucturasDatos1;
+            this.informacionAcademica.ArquitecturaComputadoras1 = arquitecturaComputadoras1;
+            this.informacionAcademica.MetodologiaInvestigacion = metodologiaInvestigacion;
+            this.informacionAcademica.Logica = logica;
+            this.informacionAcademica.Calculo = calculo;
+            this.informacionAcademica.Redes1 = redes1;
+            this.informacionAcademica.Redes2 = redes2;
+            this.informacionAcademica.IngenieriaSoftware1 = ingenieriaSoftware1;
+            this.informacionAcademica.IngenieriaSoftware2 = ingenieriaSoftware2;
+            this.informacionAcademica.BasesDatos1 = basesDatos1;
+            this.informacionAcademica.BasesDatos2 = basesDatos2;
+            this.informacionAcademica.TallerIntegracion1 = tallerIntegracion1;
+            this.informacionAcademica.SistemasOperativos = sistemasOperativos;
+            this.informacionAcademica.ArquitecturaComputadoras2 = arquitecturaComputadoras2;
+            this.informacionAcademica.AlgoritmosEstructurasDatos2 = algoritmosEstructurasDatos2;
+            this.informacionAcademica.OrganizacionArchivos = organizacionArchivos;
+            this.informacionAcademica.InteligenciaArtificial = inteligenciaArtificial;
+            this.informacionAcademica.TallerIntegracion2 = tallerIntegracion2;
+            this.informacionAcademica.TallerIntegracion3 = tallerIntegracion3;
+            this.informacionAcademica.ProgramacionAvanzada = programacionAvanzada;
+            this.informacionAcademica.ProgramacionDeSistemas = programacionDeSistemas;
+            this.informacionAcademica.EticaLegislacionInformatica = eticaLegislacionInformatica;
+            this.informacionAcademica.FundamentosAdministracion = fundamentosAdministracion;
+            this.informacionAcademica.AdministracionProyectos = administracionProyectos;
+            this.informacionAcademica.Compiladores = compiladores;
+            this.informacionAcademica.AdministracionRecursosInformaticos = administracionRecursosInformaticos;
+            this.informacionAcademica.ServicioSocial = servicioSocial;
+            this.informacionAcademica.ExperienciaRecepcional = experienciaRecepcional;
+            this.informacionAcademica.DesarrolloAplicacionesEnRed = desarrolloAplicacionesEnRed;
+            this.informacionAcademica.IngenieriaSoftware3 = ingenieriaSoftware3;
+            this.informacionAcademica.Graficacion = graficacion;
+            this.informacionAcademica.SistemasInformacionEmpresarial = sistemasInformacionEmpresarial;
+            this.informacionAcademica.AdministracionSeguridadDeServiciosEnRed = administracionSeguridadDeServiciosEnRed;
+            this.informacionAcademica.TopicosSelectos1 = topicosSelectos1;
+            this.informacionAcademica.TopicosSelectos2 = topicosSelectos2;
+            this.informacionAcademica.TopicosSelectos3 = topicosSelectos3;
+            this.informacionAcademica.TopicosSelectos4 = topicosSelectos4;
+            this.informacionAcademica.SistemasInformacionGeografica = sistemasInformacionGeografica;
+            this.informacionAcademica.Multimedia = multimedia;
+            this.informacionAcademica.AuditoriaInformatica = auditoriaInformatica;
+            this.informacionAcademica.TallerIntegracion4 = tallerIntegracion4;
+            this.informacionAcademica.Redes3 = redes3;
+
+            if (this.informacionAcademica.IngresoLicenciatura == "" || this.informacionAcademica.EgresoLicenciatrua == "" || this.informacionAcademica.FormacionActual == "" || this.informacionAcademica.PlanDeEstudios == "" || this.informacionAcademica.DesempeñoDocentes == "" || this.informacionAcademica.OrganizacionAdministrativa == "" || this.informacionAcademica.Instalacion == "" || this.informacionAcademica.ServiciosApoyo == "" || this.informacionAcademica.ActCulturalesYDeportivas == "" || this.informacionAcademica.Ingles1 == "" || this.informacionAcademica.Ingles2 == "" ||
+                this.informacionAcademica.ComputacionBasica == "" || this.informacionAcademica.HabilidadesPensamiento == "" || this.informacionAcademica.AlgebraLineal == "" || this.informacionAcademica.Probabilidad == "" || this.informacionAcademica.MatematicasDiscretas == "" || this.informacionAcademica.AlgoritmosEstucturasDatos1 == "" || this.informacionAcademica.ArquitecturaComputadoras1 == "" || this.informacionAcademica.MetodologiaInvestigacion == "" || this.informacionAcademica.Logica == "" || this.informacionAcademica.Redes1 == "" || this.informacionAcademica.Redes2 == "" ||
+                this.informacionAcademica.IngenieriaSoftware1 == "" || this.informacionAcademica.IngenieriaSoftware2 == "" || this.informacionAcademica.BasesDatos1 == "" || this.informacionAcademica.BasesDatos2 == "" || this.informacionAcademica.TallerIntegracion1 == "" || this.informacionAcademica.SistemasOperativos == "" || this.informacionAcademica.ArquitecturaComputadoras2 == "" || this.informacionAcademica.AlgoritmosEstructurasDatos2 == "" || this.informacionAcademica.OrganizacionArchivos == "" || this.informacionAcademica.InteligenciaArtificial == "" || this.informacionAcademica.TallerIntegracion2 == "" ||
+                this.informacionAcademica.TallerIntegracion3 == "" || this.informacionAcademica.ProgramacionAvanzada == "" || this.informacionAcademica.ProgramacionDeSistemas == "" || this.informacionAcademica.EticaLegislacionInformatica == "" || this.informacionAcademica.FundamentosAdministracion == "" || this.informacionAcademica.AdministracionProyectos == "" || this.informacionAcademica.Compiladores == "" || this.informacionAcademica.AdministracionRecursosInformaticos == "" || this.informacionAcademica.ServicioSocial == "" || this.informacionAcademica.ExperienciaRecepcional == "" || this.informacionAcademica.DesarrolloAplicacionesEnRed == "" ||
+                this.informacionAcademica.IngenieriaSoftware3 == "" || this.informacionAcademica.Graficacion == "" || this.informacionAcademica.SistemasInformacionEmpresarial == "" || this.informacionAcademica.AdministracionSeguridadDeServiciosEnRed == "" || this.informacionAcademica.TopicosSelectos1 == "" || this.informacionAcademica.TopicosSelectos2 == "" || this.informacionAcademica.TopicosSelectos3 == "" || this.informacionAcademica.TopicosSelectos4 == "" || this.informacionAcademica.SistemasInformacionGeografica == "" || this.informacionAcademica.Multimedia == "" || this.informacionAcademica.AuditoriaInformatica == "" ||
+                this.informacionAcademica.TallerIntegracion4 == "" || this.informacionAcademica.Redes3 == "")
+            {
+                System.Windows.MessageBox.Show(this, "LLena todos los campos");
+            }
+            else
+            {
+                this.Resultado = InformaciónAcadémicaDAO.guardar(this.informacionAcademica, this.nuevo);
+            }
+        }
+
+        private void btnRegresarClick(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
-        private void btnRegresarInformacionLaboral_Click(object sender, RoutedEventArgs e)
+        private void btnRegresarInformacionLaboralClick(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
-        private void btnRegresarInfAcademica_Click(object sender, RoutedEventArgs e)
+        private void btnRegresarAcademicaClick(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
-        private void btnModificar_Click(object sender, RoutedEventArgs e)
+        private void btnModificarClick(object sender, RoutedEventArgs e)
         {
             txtCargoDesempenado.IsEnabled = true;
             txtTipoContratacion.IsEnabled = true;
@@ -1973,7 +3436,7 @@ namespace SE.View
         }
 
 
-        private void btnGuardarLaboral_Click(object sender, RoutedEventArgs e)
+        private void btnGuardarLaboralClick(object sender, RoutedEventArgs e)
         {
             if (rbSi.IsChecked == true)
             {

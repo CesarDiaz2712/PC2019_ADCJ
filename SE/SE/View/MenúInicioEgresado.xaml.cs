@@ -49,7 +49,7 @@ namespace SE.View
             informacionAcademica = InformaciónAcadémicaDAO.obtenerInformacionAcademicaByIdEgresado(usuarioIniciado.IdEgresado);
         }
 
-        private void btn_FichaPreEgreso_Click(object sender, RoutedEventArgs e)
+        private void btnFichaPreEgresoClick(object sender, RoutedEventArgs e)
         {
             FichaPreEgreso ficha = new FichaPreEgreso();
             ficha.IdEgresado = this.usuarioIniciado.IdEgresado;
@@ -58,7 +58,7 @@ namespace SE.View
             ventanaFicha.Show();
         }
 
-        private void btnCuestionario_Click(object sender, RoutedEventArgs e)
+        private void btnCuestionarioClick(object sender, RoutedEventArgs e)
         {
             InformacionLaboral informacionLaboral = new InformacionLaboral();
             informacionLaboral.IdEgresado = this.usuarioIniciado.IdEgresado;
@@ -69,14 +69,14 @@ namespace SE.View
             cuestionario.Show();
         }
 
-        private void btnConsultarInformacion_Click(object sender, RoutedEventArgs e)
+        private void btnConsultarInformacionClick(object sender, RoutedEventArgs e)
         {
             this.consultaInformacion();
             ConsultaInformacion consultaInformacion = new ConsultaInformacion(egresado, informacionPersonal, informacionLaboral, informacionAcademica, false);
             consultaInformacion.Show();
         }
 
-        private void btnCerrarSesion_Click(object sender, RoutedEventArgs e)
+        private void btnCerrarSesionClick(object sender, RoutedEventArgs e)
         {
             MainWindow inicio = new MainWindow();
             this.Close();

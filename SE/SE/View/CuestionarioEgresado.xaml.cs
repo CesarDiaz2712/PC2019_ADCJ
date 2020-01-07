@@ -179,7 +179,7 @@ namespace SE.View
         
         public bool Resultado { get => resultado; set => resultado = value; }
 
-        private void btn_Guardar_Click_Laboral(object sender, RoutedEventArgs e)
+        private void btnGuardarLaboralClick(object sender, RoutedEventArgs e)
         {
             if (rbSi.IsChecked == true)
             {
@@ -660,7 +660,7 @@ namespace SE.View
         }
 
 
-        private void btnGuardarrAcademica_Click(object sender, RoutedEventArgs e)
+        private void btnGuardarAcademicaClick(object sender, RoutedEventArgs e)
         {
             if (rbLicenciatura.IsChecked == true)
             {
@@ -2062,19 +2062,19 @@ namespace SE.View
             }
         }
     
-        private void btnCancelarInformacionLaboral_Click(object sender, RoutedEventArgs e)
+        private void btnCancelarInformacionLaboralClick(object sender, RoutedEventArgs e)
         {
             this.Resultado = false;
             this.Close();
         }
 
-        private void btnCancelarInfAcademica_Click(object sender, RoutedEventArgs e)
+        private void btnCancelarInfAcademicaClick(object sender, RoutedEventArgs e)
         {
             this.Resultado = false;
             this.Close();
         }
 
-        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        private void btnCancelarInformacionPersonalClick(object sender, RoutedEventArgs e)
         {
             this.Resultado = false;
             this.Close();

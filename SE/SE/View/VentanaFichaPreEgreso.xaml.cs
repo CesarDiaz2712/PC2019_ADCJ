@@ -34,7 +34,7 @@ namespace SE.View
         }
 
         public bool Resultado { get => resultado; set => resultado = value; }
-        public void btn_Guardar_Click(object sender, RoutedEventArgs e)
+        public void btnGuardarFichaPreEgresoClick(object sender, RoutedEventArgs e)
         {
             if (rbHombre.IsChecked==true)
             {
@@ -70,7 +70,7 @@ namespace SE.View
             this.Close();
         }
 
-        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        private void btnCancelarFichaPreEgresoClick(object sender, RoutedEventArgs e)
         {
             this.Resultado = false;
             this.Close();

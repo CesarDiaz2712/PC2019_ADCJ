@@ -22,7 +22,7 @@
         <TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="22" Margin="409,110,0,0" TextWrapping="Wrap" Text="USUARIO" VerticalAlignment="Top" Width="273" FontSize="16" FontFamily="Microsoft JhengHei" FontWeight="Bold" Foreground="#FFA4A4A4" Background="{x:Null}" GotFocus="txt_usuario_GotFocus" />
         <Label x:Name="lblContrasena" Content="CONTRASEÑA:" HorizontalAlignment="Left" Margin="311,146,0,0" VerticalAlignment="Top" Width="126" FontSize="16" FontFamily="Microsoft JhengHei" Foreground="#FFA4A4A4"/>
         <PasswordBox x:Name="txtContrasena" HorizontalAlignment="Left" Margin="409,177,0,0" VerticalAlignment="Top" Width="273" FontSize="16" FontWeight="Bold" Foreground="#FFA4A4A4" Background="{x:Null}" />
-        <Button x:Name="btnIngresar"  Content="INGRESAR" HorizontalAlignment="Left" Margin="462,250,0,0" VerticalAlignment="Top" Width="131" FontFamily="Microsoft JhengHei" FontSize="16" FontWeight="Bold" Foreground="Black" Click="btn_ingresar_Click">
+        <Button x:Name="btnIngresar"  Content="INGRESAR" HorizontalAlignment="Left" Margin="462,250,0,0" VerticalAlignment="Top" Width="131" FontFamily="Microsoft JhengHei" FontSize="16" FontWeight="Bold" Foreground="Black" Click="btningresarClick">
             <Button.OpacityMask>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.8">
                     <GradientStop Color="Black" Offset="0"/>
