@@ -93,8 +93,6 @@
     <Compile Include="model\pocos\FichaPreEgreso.cs" />
     <Compile Include="model\pocos\InformacionLaboral.cs" />
     <Compile Include="model\pocos\InformacionPersonal.cs" />
-    <Compile Include="model\pocos\Respuesta.cs" />
-    <Compile Include="model\pocos\Usuario.cs" />
     <Compile Include="model\pocos\Validacion.cs" />
     <Compile Include="View\ConsultaInformacion.xaml.cs">
       <DependentUpon>ConsultaInformacion.xaml</DependentUpon>

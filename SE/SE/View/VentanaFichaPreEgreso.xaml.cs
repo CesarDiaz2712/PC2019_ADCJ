@@ -65,9 +65,17 @@ namespace SE.View
             this.ficha.NumeroCasa = txtNumeroCasa.Text;
             this.ficha.Telefono = txtTelefono.Text;
 
-            this.Resultado = FichaPreEgresoDAO.guardar(this.ficha, true);
-
-            this.Close();
+            if (this.ficha.Nacionalidad == "" || this.ficha.Sexo == "" || this.ficha.Calle == "" || this.ficha.Email == "" ||
+                this.ficha.Colonia == "" || this.ficha.Ciudad == "" || this.ficha.Estado == "" || this.ficha.CodigoPostal == "" ||
+                 this.ficha.NumeroCasa == "" || this.ficha.Telefono == "")
+            {
+                MessageBox.Show(this, "Llena todos los campos");
+            }
+            else
+            {
+                this.Resultado = FichaPreEgresoDAO.guardar(this.ficha, true);
+                this.Close();
+            }
         }
 
         private void btnCancelarFichaPreEgresoClick(object sender, RoutedEventArgs e)
